@@ -21,19 +21,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'on9*bf65je3#4+jphqufropk!s9*i&$*54@_9t8^6+c)iro2&q'
-SECRET_KEY = os.environ.get('SECRET_KEY', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVrbXZ6Z3hueGlteHJ3dGx1dmxqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjU1NTY2NTksImV4cCI6MjA0MTEzMjY1OX0.wyA_aBpGBJsTdIg38q0VMVX7CakVW1XhDAwQOR2DiDU')
+SECRET_KEY = 'on9*bf65je3#4+jphqufropk!s9*i&$*54@_9t8^6+c)iro2&q'
+# SECRET_KEY = os.environ.get('SECRET_KEY', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVrbXZ6Z3hueGlteHJ3dGx1dmxqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjU1NTY2NTksImV4cCI6MjA0MTEzMjY1OX0.wyA_aBpGBJsTdIg38q0VMVX7CakVW1XhDAwQOR2DiDU')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = os.environ.get('DEBUG', 'True') == 'True'
+# DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
 # ALLOWED_HOSTS = []
 # ALLOWED_HOSTS = ['x-empire.onrender.com','127.0.0.1', 'localhost']
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '127.0.0.1').split(",")
-SUPABASE_DB_URL = os.environ.get("SUPABASE_DB_URL")
-DJANGO_ENV = os.environ.get('DJANGO_ENV')
+# ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '127.0.0.1').split(",")
+# SUPABASE_DB_URL = os.environ.get("SUPABASE_DB_URL")
+# DJANGO_ENV = os.environ.get('DJANGO_ENV')
 
 
 # Application definition
@@ -91,32 +91,32 @@ WSGI_APPLICATION = 'HMS.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': 'db.sqlite3',
-#         # 'USER': os.environ.get('DB_USER'),
-#         # 'PASSWORD': os.environ.get('DB_USER_PASSWORD'),
-#         # 'HOST': os.environ.get('DB_HOST'),
-#         # 'PORT'
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
+        # 'USER': os.environ.get('DB_USER'),
+        # 'PASSWORD': os.environ.get('DB_USER_PASSWORD'),
+        # 'HOST': os.environ.get('DB_HOST'),
+        # 'PORT'
+    }
+}
 # Check if the Supabase database URL is set
-if SUPABASE_DB_URL:
-    # Use the Supabase database configuration
-    DATABASES = {
-        "default": dj_database_url.config(
-            default=SUPABASE_DB_URL, conn_max_age=600
-        )
-    }
-else:
-    # Use the SQLite database configuration for development
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
+# if SUPABASE_DB_URL:
+#     # Use the Supabase database configuration
+#     DATABASES = {
+#         "default": dj_database_url.config(
+#             default=SUPABASE_DB_URL, conn_max_age=600
+#         )
+#     }
+# else:
+#     # Use the SQLite database configuration for development
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     }
 
 
 # Password validation
