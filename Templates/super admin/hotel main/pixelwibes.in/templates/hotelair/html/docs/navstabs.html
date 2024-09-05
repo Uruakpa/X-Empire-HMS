@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from pixelwibes.in/templates/hotelair/html/docs/navstabs.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:34:35 GMT -->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Responsive Bootstrap 5 admin dashboard template & web App ui kit."
+    />
+    <meta name="keyword" content="bootstrap admin template" />
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
+    <!--[ Favicon]-->
+    <title>: HotelAir : Hotel Management Admin Dashboard Template</title>
+
+    <!--[ Favicon]-->
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/images/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/images/apple-touch-icon.png"
+    />
+
+    <link rel="stylesheet" href="../assets/css/prism.min.css" />
+    <link rel="stylesheet" href="../assets/css/summernote.min.css" />
+    <style>
+      @font-face {
+        font-family: "summernote";
+        src: url("../assets/fonts/summernoted41d.eot?#iefix")
+            format("embedded-opentype"),
+          url("../assets/fonts/summernote.woff2") format("woff2"),
+          url("../assets/fonts/summernote.woff") format("woff"),
+          url("../assets/fonts/summernote.ttf") format("truetype");
+      }
+    </style>
+
+    <!--[ Template main css file ]-->
+    <link rel="stylesheet" href="../assets/css/style.min.css" />
+  </head>
+
+  <body data-theme="theme-PurpleHeart" class="svgstroke-a docs">
+    <button
+      class="btn btn-primary d-inline-flex d-xl-none position-fixed bottom-0 end-0 p-2 me-3 mb-3 z-3 shadow avatar rounded-circle"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvas_Navbar"
+    >
+      <svg
+        class="svg-stroke"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M4 6l16 0"></path>
+        <path d="M4 12l16 0"></path>
+        <path d="M4 18l16 0"></path>
+      </svg>
+    </button>
+
+    <header class="border-bottom cus-header">
+      <div class="container-xl">
+        <div class="row px-xl-4">
+          <div class="col-12">
+            <div class="d-flex justify-content-between py-3">
+              <a
+                href="../index.html"
+                class="brand-icon text-decoration-none d-flex align-items-center"
+                title="HotelAir Admin Template"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+                  ></path>
+                  <path d="M9 8l0 8"></path>
+                  <path d="M9 12l6 0"></path>
+                  <path d="M15 8l0 8"></path>
+                </svg>
+                <span class="fw-bold ps-2 fs-5 text-gradient"
+                  >X <small>-</small>Empire</span
+                >
+              </a>
+              <a href="#" class="btn btn-dark">Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container-xl px-0">
+      <!-- start: page menu link -->
+      <aside
+        class="ps-xl-5 ps-lg-4 ps-3 pe-2 py-3 sidebar sticky-top"
+        data-bs-theme="none"
+      >
+        <nav class="navbar navbar-expand-xl py-0">
+          <div
+            class="offcanvas offcanvas-start"
+            data-bs-scroll="true"
+            tabindex="-1"
+            id="offcanvas_Navbar"
+          >
+            <div class="offcanvas-header">
+              <span class="fw-bold fs-5 text-gradient"
+                >X <small>-</small>Empire</span
+              >
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body flex-column custom_scroll ps-3 ps-xl-0">
+              <div
+                class="d-flex align-items-start mb-4 d-none d-xl-inline-flex"
+              >
+                <a
+                  href="../index.html"
+                  class="brand-icon text-decoration-none d-flex align-items-center"
+                  title="HotelAir Admin Template"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+                    />
+                    <path d="M9 8l0 8" />
+                    <path d="M9 12l6 0" />
+                    <path d="M15 8l0 8" />
+                  </svg>
+                  <span class="fw-bold ps-2 fs-5 text-gradient"
+                    >X <small>-</small>Empire</span
+                  >
+                </a>
+              </div>
+              <!-- start: Menu tab -->
+              <ul
+                class="nav nav-tabs tab-dynamic px-0 mb-4"
+                role="tablist"
+                style="--dynamic-color: var(--accent-color)"
+              >
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="ps-2 pe-3 nav-link"
+                    data-bs-toggle="tab"
+                    href="#tab_General"
+                    role="tab"
+                    aria-selected="false"
+                    tabindex="-1"
+                    >General</a
+                  >
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="ps-2 pe-3 nav-link active"
+                    data-bs-toggle="tab"
+                    href="#tab_Bootstrtap"
+                    role="tab"
+                    aria-selected="true"
+                    >Bootstrtap</a
+                  >
+                </li>
+              </ul>
+              <!-- start: Menu content -->
+              <div class="tab-content">
+                <!-- start: General tab-->
+                <div class="tab-pane fade" id="tab_General" role="tabpanel">
+                  <ul class="list-unstyled mb-4 menu-list">
+                    <li>
+                      <a href="index.html" aria-label="Documentation">
+                        <svg
+                          class="svg-stroke"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            stroke="none"
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          ></path>
+                          <path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
+                          <path
+                            d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"
+                          ></path>
+                          <path d="M10 12h4v4h-4z"></path>
+                        </svg>
+                        <span class="mx-3">Documentation</span>
+                      </a>
+                    </li>
+                    <li class="py-2 mt-2">
+                      <h6
+                        class="fl-title title-font ps-2 small text-uppercase text-muted"
+                        style="--dynamic-color: var(--theme-color1)"
+                      >
+                        Widgets
+                      </h6>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a
+                            href="widgets-basic-card.html"
+                            aria-label="Widgets Basic card"
+                            >Basic card</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="widgets-card-tiles.html"
+                            aria-label="Widgets tiles"
+                            >Card tiles</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="widgets-card-tab.html"
+                            aria-label="Widgets Tabbed"
+                            >Tabbed card</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="widgets-tables.html"
+                            aria-label="Widgets Tables"
+                            >Tables example</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="widgets-forms.html"
+                            aria-label="Widgets Forms"
+                            >Forms example</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="py-2 mt-2">
+                      <h6
+                        class="fl-title title-font ps-2 small text-uppercase text-muted"
+                        style="--dynamic-color: var(--theme-color1)"
+                      >
+                        Charts
+                      </h6>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="apex.html" aria-label="Apex chart"
+                            >Apex chart</a
+                          >
+                        </li>
+                        <li>
+                          <a href="peity.html" aria-label="Peity chart"
+                            >Peity chart</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="py-2 mt-2">
+                      <h6
+                        class="fl-title title-font ps-2 small text-uppercase text-muted"
+                        style="--dynamic-color: var(--theme-color1)"
+                      >
+                        Plugin (NPM)
+                      </h6>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="datatables.html" aria-label="Datatables"
+                            >Datatables</a
+                          >
+                        </li>
+                        <li>
+                          <a href="flatpickr.html" aria-label="Flatpickr"
+                            >Flatpickr</a
+                          >
+                        </li>
+                        <li>
+                          <a href="inputmask.html" aria-label="Inputmask"
+                            >Inputmask</a
+                          >
+                        </li>
+                        <li>
+                          <a href="jsvectormap.html" aria-label="Jsvectormap"
+                            >Jsvectormap</a
+                          >
+                        </li>
+                        <li>
+                          <a href="sortablejs.html" aria-label="Sortablejs"
+                            >Sortablejs</a
+                          >
+                        </li>
+                        <li>
+                          <a href="sweetalert2.html" aria-label="Sweet alert 2"
+                            >Sweet alert 2</a
+                          >
+                        </li>
+                        <li>
+                          <a href="tagify.html" aria-label="Tagify">Tagify</a>
+                        </li>
+                        <li>
+                          <a href="tiny-slider.html" aria-label="Tiny slider"
+                            >Tiny slider</a
+                          >
+                        </li>
+                        <li>
+                          <a href="full-calendar.html" aria-label="Calendar"
+                            >Calendar</a
+                          >
+                        </li>
+                        <li>
+                          <a href="summernote.html" aria-label="Summernote"
+                            >Summernote</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="py-2 mt-2">
+                      <h6
+                        class="fl-title title-font ps-2 small text-uppercase text-muted"
+                        style="--dynamic-color: var(--theme-color1)"
+                      >
+                        Font icon
+                      </h6>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a
+                            href="bootstrap-icon.html"
+                            aria-label="Bootstrap Icon"
+                            >Bootstrap Icon</a
+                          >
+                        </li>
+                        <li>
+                          <a href="flag-icon.html" aria-label="Country Flag"
+                            >Country Flag icon</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="fontawesome-icon.html"
+                            aria-label="Font awesome"
+                            >Font awesome</a
+                          >
+                        </li>
+                        <li>
+                          <a href="linear-icon.html" aria-label="Simple line"
+                            >Simple line icon</a
+                          >
+                        </li>
+                        <li>
+                          <a href="weather-icon.html" aria-label="Weather icon"
+                            >Weather icon</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <!-- start: Bootstrtap tab -->
+                <div
+                  class="tab-pane fade active show"
+                  id="tab_Bootstrtap"
+                  role="tabpanel"
+                >
+                  <h6
+                    class="fl-title title-font ps-2 small text-uppercase text-muted"
+                    style="--dynamic-color: var(--theme-color1)"
+                  >
+                    Bootstrtap
+                  </h6>
+                  <ul class="list-unstyled mb-4 menu-list">
+                    <li class="py-2 mt-2">
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="accordion.html" aria-label="Accordion"
+                            >Accordion</a
+                          >
+                        </li>
+                        <li>
+                          <a href="alerts.html" aria-label="Alerts">Alerts</a>
+                        </li>
+                        <li>
+                          <a href="avatar.html" aria-label="User Avatar"
+                            >User Avatar</a
+                          >
+                        </li>
+                        <li>
+                          <a href="badges.html" aria-label="Badges">Badges</a>
+                        </li>
+                        <li>
+                          <a href="breadcrumb.html" aria-label="Breadcrumb"
+                            >Breadcrumb</a
+                          >
+                        </li>
+                        <li>
+                          <a href="buttons.html" aria-label="Buttons"
+                            >Buttons</a
+                          >
+                        </li>
+                        <li>
+                          <a href="cards.html" aria-label="Cards">Cards</a>
+                        </li>
+                        <li>
+                          <a href="carousel.html" aria-label="Carousel"
+                            >Carousel</a
+                          >
+                        </li>
+                        <li>
+                          <a href="collapse.html" aria-label="Collapse"
+                            >Collapse</a
+                          >
+                        </li>
+                        <li>
+                          <a href="dropdowns.html" aria-label="Dropdowns"
+                            >Dropdowns</a
+                          >
+                        </li>
+                        <li>
+                          <a href="listgroup.html" aria-label="List group"
+                            >List group</a
+                          >
+                        </li>
+                        <li>
+                          <a href="modal.html" aria-label="Modal">Modal</a>
+                        </li>
+                        <li>
+                          <a href="navbar.html" aria-label="Navbar">Navbar</a>
+                        </li>
+                        <li>
+                          <a
+                            class="active"
+                            href="navstabs.html"
+                            aria-label="Navs and tabs"
+                            >Navs and tabs</a
+                          >
+                        </li>
+                        <li>
+                          <a href="offcanvas.html" aria-label="Offcanvas"
+                            >Offcanvas</a
+                          >
+                        </li>
+                        <li>
+                          <a href="pagination.html" aria-label="Pagination"
+                            >Pagination</a
+                          >
+                        </li>
+                        <li>
+                          <a href="placeholders.html" aria-label="Placeholders"
+                            >Placeholders</a
+                          >
+                        </li>
+                        <li>
+                          <a href="popovers.html" aria-label="Popovers"
+                            >Popovers</a
+                          >
+                        </li>
+                        <li>
+                          <a href="progress.html" aria-label="Progress"
+                            >Progress</a
+                          >
+                        </li>
+                        <li>
+                          <a href="spinners.html" aria-label="Spinners"
+                            >Spinners</a
+                          >
+                        </li>
+                        <li>
+                          <a href="toasts.html" aria-label="Toasts">Toasts</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </aside>
+
+      <div class="content px-xl-5 px-lg-4 px-3 py-3 page-body bg-card">
+        <h4 class="mb-4">Navs and tabs</h4>
+        <p class="lead">
+          Navigation available in Bootstrap share general markup and styles,
+          from the base <code>.nav</code> class to the active and disabled
+          states. Swap modifier classes to switch between each style.
+        </p>
+        <p class="lead">
+          The base <code>.nav</code> component is built with flexbox and provide
+          a strong foundation for building all types of navigation components.
+          It includes some style overrides (for working with lists), some link
+          padding for larger hit areas, and basic disabled styling.
+        </p>
+        <pre
+          class="language-html"
+          data-lang="html"
+        ><code class=" language-html">&lt;ul class=&quot;nav nav-tabs mb-3&quot; id=&quot;myTab&quot; role=&quot;tablist&quot;&gt;
+	&lt;li class=&quot;nav-item&quot; role=&quot;presentation&quot;&gt;
+		&lt;button class=&quot;nav-link active&quot; id=&quot;home-tab&quot; data-bs-toggle=&quot;tab&quot; data-bs-target=&quot;#home&quot; type=&quot;button&quot; role=&quot;tab&quot; aria-controls=&quot;home&quot; aria-selected=&quot;true&quot;&gt;Home&lt;/button&gt;
+	&lt;/li&gt;
+	&lt;li class=&quot;nav-item&quot; role=&quot;presentation&quot;&gt;
+		&lt;button class=&quot;nav-link&quot; id=&quot;profile-tab&quot; data-bs-toggle=&quot;tab&quot; data-bs-target=&quot;#profile&quot; type=&quot;button&quot; role=&quot;tab&quot; aria-controls=&quot;profile&quot; aria-selected=&quot;false&quot;&gt;Profile&lt;/button&gt;
+	&lt;/li&gt;
+	&lt;li class=&quot;nav-item&quot; role=&quot;presentation&quot;&gt;
+		&lt;button class=&quot;nav-link&quot; id=&quot;contact-tab&quot; data-bs-toggle=&quot;tab&quot; data-bs-target=&quot;#contact&quot; type=&quot;button&quot; role=&quot;tab&quot; aria-controls=&quot;contact&quot; aria-selected=&quot;false&quot;&gt;Contact&lt;/button&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;tab-content&quot; id=&quot;myTabContent&quot;&gt;
+	&lt;div class=&quot;tab-pane fade active show&quot; id=&quot;home&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;home-tab&quot;&gt;
+		&lt;p&gt;&lt;strong&gt;This is some placeholder content the Home tab's associated content.&lt;/strong&gt; Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other &lt;code&gt;.nav&lt;/code&gt;-powered navigation.&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;tab-pane fade&quot; id=&quot;profile&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;profile-tab&quot;&gt;
+		&lt;p&gt;&lt;strong&gt;This is some placeholder content the Profile tab's associated content.&lt;/strong&gt; Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other &lt;code&gt;.nav&lt;/code&gt;-powered navigation.&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;tab-pane fade&quot; id=&quot;contact&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;contact-tab&quot;&gt;
+		&lt;p&gt;&lt;strong&gt;This is some placeholder content the Contact tab's associated content.&lt;/strong&gt; Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other &lt;code&gt;.nav&lt;/code&gt;-powered navigation.&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <div class="row g-xl-5 g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h6 class="card-title mb-0">Basic Example</h6>
+              </div>
+              <div class="card-body">
+                <ul class="nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >Active</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <h5>Horizontal alignment</h5>
+                <p>
+                  Centered with <code>.justify-content-center</code>,
+                  Right-aligned with <code>.justify-content-end</code>:
+                </p>
+                <ul class="nav justify-content-center">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >Active</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                  </li>
+                </ul>
+                <ul class="nav justify-content-end">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >Active</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <h5>Vertical</h5>
+                <p>
+                  Stack your navigation by changing the flex item direction with
+                  the <code>.flex-column</code> utility. Need to stack them on
+                  some viewports but not others? Use the responsive versions
+                  (e.g., <code>.flex-sm-column</code>).
+                </p>
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >Active</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <h5>Tabs</h5>
+            <p>
+              Takes the basic nav from above and adds the
+              <code>.nav-tabs</code> class to generate a tabbed interface. Use
+              them to create tabbable regions with our
+              <a href="#javascript-behavior">tab JavaScript plugin</a>.
+            </p>
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Active</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12">
+            <h5>Pills</h5>
+            <p>Take that same HTML, but use <code>.nav-pills</code> instead:</p>
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Active</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12">
+            <h5>Fill and justify</h5>
+            <p>
+              Force your <code>.nav</code>’s contents to extend the full
+              available width one of two modifier classes. To proportionately
+              fill all available space with your <code>.nav-item</code>s, use
+              <code>.nav-fill</code>. Notice that all horizontal space is
+              occupied, but not every nav item has the same width.
+            </p>
+            <ul class="nav nav-pills nav-fill border rounded p-2">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Active</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Much longer nav link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12">
+            <h5>Tabs with dropdowns</h5>
+            <div class="card">
+              <div class="card-body">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >Active</a
+                    >
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      href="#"
+                      role="button"
+                      aria-expanded="false"
+                      >Dropdown</a
+                    >
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </li>
+                      <li><hr class="dropdown-divider" /></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <h5>Pills with dropdowns</h5>
+                <ul class="nav nav-pills">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >Active</a
+                    >
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      href="#"
+                      role="button"
+                      aria-expanded="false"
+                      >Dropdown</a
+                    >
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </li>
+                      <li><hr class="dropdown-divider" /></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <h5>JavaScript behavior</h5>
+            <div class="card">
+              <div class="card-body">
+                <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="home-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#home"
+                      type="button"
+                      role="tab"
+                      aria-controls="home"
+                      aria-selected="true"
+                    >
+                      Home
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="profile-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#profile"
+                      type="button"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="false"
+                    >
+                      Profile
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="contact-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#contact"
+                      type="button"
+                      role="tab"
+                      aria-controls="contact"
+                      aria-selected="false"
+                    >
+                      Contact
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div
+                    class="tab-pane fade active show"
+                    id="home"
+                    role="tabpanel"
+                    aria-labelledby="home-tab"
+                  >
+                    <p>
+                      <strong
+                        >This is some placeholder content the Home tab's
+                        associated content.</strong
+                      >
+                      Clicking another tab will toggle the visibility of this
+                      one for the next. The tab JavaScript swaps classes to
+                      control the content visibility and styling. You can use it
+                      with tabs, pills, and any other <code>.nav</code>-powered
+                      navigation.
+                    </p>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="profile"
+                    role="tabpanel"
+                    aria-labelledby="profile-tab"
+                  >
+                    <p>
+                      <strong
+                        >This is some placeholder content the Profile tab's
+                        associated content.</strong
+                      >
+                      Clicking another tab will toggle the visibility of this
+                      one for the next. The tab JavaScript swaps classes to
+                      control the content visibility and styling. You can use it
+                      with tabs, pills, and any other <code>.nav</code>-powered
+                      navigation.
+                    </p>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="contact"
+                    role="tabpanel"
+                    aria-labelledby="contact-tab"
+                  >
+                    <p>
+                      <strong
+                        >This is some placeholder content the Contact tab's
+                        associated content.</strong
+                      >
+                      Clicking another tab will toggle the visibility of this
+                      one for the next. The tab JavaScript swaps classes to
+                      control the content visibility and styling. You can use it
+                      with tabs, pills, and any other <code>.nav</code>-powered
+                      navigation.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <h5>The tabs plugin also works with pills.</h5>
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="pills-home-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-home"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-home"
+                      aria-selected="true"
+                    >
+                      Home
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="pills-profile-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-profile"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-profile"
+                      aria-selected="false"
+                    >
+                      Profile
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="pills-contact-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-contact"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-contact"
+                      aria-selected="false"
+                    >
+                      Contact
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="pills-home"
+                    role="tabpanel"
+                    aria-labelledby="pills-home-tab"
+                  >
+                    <p>
+                      <strong
+                        >This is some placeholder content the Home tab's
+                        associated content.</strong
+                      >
+                      Clicking another tab will toggle the visibility of this
+                      one for the next. The tab JavaScript swaps classes to
+                      control the content visibility and styling. You can use it
+                      with tabs, pills, and any other <code>.nav</code>-powered
+                      navigation.
+                    </p>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="pills-profile"
+                    role="tabpanel"
+                    aria-labelledby="pills-profile-tab"
+                  >
+                    <p>
+                      <strong
+                        >This is some placeholder content the Profile tab's
+                        associated content.</strong
+                      >
+                      Clicking another tab will toggle the visibility of this
+                      one for the next. The tab JavaScript swaps classes to
+                      control the content visibility and styling. You can use it
+                      with tabs, pills, and any other <code>.nav</code>-powered
+                      navigation.
+                    </p>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="pills-contact"
+                    role="tabpanel"
+                    aria-labelledby="pills-contact-tab"
+                  >
+                    <p>
+                      <strong
+                        >This is some placeholder content the Contact tab's
+                        associated content.</strong
+                      >
+                      Clicking another tab will toggle the visibility of this
+                      one for the next. The tab JavaScript swaps classes to
+                      control the content visibility and styling. You can use it
+                      with tabs, pills, and any other <code>.nav</code>-powered
+                      navigation.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <h5>And with vertical pills.</h5>
+                <div class="d-flex align-items-start">
+                  <div
+                    class="nav flex-column nav-pills me-3"
+                    id="v-pills-tab"
+                    role="tablist"
+                    aria-orientation="vertical"
+                  >
+                    <button
+                      class="nav-link active"
+                      id="v-pills-home-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-home"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-home"
+                      aria-selected="true"
+                    >
+                      Home
+                    </button>
+                    <button
+                      class="nav-link"
+                      id="v-pills-profile-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-profile"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-profile"
+                      aria-selected="false"
+                    >
+                      Profile
+                    </button>
+                    <button
+                      class="nav-link"
+                      id="v-pills-messages-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-messages"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-messages"
+                      aria-selected="false"
+                    >
+                      Messages
+                    </button>
+                    <button
+                      class="nav-link"
+                      id="v-pills-settings-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-settings"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-settings"
+                      aria-selected="false"
+                    >
+                      Settings
+                    </button>
+                  </div>
+                  <div class="tab-content" id="v-pills-tabContent">
+                    <div
+                      class="tab-pane fade show active"
+                      id="v-pills-home"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-home-tab"
+                    >
+                      <p>
+                        <strong
+                          >This is some placeholder content the Home tab's
+                          associated content.</strong
+                        >
+                        Clicking another tab will toggle the visibility of this
+                        one for the next. The tab JavaScript swaps classes to
+                        control the content visibility and styling. You can use
+                        it with tabs, pills, and any other
+                        <code>.nav</code>-powered navigation.
+                      </p>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="v-pills-profile"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-profile-tab"
+                    >
+                      <p>
+                        <strong
+                          >This is some placeholder content the Profile tab's
+                          associated content.</strong
+                        >
+                        Clicking another tab will toggle the visibility of this
+                        one for the next. The tab JavaScript swaps classes to
+                        control the content visibility and styling. You can use
+                        it with tabs, pills, and any other
+                        <code>.nav</code>-powered navigation.
+                      </p>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="v-pills-messages"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-messages-tab"
+                    >
+                      <p>
+                        <strong
+                          >This is some placeholder content the Messages tab's
+                          associated content.</strong
+                        >
+                        Clicking another tab will toggle the visibility of this
+                        one for the next. The tab JavaScript swaps classes to
+                        control the content visibility and styling. You can use
+                        it with tabs, pills, and any other
+                        <code>.nav</code>-powered navigation.
+                      </p>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="v-pills-settings"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-settings-tab"
+                    >
+                      <p>
+                        <strong
+                          >This is some placeholder content the Settings tab's
+                          associated content.</strong
+                        >
+                        Clicking another tab will toggle the visibility of this
+                        one for the next. The tab JavaScript swaps classes to
+                        control the content visibility and styling. You can use
+                        it with tabs, pills, and any other
+                        <code>.nav</code>-powered navigation.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- start: template setting, and more. -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvas_setting"
+      aria-labelledby="offcanvas_setting"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Template Setting</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="mb-4">
+          <h6>Set Theme Color</h6>
+          <ul class="choose-skin list-unstyled mb-0">
+            <li data-theme="ValenciaRed">
+              <div style="--hotelair-theme-color: #d63b38"></div>
+            </li>
+            <li data-theme="SunOrange">
+              <div style="--hotelair-theme-color: #f7a614"></div>
+            </li>
+            <li data-theme="AppleGreen">
+              <div style="--hotelair-theme-color: #5bc43a"></div>
+            </li>
+            <li data-theme="CeruleanBlue">
+              <div style="--hotelair-theme-color: #00b8d6"></div>
+            </li>
+            <li data-theme="Mariner">
+              <div style="--hotelair-theme-color: #0066fe"></div>
+            </li>
+            <li data-theme="PurpleHeart" class="active">
+              <div style="--hotelair-theme-color: #6238b3"></div>
+            </li>
+            <li data-theme="FrenchRose">
+              <div style="--hotelair-theme-color: #eb5393"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="svg-stroke mb-4">
+          <h6>Icon Border Stroke</h6>
+          <div
+            class="btn-group"
+            role="group"
+            aria-label="Basic radio toggle button group"
+          >
+            <input
+              type="radio"
+              class="btn-check"
+              name="stroke"
+              id="Stroke_A"
+              value="svgstroke-a"
+              checked
+            />
+            <label class="btn btn-outline-primary" for="Stroke_A"
+              >Stroke 1</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="stroke"
+              id="Stroke_B"
+              value="svgstroke-b"
+            />
+            <label class="btn btn-outline-primary" for="Stroke_B"
+              >Stroke 2</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="stroke"
+              id="Stroke_C"
+              value="svgstroke-c"
+            />
+            <label class="btn btn-outline-primary" for="Stroke_C"
+              >Stroke 3</label
+            >
+          </div>
+        </div>
+        <div class="mb-4">
+          <h6>Layout Section Ligh/Dark</h6>
+          <ul class="list-unstyled d-flex flex-wrap">
+            <li class="me-2 mb-2 sidebar-toggle">
+              <input type="checkbox" class="btn-check" id="Sidebar_dark" />
+              <label class="btn btn-outline-primary" for="Sidebar_dark"
+                >Sidebar</label
+              >
+            </li>
+            <li class="me-2 mb-2 header-toggle">
+              <input type="checkbox" class="btn-check" id="Header_dark" />
+              <label class="btn btn-outline-primary" for="Header_dark"
+                >Header</label
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="mb-4">
+          <h6>More App Setting</h6>
+          <div class="form-check form-switch bodygradient-toggle">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="bodyGradient"
+              checked
+            />
+            <label class="form-check-label" for="bodyGradient"
+              >Body Gradient Background</label
+            >
+          </div>
+
+          <div class="form-check form-switch monochrome-toggle">
+            <input
+              class="form-check-input fs-6"
+              type="checkbox"
+              role="switch"
+              id="monochrome"
+            />
+            <label class="form-check-label" for="monochrome"
+              >Monochrome Mode</label
+            >
+          </div>
+          <!-- <div class="form-check form-switch gradient-active">
+					<input class="form-check-input fs-6" type="checkbox" role="switch" id="gradient-active">
+					<label class="form-check-label" for="gradient-active">Gradient Active</label>
+				</div> -->
+          <div class="form-check form-switch radius-toggle">
+            <input
+              class="form-check-input fs-6"
+              type="checkbox"
+              role="switch"
+              id="radius0"
+            />
+            <label class="form-check-label" for="radius0"
+              >Border Radius none</label
+            >
+          </div>
+          <div class="form-check form-switch svg-icon-color">
+            <input
+              class="form-check-input fs-6"
+              type="checkbox"
+              role="switch"
+              id="IconColor"
+            />
+            <label class="form-check-label" for="IconColor"
+              >Sidebar Icon color</label
+            >
+          </div>
+          <div class="form-check form-switch cb-shadow">
+            <input
+              class="form-check-input fs-6"
+              type="checkbox"
+              role="switch"
+              id="BoxShadow"
+            />
+            <label class="form-check-label" for="BoxShadow"
+              >Card box shadow active</label
+            >
+          </div>
+        </div>
+        <div class="d-flex">
+          <button type="button" class="btn w-100 me-1 py-2 btn-primary">
+            Buy Now
+          </button>
+          <button type="button" class="btn w-100 ms-1 py-2 btn-dark">
+            View Portfolio
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--[ hotelair template vender js ]-->
+    <script src="../assets/bundles/libscripts.bundle.js"></script>
+    <script src="../assets/bundles/prism.bundle.js"></script>
+
+    <!-- Template page js -->
+    <script src="../assets/js/main.js"></script>
+  </body>
+
+  <!-- Mirrored from pixelwibes.in/templates/hotelair/html/docs/navstabs.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:34:35 GMT -->
+</html>

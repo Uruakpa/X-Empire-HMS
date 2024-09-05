@@ -1,0 +1,420 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+X-Empire - Transaction
+{% endblock title %}
+{% block content %}
+<div class="content">
+	{% comment %} page header {% endcomment %}
+	{% include "header.html" %}
+	{% comment %} end page header {% endcomment %}
+	<!-- start: page body area -->
+	<div class="px-xl-5 px-lg-4 px-3 py-3 page-body">
+
+		<div class="row mb-3">
+			<div class="col-sm-12">
+				<div class="d-flex align-items-center justify-content-between flex-wrap">
+					<h3 class="fw-bold mb-0">Transaction</h3>
+				</div>
+			</div>
+		</div>
+
+		<ul class="row g-3 list-unstyled row-deck">
+			<li class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+				<div class="card rounded-4 p-xl-3">
+					<div class="card-body d-flex align-items-start">
+						<div class="avatar rounded no-thumbnail"><i class="fa fa-cc-mastercard"></i></div>
+						<div class="ms-3 me-auto">
+							<h5 class="fw-normal theme-text-color1 mb-1">Bill</h5>
+							<p>₦2,500.00</p>
+							<div id="apexspark-Bill"></div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+				<div class="card rounded-4 p-xl-3">
+					<div class="card-body d-flex align-items-start">
+						<div class="avatar rounded no-thumbnail"><i class="fa fa-cutlery"></i></div>
+						<div class="ms-3 me-auto">
+							<h5 class="fw-normal theme-text-color2 mb-1">Food</h5>
+							<p>₦22,300.00</p>
+							<div id="apexspark-Food"></div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+				<div class="card rounded-4 p-xl-3">
+					<div class="card-body d-flex align-items-start">
+						<div class="avatar rounded no-thumbnail"><i class="fa fa-cc-mastercard"></i></div>
+						<div class="ms-3 me-auto">
+							<h5 class="fw-normal theme-text-color3 mb-1">Utility</h5>
+							<p>₦730.00</p>
+							<div id="apexspark-Utility"></div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+				<div class="card rounded-4 p-xl-3">
+					<div class="card-body d-flex align-items-start">
+						<div class="avatar rounded no-thumbnail"><i class="fa fa-shopping-basket"></i></div>
+						<div class="ms-3 me-auto">
+							<h5 class="fw-normal theme-text-color4 mb-1">Shopping</h5>
+							<p>₦5,500.00</p>
+							<div id="apexspark-Shopping"></div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul> <!--[ ul.row end ]-->
+
+		<div class="border border-primary p-4 rounded-2 rounded-4">
+			<div class="calendar-tab pb-4" style="--dynamic-color: var(--primary-color)">
+				<ul class="nav nav-pills text-muted text-uppercase" role="tablist">
+					<li class="nav-item">
+						Sun
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_1" type="button" role="tab">01</button>
+					</li>
+					<li class="nav-item">
+						Mon
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_2" type="button" role="tab">02</button>
+					</li>
+					<li class="nav-item">
+						Tue
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_3" type="button" role="tab">03</button>
+					</li>
+					<li class="nav-item">
+						Wed
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_4" type="button" role="tab">04</button>
+					</li>
+					<li class="nav-item">
+						Thu
+						<button class="nav-link active" data-bs-toggle="pill" data-bs-target="#c_date_5" type="button" role="tab">05</button>
+					</li>
+					<li class="nav-item">
+						Fri
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_6" type="button" role="tab">06</button>
+					</li>
+					<li class="nav-item">
+						Sat
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_7" type="button" role="tab">07</button>
+					</li>
+					<li class="nav-item">
+						Sun
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_8" type="button" role="tab">08</button>
+					</li>
+					<li class="nav-item">
+						Mon
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_9" type="button" role="tab">09</button>
+					</li>
+					<li class="nav-item">
+						Tue
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_10" type="button" role="tab">10</button>
+					</li>
+					<li class="nav-item">
+						Wed
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_11" type="button" role="tab">11</button>
+					</li>
+					<li class="nav-item">
+						Thu
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_12" type="button" role="tab">12</button>
+					</li>
+					<li class="nav-item">
+						Fri
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_13" type="button" role="tab">13</button>
+					</li>
+					<li class="nav-item">
+						Sat
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_14" type="button" role="tab">14</button>
+					</li>
+					<li class="nav-item">
+						Sun
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_15" type="button" role="tab">15</button>
+					</li>
+					<li class="nav-item">
+						Sun
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_16" type="button" role="tab">16</button>
+					</li>
+					<li class="nav-item">
+						Mon
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_17" type="button" role="tab">17</button>
+					</li>
+					<li class="nav-item">
+						Tue
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_18" type="button" role="tab">18</button>
+					</li>
+					<li class="nav-item">
+						Wed
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_19" type="button" role="tab">19</button>
+					</li>
+					<li class="nav-item">
+						Thu
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_20" type="button" role="tab">20</button>
+					</li>
+					<li class="nav-item">
+						Fri
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_21" type="button" role="tab">21</button>
+					</li>
+					<li class="nav-item">
+						Sat
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_22" type="button" role="tab">22</button>
+					</li>
+					<li class="nav-item">
+						Sun
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_23" type="button" role="tab">23</button>
+					</li>
+					<li class="nav-item">
+						Mon
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_24" type="button" role="tab">24</button>
+					</li>
+					<li class="nav-item">
+						Tue
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_25" type="button" role="tab">25</button>
+					</li>
+					<li class="nav-item">
+						Wed
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_26" type="button" role="tab">26</button>
+					</li>
+					<li class="nav-item">
+						Thu
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_27" type="button" role="tab">27</button>
+					</li>
+					<li class="nav-item">
+						Fri
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_28" type="button" role="tab">28</button>
+					</li>
+					<li class="nav-item">
+						Sat
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_29" type="button" role="tab">29</button>
+					</li>
+					<li class="nav-item">
+						Sun
+						<button class="nav-link" data-bs-toggle="pill" data-bs-target="#c_date_30" type="button" role="tab">30</button>
+					</li>
+				</ul>
+			</div>
+			<table class="table align-middle table-hover dataTable table-body" style="width: 100%;">
+				<thead>
+					<tr class="small text-muted text-uppercase">
+						<th>
+							<div class="form-check mb-0" style="font-size: 16px;">
+								<input class="form-check-input select-all" type="checkbox" value="">
+							</div>
+						</th>
+						<th>Product Description</th>
+						<th>Status</th>
+						<th>Price</th>
+						<th>Order No.</th>
+						<th>Order Total</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="row-selectable">
+						<td>
+							<div class="form-check mb-0">
+								<input class="form-check-input" type="checkbox" value="">
+							</div>
+						</td>
+						<td class="fs-6">Gas Bill Payment</td>
+						<td class="text-primary">Your order is successful</td>
+						<td>₦500.00</td>
+						<td>
+							B-123123
+							<div class="small text-muted">22  5:08 pm</div>
+						</td>
+						<td>₦500.00</td>
+						<td>
+							<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Send Email"><i class="fa fa-envelope"></i></button>
+							<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Download invoice"><i class="fa fa-download"></i></button>
+						</td>
+					</tr>
+					<tr class="row-selectable">
+						<td>
+							<div class="form-check mb-0">
+								<input class="form-check-input" type="checkbox" value="">
+							</div>
+						</td>
+						<td class="fs-6">Electricity Bill</td>
+						<td class="text-primary">successful</td>
+						<td>₦1000.00</td>
+						<td>
+							M-123123
+							<div class="small text-muted">22  5:08 pm</div>
+						</td>
+						<td>₦1000.00</td>
+						<td>
+							<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Send Email"><i class="fa fa-envelope"></i></button>
+							<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Download invoice"><i class="fa fa-download"></i></button>
+						</td>
+					</tr>
+					<tr class="row-selectable">
+						<td>
+							<div class="form-check mb-0">
+								<input class="form-check-input" type="checkbox" value="">
+							</div>
+						</td>
+						<td class="fs-6">Hotel Tax Bill</td>
+						<td class="text-primary">Booking Confirmed</td>
+						<td>₦45.00</td>
+						<td>
+							B-123123
+							<div class="small text-muted">22  5:08 pm</div>
+						</td>
+						<td>₦46.00</td>
+						<td>
+							<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Send Email"><i class="fa fa-envelope"></i></button>
+							<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Download invoice"><i class="fa fa-download"></i></button>
+						</td>
+					</tr>
+					<tr class="row-selectable">
+						<td>
+							<div class="form-check mb-0">
+								<input class="form-check-input" type="checkbox" value="">
+							</div>
+						</td>
+						<td class="fs-6">Hotel Tv Recharge</td>
+						<td class="text-primary">Recharge successful</td>
+						<td>₦99.90</td>
+						<td>
+							R-123123
+							<div class="small text-muted">22  5:08 pm</div>
+						</td>
+						<td>₦99.90</td>
+						<td>
+							<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Send Email"><i class="fa fa-envelope"></i></button>
+							<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Download invoice"><i class="fa fa-download"></i></button>
+						</td>
+					</tr>
+					<tr class="row-selectable">
+						<td>
+							<div class="form-check mb-0">
+								<input class="form-check-input" type="checkbox" value="">
+							</div>
+						</td>
+						<td class="fs-6">Hotelair Pharmacy</td>
+						<td class="text-primary">Your order is successful</td>
+						<td>₦122.00</td>
+						<td>
+							B-123123
+							<div class="small text-muted">22  5:08 pm</div>
+						</td>
+						<td>₦122.00</td>
+						<td>
+							<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Send Email"><i class="fa fa-envelope"></i></button>
+							<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Download invoice"><i class="fa fa-download"></i></button>
+						</td>
+					</tr>
+					<tr class="row-selectable">
+						<td>
+							<div class="form-check mb-0">
+								<input class="form-check-input" type="checkbox" value="">
+							</div>
+						</td>
+						<td class="fs-6">Gas Bill Payment</td>
+						<td class="text-primary">Your order is successful</td>
+						<td>₦500.00</td>
+						<td>
+							B-123123
+							<div class="small text-muted">22  5:08 pm</div>
+						</td>
+						<td>₦500.00</td>
+						<td>
+							<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Send Email"><i class="fa fa-envelope"></i></button>
+							<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Download invoice"><i class="fa fa-download"></i></button>
+						</td>
+					</tr>
+					<tr class="row-selectable">
+						<td>
+							<div class="form-check mb-0">
+								<input class="form-check-input" type="checkbox" value="">
+							</div>
+						</td>
+						<td class="fs-6">Electricity Bill</td>
+						<td class="text-primary">successful</td>
+						<td>₦1000.00</td>
+						<td>
+							M-123123
+							<div class="small text-muted">22  5:08 pm</div>
+						</td>
+						<td>₦1000.00</td>
+						<td>
+							<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Send Email"><i class="fa fa-envelope"></i></button>
+							<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Download invoice"><i class="fa fa-download"></i></button>
+						</td>
+					</tr>
+					<tr class="row-selectable">
+						<td>
+							<div class="form-check mb-0">
+								<input class="form-check-input" type="checkbox" value="">
+							</div>
+						</td>
+						<td class="fs-6">Hotel Tax Bill</td>
+						<td class="text-primary">Booking Confirmed</td>
+						<td>₦45.00</td>
+						<td>
+							B-123123
+							<div class="small text-muted">22  5:08 pm</div>
+						</td>
+						<td>₦46.00</td>
+						<td>
+							<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Send Email"><i class="fa fa-envelope"></i></button>
+							<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Download invoice"><i class="fa fa-download"></i></button>
+						</td>
+					</tr>
+					<tr class="row-selectable">
+						<td>
+							<div class="form-check mb-0">
+								<input class="form-check-input" type="checkbox" value="">
+							</div>
+						</td>
+						<td class="fs-6">Hotel Tv Recharge</td>
+						<td class="text-primary">Recharge successful</td>
+						<td>₦99.90</td>
+						<td>
+							R-123123
+							<div class="small text-muted">22  5:08 pm</div>
+						</td>
+						<td>₦99.90</td>
+						<td>
+							<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Send Email"><i class="fa fa-envelope"></i></button>
+							<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Download invoice"><i class="fa fa-download"></i></button>
+						</td>
+					</tr>
+					<tr class="row-selectable">
+						<td>
+							<div class="form-check mb-0">
+								<input class="form-check-input" type="checkbox" value="">
+							</div>
+						</td>
+						<td class="fs-6">Hotelair Pharmacy</td>
+						<td class="text-primary">Your order is successful</td>
+						<td>122.00</td>
+						<td>
+							B-123123
+							<div class="small text-muted">22  5:08 pm</div>
+						</td>
+						<td>N122.00</td>
+						<td>
+							<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Send Email"><i class="fa fa-envelope"></i></button>
+							<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Download invoice"><i class="fa fa-download"></i></button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+</div>
+{% endblock content %}
+		
+
+	
+
+	
+
+	
+

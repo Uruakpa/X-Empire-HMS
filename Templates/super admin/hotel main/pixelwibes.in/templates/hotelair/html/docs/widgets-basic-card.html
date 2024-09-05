@@ -1,0 +1,1995 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from pixelwibes.in/templates/hotelair/html/docs/widgets-basic-card.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:32:55 GMT -->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Responsive Bootstrap 5 admin dashboard template & web App ui kit."
+    />
+    <meta name="keyword" content="bootstrap admin template" />
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
+    <!--[ Favicon]-->
+    <title>: HotelAir : Hotel Management Admin Dashboard Template</title>
+
+    <!--[ Favicon]-->
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/images/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/images/apple-touch-icon.png"
+    />
+
+    <link rel="stylesheet" href="../assets/css/prism.min.css" />
+
+    <!--[ Template main css file ]-->
+    <link rel="stylesheet" href="../assets/css/style.min.css" />
+  </head>
+
+  <body data-theme="theme-PurpleHeart" class="svgstroke-a docs">
+    <button
+      class="btn btn-primary d-inline-flex d-xl-none position-fixed bottom-0 end-0 p-2 me-3 mb-3 z-3 shadow avatar rounded-circle"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvas_Navbar"
+    >
+      <svg
+        class="svg-stroke"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M4 6l16 0"></path>
+        <path d="M4 12l16 0"></path>
+        <path d="M4 18l16 0"></path>
+      </svg>
+    </button>
+
+    <header class="border-bottom cus-header">
+      <div class="container-xl">
+        <div class="row px-xl-4">
+          <div class="col-12">
+            <div class="d-flex justify-content-between py-3">
+              <a
+                href="../index.html"
+                class="brand-icon text-decoration-none d-flex align-items-center"
+                title="HotelAir Admin Template"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+                  ></path>
+                  <path d="M9 8l0 8"></path>
+                  <path d="M9 12l6 0"></path>
+                  <path d="M15 8l0 8"></path>
+                </svg>
+                <span class="fw-bold ps-2 fs-5 text-gradient"
+                  >X <small>-</small>Empire</span
+                >
+              </a>
+              <a href="#" class="btn btn-dark">Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container-xl px-0">
+      <!-- start: page menu link -->
+      <aside
+        class="ps-xl-5 ps-lg-4 ps-3 pe-2 py-3 sidebar sticky-top"
+        data-bs-theme="none"
+      >
+        <nav class="navbar navbar-expand-xl py-0">
+          <div
+            class="offcanvas offcanvas-start"
+            data-bs-scroll="true"
+            tabindex="-1"
+            id="offcanvas_Navbar"
+          >
+            <div class="offcanvas-header">
+              <span class="fw-bold fs-5 text-gradient"
+                >X <small>-</small>Empire</span
+              >
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body flex-column custom_scroll ps-3 ps-xl-0">
+              <div
+                class="d-flex align-items-start mb-4 d-none d-xl-inline-flex"
+              >
+                <a
+                  href="../index.html"
+                  class="brand-icon text-decoration-none d-flex align-items-center"
+                  title="HotelAir Admin Template"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+                    />
+                    <path d="M9 8l0 8" />
+                    <path d="M9 12l6 0" />
+                    <path d="M15 8l0 8" />
+                  </svg>
+                  <span class="fw-bold ps-2 fs-5 text-gradient"
+                    >X <small>-</small>Empire</span
+                  >
+                </a>
+              </div>
+              <!-- start: Menu tab -->
+              <ul
+                class="nav nav-tabs tab-dynamic px-0 mb-4"
+                role="tablist"
+                style="--dynamic-color: var(--accent-color)"
+              >
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="ps-2 pe-3 nav-link active"
+                    data-bs-toggle="tab"
+                    href="#tab_General"
+                    role="tab"
+                    aria-selected="false"
+                    tabindex="-1"
+                    >General</a
+                  >
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="ps-2 pe-3 nav-link"
+                    data-bs-toggle="tab"
+                    href="#tab_Bootstrtap"
+                    role="tab"
+                    aria-selected="true"
+                    >Bootstrtap</a
+                  >
+                </li>
+              </ul>
+              <!-- start: Menu content -->
+              <div class="tab-content">
+                <!-- start: General tab-->
+                <div
+                  class="tab-pane fade active show"
+                  id="tab_General"
+                  role="tabpanel"
+                >
+                  <ul class="list-unstyled mb-4 menu-list">
+                    <li>
+                      <a href="index.html" aria-label="Documentation">
+                        <svg
+                          class="svg-stroke"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            stroke="none"
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          ></path>
+                          <path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
+                          <path
+                            d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"
+                          ></path>
+                          <path d="M10 12h4v4h-4z"></path>
+                        </svg>
+                        <span class="mx-3">Documentation</span>
+                      </a>
+                    </li>
+                    <li class="py-2 mt-2">
+                      <h6
+                        class="fl-title title-font ps-2 small text-uppercase text-muted"
+                        style="--dynamic-color: var(--theme-color1)"
+                      >
+                        Widgets
+                      </h6>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a
+                            class="active"
+                            href="widgets-basic-card.html"
+                            aria-label="Widgets Basic card"
+                            >Basic card</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="widgets-card-tiles.html"
+                            aria-label="Widgets tiles"
+                            >Card tiles</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="widgets-card-tab.html"
+                            aria-label="Widgets Tabbed"
+                            >Tabbed card</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="widgets-tables.html"
+                            aria-label="Widgets Tables"
+                            >Tables example</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="widgets-forms.html"
+                            aria-label="Widgets Forms"
+                            >Forms example</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="py-2 mt-2">
+                      <h6
+                        class="fl-title title-font ps-2 small text-uppercase text-muted"
+                        style="--dynamic-color: var(--theme-color1)"
+                      >
+                        Charts
+                      </h6>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="apex.html" aria-label="Apex chart"
+                            >Apex chart</a
+                          >
+                        </li>
+                        <li>
+                          <a href="peity.html" aria-label="Peity chart"
+                            >Peity chart</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="py-2 mt-2">
+                      <h6
+                        class="fl-title title-font ps-2 small text-uppercase text-muted"
+                        style="--dynamic-color: var(--theme-color1)"
+                      >
+                        Plugin (NPM)
+                      </h6>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="datatables.html" aria-label="Datatables"
+                            >Datatables</a
+                          >
+                        </li>
+                        <li>
+                          <a href="flatpickr.html" aria-label="Flatpickr"
+                            >Flatpickr</a
+                          >
+                        </li>
+                        <li>
+                          <a href="inputmask.html" aria-label="Inputmask"
+                            >Inputmask</a
+                          >
+                        </li>
+                        <li>
+                          <a href="jsvectormap.html" aria-label="Jsvectormap"
+                            >Jsvectormap</a
+                          >
+                        </li>
+                        <li>
+                          <a href="sortablejs.html" aria-label="Sortablejs"
+                            >Sortablejs</a
+                          >
+                        </li>
+                        <li>
+                          <a href="sweetalert2.html" aria-label="Sweet alert 2"
+                            >Sweet alert 2</a
+                          >
+                        </li>
+                        <li>
+                          <a href="tagify.html" aria-label="Tagify">Tagify</a>
+                        </li>
+                        <li>
+                          <a href="tiny-slider.html" aria-label="Tiny slider"
+                            >Tiny slider</a
+                          >
+                        </li>
+                        <li>
+                          <a href="full-calendar.html" aria-label="Calendar"
+                            >Calendar</a
+                          >
+                        </li>
+                        <li>
+                          <a href="summernote.html" aria-label="Summernote"
+                            >Summernote</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="py-2 mt-2">
+                      <h6
+                        class="fl-title title-font ps-2 small text-uppercase text-muted"
+                        style="--dynamic-color: var(--theme-color1)"
+                      >
+                        Font icon
+                      </h6>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a
+                            href="bootstrap-icon.html"
+                            aria-label="Bootstrap Icon"
+                            >Bootstrap Icon</a
+                          >
+                        </li>
+                        <li>
+                          <a href="flag-icon.html" aria-label="Country Flag"
+                            >Country Flag icon</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="fontawesome-icon.html"
+                            aria-label="Font awesome"
+                            >Font awesome</a
+                          >
+                        </li>
+                        <li>
+                          <a href="linear-icon.html" aria-label="Simple line"
+                            >Simple line icon</a
+                          >
+                        </li>
+                        <li>
+                          <a href="weather-icon.html" aria-label="Weather icon"
+                            >Weather icon</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <!-- start: Bootstrtap tab -->
+                <div class="tab-pane fade" id="tab_Bootstrtap" role="tabpanel">
+                  <h6
+                    class="fl-title title-font ps-2 small text-uppercase text-muted"
+                    style="--dynamic-color: var(--theme-color1)"
+                  >
+                    Bootstrtap
+                  </h6>
+                  <ul class="list-unstyled mb-4 menu-list">
+                    <li class="py-2 mt-2">
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="accordion.html" aria-label="Accordion"
+                            >Accordion</a
+                          >
+                        </li>
+                        <li>
+                          <a href="alerts.html" aria-label="Alerts">Alerts</a>
+                        </li>
+                        <li>
+                          <a href="avatar.html" aria-label="User Avatar"
+                            >User Avatar</a
+                          >
+                        </li>
+                        <li>
+                          <a href="badges.html" aria-label="Badges">Badges</a>
+                        </li>
+                        <li>
+                          <a href="breadcrumb.html" aria-label="Breadcrumb"
+                            >Breadcrumb</a
+                          >
+                        </li>
+                        <li>
+                          <a href="buttons.html" aria-label="Buttons"
+                            >Buttons</a
+                          >
+                        </li>
+                        <li>
+                          <a href="cards.html" aria-label="Cards">Cards</a>
+                        </li>
+                        <li>
+                          <a href="carousel.html" aria-label="Carousel"
+                            >Carousel</a
+                          >
+                        </li>
+                        <li>
+                          <a href="collapse.html" aria-label="Collapse"
+                            >Collapse</a
+                          >
+                        </li>
+                        <li>
+                          <a href="dropdowns.html" aria-label="Dropdowns"
+                            >Dropdowns</a
+                          >
+                        </li>
+                        <li>
+                          <a href="listgroup.html" aria-label="List group"
+                            >List group</a
+                          >
+                        </li>
+                        <li>
+                          <a href="modal.html" aria-label="Modal">Modal</a>
+                        </li>
+                        <li>
+                          <a href="navbar.html" aria-label="Navbar">Navbar</a>
+                        </li>
+                        <li>
+                          <a href="navstabs.html" aria-label="Navs and tabs"
+                            >Navs and tabs</a
+                          >
+                        </li>
+                        <li>
+                          <a href="offcanvas.html" aria-label="Offcanvas"
+                            >Offcanvas</a
+                          >
+                        </li>
+                        <li>
+                          <a href="pagination.html" aria-label="Pagination"
+                            >Pagination</a
+                          >
+                        </li>
+                        <li>
+                          <a href="placeholders.html" aria-label="Placeholders"
+                            >Placeholders</a
+                          >
+                        </li>
+                        <li>
+                          <a href="popovers.html" aria-label="Popovers"
+                            >Popovers</a
+                          >
+                        </li>
+                        <li>
+                          <a href="progress.html" aria-label="Progress"
+                            >Progress</a
+                          >
+                        </li>
+                        <li>
+                          <a href="spinners.html" aria-label="Spinners"
+                            >Spinners</a
+                          >
+                        </li>
+                        <li>
+                          <a href="toasts.html" aria-label="Toasts">Toasts</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </aside>
+
+      <div class="content px-xl-5 px-lg-4 px-3 py-3 page-body bg-card">
+        <h4 class="mb-4">Basic card</h4>
+        <div class="row g-3 mb-4">
+          <div class="col-md-6 col-sm-12">
+            <div class="card mb-3">
+              <div class="card-header">
+                <h5 class="card-title mb-0">This is a standard card</h5>
+              </div>
+              <div class="card-body">
+                Aperiam deleniti fugit incidunt, iste, itaque minima neque
+                pariatur perferendis sed suscipit velit vitae voluptatem.
+              </div>
+              <div class="card-footer py-2">This is standard card footer</div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-header">
+                <h5 class="card-title mb-0">This is a standard card</h5>
+              </div>
+              <div class="card-body">
+                Aperiam deleniti fugit incidunt, iste, itaque minima neque
+                pariatur perferendis sed suscipit velit vitae voluptatem.
+              </div>
+              <div class="card-footer text-end py-2">
+                <button class="btn btn-sm btn-secondary" type="button">
+                  Close
+                </button>
+                <button class="btn btn-sm btn-primary" type="button">
+                  Save
+                </button>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-header mb-3">
+                <h6 class="card-title mb-0">Card with alert</h6>
+              </div>
+              <div
+                class="card-alert alert alert-success mb-0 rounded-0 border-0"
+              >
+                Adding action was successful
+              </div>
+              <div class="card-body">
+                Aperiam deleniti fugit incidunt, iste, itaque minima neque
+                pariatur perferendis sed suscipit velit vitae voluptatem.
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-header mb-3">
+                <h6 class="card-title mb-0">Card with alert</h6>
+              </div>
+              <div
+                class="card-alert alert alert-danger mb-0 rounded-0 border-0"
+              >
+                Adding action failed
+              </div>
+              <div class="card-body">
+                Aperiam deleniti fugit incidunt, iste, itaque minima neque
+                pariatur perferendis sed suscipit velit vitae voluptatem.
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-header align-items-center">
+                <h6 class="card-title mb-0">Card with search</h6>
+                <form>
+                  <div class="input-group">
+                    <input
+                      type="search"
+                      class="form-control form-control-sm"
+                      placeholder="Search something..."
+                      name="s"
+                    />
+                    <button class="btn btn-sm btn-secondary" type="button">
+                      <span class="fa fa-search"></span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="card-body">
+                Aperiam deleniti fugit incidunt, iste, itaque minima neque
+                pariatur perferendis sed suscipit velit vitae voluptatem.
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-header align-items-center">
+                <h6 class="card-title mb-0">Panel with custom buttons</h6>
+                <form>
+                  <button class="btn btn-sm btn-primary" type="button">
+                    Action1
+                  </button>
+                  <button class="btn btn-sm btn-secondary" type="button">
+                    Action2
+                  </button>
+                </form>
+              </div>
+              <div class="card-body">
+                Aperiam deleniti fugit incidunt, iste, itaque minima neque
+                pariatur perferendis sed suscipit velit vitae voluptatem.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div class="card mb-3">
+              <div class="card-header border-top border-primary">
+                <h6 class="card-title mb-0">Card Primary</h6>
+              </div>
+              <div class="card-body">
+                Aperiam deleniti fugit incidunt, iste, itaque minima neque
+                pariatur perferendis sed suscipit velit vitae voluptatem.
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-header border-top border-info">
+                <h6 class="card-title mb-0">Card info</h6>
+                <span>
+                  <a
+                    href="#"
+                    class="card-fullscreen"
+                    data-bs-toggle="tooltip"
+                    title="Card Full Screen"
+                  >
+                    <svg
+                      class="svg-stroke"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        d="M3 16m0 1a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1z"
+                      ></path>
+                      <path
+                        d="M4 12v-6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-6"
+                      ></path>
+                      <path d="M12 8h4v4"></path>
+                      <path d="M16 8l-5 5"></path>
+                    </svg>
+                  </a>
+                  <a
+                    href="#"
+                    class="dropdown-toggle after-none"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    title="More Action"
+                  >
+                    <svg
+                      class="svg-stroke"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                      ></path>
+                      <path d="M8 12l0 .01"></path>
+                      <path d="M12 12l0 .01"></path>
+                      <path d="M16 12l0 .01"></path>
+                    </svg>
+                  </a>
+                  <div
+                    class="dropdown-menu dropdown-menu-end shadow rounded-4 p-2"
+                  >
+                    <a
+                      href="javascript:void(0)"
+                      class="dropdown-item rounded-pill"
+                      ><i class="me-2 fa fa-share"></i>Share</a
+                    >
+                    <a
+                      href="javascript:void(0)"
+                      class="dropdown-item rounded-pill"
+                      ><i class="me-2 fa fa-pencil"></i>Rename</a
+                    >
+                    <div class="dropdown-divider"></div>
+                    <a
+                      href="javascript:void(0)"
+                      class="dropdown-item rounded-pill"
+                      ><i class="me-2 fa fa-link"></i>Copy Link Address</a
+                    >
+                    <a
+                      href="javascript:void(0)"
+                      class="dropdown-item rounded-pill"
+                      ><i class="me-2 fa fa-folder"></i>Move to</a
+                    >
+                    <a
+                      href="javascript:void(0)"
+                      class="dropdown-item rounded-pill"
+                      ><i class="me-2 fa fa-copy"></i>Copy to</a
+                    >
+                    <a
+                      href="javascript:void(0)"
+                      class="dropdown-item rounded-pill"
+                      ><i class="me-2 fa fa-edit"></i>Make Private</a
+                    >
+                    <a
+                      href="javascript:void(0)"
+                      class="dropdown-item rounded-pill"
+                      ><i class="me-2 fa fa-download"></i>Download</a
+                    >
+                    <div class="dropdown-divider"></div>
+                    <a
+                      href="javascript:void(0)"
+                      class="dropdown-item rounded-pill card-options-remove"
+                      data-toggle="card-remove"
+                      ><i class="me-2 fa fa-trash"></i>Delete</a
+                    >
+                  </div>
+                </span>
+              </div>
+              <div class="card-body">
+                Aperiam deleniti fugit incidunt, iste, itaque minima neque
+                pariatur perferendis sed suscipit velit vitae voluptatem.
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-header border-top border-warning">
+                <h6 class="card-title mb-0">Card with switch</h6>
+                <div class="card-action">
+                  <div class="form-check form-switch">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="onoff"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                Aperiam deleniti fugit incidunt, iste, itaque minima neque
+                pariatur perferendis sed suscipit velit vitae voluptatem.
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-header border-top border-danger">
+                <h6 class="card-title mb-0">Card Danger</h6>
+                <div class="card-action">
+                  <span>
+                    <a
+                      href="#"
+                      class="card-fullscreen"
+                      data-bs-toggle="tooltip"
+                      title="Card Full Screen"
+                    >
+                      <svg
+                        class="svg-stroke"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          stroke="none"
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        ></path>
+                        <path
+                          d="M3 16m0 1a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1z"
+                        ></path>
+                        <path
+                          d="M4 12v-6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-6"
+                        ></path>
+                        <path d="M12 8h4v4"></path>
+                        <path d="M16 8l-5 5"></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-toggle after-none"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      title="More Action"
+                    >
+                      <svg
+                        class="svg-stroke"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          stroke="none"
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        ></path>
+                        <path
+                          d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                        ></path>
+                        <path d="M8 12l0 .01"></path>
+                        <path d="M12 12l0 .01"></path>
+                        <path d="M16 12l0 .01"></path>
+                      </svg>
+                    </a>
+                    <div
+                      class="dropdown-menu dropdown-menu-end shadow rounded-4 p-2"
+                    >
+                      <a
+                        href="javascript:void(0)"
+                        class="dropdown-item rounded-pill"
+                        ><i class="me-2 fa fa-share"></i>Share</a
+                      >
+                      <a
+                        href="javascript:void(0)"
+                        class="dropdown-item rounded-pill"
+                        ><i class="me-2 fa fa-pencil"></i>Rename</a
+                      >
+                      <div class="dropdown-divider"></div>
+                      <a
+                        href="javascript:void(0)"
+                        class="dropdown-item rounded-pill"
+                        ><i class="me-2 fa fa-link"></i>Copy Link Address</a
+                      >
+                      <a
+                        href="javascript:void(0)"
+                        class="dropdown-item rounded-pill"
+                        ><i class="me-2 fa fa-folder"></i>Move to</a
+                      >
+                      <a
+                        href="javascript:void(0)"
+                        class="dropdown-item rounded-pill"
+                        ><i class="me-2 fa fa-copy"></i>Copy to</a
+                      >
+                      <a
+                        href="javascript:void(0)"
+                        class="dropdown-item rounded-pill"
+                        ><i class="me-2 fa fa-edit"></i>Make Private</a
+                      >
+                      <a
+                        href="javascript:void(0)"
+                        class="dropdown-item rounded-pill"
+                        ><i class="me-2 fa fa-download"></i>Download</a
+                      >
+                      <div class="dropdown-divider"></div>
+                      <a
+                        href="javascript:void(0)"
+                        class="dropdown-item rounded-pill card-options-remove"
+                        data-toggle="card-remove"
+                        ><i class="me-2 fa fa-trash"></i>Delete</a
+                      >
+                    </div>
+                  </span>
+                </div>
+              </div>
+              <div class="card-body">
+                Aperiam deleniti fugit incidunt, iste, itaque minima neque
+                pariatur perferendis sed suscipit velit vitae voluptatem.
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-header border-top border-success">
+                <h6 class="card-title mb-0">Card success</h6>
+                <div class="card-action">
+                  <a href="#" class="p-1"><i class="fa fa-search"></i></a>
+                  <a href="#" class="p-1"><i class="fa fa-share-alt"></i></a>
+                </div>
+              </div>
+              <div class="card-body">
+                Aperiam deleniti fugit incidunt, iste, itaque minima neque
+                pariatur perferendis sed suscipit velit vitae voluptatem.
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-header border-top border-dark">
+                <h6 class="card-title mb-0">Card dark</h6>
+                <a
+                  href="#"
+                  class="dropdown-toggle after-none"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-opacity="1"
+                      d="M4 9.5C3.60218 9.5 3.22064 9.34196 2.93934 9.06066C2.65804 8.77936 2.5 8.39782 2.5 8C2.5 7.60218 2.65804 7.22064 2.93934 6.93934C3.22064 6.65804 3.60218 6.5 4 6.5C4.39782 6.5 4.77936 6.65804 5.06066 6.93934C5.34196 7.22064 5.5 7.60218 5.5 8C5.5 8.39782 5.34196 8.77936 5.06066 9.06066C4.77936 9.34196 4.39782 9.5 4 9.5ZM8 9.5C7.60218 9.5 7.22064 9.34196 6.93934 9.06066C6.65804 8.77936 6.5 8.39782 6.5 8C6.5 7.60218 6.65804 7.22064 6.93934 6.93934C7.22064 6.65804 7.60218 6.5 8 6.5C8.39782 6.5 8.77936 6.65804 9.06066 6.93934C9.34196 7.22064 9.5 7.60218 9.5 8C9.5 8.39782 9.34196 8.77936 9.06066 9.06066C8.77936 9.34196 8.39782 9.5 8 9.5ZM12 9.5C11.6022 9.5 11.2206 9.34196 10.9393 9.06066C10.658 8.77936 10.5 8.39782 10.5 8C10.5 7.60218 10.658 7.22064 10.9393 6.93934C11.2206 6.65804 11.6022 6.5 12 6.5C12.3978 6.5 12.7794 6.65804 13.0607 6.93934C13.342 7.22064 13.5 7.60218 13.5 8C13.5 8.39782 13.342 8.77936 13.0607 9.06066C12.7794 9.34196 12.3978 9.5 12 9.5Z"
+                    />
+                    <path
+                      fill-opacity="0.3"
+                      d="M14 1C14.2652 1 14.5196 1.10536 14.7071 1.29289C14.8946 1.48043 15 1.73478 15 2V14C15 14.2652 14.8946 14.5196 14.7071 14.7071C14.5196 14.8946 14.2652 15 14 15H2C1.73478 15 1.48043 14.8946 1.29289 14.7071C1.10536 14.5196 1 14.2652 1 14V2C1 1.73478 1.10536 1.48043 1.29289 1.29289C1.48043 1.10536 1.73478 1 2 1H14ZM2 0C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2L0 14C0 14.5304 0.210714 15.0391 0.585786 15.4142C0.960859 15.7893 1.46957 16 2 16H14C14.5304 16 15.0391 15.7893 15.4142 15.4142C15.7893 15.0391 16 14.5304 16 14V2C16 1.46957 15.7893 0.960859 15.4142 0.585786C15.0391 0.210714 14.5304 0 14 0L2 0Z"
+                    />
+                  </svg>
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-end shadow border-0 p-2 rounded-4"
+                >
+                  <li>
+                    <a class="dropdown-item rounded-pill" href="#">File Info</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item rounded-pill" href="#">Copy to</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item rounded-pill" href="#">Move to</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item rounded-pill" href="#">Rename</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item rounded-pill" href="#">Block</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item rounded-pill" href="#">Delete</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body">
+                Aperiam deleniti fugit incidunt, iste, itaque minima neque
+                pariatur perferendis sed suscipit velit vitae voluptatem.
+              </div>
+            </div>
+          </div>
+        </div>
+        <h5 class="text-uppercase text-primary mb-1">User Card's</h5>
+        <p>You can set as per your requirment with real data.</p>
+        <div class="row g-3 mb-5">
+          <div class="col-lg-7">
+            <div class="card">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-auto">
+                    <a href="#"
+                      ><img
+                        src="../assets/images/profile_av.png"
+                        alt="..."
+                        class="avatar lg rounded"
+                    /></a>
+                  </div>
+                  <div class="col ml-n2">
+                    <h5 class="mb-1"><a href="#">Robert Mark</a></h5>
+                    <p class="small text-muted mb-1">
+                      You either die Spongebob or you live long enough to...
+                    </p>
+                    <p class="small mb-0">
+                      <span class="text-success">●</span> Online
+                    </p>
+                  </div>
+                  <div class="col-auto">
+                    <a
+                      href="#!"
+                      class="btn btn-sm btn-primary d-none d-md-inline-block"
+                      >Subscribe</a
+                    >
+                  </div>
+                  <div class="col-auto">
+                    <div class="dropdown">
+                      <a
+                        href="#"
+                        class="btn btn-link btn-sm dropdown-toggle"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-haspopup="true"
+                        data-expanded="false"
+                      >
+                        <i class="fa fa-more fa-hc-lg"></i>
+                      </a>
+                      <div class="dropdown-menu">
+                        <a href="#!" class="dropdown-item">Action</a>
+                        <a href="#!" class="dropdown-item">Another action</a>
+                        <a href="#!" class="dropdown-item"
+                          >Something else here</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- / .row -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="card">
+              <div class="card-body d-flex align-items-start">
+                <div class="avatar rounded-circle no-thumbnail">UD</div>
+                <div class="text-truncate ms-3">
+                  <h6 class="text-truncate mb-0 me-auto">UI-Design Group</h6>
+                  <p>North Carolina, CT, USA</p>
+                  <div class="avatar-list avatar-list-stacked d-flex ps-3">
+                    <img
+                      class="avatar sm rounded-circle"
+                      src="../assets/images/xs/avatar5.jpg"
+                      data-toggle="tooltip"
+                      title="Avatar"
+                    />
+                    <img
+                      class="avatar sm rounded-circle"
+                      src="../assets/images/xs/avatar6.jpg"
+                      data-toggle="tooltip"
+                      title="Avatar"
+                    />
+                    <img
+                      class="avatar sm rounded-circle"
+                      src="../assets/images/xs/avatar1.jpg"
+                      data-toggle="tooltip"
+                      title="Avatar"
+                    />
+                    <img
+                      class="avatar sm rounded-circle"
+                      src="../assets/images/xs/avatar4.jpg"
+                      data-toggle="tooltip"
+                      title="Avatar"
+                    />
+                    <img
+                      class="avatar sm rounded-circle"
+                      src="../assets/images/xs/avatar2.jpg"
+                      data-toggle="tooltip"
+                      title="Avatar"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-6">
+            <div class="card text-center mb-3">
+              <div class="card-body">
+                <div>
+                  <img
+                    src="../assets/images/profile_av.png"
+                    class="rounded-circle img-thumbnail"
+                    alt="profile-image"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h5>Freddie J. Plourde</h5>
+                  <p class="text-muted">
+                    @Founder <span>| </span
+                    ><span
+                      ><a href="#" class="text-pink">websitename.com</a></span
+                    >
+                  </p>
+                </div>
+                <div class="social-links list-inline mb-4">
+                  <a
+                    class="px-2"
+                    title="Facebook"
+                    data-placement="top"
+                    data-bs-toggle="tooltip"
+                    href="#"
+                    ><i class="fa fa-facebook-official"></i
+                  ></a>
+                  <a
+                    class="px-2"
+                    title="Facebook"
+                    data-placement="top"
+                    data-bs-toggle="tooltip"
+                    href="#"
+                    ><i class="fa fa-linkedin-square"></i
+                  ></a>
+                  <a
+                    class="px-2"
+                    title="Facebook"
+                    data-placement="top"
+                    data-bs-toggle="tooltip"
+                    href="#"
+                    ><i class="fa fa-twitter-square"></i
+                  ></a>
+                </div>
+                <button type="button" class="btn btn-primary">
+                  Message Now
+                </button>
+              </div>
+              <div class="card-footer">
+                <div class="row g-3">
+                  <div class="col">
+                    <small>Wallets Balance</small>
+                    <h5 class="mb-0 mt-1">2563</h5>
+                  </div>
+                  <div class="col">
+                    <small>Income amounts</small>
+                    <h5 class="mb-0 mt-1">6952</h5>
+                  </div>
+                  <div class="col">
+                    <small>Total Transactions</small>
+                    <h5 class="mb-0 mt-1">1125</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col text-truncate">
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="../assets/images/profile_av.png"
+                        data-bs-toggle="tooltip"
+                        title="Avatar"
+                        alt="Avatar"
+                        class="rounded-circle avatar"
+                      />
+                      <div class="ms-3">
+                        <a href="#" title="">Kevin Gill</a>
+                        <p class="mb-0">kevin.gill@gmail.com</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Dropdown -->
+                  <div class="col-auto">
+                    <div class="dropdown">
+                      <a
+                        href="#"
+                        class="btn btn-link btn-sm dropdown-toggle"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-haspopup="true"
+                        data-expanded="false"
+                      ></a>
+                      <div class="dropdown-menu">
+                        <a href="#!" class="dropdown-item">Action</a>
+                        <a href="#!" class="dropdown-item">Another action</a>
+                        <a href="#!" class="dropdown-item"
+                          >Something else here</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group my-3">
+                  <textarea
+                    rows="3"
+                    class="form-control no-resize"
+                    placeholder="Please type what you want..."
+                  ></textarea>
+                </div>
+                <div class="text-end">
+                  <button class="btn btn-primary">Post</button>
+                  <button class="btn btn-link">
+                    <i class="fa fa-paperclip"></i>
+                  </button>
+                  <button class="btn btn-link">
+                    <i class="fa fa-camera"></i>
+                  </button>
+                  <button class="btn btn-link">
+                    <i class="fa fa-smile-o"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="../assets/images/gallery/6.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <button class="btn btn-sm btn-primary">For Rent</button>
+                    <button class="btn btn-sm btn-secondary">Inquiry</button>
+                  </div>
+                  <h5 class="mb-0">$8,499/<small class="fs-6">mo</small></h5>
+                </div>
+                <div class="d-flex flex-column mt-3">
+                  <h5>Card title</h5>
+                  <span
+                    ><i class="fa fa-map-pin"></i> 603 Jennifer Ln,
+                    Gilbertsville, PA, 19525</span
+                  >
+                </div>
+              </div>
+              <div
+                class="bg-body d-flex justify-content-between property-info py-2 px-3"
+              >
+                <p class="mb-0">Beds: <strong>2</strong></p>
+                <p class="mb-0">Baths: <strong>2</strong></p>
+                <p class="mb-0">Sq Ft: <strong>1425</strong></p>
+              </div>
+              <div
+                class="card-footer d-flex justify-content-between align-items-center py-3"
+              >
+                <div class="d-flex align-items-center">
+                  <img
+                    class="avatar rounded-circle"
+                    src="../assets/images/xs/avatar2.jpg"
+                    alt=""
+                  />
+                  <div class="flex-fill ms-2">
+                    <div class="h6 mb-0">By Jony Doe</div>
+                    <span class="small text-muted">8 min ago</span>
+                  </div>
+                </div>
+                <p class="mb-0">4 years ago</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card mb-3">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col text-truncate">
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="../assets/images/profile_av.png"
+                        data-bs-toggle="tooltip"
+                        title="avatar"
+                        alt="Avatar"
+                        class="rounded avatar"
+                      />
+                      <div class="ms-3">
+                        <a href="#" title="">Kevin Gill</a>
+                        <p class="mb-0">kevin.gill@gmail.com</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Dropdown -->
+                  <div class="col-auto">
+                    <div class="dropdown">
+                      <a
+                        href="#"
+                        class="btn btn-link btn-sm dropdown-toggle"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-haspopup="true"
+                        data-expanded="false"
+                      ></a>
+                      <div class="dropdown-menu">
+                        <a href="#!" class="dropdown-item">Action</a>
+                        <a href="#!" class="dropdown-item">Another action</a>
+                        <a href="#!" class="dropdown-item"
+                          >Something else here</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-body text-center position-relative">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-sm position-absolute top-0 end-0"
+                >
+                  <i class="fa fa-edit"></i>
+                </button>
+                <img
+                  class="rounded-pill img-thumbnail"
+                  src="../assets/images/profile_av.png"
+                  alt="avatar"
+                />
+                <div class="card-body">
+                  <h6>Robert Mark</h6>
+                  <span class="text-muted">robert.mark@gmail.com</span>
+                  <p>+14 123 456 789</p>
+                  <div class="social">
+                    <a
+                      class="p-2"
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      title="Facebook"
+                      ><i class="fa fa-facebook-official"></i
+                    ></a>
+                    <a
+                      class="p-2"
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      title="Github"
+                      ><i class="fa fa-github"></i
+                    ></a>
+                    <a
+                      class="p-2"
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      title="Linkedin"
+                      ><i class="fa fa-linkedin"></i
+                    ></a>
+                    <a
+                      class="p-2"
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      title="Instagram"
+                      ><i class="fa fa-instagram"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-body text-center">
+                <h2 class="fw-bold">$45,854</h2>
+                <p class="text-uppercase text-muted mb-3">Revenue today</p>
+                <p class="mb-4">
+                  Lorem ipsum dolor sit amit,consectetur eiusmdd tempory
+                  incididunt ut labore et dolore magna elit
+                </p>
+                <a href="#" class="btn btn-outline-primary mb-1"
+                  >View history</a
+                >
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="../assets/images/gallery/7.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="mb-4">Girl &amp; Lake</h5>
+                <div class="row g-2 mb-4">
+                  <div class="col-5">
+                    <i class="fa fa-camera me-1"></i>ISO 200
+                  </div>
+                  <div class="col-7">
+                    <i class="fa fa-camera me-1"></i>1/1000
+                  </div>
+                  <div class="col-5">3780 x 2984</div>
+                  <div class="col-7">9.54 MB</div>
+                </div>
+                <div class="row g-2">
+                  <div class="col-5"><strong>Created:</strong></div>
+                  <div class="col-7">09 Jun 2019 11:32AM</div>
+                  <div class="col-5"><strong>Updated:</strong></div>
+                  <div class="col-7">19 Jun 2019 9:43PM</div>
+                  <div class="col-5"><strong>Bit Depth:</strong></div>
+                  <div class="col-7">16 bit</div>
+                  <div class="col-5"><strong>Creator:</strong></div>
+                  <div class="col-7">Nathan Guerrero</div>
+                  <div class="col-5"><strong>Privacy</strong></div>
+                  <div class="col-7">
+                    <select class="form-control">
+                      <option value="">Public</option>
+                      <option value="">Private</option>
+                      <option value="">Friends</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row align-items-center mt-3">
+                  <div class="col-5"><strong>Collaborators</strong></div>
+                  <div class="col-7">
+                    <div class="group-members">
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="Avatar"
+                        ><img
+                          class="avatar sm rounded-circle"
+                          src="../assets/images/xs/avatar3.jpg"
+                          alt="avatar"
+                      /></a>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="Avatar"
+                        ><img
+                          class="avatar sm rounded-circle"
+                          src="../assets/images/xs/avatar1.jpg"
+                          alt="avatar"
+                      /></a>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="Avatar"
+                        ><img
+                          class="avatar sm rounded-circle"
+                          src="../assets/images/xs/avatar7.jpg"
+                          alt="avatar"
+                      /></a>
+                      <a
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="Avatar"
+                        ><img
+                          class="avatar sm rounded-circle"
+                          src="../assets/images/xs/avatar9.jpg"
+                          alt="avatar"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card mb-3">
+              <div class="card-body text-center">
+                <img
+                  class="rounded-circle img-thumbnail"
+                  src="../assets/images/profile_av.png"
+                  alt=""
+                />
+                <h6 class="mt-3 mb-0">Robert Mark</h6>
+                <span>Megan-porter@info.com</span>
+                <ul class="mt-3 list-unstyled d-flex justify-content-center">
+                  <li>
+                    <a class="p-3" target="_blank" href="#"
+                      ><i class="fa fa-facebook"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a class="p-3" target="_blank" href="#"
+                      ><i class="fa fa-linkedin"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a class="p-3" target="_blank" href="#"
+                      ><i class="fa fa-linkedin"></i
+                    ></a>
+                  </li>
+                </ul>
+                <button class="btn btn-primary btn-sm">Follow</button>
+                <button class="btn btn-outline-primary btn-sm">Message</button>
+              </div>
+            </div>
+            <div class="card mb-3 text-center">
+              <div class="card-body">
+                <div
+                  class="avatar lg rounded-circle no-thumbnail me-auto ms-auto"
+                >
+                  UD
+                </div>
+                <h6 class="text-truncate mb-0 me-auto">UI-Design Group</h6>
+                <p>North Carolina, CT, USA</p>
+                <div
+                  class="avatar-list avatar-list-stacked d-flex justify-content-center ps-3"
+                >
+                  <img
+                    class="avatar sm rounded-circle"
+                    src="../assets/images/xs/avatar5.jpg"
+                    data-toggle="tooltip"
+                    title="Avatar"
+                  />
+                  <img
+                    class="avatar sm rounded-circle"
+                    src="../assets/images/xs/avatar6.jpg"
+                    data-toggle="tooltip"
+                    title="Avatar"
+                  />
+                  <img
+                    class="avatar sm rounded-circle"
+                    src="../assets/images/xs/avatar1.jpg"
+                    data-toggle="tooltip"
+                    title="Avatar"
+                  />
+                  <img
+                    class="avatar sm rounded-circle"
+                    src="../assets/images/xs/avatar4.jpg"
+                    data-toggle="tooltip"
+                    title="Avatar"
+                  />
+                  <img
+                    class="avatar sm rounded-circle"
+                    src="../assets/images/xs/avatar2.jpg"
+                    data-toggle="tooltip"
+                    title="Avatar"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-body text-center">
+                <img
+                  src="../assets/images/profile_av.png"
+                  class="rounded-circle img-thumbnail"
+                  alt="profile-image"
+                />
+                <h6 class="fw-bold mt-4 mb-1">Helen Maggie</h6>
+                <p class="text-uppercase small">Support team</p>
+                <button class="btn btn-primary">
+                  <i class="fa fa-plus"></i> Request Access
+                </button>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <img
+                class="card-img-top"
+                src="../assets/images/gallery/16.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-normal">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="javascript:void(0);" class="btn btn-primary"
+                  >Go somewhere</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--[ Start:: basic widget ]-->
+        <h5 class="text-uppercase text-primary mb-1">
+          Basic data widget Card's
+        </h5>
+        <p>You can set as per your requirment with real data.</p>
+        <div class="row g-3">
+          <div class="col-xl-4 col-lg-6 col-md-12">
+            <div class="card p-3 px-4 mb-3">
+              <div>Total revenue</div>
+              <div class="py-4 m-0 text-center h1 text-success">$9,452</div>
+              <div class="d-flex">
+                <small class="text-muted">Income</small>
+                <div class="ms-auto">
+                  <i class="fa fa-angle-up text-success me-2"></i>4%
+                </div>
+              </div>
+            </div>
+            <div class="card p-3 px-4 mb-3">
+              <div>Income status</div>
+              <div class="py-4 m-0 text-center h1 text-info">$2,258</div>
+              <div class="d-flex">
+                <small class="text-muted">New income</small>
+                <div class="ms-auto">0%</div>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-body">
+                <h6 class="text-muted text-uppercase mt-0">Orders</h6>
+                <h2>1,587</h2>
+                <span class="badge bg-primary">+11% </span>
+                <span class="text-muted">From previous period</span>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-body d-flex align-items-center">
+                <div class="avatar lg rounded-circle no-thumbnail">
+                  <i class="fa fa-cc-mastercard"></i>
+                </div>
+                <div class="ms-3">
+                  <span>Bounce rate</span>
+                  <h5 class="mb-0">52.5</h5>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="mb-0">Mobile App</h5>
+                <small class="text-muted">Ecommerce Application</small>
+                <div class="py-4">
+                  <span class="fs-3 fw-bold">%14.</span>
+                  <small>84</small>
+                  <p>May 01, 2021</p>
+                </div>
+                <div class="avatar-list avatar-list-stacked px-3">
+                  <img
+                    class="avatar sm rounded-circle"
+                    src="../assets/images/xs/avatar5.jpg"
+                    data-toggle="tooltip"
+                    title="Avatar"
+                  />
+                  <img
+                    class="avatar sm rounded-circle"
+                    src="../assets/images/xs/avatar6.jpg"
+                    data-toggle="tooltip"
+                    title="Avatar"
+                  />
+                  <img
+                    class="avatar sm rounded-circle"
+                    src="../assets/images/xs/avatar1.jpg"
+                    data-toggle="tooltip"
+                    title="Avatar"
+                  />
+                  <img
+                    class="avatar sm rounded-circle"
+                    src="../assets/images/xs/avatar4.jpg"
+                    data-toggle="tooltip"
+                    title="Avatar"
+                  />
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="#" title=""
+                  >View Project<i class="fa fa-long-arrow-right ms-2"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6 col-md-12">
+            <div class="card mb-3">
+              <div class="card-body">
+                <div class="h2 float-end">45%</div>
+                <h5 class="mb-1">Email</h5>
+                <div class="text-muted">Total Account</div>
+                <div class="mt-3">
+                  <div class="progress" style="height: 5px">
+                    <div
+                      class="progress-bar bg-success"
+                      role="progressbar"
+                      style="width: 45%"
+                      aria-valuenow="45"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-body">
+                <div class="h2 float-end">27%</div>
+                <h5 class="mb-1">2,510</h5>
+                <div class="text-muted">Total Leads</div>
+                <div class="mt-4">
+                  <div class="progress" style="height: 5px">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 27%"
+                      aria-valuenow="27"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-body">
+                <div class="h2 float-end">62%</div>
+                <h5 class="mb-1">Server</h5>
+                <div class="text-muted">of 1Tb</div>
+                <div class="mt-4">
+                  <div class="progress" style="height: 5px">
+                    <div
+                      class="progress-bar bg-warning"
+                      role="progressbar"
+                      style="width: 65%"
+                      aria-valuenow="65"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-body">
+                <div class="avatar">
+                  <i class="fa fa-cc-mastercard fa-2x"></i>
+                </div>
+                <span>Total income</span>
+                <h5 class="mb-0">$7,805</h5>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-body">
+                <h6 class="text-muted">Product Sold</h6>
+                <h2 class="mt-4">2,248</h2>
+                <span class="badge bg-primary">+19% </span>
+                <span class="text-muted">Last year</span>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col text-truncate fs-6 fw-bold">Labels</div>
+                </div>
+                <ul class="list-unstyled mt-3 mb-0">
+                  <li
+                    class="d-flex justify-content-between align-items-center py-1 mt-2"
+                  >
+                    <a href="#" class="color-600">AngularJs</a>
+                    <span class="badge bg-primary rounded">14</span>
+                  </li>
+                  <li
+                    class="d-flex justify-content-between align-items-center py-1 mt-2"
+                  >
+                    <a href="#" class="color-600">ReactJs</a>
+                    <span class="badge bg-primary rounded">2</span>
+                  </li>
+                  <li
+                    class="d-flex justify-content-between align-items-center py-1 mt-2"
+                  >
+                    <a href="#" class="color-600">Master Safe</a>
+                    <span class="badge bg-primary rounded">1</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-5 col-lg-12 col-md-12">
+            <div class="card mb-3">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <div class="avatar rounded-circle no-thumbnail bg-warning">
+                    <i class="fa fa-trophy fa-lg"></i>
+                  </div>
+                  <div class="flex-fill ms-3 text-truncate">
+                    <span class="h6 mb-0">Awwwards</span>
+                  </div>
+                </div>
+                <h5 class="my-4">
+                  Best of trendy design in <a href="#">2022</a> on Awwwards
+                </h5>
+                <p class="text-muted">
+                  Lorem ipsum dolor sit amet, consec adipiscing elit In
+                  vulputate vitae massa eu dapibus ligula.
+                </p>
+                <a href="#" title=""
+                  >Go to Awards<i class="fa fa-long-arrow-right ms-2"></i
+                ></a>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <div class="avatar rounded-circle no-thumbnail bg-warning">
+                    <i class="fa fa-star fa-lg"></i>
+                  </div>
+                  <div class="flex-fill ms-3 text-truncate">
+                    <span class="h5 mb-0">4.9 Rating </span>
+                  </div>
+                </div>
+                <div class="avatar-list avatar-list-stacked my-4 px-3">
+                  <img
+                    class="avatar rounded-circle"
+                    src="../assets/images/xs/avatar5.jpg"
+                    data-toggle="tooltip"
+                    title="Avatar"
+                  />
+                  <img
+                    class="avatar rounded-circle"
+                    src="../assets/images/xs/avatar6.jpg"
+                    data-toggle="tooltip"
+                    title="Avatar"
+                  />
+                  <img
+                    class="avatar rounded-circle"
+                    src="../assets/images/xs/avatar1.jpg"
+                    data-toggle="tooltip"
+                    title="Avatar"
+                  />
+                  <img
+                    class="avatar rounded-circle"
+                    src="../assets/images/xs/avatar4.jpg"
+                    data-toggle="tooltip"
+                    title="Avatar"
+                  />
+                  <span>+195K raters</span>
+                </div>
+                <p class="text-muted">
+                  Lorem ipsum dolor sit amet, consec adipiscing elit In
+                  vulputate vitae massa eu dapibus ligula.
+                </p>
+                <a href="#" title=""
+                  >Rate Out Application<i
+                    class="fa fa-long-arrow-right ms-2"
+                  ></i
+                ></a>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-body">
+                <div class="text-warning mb-3">
+                  <i class="fa fa-star fa-lg"></i>
+                  <i class="fa fa-star fa-lg"></i>
+                  <i class="fa fa-star fa-lg"></i>
+                  <i class="fa fa-star fa-lg"></i>
+                  <i class="fa fa-star fa-lg"></i>
+                  <span class="ps-2">4.7 Rating</span>
+                </div>
+                <p class="mb-0">
+                  Lorem ipsum dolor sit amet, consec adipiscing elit In
+                  vulputate vitae massa eu dapibus ligula.
+                </p>
+              </div>
+              <div class="card-footer d-flex align-items-center">
+                <img
+                  class="avatar rounded-circle"
+                  src="../assets/images/xs/avatar5.jpg"
+                  data-toggle="tooltip"
+                  title="Avatar"
+                />
+                <div class="ms-3">
+                  <h6 class="mb-0">Sabo Masties</h6>
+                  <small class="text-muted">Founder @ tt.com</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--[ .row end ]-->
+      </div>
+    </main>
+
+    <!-- start: template setting, and more. -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvas_setting"
+      aria-labelledby="offcanvas_setting"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Template Setting</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="mb-4">
+          <h6>Set Theme Color</h6>
+          <ul class="choose-skin list-unstyled mb-0">
+            <li data-theme="ValenciaRed">
+              <div style="--hotelair-theme-color: #d63b38"></div>
+            </li>
+            <li data-theme="SunOrange">
+              <div style="--hotelair-theme-color: #f7a614"></div>
+            </li>
+            <li data-theme="AppleGreen">
+              <div style="--hotelair-theme-color: #5bc43a"></div>
+            </li>
+            <li data-theme="CeruleanBlue">
+              <div style="--hotelair-theme-color: #00b8d6"></div>
+            </li>
+            <li data-theme="Mariner">
+              <div style="--hotelair-theme-color: #0066fe"></div>
+            </li>
+            <li data-theme="PurpleHeart" class="active">
+              <div style="--hotelair-theme-color: #6238b3"></div>
+            </li>
+            <li data-theme="FrenchRose">
+              <div style="--hotelair-theme-color: #eb5393"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="svg-stroke mb-4">
+          <h6>Icon Border Stroke</h6>
+          <div
+            class="btn-group"
+            role="group"
+            aria-label="Basic radio toggle button group"
+          >
+            <input
+              type="radio"
+              class="btn-check"
+              name="stroke"
+              id="Stroke_A"
+              value="svgstroke-a"
+              checked
+            />
+            <label class="btn btn-outline-primary" for="Stroke_A"
+              >Stroke 1</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="stroke"
+              id="Stroke_B"
+              value="svgstroke-b"
+            />
+            <label class="btn btn-outline-primary" for="Stroke_B"
+              >Stroke 2</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="stroke"
+              id="Stroke_C"
+              value="svgstroke-c"
+            />
+            <label class="btn btn-outline-primary" for="Stroke_C"
+              >Stroke 3</label
+            >
+          </div>
+        </div>
+        <div class="mb-4">
+          <h6>Layout Section Ligh/Dark</h6>
+          <ul class="list-unstyled d-flex flex-wrap">
+            <li class="me-2 mb-2 sidebar-toggle">
+              <input type="checkbox" class="btn-check" id="Sidebar_dark" />
+              <label class="btn btn-outline-primary" for="Sidebar_dark"
+                >Sidebar</label
+              >
+            </li>
+            <li class="me-2 mb-2 header-toggle">
+              <input type="checkbox" class="btn-check" id="Header_dark" />
+              <label class="btn btn-outline-primary" for="Header_dark"
+                >Header</label
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="mb-4">
+          <h6>More App Setting</h6>
+          <div class="form-check form-switch bodygradient-toggle">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="bodyGradient"
+              checked
+            />
+            <label class="form-check-label" for="bodyGradient"
+              >Body Gradient Background</label
+            >
+          </div>
+
+          <div class="form-check form-switch monochrome-toggle">
+            <input
+              class="form-check-input fs-6"
+              type="checkbox"
+              role="switch"
+              id="monochrome"
+            />
+            <label class="form-check-label" for="monochrome"
+              >Monochrome Mode</label
+            >
+          </div>
+          <!-- <div class="form-check form-switch gradient-active">
+					<input class="form-check-input fs-6" type="checkbox" role="switch" id="gradient-active">
+					<label class="form-check-label" for="gradient-active">Gradient Active</label>
+				</div> -->
+          <div class="form-check form-switch radius-toggle">
+            <input
+              class="form-check-input fs-6"
+              type="checkbox"
+              role="switch"
+              id="radius0"
+            />
+            <label class="form-check-label" for="radius0"
+              >Border Radius none</label
+            >
+          </div>
+          <div class="form-check form-switch svg-icon-color">
+            <input
+              class="form-check-input fs-6"
+              type="checkbox"
+              role="switch"
+              id="IconColor"
+            />
+            <label class="form-check-label" for="IconColor"
+              >Sidebar Icon color</label
+            >
+          </div>
+          <div class="form-check form-switch cb-shadow">
+            <input
+              class="form-check-input fs-6"
+              type="checkbox"
+              role="switch"
+              id="BoxShadow"
+            />
+            <label class="form-check-label" for="BoxShadow"
+              >Card box shadow active</label
+            >
+          </div>
+        </div>
+        <div class="d-flex">
+          <button type="button" class="btn w-100 me-1 py-2 btn-primary">
+            Buy Now
+          </button>
+          <button type="button" class="btn w-100 ms-1 py-2 btn-dark">
+            View Portfolio
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--[ hotelair template vender js ]-->
+    <script src="../assets/bundles/libscripts.bundle.js"></script>
+    <script src="../assets/bundles/prism.bundle.js"></script>
+
+    <!-- Template page js -->
+    <script src="../assets/js/main.js"></script>
+  </body>
+
+  <!-- Mirrored from pixelwibes.in/templates/hotelair/html/docs/widgets-basic-card.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:32:55 GMT -->
+</html>

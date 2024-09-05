@@ -1,0 +1,339 @@
+{% extends "base.html" %}
+{% block title %}
+X-Empire - Items Suppliers List
+{% endblock title %}
+{% block content %}
+		
+
+		<div class="content">
+			{% comment %} page header {% endcomment %}
+			{% include "header.html" %}
+			{% comment %} end page header {% endcomment %}
+			<!-- start: page body area -->
+			<div class="px-xl-5 px-lg-4 px-3 py-3 page-body">
+                <div class="row g-3">
+					<div class="col-sm-12">
+						<div class="d-flex align-items-center justify-content-between flex-wrap">
+							<h3 class="fw-bold mb-0">Items Suppliers List</h3>
+							<div class="col-auto d-flex w-sm-100">
+								<button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#add-items">Add Suppliers</button>
+							</div>
+						</div>
+				  </div>
+                  <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <table class="table dataTable align-middle table-hover table-body" style="width: 100%;">
+                                    <thead>
+                                        <tr>
+                                            <th>Id</th>
+											<th>Suppliers Name</th>
+											<th>Email</th>
+											<th>Mobile</th>
+											<th>Address</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+										<tr>
+											<td>1101</td>
+											<td>jemy</td>
+											<td>jemy@gmail.com</td>
+											<td>(555) 123-4567</td>
+											<td>123 Main St, Anytown, USA</td>
+											<td>
+												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-items"><i class="bi bi-pencil-square"></i></button>
+												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>1102</td>
+											<td>Aura</td>
+											<td>aura@gmail.com</td>
+											<td>(555) 234-5678</td>
+											<td>456 Elm St, Smallville, USA</td>
+											<td>
+												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-items"><i class="bi bi-pencil-square"></i></button>
+												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>1103</td>
+											<td>John Smith</td>
+											<td>john.smith@gmail.com</td>
+											<td>(555) 123-5567</td>
+											<td>124 Main St, Anytown, USA</td>
+											<td>
+												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-items"><i class="bi bi-pencil-square"></i></button>
+												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>1104</td>
+											<td>Sarah Brown</td>
+											<td>sarah.brown@gmail.com</td>
+											<td>(555) 456-7890</td>
+											<td>101 Pine St, Lakeside, USA</td>
+											<td>
+												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-items"><i class="bi bi-pencil-square"></i></button>
+												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>1105</td>
+											<td>David Taylor</td>
+											<td>david.taylor@gmail.com</td>
+											<td>(555) 567-8901</td>
+											<td>222 Maple Ave, Rivertown, USA</td>
+											<td>
+												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-items"><i class="bi bi-pencil-square"></i></button>
+												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>1106</td>
+											<td>Jennifer Miller</td>
+											<td>jennifer.miller@gmail.com</td>
+											<td>(555) 678-9012</td>
+											<td>333 Cedar St, Hillcrest, USA</td>
+											<td>
+												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-items"><i class="bi bi-pencil-square"></i></button>
+												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>1107</td>
+											<td>Daniel Davis</td>
+											<td>daniel.davis@gmail.com</td>
+											<td>(555) 789-0123</td>
+											<td>444 Birch Ln, Meadowview, USA</td>
+											<td>
+												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-items"><i class="bi bi-pencil-square"></i></button>
+												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>1108</td>
+											<td>Jessica Wilson</td>
+											<td>jessica.wilson@gmail.com</td>
+											<td>(555) 890-1234</td>
+											<td>555 Walnut St, Woodville, USA</td>
+											<td>
+												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-items"><i class="bi bi-pencil-square"></i></button>
+												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>1109</td>
+											<td>Christopher Moore</td>
+											<td>christopher.moore@gmail.com</td>
+											<td>(555) 901-2345</td>
+											<td>666 Pineapple Ave, Beachtown, USA</td>
+											<td>
+												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-items"><i class="bi bi-pencil-square"></i></button>
+												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>1110</td>
+											<td>Amanda Anderson </td>
+											<td>amanda.anderson@gmail.com</td>
+											<td>(555) 012-3456</td>
+											<td>777 Cherry Rd, Orchard Hills, USA</td>
+											<td>
+												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-items"><i class="bi bi-pencil-square"></i></button>
+												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
+											</td>
+										</tr>
+									</tbody>
+                                </table>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="pe-2">
+                        <a
+                          class="d-flex p-lg-3 p-2 rounded-3"
+                          href="javascript:void(0);"
+                        >
+                          <div class="avatar sm">
+                            <svg
+                              class="svg-stroke"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path
+                                stroke="none"
+                                d="M0 0h24v24H0z"
+                                fill="none"
+                              ></path>
+                              <path
+                                d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"
+                              ></path>
+                              <path d="M12 8v4"></path>
+                              <path d="M12 16h.01"></path>
+                            </svg>
+                          </div>
+                          <div class="flex-fill ms-3">
+                            <span class="d-flex justify-content-between"
+                              ><small class="text-danger">Error 404</small
+                              ><small class="text-muted">Yesterday</small></span
+                            >
+                            <p class="mb-0 mt-1">
+                              HotelAir admin template on website analytics
+                              configurations
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              
+              
+              
+              
+              
+            </ul>
+          </div>
+        </header>
+        
+      </div>
+    
+
+    
+
+    <!-- Add Suppliers-->
+    <div class="modal fade" id="add-items" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">Add Suppliers</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group mb-3">
+                <label class="form-label text-muted">Suppliers Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Add Suppliers Name"
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label class="form-label text-muted">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Add Email"
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label class="form-label text-muted">Number</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Add Number"
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label class="form-label text-muted">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Add Address"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Suppliers-->
+    <div class="modal fade" id="edit-items" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">Edit Category</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group mb-3">
+                <label class="form-label text-muted">Suppliers Name</label>
+                <input type="text" class="form-control" value="jemy" />
+              </div>
+              <div class="form-group mb-3">
+                <label class="form-label text-muted">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  value="jemy@gmail.com"
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label class="form-label text-muted">Number</label>
+                <input type="text" class="form-control" value="202-306-2589" />
+              </div>
+              <div class="form-group mb-3">
+                <label class="form-label text-muted">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  value="123 Main St, Anytown, USA"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">
+              Update changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $(".dataTable").addClass("nowrap").dataTable({
+          responsive: true,
+        });
+      });
+    </script>
+{% endblock content %}
+ 

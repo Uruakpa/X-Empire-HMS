@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}
+X-Empire - Room Booking List
+{% endblock title %}
+{% block content %}
+<div class="content">
+			{% comment %} page header {% endcomment %}
+			{% include "header.html" %}
+			{% comment %} end page header {% endcomment %}
+			<!-- start: page body area -->
+			<div class="px-xl-5 px-lg-4 px-3 py-3 page-body">
+                <div class="row g-3">
+					<div class="col-sm-12">
+						<div class="d-flex align-items-center justify-content-between flex-wrap">
+							<h3 class="fw-bold mb-0">Room Booking List</h3>
+							<div class="col-auto d-flex w-sm-100">
+								<a href="{% url "room-booking" user.id %}" class="btn btn-dark btn-set-task w-sm-100">Room Book</a>
+							</div>
+						</div>
+				  </div>
+                  <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <table class="table dataTable align-middle table-hover table-body" style="width: 100%;">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Room Type</th>
+                                            <th>Check In</th>
+                                            <th>Check Out</th>
+                                            <th>Paid Amount</th>
+                                            <th>Due Amount</th>
+                                            <th>Payment Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for reservations in reservation %}
+                                        <tr>
+                                           <td>
+                                               {{reservations.guest.first_name}} {{reservations.guest.last_name}}
+                                           </td>
+                                           <td>
+                                            {{reservations.room.room_type}}
+                                           </td>
+                                           <td>12/03/2021</td>
+                                           <td>14/03/2021</td>
+                                           <td>0.00</td>
+                                           <td>$230</td>
+                                           <td><span class="badge text-bg-warning">Pending</span></td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                  </div>
+                </div><!-- Row End -->
+
+			</div>
+		</div>
+
+	
+    <script>
+		$(document).ready( function () {
+            $('.dataTable')
+            .addClass( 'nowrap' )
+            .dataTable( {
+                responsive: true,
+            });
+        });
+
+	</script>
+{% endblock content %}

@@ -1,0 +1,1925 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from pixelwibes.in/templates/hotelair/html/docs/widgets-forms.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:32:55 GMT -->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Responsive Bootstrap 5 admin dashboard template & web App ui kit."
+    />
+    <meta name="keyword" content="bootstrap admin template" />
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
+    <!--[ Favicon]-->
+    <title>: HotelAir : Hotel Management Admin Dashboard Template</title>
+
+    <!--[ Favicon]-->
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/images/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/images/apple-touch-icon.png"
+    />
+
+    <link rel="stylesheet" href="../assets/css/prism.min.css" />
+    <link rel="stylesheet" href="../assets/css/select2.min.css" />
+    <link rel="stylesheet" href="../assets/css/flatpickr.min.css" />
+
+    <!--[ Template main css file ]-->
+    <link rel="stylesheet" href="../assets/css/style.min.css" />
+  </head>
+
+  <body data-theme="theme-PurpleHeart" class="svgstroke-a docs">
+    <button
+      class="btn btn-primary d-inline-flex d-xl-none position-fixed bottom-0 end-0 p-2 me-3 mb-3 z-3 shadow avatar rounded-circle"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvas_Navbar"
+    >
+      <svg
+        class="svg-stroke"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M4 6l16 0"></path>
+        <path d="M4 12l16 0"></path>
+        <path d="M4 18l16 0"></path>
+      </svg>
+    </button>
+
+    <header class="border-bottom cus-header">
+      <div class="container-xl">
+        <div class="row px-xl-4">
+          <div class="col-12">
+            <div class="d-flex justify-content-between py-3">
+              <a
+                href="../index.html"
+                class="brand-icon text-decoration-none d-flex align-items-center"
+                title="HotelAir Admin Template"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+                  ></path>
+                  <path d="M9 8l0 8"></path>
+                  <path d="M9 12l6 0"></path>
+                  <path d="M15 8l0 8"></path>
+                </svg>
+                <span class="fw-bold ps-2 fs-5 text-gradient"
+                  >X <small>-</small>Empire</span
+                >
+              </a>
+              <a href="#" class="btn btn-dark">Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container-xl px-0">
+      <!-- start: page menu link -->
+      <aside
+        class="ps-xl-5 ps-lg-4 ps-3 pe-2 py-3 sidebar sticky-top"
+        data-bs-theme="none"
+      >
+        <nav class="navbar navbar-expand-xl py-0">
+          <div
+            class="offcanvas offcanvas-start"
+            data-bs-scroll="true"
+            tabindex="-1"
+            id="offcanvas_Navbar"
+          >
+            <div class="offcanvas-header">
+              <span class="fw-bold fs-5 text-gradient"
+                >X <small>-</small>Empire</span
+              >
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body flex-column custom_scroll ps-3 ps-xl-0">
+              <div
+                class="d-flex align-items-start mb-4 d-none d-xl-inline-flex"
+              >
+                <a
+                  href="../index.html"
+                  class="brand-icon text-decoration-none d-flex align-items-center"
+                  title="HotelAir Admin Template"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+                    />
+                    <path d="M9 8l0 8" />
+                    <path d="M9 12l6 0" />
+                    <path d="M15 8l0 8" />
+                  </svg>
+                  <span class="fw-bold ps-2 fs-5 text-gradient"
+                    >X <small>-</small>Empire</span
+                  >
+                </a>
+              </div>
+              <!-- start: Menu tab -->
+              <ul
+                class="nav nav-tabs tab-dynamic px-0 mb-4"
+                role="tablist"
+                style="--dynamic-color: var(--accent-color)"
+              >
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="ps-2 pe-3 nav-link active"
+                    data-bs-toggle="tab"
+                    href="#tab_General"
+                    role="tab"
+                    aria-selected="false"
+                    tabindex="-1"
+                    >General</a
+                  >
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="ps-2 pe-3 nav-link"
+                    data-bs-toggle="tab"
+                    href="#tab_Bootstrtap"
+                    role="tab"
+                    aria-selected="true"
+                    >Bootstrtap</a
+                  >
+                </li>
+              </ul>
+              <!-- start: Menu content -->
+              <div class="tab-content">
+                <!-- start: General tab-->
+                <div
+                  class="tab-pane fade active show"
+                  id="tab_General"
+                  role="tabpanel"
+                >
+                  <ul class="list-unstyled mb-4 menu-list">
+                    <li>
+                      <a href="index.html" aria-label="Documentation">
+                        <svg
+                          class="svg-stroke"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            stroke="none"
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          ></path>
+                          <path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
+                          <path
+                            d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"
+                          ></path>
+                          <path d="M10 12h4v4h-4z"></path>
+                        </svg>
+                        <span class="mx-3">Documentation</span>
+                      </a>
+                    </li>
+                    <li class="py-2 mt-2">
+                      <h6
+                        class="fl-title title-font ps-2 small text-uppercase text-muted"
+                        style="--dynamic-color: var(--theme-color1)"
+                      >
+                        Widgets
+                      </h6>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a
+                            href="widgets-basic-card.html"
+                            aria-label="Widgets Basic card"
+                            >Basic card</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="widgets-card-tiles.html"
+                            aria-label="Widgets tiles"
+                            >Card tiles</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="widgets-card-tab.html"
+                            aria-label="Widgets Tabbed"
+                            >Tabbed card</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="widgets-tables.html"
+                            aria-label="Widgets Tables"
+                            >Tables example</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="active"
+                            href="widgets-forms.html"
+                            aria-label="Widgets Forms"
+                            >Forms example</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="py-2 mt-2">
+                      <h6
+                        class="fl-title title-font ps-2 small text-uppercase text-muted"
+                        style="--dynamic-color: var(--theme-color1)"
+                      >
+                        Charts
+                      </h6>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="apex.html" aria-label="Apex chart"
+                            >Apex chart</a
+                          >
+                        </li>
+                        <li>
+                          <a href="peity.html" aria-label="Peity chart"
+                            >Peity chart</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="py-2 mt-2">
+                      <h6
+                        class="fl-title title-font ps-2 small text-uppercase text-muted"
+                        style="--dynamic-color: var(--theme-color1)"
+                      >
+                        Plugin (NPM)
+                      </h6>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="datatables.html" aria-label="Datatables"
+                            >Datatables</a
+                          >
+                        </li>
+                        <li>
+                          <a href="flatpickr.html" aria-label="Flatpickr"
+                            >Flatpickr</a
+                          >
+                        </li>
+                        <li>
+                          <a href="inputmask.html" aria-label="Inputmask"
+                            >Inputmask</a
+                          >
+                        </li>
+                        <li>
+                          <a href="jsvectormap.html" aria-label="Jsvectormap"
+                            >Jsvectormap</a
+                          >
+                        </li>
+                        <li>
+                          <a href="sortablejs.html" aria-label="Sortablejs"
+                            >Sortablejs</a
+                          >
+                        </li>
+                        <li>
+                          <a href="sweetalert2.html" aria-label="Sweet alert 2"
+                            >Sweet alert 2</a
+                          >
+                        </li>
+                        <li>
+                          <a href="tagify.html" aria-label="Tagify">Tagify</a>
+                        </li>
+                        <li>
+                          <a href="tiny-slider.html" aria-label="Tiny slider"
+                            >Tiny slider</a
+                          >
+                        </li>
+                        <li>
+                          <a href="full-calendar.html" aria-label="Calendar"
+                            >Calendar</a
+                          >
+                        </li>
+                        <li>
+                          <a href="summernote.html" aria-label="Summernote"
+                            >Summernote</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="py-2 mt-2">
+                      <h6
+                        class="fl-title title-font ps-2 small text-uppercase text-muted"
+                        style="--dynamic-color: var(--theme-color1)"
+                      >
+                        Font icon
+                      </h6>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a
+                            href="bootstrap-icon.html"
+                            aria-label="Bootstrap Icon"
+                            >Bootstrap Icon</a
+                          >
+                        </li>
+                        <li>
+                          <a href="flag-icon.html" aria-label="Country Flag"
+                            >Country Flag icon</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="fontawesome-icon.html"
+                            aria-label="Font awesome"
+                            >Font awesome</a
+                          >
+                        </li>
+                        <li>
+                          <a href="linear-icon.html" aria-label="Simple line"
+                            >Simple line icon</a
+                          >
+                        </li>
+                        <li>
+                          <a href="weather-icon.html" aria-label="Weather icon"
+                            >Weather icon</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <!-- start: Bootstrtap tab -->
+                <div class="tab-pane fade" id="tab_Bootstrtap" role="tabpanel">
+                  <h6
+                    class="fl-title title-font ps-2 small text-uppercase text-muted"
+                    style="--dynamic-color: var(--theme-color1)"
+                  >
+                    Bootstrtap
+                  </h6>
+                  <ul class="list-unstyled mb-4 menu-list">
+                    <li class="py-2 mt-2">
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="accordion.html" aria-label="Accordion"
+                            >Accordion</a
+                          >
+                        </li>
+                        <li>
+                          <a href="alerts.html" aria-label="Alerts">Alerts</a>
+                        </li>
+                        <li>
+                          <a href="avatar.html" aria-label="User Avatar"
+                            >User Avatar</a
+                          >
+                        </li>
+                        <li>
+                          <a href="badges.html" aria-label="Badges">Badges</a>
+                        </li>
+                        <li>
+                          <a href="breadcrumb.html" aria-label="Breadcrumb"
+                            >Breadcrumb</a
+                          >
+                        </li>
+                        <li>
+                          <a href="buttons.html" aria-label="Buttons"
+                            >Buttons</a
+                          >
+                        </li>
+                        <li>
+                          <a href="cards.html" aria-label="Cards">Cards</a>
+                        </li>
+                        <li>
+                          <a href="carousel.html" aria-label="Carousel"
+                            >Carousel</a
+                          >
+                        </li>
+                        <li>
+                          <a href="collapse.html" aria-label="Collapse"
+                            >Collapse</a
+                          >
+                        </li>
+                        <li>
+                          <a href="dropdowns.html" aria-label="Dropdowns"
+                            >Dropdowns</a
+                          >
+                        </li>
+                        <li>
+                          <a href="listgroup.html" aria-label="List group"
+                            >List group</a
+                          >
+                        </li>
+                        <li>
+                          <a href="modal.html" aria-label="Modal">Modal</a>
+                        </li>
+                        <li>
+                          <a href="navbar.html" aria-label="Navbar">Navbar</a>
+                        </li>
+                        <li>
+                          <a href="navstabs.html" aria-label="Navs and tabs"
+                            >Navs and tabs</a
+                          >
+                        </li>
+                        <li>
+                          <a href="offcanvas.html" aria-label="Offcanvas"
+                            >Offcanvas</a
+                          >
+                        </li>
+                        <li>
+                          <a href="pagination.html" aria-label="Pagination"
+                            >Pagination</a
+                          >
+                        </li>
+                        <li>
+                          <a href="placeholders.html" aria-label="Placeholders"
+                            >Placeholders</a
+                          >
+                        </li>
+                        <li>
+                          <a href="popovers.html" aria-label="Popovers"
+                            >Popovers</a
+                          >
+                        </li>
+                        <li>
+                          <a href="progress.html" aria-label="Progress"
+                            >Progress</a
+                          >
+                        </li>
+                        <li>
+                          <a href="spinners.html" aria-label="Spinners"
+                            >Spinners</a
+                          >
+                        </li>
+                        <li>
+                          <a href="toasts.html" aria-label="Toasts">Toasts</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </aside>
+
+      <div class="content px-xl-5 px-lg-4 px-3 py-3 page-body bg-card">
+        <h3 class="title-font mb-3">Forms example</h3>
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h6 class="card-title mb-0">
+                  <strong>Personal Information</strong>
+                </h6>
+                <div class="form-check form-switch card-toggle-one">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    role="switch"
+                    id="boxlayout"
+                  />
+                  <label class="form-check-label" for="boxlayout"
+                    >Show Code</label
+                  >
+                </div>
+              </div>
+              <div class="card-body card-main-one">
+                <form class="row g-3">
+                  <div class="col-md-6 col-12">
+                    <label class="col-form-label">First Name</label>
+                    <fieldset
+                      class="form-icon-group left-icon position-relative"
+                    >
+                      <input type="text" class="form-control" />
+                      <div class="form-icon position-absolute">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-person"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"
+                          />
+                        </svg>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <label class="col-form-label">Last Name</label>
+                    <fieldset
+                      class="form-icon-group left-icon position-relative"
+                    >
+                      <input type="text" class="form-control" />
+                      <div class="form-icon position-absolute">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-person"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"
+                          />
+                        </svg>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <label class="col-form-label">Email Address</label>
+                    <fieldset
+                      class="form-icon-group left-icon position-relative"
+                    >
+                      <input type="email" class="form-control" />
+                      <div class="form-icon position-absolute">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-envelope-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"
+                          />
+                        </svg>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <label class="col-form-label">Phone Number</label>
+                    <fieldset
+                      class="form-icon-group left-icon position-relative"
+                    >
+                      <input
+                        type="text"
+                        class="form-control phone-number"
+                        placeholder="Ex: (000) 000-00-00"
+                      />
+                      <div class="form-icon position-absolute">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-phone"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"
+                          />
+                          <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                        </svg>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <label class="col-form-label">Password</label>
+                    <fieldset
+                      class="form-icon-group left-icon position-relative"
+                    >
+                      <input type="password" class="form-control" />
+                      <div class="form-icon position-absolute">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-eye"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                          />
+                          <path
+                            d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                          />
+                        </svg>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <label class="col-form-label">Confirm Password</label>
+                    <fieldset
+                      class="form-icon-group left-icon position-relative"
+                    >
+                      <input type="password" class="form-control" />
+                      <div class="form-icon position-absolute">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-eye"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                          />
+                          <path
+                            d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                          />
+                        </svg>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary">Save</button>
+                    <button class="btn btn-outline-secondary">Cancle</button>
+                  </div>
+                </form>
+                <div class="form-code">
+                  <pre
+                    class="language-html m-0"
+                    data-lang="html"
+                  ><code class="language-html">&lt;form&gt;
+	&lt;div class=&quot;row&quot;&gt;
+		&lt;div class=&quot;mb-3 col-md-6 col-12&quot;&gt;
+			&lt;label class=&quot;col-form-label&quot;&gt;First Name&lt;/label&gt;
+			&lt;fieldset class=&quot;form-icon-group left-icon position-relative&quot;&gt;
+				&lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+				&lt;div class=&quot;form-icon position-absolute&quot;&gt;
+					&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;16&quot; height=&quot;16&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-person&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+						&lt;path d=&quot;M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z&quot;/&gt;
+					&lt;/svg&gt;
+				&lt;/div&gt;
+			&lt;/fieldset&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;mb-3 col-md-6 col-12&quot;&gt;
+			&lt;label class=&quot;col-form-label&quot;&gt;Last Name&lt;/label&gt;
+			&lt;fieldset class=&quot;form-icon-group left-icon position-relative&quot;&gt;
+				&lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+				&lt;div class=&quot;form-icon position-absolute&quot;&gt;
+					&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;16&quot; height=&quot;16&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-person&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+						&lt;path d=&quot;M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z&quot;/&gt;
+					&lt;/svg&gt;
+				&lt;/div&gt;
+			&lt;/fieldset&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;mb-3 col-md-6 col-12&quot;&gt;
+			&lt;label class=&quot;col-form-label&quot;&gt;Email Address&lt;/label&gt;
+			&lt;fieldset class=&quot;form-icon-group left-icon position-relative&quot;&gt;
+				&lt;input type=&quot;email&quot; class=&quot;form-control&quot;&gt;
+				&lt;div class=&quot;form-icon position-absolute&quot;&gt;
+					&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;16&quot; height=&quot;16&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-envelope-fill&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+						&lt;path d=&quot;M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z&quot;/&gt;
+					&lt;/svg&gt;
+				&lt;/div&gt;
+			&lt;/fieldset&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;mb-3 col-md-6 col-12&quot;&gt;
+			&lt;label class=&quot;col-form-label&quot;&gt;Phone Number&lt;/label&gt;
+			&lt;fieldset class=&quot;form-icon-group left-icon position-relative&quot;&gt;
+				&lt;input type=&quot;text&quot; class=&quot;form-control phone-number&quot; placeholder=&quot;Ex: (000) 000-00-00&quot;&gt;
+				&lt;div class=&quot;form-icon position-absolute&quot;&gt;
+					&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;16&quot; height=&quot;16&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-phone&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+						&lt;path d=&quot;M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z&quot;/&gt;
+						&lt;path d=&quot;M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z&quot;/&gt;
+					&lt;/svg&gt;
+				&lt;/div&gt;
+			&lt;/fieldset&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;mb-3 col-md-6 col-12&quot;&gt;
+			&lt;label class=&quot;col-form-label&quot;&gt;Password&lt;/label&gt;
+			&lt;fieldset class=&quot;form-icon-group left-icon position-relative&quot;&gt;
+				&lt;input type=&quot;password&quot; class=&quot;form-control&quot;&gt;
+				&lt;div class=&quot;form-icon position-absolute&quot;&gt;
+					&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;16&quot; height=&quot;16&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-eye&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+						&lt;path d=&quot;M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z&quot;/&gt;
+						&lt;path d=&quot;M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z&quot;/&gt;
+					&lt;/svg&gt;
+				&lt;/div&gt;
+			&lt;/fieldset&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;mb-3 col-md-6 col-12&quot;&gt;
+			&lt;label class=&quot;col-form-label&quot;&gt;Confirm Password&lt;/label&gt;
+			&lt;fieldset class=&quot;form-icon-group left-icon position-relative&quot;&gt;
+				&lt;input type=&quot;password&quot; class=&quot;form-control&quot;&gt;
+				&lt;div class=&quot;form-icon position-absolute&quot;&gt;
+					&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;16&quot; height=&quot;16&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-eye&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+						&lt;path d=&quot;M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z&quot;/&gt;
+						&lt;path d=&quot;M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z&quot;/&gt;
+					&lt;/svg&gt;
+				&lt;/div&gt;
+			&lt;/fieldset&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;col-12&quot;&gt;
+			&lt;button class=&quot;btn btn-primary&quot;&gt;Save&lt;/button&gt;
+			&lt;button class=&quot;btn btn-outline-secondary&quot;&gt;Cancle&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                </div>
+              </div>
+            </div>
+            <!-- Personal Information Card End -->
+          </div>
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h6 class="card-title mb-0">
+                  <strong>Company Information</strong>
+                </h6>
+                <div class="form-check form-switch card-toggle-two">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    role="switch"
+                    id="card-toggle-two"
+                  />
+                  <label class="form-check-label" for="card-toggle-two"
+                    >Show Code</label
+                  >
+                </div>
+              </div>
+              <div class="card-body card-main-two">
+                <form class="row g-3">
+                  <div class="col-md-6 col-12">
+                    <label class="col-form-label">Company Name</label>
+                    <fieldset
+                      class="form-icon-group left-icon position-relative"
+                    >
+                      <input type="text" class="form-control" />
+                      <div class="form-icon position-absolute">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-building"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"
+                          />
+                          <path
+                            d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z"
+                          />
+                        </svg>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <label class="col-form-label">Company Number</label>
+                    <fieldset
+                      class="form-icon-group left-icon position-relative"
+                    >
+                      <input
+                        type="text"
+                        class="form-control phone-number"
+                        placeholder="Ex: (000) 000-00-00"
+                      />
+                      <div class="form-icon position-absolute">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-phone"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"
+                          />
+                          <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                        </svg>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <label class="col-form-label">Employees</label>
+                    <input type="hidden" class="form-control" />
+                    <fieldset>
+                      <select
+                        class="array-select form-control form-select"
+                        aria-label="example"
+                      >
+                        <option selected>Select Employees</option>
+                        <option>0-10</option>
+                        <option>11-50</option>
+                        <option>51-100</option>
+                        <option>100+</option>
+                      </select>
+                    </fieldset>
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <label class="col-form-label">Company Type</label>
+                    <select
+                      class="form-select array-select form-control"
+                      aria-label="example"
+                    >
+                      <option selected>Select Type</option>
+                      <option>Real Estate</option>
+                      <option>Hospital</option>
+                      <option>Information Technology (IT)</option>
+                      <option>Goverment</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <label class="col-form-label">Joining Date</label>
+                    <fieldset
+                      class="form-icon-group left-icon position-relative"
+                    >
+                      <input
+                        type="text"
+                        class="form-control f-basic flatpickr-input"
+                        placeholder="Select Date.."
+                        readonly="readonly"
+                      />
+                      <div class="form-icon position-absolute">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-calendar-check"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"
+                          />
+                          <path
+                            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"
+                          />
+                        </svg>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <label class="col-form-label">End Date</label>
+                    <fieldset
+                      class="form-icon-group left-icon position-relative"
+                    >
+                      <input
+                        type="text"
+                        class="form-control f-basic flatpickr-input"
+                        placeholder="Select Date.."
+                        readonly="readonly"
+                      />
+                      <div class="form-icon position-absolute">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-calendar-check"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"
+                          />
+                          <path
+                            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"
+                          />
+                        </svg>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary">Save</button>
+                    <button class="btn btn-outline-secondary">Cancle</button>
+                  </div>
+                </form>
+                <div class="form-code">
+                  <pre
+                    class="language-html m-0"
+                    data-lang="html"
+                  ><code class="language-html">&lt;form&gt;
+	&lt;div class=&quot;row&quot;&gt;
+		&lt;div class=&quot;mb-3 col-md-6 col-12&quot;&gt;
+			&lt;label class=&quot;col-form-label&quot;&gt;Company Name&lt;/label&gt;
+			&lt;fieldset class=&quot;form-icon-group left-icon position-relative&quot;&gt; 
+				&lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+				&lt;div class=&quot;form-icon position-absolute&quot;&gt;
+					&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;16&quot; height=&quot;16&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-building&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+						&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z&quot;/&gt;
+						&lt;path d=&quot;M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z&quot;/&gt;
+					&lt;/svg&gt;
+				&lt;/div&gt;
+			&lt;/fieldset&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;mb-3 col-md-6 col-12&quot;&gt;
+			&lt;label class=&quot;col-form-label&quot;&gt;Company Number&lt;/label&gt;
+			&lt;fieldset class=&quot;form-icon-group left-icon position-relative&quot;&gt;
+				&lt;input type=&quot;text&quot; class=&quot;form-control phone-number&quot; placeholder=&quot;Ex: (000) 000-00-00&quot;&gt;
+				&lt;div class=&quot;form-icon position-absolute&quot;&gt;
+					&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;16&quot; height=&quot;16&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-phone&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+						&lt;path d=&quot;M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z&quot;/&gt;
+						&lt;path d=&quot;M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z&quot;/&gt;
+					&lt;/svg&gt;
+				&lt;/div&gt;
+			&lt;/fieldset&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;mb-3 col-md-6 col-12&quot;&gt;
+			&lt;label class=&quot;col-form-label&quot;&gt;Employees&lt;/label&gt;
+			&lt;input type=&quot;hidden&quot; class=&quot;form-control&quot;&gt;
+			&lt;fieldset&gt;
+				&lt;select class=&quot;array-select form-control form-select&quot; aria-label=&quot;example&quot;&gt;
+					&lt;option selected&gt;Select Employees&lt;/option&gt;
+					&lt;option&gt;0-10&lt;/option&gt;
+					&lt;option&gt;11-50&lt;/option&gt;
+					&lt;option&gt;51-100&lt;/option&gt;
+					&lt;option&gt;100+&lt;/option&gt;
+				&lt;/select&gt;
+			&lt;/fieldset&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;mb-3 col-md-6 col-12&quot;&gt;
+			&lt;label class=&quot;col-form-label&quot;&gt;Company Type&lt;/label&gt;
+			&lt;select class=&quot;form-select array-select form-control&quot; aria-label=&quot;example&quot;&gt;
+				&lt;option selected&gt;Select Type&lt;/option&gt;
+				&lt;option&gt;Real Estate&lt;/option&gt;
+				&lt;option&gt;Hospital&lt;/option&gt;
+				&lt;option&gt;Information Technology (IT)&lt;/option&gt;
+				&lt;option&gt;Goverment&lt;/option&gt;
+			&lt;/select&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;mb-3 col-md-6 col-12&quot;&gt;
+			&lt;label class=&quot;col-form-label&quot;&gt;Joining Date&lt;/label&gt;
+			&lt;fieldset class=&quot;form-icon-group left-icon position-relative&quot;&gt;
+				&lt;input type=&quot;text&quot; class=&quot;form-control f-basic flatpickr-input&quot; placeholder=&quot;Select Date..&quot; readonly=&quot;readonly&quot;&gt;
+				&lt;div class=&quot;form-icon position-absolute&quot;&gt;
+					&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;16&quot; height=&quot;16&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-calendar-check&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+						&lt;path d=&quot;M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z&quot;/&gt;
+						&lt;path d=&quot;M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z&quot;/&gt;
+					&lt;/svg&gt;
+				&lt;/div&gt;
+			&lt;/fieldset&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;mb-3 col-md-6 col-12&quot;&gt;
+			&lt;label class=&quot;col-form-label&quot;&gt;End Date&lt;/label&gt;
+			&lt;fieldset class=&quot;form-icon-group left-icon position-relative&quot;&gt;
+				&lt;input type=&quot;text&quot; class=&quot;form-control f-basic flatpickr-input&quot; placeholder=&quot;Select Date..&quot; readonly=&quot;readonly&quot;&gt;
+				&lt;div class=&quot;form-icon position-absolute&quot;&gt;
+					&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;16&quot; height=&quot;16&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-calendar-check&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+						&lt;path d=&quot;M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z&quot;/&gt;
+						&lt;path d=&quot;M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z&quot;/&gt;
+					&lt;/svg&gt;
+				&lt;/div&gt;
+			&lt;/fieldset&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;col-12&quot;&gt;
+			&lt;button class=&quot;btn btn-primary&quot;&gt;Save&lt;/button&gt;
+			&lt;button class=&quot;btn btn-outline-secondary&quot;&gt;Cancle&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                </div>
+              </div>
+            </div>
+            <!-- Company Information Card End -->
+          </div>
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h6 class="card-title mb-0"><strong>Float Label</strong></h6>
+                <div class="form-check form-switch card-toggle-three">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    role="switch"
+                    id="card-toggle-three"
+                  />
+                  <label class="form-check-label" for="card-toggle-three"
+                    >Show Code</label
+                  >
+                </div>
+              </div>
+              <div class="card-body card-main-three">
+                <form class="form-floating">
+                  <div class="mb-4">
+                    <span class="form-floating">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="TextInput"
+                        placeholder="Name"
+                      />
+                      <label class="form-label" for="TextInput"
+                        >Text Input</label
+                      >
+                    </span>
+                  </div>
+                  <div class="mb-4">
+                    <span class="form-floating">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="emailInput"
+                        placeholder="password"
+                      />
+                      <label class="form-label" for="emailInput"
+                        >Email Input</label
+                      >
+                    </span>
+                  </div>
+                  <div class="mb-4">
+                    <span class="form-floating">
+                      <textarea
+                        class="form-control"
+                        id="TextArea"
+                        rows="5"
+                        cols="30"
+                        placeholder="Comment"
+                      ></textarea>
+                      <label class="form-label" for="TextArea">Text Area</label>
+                    </span>
+                  </div>
+                  <div class="mb-4">
+                    <div class="form-floating">
+                      <select
+                        class="form-select"
+                        id="floatingSelect"
+                        aria-label="Floating label select example"
+                      >
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <label for="floatingSelect">Works with selects</label>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <button class="btn btn-primary">Save</button>
+                    <button class="btn btn-outline-secondary">Cancle</button>
+                  </div>
+                </form>
+                <div class="form-code">
+                  <pre
+                    class="language-html m-0"
+                    data-lang="html"
+                  ><code class="language-html">&lt;form class=&quot;form-floating&quot;&gt;
+	&lt;div class=&quot;mb-4&quot;&gt;
+		&lt;span class=&quot;form-floating&quot;&gt;
+			&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;TextInput&quot; placeholder=&quot;Name&quot;&gt;
+			&lt;label class=&quot;form-label&quot; for=&quot;TextInput&quot;&gt;Text Input&lt;/label&gt;
+		&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;mb-4&quot;&gt;
+		&lt;span class=&quot;form-floating&quot;&gt;
+			&lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;emailInput&quot; placeholder=&quot;password&quot;&gt;
+			&lt;label class=&quot;form-label&quot; for=&quot;emailInput&quot;&gt;Email Input&lt;/label&gt;
+		&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;mb-4&quot;&gt;
+		&lt;span class=&quot;form-floating&quot;&gt;
+			&lt;textarea class=&quot;form-control&quot; id=&quot;TextArea&quot; rows=&quot;5&quot; cols=&quot;30&quot; placeholder=&quot;Comment&quot;&gt;&lt;/textarea&gt;
+			&lt;label class=&quot;form-label&quot; for=&quot;TextArea&quot;&gt;Text Area&lt;/label&gt;
+		&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;mb-4&quot;&gt;
+		&lt;div class=&quot;form-floating&quot;&gt;
+			&lt;select class=&quot;form-select&quot; id=&quot;floatingSelect&quot; aria-label=&quot;Floating label select example&quot;&gt;
+				&lt;option selected&gt;Open this select menu&lt;/option&gt;
+				&lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
+				&lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
+				&lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
+			&lt;/select&gt;
+			&lt;label for=&quot;floatingSelect&quot;&gt;Works with selects&lt;/label&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;mb-4&quot;&gt;
+		&lt;button class=&quot;btn btn-primary&quot;&gt;Save&lt;/button&gt;
+		&lt;button class=&quot;btn btn-outline-secondary&quot;&gt;Cancle&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                </div>
+              </div>
+            </div>
+            <!-- Form Validation -->
+          </div>
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h6 class="card-title mb-0"><strong>Checkout form</strong></h6>
+                <div class="form-check form-switch card-toggle-four">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    role="switch"
+                    id="card-toggle-four"
+                  />
+                  <label class="form-check-label" for="card-toggle-four"
+                    >Show Code</label
+                  >
+                </div>
+              </div>
+              <div class="card-body card-main-four">
+                <div class="row g-5 form">
+                  <div class="col-md-5 col-lg-4 order-md-last">
+                    <h4
+                      class="d-flex justify-content-between align-items-center mb-3"
+                    >
+                      <span class="text-primary h6">Your cart</span>
+                      <span class="badge bg-primary rounded-pill">3</span>
+                    </h4>
+                    <ul class="list-group mb-3">
+                      <li
+                        class="list-group-item d-flex justify-content-between lh-sm"
+                      >
+                        <div>
+                          <h6 class="my-0">Product name</h6>
+                          <small class="text-muted">Brief description</small>
+                        </div>
+                        <span class="text-muted">$12</span>
+                      </li>
+                      <li
+                        class="list-group-item d-flex justify-content-between lh-sm"
+                      >
+                        <div>
+                          <h6 class="my-0">Second product</h6>
+                          <small class="text-muted">Brief description</small>
+                        </div>
+                        <span class="text-muted">$8</span>
+                      </li>
+                      <li
+                        class="list-group-item d-flex justify-content-between lh-sm"
+                      >
+                        <div>
+                          <h6 class="my-0">Third item</h6>
+                          <small class="text-muted">Brief description</small>
+                        </div>
+                        <span class="text-muted">$5</span>
+                      </li>
+                      <li
+                        class="list-group-item d-flex justify-content-between bg-light"
+                      >
+                        <div class="text-success">
+                          <h6 class="my-0">Promo code</h6>
+                          <small>EXAMPLECODE</small>
+                        </div>
+                        <span class="text-success">−$5</span>
+                      </li>
+                      <li
+                        class="list-group-item d-flex justify-content-between"
+                      >
+                        <span>Total (USD)</span>
+                        <strong>$20</strong>
+                      </li>
+                    </ul>
+
+                    <form class="card p-2">
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Promo code"
+                        />
+                        <button type="submit" class="btn btn-secondary">
+                          Redeem
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-md-7 col-lg-8">
+                    <h4 class="mb-3 h6">Billing address</h4>
+                    <form class="needs-validation" novalidate="">
+                      <div class="row g-3">
+                        <div class="col-sm-6">
+                          <label for="firstName" class="form-label"
+                            >First name</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="firstName"
+                            placeholder=""
+                            value=""
+                            required=""
+                          />
+                          <div class="invalid-feedback">
+                            Valid first name is required.
+                          </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <label for="lastName" class="form-label"
+                            >Last name</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="lastName"
+                            placeholder=""
+                            value=""
+                            required=""
+                          />
+                          <div class="invalid-feedback">
+                            Valid last name is required.
+                          </div>
+                        </div>
+
+                        <div class="col-12">
+                          <label for="username" class="form-label"
+                            >Username</label
+                          >
+                          <div class="input-group has-validation">
+                            <span class="input-group-text">@</span>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="username"
+                              placeholder="Username"
+                              required=""
+                            />
+                            <div class="invalid-feedback">
+                              Your username is required.
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-12">
+                          <label for="email" class="form-label"
+                            >Email
+                            <span class="text-muted">(Optional)</span></label
+                          >
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            placeholder="you@gmail.com"
+                          />
+                          <div class="invalid-feedback">
+                            Please enter a valid email address for shipping
+                            updates.
+                          </div>
+                        </div>
+
+                        <div class="col-12">
+                          <label for="address" class="form-label"
+                            >Address</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="address"
+                            placeholder="1234 Main St"
+                            required=""
+                          />
+                          <div class="invalid-feedback">
+                            Please enter your shipping address.
+                          </div>
+                        </div>
+
+                        <div class="col-12">
+                          <label for="address2" class="form-label"
+                            >Address 2
+                            <span class="text-muted">(Optional)</span></label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="address2"
+                            placeholder="Apartment or suite"
+                          />
+                        </div>
+
+                        <div class="col-md-5">
+                          <label for="country" class="form-label"
+                            >Country</label
+                          >
+                          <select class="form-select" id="country" required="">
+                            <option value="">Choose...</option>
+                            <option>United States</option>
+                          </select>
+                          <div class="invalid-feedback">
+                            Please select a valid country.
+                          </div>
+                        </div>
+
+                        <div class="col-md-4">
+                          <label for="state" class="form-label">State</label>
+                          <select class="form-select" id="state" required="">
+                            <option value="">Choose...</option>
+                            <option>California</option>
+                          </select>
+                          <div class="invalid-feedback">
+                            Please provide a valid state.
+                          </div>
+                        </div>
+
+                        <div class="col-md-3">
+                          <label for="zip" class="form-label">Zip</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="zip"
+                            placeholder=""
+                            required=""
+                          />
+                          <div class="invalid-feedback">Zip code required.</div>
+                        </div>
+                      </div>
+
+                      <hr class="my-4" />
+
+                      <div class="form-check">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="same-address"
+                        />
+                        <label class="form-check-label" for="same-address"
+                          >Shipping address is the same as my billing
+                          address</label
+                        >
+                      </div>
+
+                      <div class="form-check">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="save-info"
+                        />
+                        <label class="form-check-label" for="save-info"
+                          >Save this information for next time</label
+                        >
+                      </div>
+
+                      <hr class="my-4" />
+
+                      <h4 class="mb-3 h6">Payment</h4>
+
+                      <div class="my-3">
+                        <div class="form-check">
+                          <input
+                            id="credit"
+                            name="paymentMethod"
+                            type="radio"
+                            class="form-check-input"
+                            checked=""
+                            required=""
+                          />
+                          <label class="form-check-label" for="credit"
+                            >Credit card</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            id="debit"
+                            name="paymentMethod"
+                            type="radio"
+                            class="form-check-input"
+                            required=""
+                          />
+                          <label class="form-check-label" for="debit"
+                            >Debit card</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            id="paypal"
+                            name="paymentMethod"
+                            type="radio"
+                            class="form-check-input"
+                            required=""
+                          />
+                          <label class="form-check-label" for="paypal"
+                            >PayPal</label
+                          >
+                        </div>
+                      </div>
+
+                      <div class="row gy-3">
+                        <div class="col-md-6">
+                          <label for="cc-name" class="form-label"
+                            >Name on card</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="cc-name"
+                            placeholder=""
+                            required=""
+                          />
+                          <small class="text-muted"
+                            >Full name as displayed on card</small
+                          >
+                          <div class="invalid-feedback">
+                            Name on card is required
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <label for="cc-number" class="form-label"
+                            >Credit card number</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="cc-number"
+                            placeholder=""
+                            required=""
+                          />
+                          <div class="invalid-feedback">
+                            Credit card number is required
+                          </div>
+                        </div>
+
+                        <div class="col-md-3">
+                          <label for="cc-expiration" class="form-label"
+                            >Expiration</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="cc-expiration"
+                            placeholder=""
+                            required=""
+                          />
+                          <div class="invalid-feedback">
+                            Expiration date required
+                          </div>
+                        </div>
+
+                        <div class="col-md-3">
+                          <label for="cc-cvv" class="form-label">CVV</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="cc-cvv"
+                            placeholder=""
+                            required=""
+                          />
+                          <div class="invalid-feedback">
+                            Security code required
+                          </div>
+                        </div>
+                      </div>
+                      <hr class="my-4" />
+                      <button
+                        class="w-100 btn btn-primary btn-lg"
+                        type="submit"
+                      >
+                        Continue to checkout
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="form-code">
+                  <pre
+                    class="language-html m-0"
+                    data-lang="html"
+                  ><code class="language-html">&lt;div class=&quot;row g-5&quot;&gt;
+&lt;div class=&quot;col-md-5 col-lg-4 order-md-last&quot;&gt;
+&lt;h4 class=&quot;d-flex justify-content-between align-items-center mb-3&quot;&gt;
+	&lt;span class=&quot;text-primary h6&quot;&gt;Your cart&lt;/span&gt;
+	&lt;span class=&quot;badge bg-primary rounded-pill&quot;&gt;3&lt;/span&gt;
+&lt;/h4&gt;
+&lt;ul class=&quot;list-group mb-3&quot;&gt;
+	&lt;li class=&quot;list-group-item d-flex justify-content-between lh-sm&quot;&gt;
+	&lt;div&gt;
+		&lt;h6 class=&quot;my-0&quot;&gt;Product name&lt;/h6&gt;
+		&lt;small class=&quot;text-muted&quot;&gt;Brief description&lt;/small&gt;
+	&lt;/div&gt;
+	&lt;span class=&quot;text-muted&quot;&gt;$12&lt;/span&gt;
+	&lt;/li&gt;
+	&lt;li class=&quot;list-group-item d-flex justify-content-between lh-sm&quot;&gt;
+	&lt;div&gt;
+		&lt;h6 class=&quot;my-0&quot;&gt;Second product&lt;/h6&gt;
+		&lt;small class=&quot;text-muted&quot;&gt;Brief description&lt;/small&gt;
+	&lt;/div&gt;
+	&lt;span class=&quot;text-muted&quot;&gt;$8&lt;/span&gt;
+	&lt;/li&gt;
+	&lt;li class=&quot;list-group-item d-flex justify-content-between lh-sm&quot;&gt;
+	&lt;div&gt;
+		&lt;h6 class=&quot;my-0&quot;&gt;Third item&lt;/h6&gt;
+		&lt;small class=&quot;text-muted&quot;&gt;Brief description&lt;/small&gt;
+	&lt;/div&gt;
+	&lt;span class=&quot;text-muted&quot;&gt;$5&lt;/span&gt;
+	&lt;/li&gt;
+	&lt;li class=&quot;list-group-item d-flex justify-content-between bg-light&quot;&gt;
+	&lt;div class=&quot;text-success&quot;&gt;
+		&lt;h6 class=&quot;my-0&quot;&gt;Promo code&lt;/h6&gt;
+		&lt;small&gt;EXAMPLECODE&lt;/small&gt;
+	&lt;/div&gt;
+	&lt;span class=&quot;text-success&quot;&gt;&minus;$5&lt;/span&gt;
+	&lt;/li&gt;
+	&lt;li class=&quot;list-group-item d-flex justify-content-between&quot;&gt;
+	&lt;span&gt;Total (USD)&lt;/span&gt;
+	&lt;strong&gt;$20&lt;/strong&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;form class=&quot;card p-2&quot;&gt;
+	&lt;div class=&quot;input-group&quot;&gt;
+	&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Promo code&quot;&gt;
+	&lt;button type=&quot;submit&quot; class=&quot;btn btn-secondary&quot;&gt;Redeem&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-7 col-lg-8&quot;&gt;
+&lt;h4 class=&quot;mb-3 h6&quot;&gt;Billing address&lt;/h4&gt;
+&lt;form class=&quot;needs-validation&quot; novalidate=&quot;&quot;&gt;
+	&lt;div class=&quot;row g-3&quot;&gt;
+	&lt;div class=&quot;col-sm-6&quot;&gt;
+		&lt;label for=&quot;firstName&quot; class=&quot;form-label&quot;&gt;First name&lt;/label&gt;
+		&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;firstName&quot; placeholder=&quot;&quot; value=&quot;&quot; required=&quot;&quot;&gt;
+		&lt;div class=&quot;invalid-feedback&quot;&gt;
+		Valid first name is required.
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;col-sm-6&quot;&gt;
+		&lt;label for=&quot;lastName&quot; class=&quot;form-label&quot;&gt;Last name&lt;/label&gt;
+		&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;lastName&quot; placeholder=&quot;&quot; value=&quot;&quot; required=&quot;&quot;&gt;
+		&lt;div class=&quot;invalid-feedback&quot;&gt;
+		Valid last name is required.
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;col-12&quot;&gt;
+		&lt;label for=&quot;username&quot; class=&quot;form-label&quot;&gt;Username&lt;/label&gt;
+		&lt;div class=&quot;input-group has-validation&quot;&gt;
+		&lt;span class=&quot;input-group-text&quot;&gt;@&lt;/span&gt;
+		&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;username&quot; placeholder=&quot;Username&quot; required=&quot;&quot;&gt;
+		&lt;div class=&quot;invalid-feedback&quot;&gt;
+			Your username is required.
+		&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;col-12&quot;&gt;
+		&lt;label for=&quot;email&quot; class=&quot;form-label&quot;&gt;Email &lt;span class=&quot;text-muted&quot;&gt;(Optional)&lt;/span&gt;&lt;/label&gt;
+		&lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;email&quot; placeholder=&quot;you@gmail.com&quot;&gt;
+		&lt;div class=&quot;invalid-feedback&quot;&gt;
+		Please enter a valid email address for shipping updates.
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;col-12&quot;&gt;
+		&lt;label for=&quot;address&quot; class=&quot;form-label&quot;&gt;Address&lt;/label&gt;
+		&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;address&quot; placeholder=&quot;1234 Main St&quot; required=&quot;&quot;&gt;
+		&lt;div class=&quot;invalid-feedback&quot;&gt;
+		Please enter your shipping address.
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;col-12&quot;&gt;
+		&lt;label for=&quot;address2&quot; class=&quot;form-label&quot;&gt;Address 2 &lt;span class=&quot;text-muted&quot;&gt;(Optional)&lt;/span&gt;&lt;/label&gt;
+		&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;address2&quot; placeholder=&quot;Apartment or suite&quot;&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;col-md-5&quot;&gt;
+		&lt;label for=&quot;country&quot; class=&quot;form-label&quot;&gt;Country&lt;/label&gt;
+		&lt;select class=&quot;form-select&quot; id=&quot;country&quot; required=&quot;&quot;&gt;
+		&lt;option value=&quot;&quot;&gt;Choose...&lt;/option&gt;
+		&lt;option&gt;United States&lt;/option&gt;
+		&lt;/select&gt;
+		&lt;div class=&quot;invalid-feedback&quot;&gt;
+		Please select a valid country.
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;col-md-4&quot;&gt;
+		&lt;label for=&quot;state&quot; class=&quot;form-label&quot;&gt;State&lt;/label&gt;
+		&lt;select class=&quot;form-select&quot; id=&quot;state&quot; required=&quot;&quot;&gt;
+		&lt;option value=&quot;&quot;&gt;Choose...&lt;/option&gt;
+		&lt;option&gt;California&lt;/option&gt;
+		&lt;/select&gt;
+		&lt;div class=&quot;invalid-feedback&quot;&gt;
+		Please provide a valid state.
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;col-md-3&quot;&gt;
+		&lt;label for=&quot;zip&quot; class=&quot;form-label&quot;&gt;Zip&lt;/label&gt;
+		&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;zip&quot; placeholder=&quot;&quot; required=&quot;&quot;&gt;
+		&lt;div class=&quot;invalid-feedback&quot;&gt;
+		Zip code required.
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;hr class=&quot;my-4&quot;&gt;
+
+	&lt;div class=&quot;form-check&quot;&gt;
+	&lt;input type=&quot;checkbox&quot; class=&quot;form-check-input&quot; id=&quot;same-address&quot;&gt;
+	&lt;label class=&quot;form-check-label&quot; for=&quot;same-address&quot;&gt;Shipping address is the same as my billing address&lt;/label&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;form-check&quot;&gt;
+	&lt;input type=&quot;checkbox&quot; class=&quot;form-check-input&quot; id=&quot;save-info&quot;&gt;
+	&lt;label class=&quot;form-check-label&quot; for=&quot;save-info&quot;&gt;Save this information for next time&lt;/label&gt;
+	&lt;/div&gt;
+
+	&lt;hr class=&quot;my-4&quot;&gt;
+
+	&lt;h4 class=&quot;mb-3 h6&quot;&gt;Payment&lt;/h4&gt;
+
+	&lt;div class=&quot;my-3&quot;&gt;
+	&lt;div class=&quot;form-check&quot;&gt;
+		&lt;input id=&quot;credit&quot; name=&quot;paymentMethod&quot; type=&quot;radio&quot; class=&quot;form-check-input&quot; checked=&quot;&quot; required=&quot;&quot;&gt;
+		&lt;label class=&quot;form-check-label&quot; for=&quot;credit&quot;&gt;Credit card&lt;/label&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;form-check&quot;&gt;
+		&lt;input id=&quot;debit&quot; name=&quot;paymentMethod&quot; type=&quot;radio&quot; class=&quot;form-check-input&quot; required=&quot;&quot;&gt;
+		&lt;label class=&quot;form-check-label&quot; for=&quot;debit&quot;&gt;Debit card&lt;/label&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;form-check&quot;&gt;
+		&lt;input id=&quot;paypal&quot; name=&quot;paymentMethod&quot; type=&quot;radio&quot; class=&quot;form-check-input&quot; required=&quot;&quot;&gt;
+		&lt;label class=&quot;form-check-label&quot; for=&quot;paypal&quot;&gt;PayPal&lt;/label&gt;
+	&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;row gy-3&quot;&gt;
+	&lt;div class=&quot;col-md-6&quot;&gt;
+		&lt;label for=&quot;cc-name&quot; class=&quot;form-label&quot;&gt;Name on card&lt;/label&gt;
+		&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;cc-name&quot; placeholder=&quot;&quot; required=&quot;&quot;&gt;
+		&lt;small class=&quot;text-muted&quot;&gt;Full name as displayed on card&lt;/small&gt;
+		&lt;div class=&quot;invalid-feedback&quot;&gt;
+		Name on card is required
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;col-md-6&quot;&gt;
+		&lt;label for=&quot;cc-number&quot; class=&quot;form-label&quot;&gt;Credit card number&lt;/label&gt;
+		&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;cc-number&quot; placeholder=&quot;&quot; required=&quot;&quot;&gt;
+		&lt;div class=&quot;invalid-feedback&quot;&gt;
+		Credit card number is required
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;col-md-3&quot;&gt;
+		&lt;label for=&quot;cc-expiration&quot; class=&quot;form-label&quot;&gt;Expiration&lt;/label&gt;
+		&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;cc-expiration&quot; placeholder=&quot;&quot; required=&quot;&quot;&gt;
+		&lt;div class=&quot;invalid-feedback&quot;&gt;
+		Expiration date required
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;col-md-3&quot;&gt;
+		&lt;label for=&quot;cc-cvv&quot; class=&quot;form-label&quot;&gt;CVV&lt;/label&gt;
+		&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;cc-cvv&quot; placeholder=&quot;&quot; required=&quot;&quot;&gt;
+		&lt;div class=&quot;invalid-feedback&quot;&gt;
+		Security code required
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;hr class=&quot;my-4&quot;&gt;
+	&lt;button class=&quot;w-100 btn btn-primary btn-lg&quot; type=&quot;submit&quot;&gt;Continue to checkout&lt;/button&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- .row end -->
+      </div>
+    </main>
+
+    <!-- start: template setting, and more. -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvas_setting"
+      aria-labelledby="offcanvas_setting"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Template Setting</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="mb-4">
+          <h6>Set Theme Color</h6>
+          <ul class="choose-skin list-unstyled mb-0">
+            <li data-theme="ValenciaRed">
+              <div style="--hotelair-theme-color: #d63b38"></div>
+            </li>
+            <li data-theme="SunOrange">
+              <div style="--hotelair-theme-color: #f7a614"></div>
+            </li>
+            <li data-theme="AppleGreen">
+              <div style="--hotelair-theme-color: #5bc43a"></div>
+            </li>
+            <li data-theme="CeruleanBlue">
+              <div style="--hotelair-theme-color: #00b8d6"></div>
+            </li>
+            <li data-theme="Mariner">
+              <div style="--hotelair-theme-color: #0066fe"></div>
+            </li>
+            <li data-theme="PurpleHeart" class="active">
+              <div style="--hotelair-theme-color: #6238b3"></div>
+            </li>
+            <li data-theme="FrenchRose">
+              <div style="--hotelair-theme-color: #eb5393"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="svg-stroke mb-4">
+          <h6>Icon Border Stroke</h6>
+          <div
+            class="btn-group"
+            role="group"
+            aria-label="Basic radio toggle button group"
+          >
+            <input
+              type="radio"
+              class="btn-check"
+              name="stroke"
+              id="Stroke_A"
+              value="svgstroke-a"
+              checked
+            />
+            <label class="btn btn-outline-primary" for="Stroke_A"
+              >Stroke 1</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="stroke"
+              id="Stroke_B"
+              value="svgstroke-b"
+            />
+            <label class="btn btn-outline-primary" for="Stroke_B"
+              >Stroke 2</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="stroke"
+              id="Stroke_C"
+              value="svgstroke-c"
+            />
+            <label class="btn btn-outline-primary" for="Stroke_C"
+              >Stroke 3</label
+            >
+          </div>
+        </div>
+        <div class="mb-4">
+          <h6>Layout Section Ligh/Dark</h6>
+          <ul class="list-unstyled d-flex flex-wrap">
+            <li class="me-2 mb-2 sidebar-toggle">
+              <input type="checkbox" class="btn-check" id="Sidebar_dark" />
+              <label class="btn btn-outline-primary" for="Sidebar_dark"
+                >Sidebar</label
+              >
+            </li>
+            <li class="me-2 mb-2 header-toggle">
+              <input type="checkbox" class="btn-check" id="Header_dark" />
+              <label class="btn btn-outline-primary" for="Header_dark"
+                >Header</label
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="mb-4">
+          <h6>More App Setting</h6>
+          <div class="form-check form-switch bodygradient-toggle">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="bodyGradient"
+              checked
+            />
+            <label class="form-check-label" for="bodyGradient"
+              >Body Gradient Background</label
+            >
+          </div>
+
+          <div class="form-check form-switch monochrome-toggle">
+            <input
+              class="form-check-input fs-6"
+              type="checkbox"
+              role="switch"
+              id="monochrome"
+            />
+            <label class="form-check-label" for="monochrome"
+              >Monochrome Mode</label
+            >
+          </div>
+          <!-- <div class="form-check form-switch gradient-active">
+					<input class="form-check-input fs-6" type="checkbox" role="switch" id="gradient-active">
+					<label class="form-check-label" for="gradient-active">Gradient Active</label>
+				</div> -->
+          <div class="form-check form-switch radius-toggle">
+            <input
+              class="form-check-input fs-6"
+              type="checkbox"
+              role="switch"
+              id="radius0"
+            />
+            <label class="form-check-label" for="radius0"
+              >Border Radius none</label
+            >
+          </div>
+          <div class="form-check form-switch svg-icon-color">
+            <input
+              class="form-check-input fs-6"
+              type="checkbox"
+              role="switch"
+              id="IconColor"
+            />
+            <label class="form-check-label" for="IconColor"
+              >Sidebar Icon color</label
+            >
+          </div>
+          <div class="form-check form-switch cb-shadow">
+            <input
+              class="form-check-input fs-6"
+              type="checkbox"
+              role="switch"
+              id="BoxShadow"
+            />
+            <label class="form-check-label" for="BoxShadow"
+              >Card box shadow active</label
+            >
+          </div>
+        </div>
+        <div class="d-flex">
+          <button type="button" class="btn w-100 me-1 py-2 btn-primary">
+            Buy Now
+          </button>
+          <button type="button" class="btn w-100 ms-1 py-2 btn-dark">
+            View Portfolio
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--[ hotelair template vender js ]-->
+    <script src="../assets/bundles/libscripts.bundle.js"></script>
+    <script src="../assets/bundles/prism.bundle.js"></script>
+    <script src="../assets/bundles/inputmask.bundle.js"></script>
+    <script src="../assets/bundles/select2.bundle.js"></script>
+    <script src="../assets/bundles/flatpickr.bundle.js"></script>
+
+    <!-- Template page js -->
+    <script src="../assets/js/main.js"></script>
+    <script>
+      $(".f-basic").flatpickr({
+        enableTime: true,
+        dateFormat: "Y-m-d H:i",
+      });
+
+      // Masking
+      Inputmask({ mask: "(999) 999-9999" }).mask(".phone-number");
+
+      // Select2 selectbox
+      $(".select2").select2();
+    </script>
+  </body>
+
+  <!-- Mirrored from pixelwibes.in/templates/hotelair/html/docs/widgets-forms.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:32:58 GMT -->
+</html>

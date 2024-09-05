@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        .form-group button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hotel Management System</h1>
+    <div class="container">
+        <div class="form-group">
+            <label for="room-number">Room Number:</label>
+            <input type="text" id="room-number" name="room-number" placeholder="Enter room number">
+        </div>
+        <div class="form-group">
+            <label for="capacity">Capacity:</label>
+            <input type="number" id="capacity" name="capacity" placeholder="Enter capacity">
+        </div>
+        <div class="form-group">
+            <label for="price-per-night">Price Per Night:</label>
+            <input type="number" id="price-per-night" name="price-per-night" placeholder="Enter price per night">
+        </div>
+        <div class="form-group">
+            <button onclick="addRoom()">Add Room</button>
+        </div>
+    </div>
+
+    <script>
+        function addRoom() {
+            var roomNumber = document.getElementById('room-number').value;
+            var capacity = document.getElementById('capacity').value;
+            var pricePerNight = document.getElementById('price-per-night').value;
+
+            // Here you can perform further actions, such as sending the data to a server or processing it locally.
+            console.log("Room Number:", roomNumber);
+            console.log("Capacity:", capacity);
+            console.log("Price Per Night:", pricePerNight);
+        }
+    </script>
+</body>
+</html>

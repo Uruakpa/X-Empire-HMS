@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from pixelwibes.in/templates/hotelair/html/docs/summernote.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:33:01 GMT -->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Responsive Bootstrap 5 admin dashboard template & web App ui kit."
+    />
+    <meta name="keyword" content="bootstrap admin template" />
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
+    <!--[ Favicon]-->
+    <title>: HotelAir : Hotel Management Admin Dashboard Template</title>
+
+    <!--[ Favicon]-->
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/images/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/images/apple-touch-icon.png"
+    />
+
+    <link rel="stylesheet" href="../assets/css/prism.min.css" />
+    <link rel="stylesheet" href="../assets/css/summernote.min.css" />
+    <style>
+      @font-face {
+        font-family: "summernote";
+        src: url("../assets/fonts/summernoted41d.eot?#iefix")
+            format("embedded-opentype"),
+          url("../assets/fonts/summernote.woff2") format("woff2"),
+          url("../assets/fonts/summernote.woff") format("woff"),
+          url("../assets/fonts/summernote.ttf") format("truetype");
+      }
+    </style>
+
+    <!--[ Template main css file ]-->
+    <link rel="stylesheet" href="../assets/css/style.min.css" />
+  </head>
+
+  <body data-theme="theme-PurpleHeart" class="svgstroke-a docs">
+    <button
+      class="btn btn-primary d-inline-flex d-xl-none position-fixed bottom-0 end-0 p-2 me-3 mb-3 z-3 shadow avatar rounded-circle"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvas_Navbar"
+    >
+      <svg
+        class="svg-stroke"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M4 6l16 0"></path>
+        <path d="M4 12l16 0"></path>
+        <path d="M4 18l16 0"></path>
+      </svg>
+    </button>
+
+    <header class="border-bottom cus-header">
+      <div class="container-xl">
+        <div class="row px-xl-4">
+          <div class="col-12">
+            <div class="d-flex justify-content-between py-3">
+              <a
+                href="../index.html"
+                class="brand-icon text-decoration-none d-flex align-items-center"
+                title="HotelAir Admin Template"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+                  ></path>
+                  <path d="M9 8l0 8"></path>
+                  <path d="M9 12l6 0"></path>
+                  <path d="M15 8l0 8"></path>
+                </svg>
+                <span class="fw-bold ps-2 fs-5 text-gradient"
+                  >X <small>-</small>Empire</span
+                >
+              </a>
+              <a href="#" class="btn btn-dark">Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container-xl px-0">
+      <!-- start: page menu link -->
+      <aside
+        class="ps-xl-5 ps-lg-4 ps-3 pe-2 py-3 sidebar sticky-top"
+        data-bs-theme="none"
+      >
+        <nav class="navbar navbar-expand-xl py-0">
+          <div
+            class="offcanvas offcanvas-start"
+            data-bs-scroll="true"
+            tabindex="-1"
+            id="offcanvas_Navbar"
+          >
+            <div class="offcanvas-header">
+              <span class="fw-bold fs-5 text-gradient"
+                >X <small>-</small>Empire</span
+              >
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body flex-column custom_scroll ps-3 ps-xl-0">
+              <div
+                class="d-flex align-items-start mb-4 d-none d-xl-inline-flex"
+              >
+                <a
+                  href="../index.html"
+                  class="brand-icon text-decoration-none d-flex align-items-center"
+                  title="HotelAir Admin Template"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+                    />
+                    <path d="M9 8l0 8" />
+                    <path d="M9 12l6 0" />
+                    <path d="M15 8l0 8" />
+                  </svg>
+                  <span class="fw-bold ps-2 fs-5 text-gradient"
+                    >X <small>-</small>Empire</span
+                  >
+                </a>
+              </div>
+              <!-- start: Menu tab -->
+              <ul
+                class="nav nav-tabs tab-dynamic px-0 mb-4"
+                role="tablist"
+                style="--dynamic-color: var(--accent-color)"
+              >
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="ps-2 pe-3 nav-link active"
+                    data-bs-toggle="tab"
+                    href="#tab_General"
+                    role="tab"
+                    aria-selected="false"
+                    tabindex="-1"
+                    >General</a
+                  >
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="ps-2 pe-3 nav-link"
+                    data-bs-toggle="tab"
+                    href="#tab_Bootstrtap"
+                    role="tab"
+                    aria-selected="true"
+                    >Bootstrtap</a
+                  >
+                </li>
+              </ul>
+              <!-- start: Menu content -->
+              <div class="tab-content">
+                <!-- start: General tab-->
+                <div
+                  class="tab-pane fade active show"
+                  id="tab_General"
+                  role="tabpanel"
+                >
+                  <ul class="list-unstyled mb-4 menu-list">
+                    <li>
+                      <a href="index.html" aria-label="Documentation">
+                        <svg
+                          class="svg-stroke"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            stroke="none"
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          ></path>
+                          <path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
+                          <path
+                            d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"
+                          ></path>
+                          <path d="M10 12h4v4h-4z"></path>
+                        </svg>
+                        <span class="mx-3">Documentation</span>
+                      </a>
+                    </li>
+                    <li class="py-2 mt-2">
+                      <h6
+                        class="fl-title title-font ps-2 small text-uppercase text-muted"
+                        style="--dynamic-color: var(--theme-color1)"
+                      >
+                        Widgets
+                      </h6>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a
+                            href="widgets-basic-card.html"
+                            aria-label="Widgets Basic card"
+                            >Basic card</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="widgets-card-tiles.html"
+                            aria-label="Widgets tiles"
+                            >Card tiles</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="widgets-card-tab.html"
+                            aria-label="Widgets Tabbed"
+                            >Tabbed card</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="widgets-tables.html"
+                            aria-label="Widgets Tables"
+                            >Tables example</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="widgets-forms.html"
+                            aria-label="Widgets Forms"
+                            >Forms example</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="py-2 mt-2">
+                      <h6
+                        class="fl-title title-font ps-2 small text-uppercase text-muted"
+                        style="--dynamic-color: var(--theme-color1)"
+                      >
+                        Charts
+                      </h6>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="apex.html" aria-label="Apex chart"
+                            >Apex chart</a
+                          >
+                        </li>
+                        <li>
+                          <a href="peity.html" aria-label="Peity chart"
+                            >Peity chart</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="py-2 mt-2">
+                      <h6
+                        class="fl-title title-font ps-2 small text-uppercase text-muted"
+                        style="--dynamic-color: var(--theme-color1)"
+                      >
+                        Plugin (NPM)
+                      </h6>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="datatables.html" aria-label="Datatables"
+                            >Datatables</a
+                          >
+                        </li>
+                        <li>
+                          <a href="flatpickr.html" aria-label="Flatpickr"
+                            >Flatpickr</a
+                          >
+                        </li>
+                        <li>
+                          <a href="inputmask.html" aria-label="Inputmask"
+                            >Inputmask</a
+                          >
+                        </li>
+                        <li>
+                          <a href="jsvectormap.html" aria-label="Jsvectormap"
+                            >Jsvectormap</a
+                          >
+                        </li>
+                        <li>
+                          <a href="sortablejs.html" aria-label="Sortablejs"
+                            >Sortablejs</a
+                          >
+                        </li>
+                        <li>
+                          <a href="sweetalert2.html" aria-label="Sweet alert 2"
+                            >Sweet alert 2</a
+                          >
+                        </li>
+                        <li>
+                          <a href="tagify.html" aria-label="Tagify">Tagify</a>
+                        </li>
+                        <li>
+                          <a href="tiny-slider.html" aria-label="Tiny slider"
+                            >Tiny slider</a
+                          >
+                        </li>
+                        <li>
+                          <a href="full-calendar.html" aria-label="Calendar"
+                            >Calendar</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="active"
+                            href="summernote.html"
+                            aria-label="Summernote"
+                            >Summernote</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="py-2 mt-2">
+                      <h6
+                        class="fl-title title-font ps-2 small text-uppercase text-muted"
+                        style="--dynamic-color: var(--theme-color1)"
+                      >
+                        Font icon
+                      </h6>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a
+                            href="bootstrap-icon.html"
+                            aria-label="Bootstrap Icon"
+                            >Bootstrap Icon</a
+                          >
+                        </li>
+                        <li>
+                          <a href="flag-icon.html" aria-label="Country Flag"
+                            >Country Flag icon</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="fontawesome-icon.html"
+                            aria-label="Font awesome"
+                            >Font awesome</a
+                          >
+                        </li>
+                        <li>
+                          <a href="linear-icon.html" aria-label="Simple line"
+                            >Simple line icon</a
+                          >
+                        </li>
+                        <li>
+                          <a href="weather-icon.html" aria-label="Weather icon"
+                            >Weather icon</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <!-- start: Bootstrtap tab -->
+                <div class="tab-pane fade" id="tab_Bootstrtap" role="tabpanel">
+                  <h6
+                    class="fl-title title-font ps-2 small text-uppercase text-muted"
+                    style="--dynamic-color: var(--theme-color1)"
+                  >
+                    Bootstrtap
+                  </h6>
+                  <ul class="list-unstyled mb-4 menu-list">
+                    <li class="py-2 mt-2">
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="accordion.html" aria-label="Accordion"
+                            >Accordion</a
+                          >
+                        </li>
+                        <li>
+                          <a href="alerts.html" aria-label="Alerts">Alerts</a>
+                        </li>
+                        <li>
+                          <a href="avatar.html" aria-label="User Avatar"
+                            >User Avatar</a
+                          >
+                        </li>
+                        <li>
+                          <a href="badges.html" aria-label="Badges">Badges</a>
+                        </li>
+                        <li>
+                          <a href="breadcrumb.html" aria-label="Breadcrumb"
+                            >Breadcrumb</a
+                          >
+                        </li>
+                        <li>
+                          <a href="buttons.html" aria-label="Buttons"
+                            >Buttons</a
+                          >
+                        </li>
+                        <li>
+                          <a href="cards.html" aria-label="Cards">Cards</a>
+                        </li>
+                        <li>
+                          <a href="carousel.html" aria-label="Carousel"
+                            >Carousel</a
+                          >
+                        </li>
+                        <li>
+                          <a href="collapse.html" aria-label="Collapse"
+                            >Collapse</a
+                          >
+                        </li>
+                        <li>
+                          <a href="dropdowns.html" aria-label="Dropdowns"
+                            >Dropdowns</a
+                          >
+                        </li>
+                        <li>
+                          <a href="listgroup.html" aria-label="List group"
+                            >List group</a
+                          >
+                        </li>
+                        <li>
+                          <a href="modal.html" aria-label="Modal">Modal</a>
+                        </li>
+                        <li>
+                          <a href="navbar.html" aria-label="Navbar">Navbar</a>
+                        </li>
+                        <li>
+                          <a href="navstabs.html" aria-label="Navs and tabs"
+                            >Navs and tabs</a
+                          >
+                        </li>
+                        <li>
+                          <a href="offcanvas.html" aria-label="Offcanvas"
+                            >Offcanvas</a
+                          >
+                        </li>
+                        <li>
+                          <a href="pagination.html" aria-label="Pagination"
+                            >Pagination</a
+                          >
+                        </li>
+                        <li>
+                          <a href="placeholders.html" aria-label="Placeholders"
+                            >Placeholders</a
+                          >
+                        </li>
+                        <li>
+                          <a href="popovers.html" aria-label="Popovers"
+                            >Popovers</a
+                          >
+                        </li>
+                        <li>
+                          <a href="progress.html" aria-label="Progress"
+                            >Progress</a
+                          >
+                        </li>
+                        <li>
+                          <a href="spinners.html" aria-label="Spinners"
+                            >Spinners</a
+                          >
+                        </li>
+                        <li>
+                          <a href="toasts.html" aria-label="Toasts">Toasts</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </aside>
+
+      <div class="content px-xl-5 px-lg-4 px-3 py-3 page-body bg-card">
+        <h4 class="mb-4">Summernote</h4>
+        <p class="lead">
+          The fastest way to get Summernote is to download the precompiled and
+          minified versions of our CSS and JavaScript. No documentation or
+          original source code files are included. For more info, please visit
+          the
+          <a href="https://summernote.org/" rel="nofollow" target="_blank"
+            >official website</a
+          >.
+        </p>
+        <div class="row g-3">
+          <div class="col-12">
+            <pre
+              class="language-html m-0"
+              data-lang="html"
+            ><code class=" language-html">&lt;div class=&quot;summernote&quot;&gt;&lt;/div&gt;
+
+&lt;script src=&quot;../assets/bundles/summernote.bundle.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+	
+	$(document).ready(function() {
+		$('.summernote').summernote();
+		var noteBar = $('.note-toolbar');
+		noteBar.find('[data-toggle]').each(function() {
+			$(this).attr('data-bs-toggle', $(this).attr('data-toggle')).removeAttr('data-toggle');
+		});
+	});
+
+&lt;/script&gt;</code></pre>
+          </div>
+          <div class="col-12">
+            <div class="summernote">
+              Hello there,
+              <br />
+              <p>
+                The toolbar can be customized and it also supports various
+                callbacks such as <code>oninit</code>, <code>onfocus</code>,
+                <code>onpaste</code> and many more.
+              </p>
+              <p>Please try <b>paste some texts</b> here</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- start: template setting, and more. -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvas_setting"
+      aria-labelledby="offcanvas_setting"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Template Setting</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="mb-4">
+          <h6>Set Theme Color</h6>
+          <ul class="choose-skin list-unstyled mb-0">
+            <li data-theme="ValenciaRed">
+              <div style="--hotelair-theme-color: #d63b38"></div>
+            </li>
+            <li data-theme="SunOrange">
+              <div style="--hotelair-theme-color: #f7a614"></div>
+            </li>
+            <li data-theme="AppleGreen">
+              <div style="--hotelair-theme-color: #5bc43a"></div>
+            </li>
+            <li data-theme="CeruleanBlue">
+              <div style="--hotelair-theme-color: #00b8d6"></div>
+            </li>
+            <li data-theme="Mariner">
+              <div style="--hotelair-theme-color: #0066fe"></div>
+            </li>
+            <li data-theme="PurpleHeart" class="active">
+              <div style="--hotelair-theme-color: #6238b3"></div>
+            </li>
+            <li data-theme="FrenchRose">
+              <div style="--hotelair-theme-color: #eb5393"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="svg-stroke mb-4">
+          <h6>Icon Border Stroke</h6>
+          <div
+            class="btn-group"
+            role="group"
+            aria-label="Basic radio toggle button group"
+          >
+            <input
+              type="radio"
+              class="btn-check"
+              name="stroke"
+              id="Stroke_A"
+              value="svgstroke-a"
+              checked
+            />
+            <label class="btn btn-outline-primary" for="Stroke_A"
+              >Stroke 1</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="stroke"
+              id="Stroke_B"
+              value="svgstroke-b"
+            />
+            <label class="btn btn-outline-primary" for="Stroke_B"
+              >Stroke 2</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="stroke"
+              id="Stroke_C"
+              value="svgstroke-c"
+            />
+            <label class="btn btn-outline-primary" for="Stroke_C"
+              >Stroke 3</label
+            >
+          </div>
+        </div>
+        <div class="mb-4">
+          <h6>Layout Section Ligh/Dark</h6>
+          <ul class="list-unstyled d-flex flex-wrap">
+            <li class="me-2 mb-2 sidebar-toggle">
+              <input type="checkbox" class="btn-check" id="Sidebar_dark" />
+              <label class="btn btn-outline-primary" for="Sidebar_dark"
+                >Sidebar</label
+              >
+            </li>
+            <li class="me-2 mb-2 header-toggle">
+              <input type="checkbox" class="btn-check" id="Header_dark" />
+              <label class="btn btn-outline-primary" for="Header_dark"
+                >Header</label
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="mb-4">
+          <h6>More App Setting</h6>
+          <div class="form-check form-switch bodygradient-toggle">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="bodyGradient"
+              checked
+            />
+            <label class="form-check-label" for="bodyGradient"
+              >Body Gradient Background</label
+            >
+          </div>
+
+          <div class="form-check form-switch monochrome-toggle">
+            <input
+              class="form-check-input fs-6"
+              type="checkbox"
+              role="switch"
+              id="monochrome"
+            />
+            <label class="form-check-label" for="monochrome"
+              >Monochrome Mode</label
+            >
+          </div>
+          <!-- <div class="form-check form-switch gradient-active">
+					<input class="form-check-input fs-6" type="checkbox" role="switch" id="gradient-active">
+					<label class="form-check-label" for="gradient-active">Gradient Active</label>
+				</div> -->
+          <div class="form-check form-switch radius-toggle">
+            <input
+              class="form-check-input fs-6"
+              type="checkbox"
+              role="switch"
+              id="radius0"
+            />
+            <label class="form-check-label" for="radius0"
+              >Border Radius none</label
+            >
+          </div>
+          <div class="form-check form-switch svg-icon-color">
+            <input
+              class="form-check-input fs-6"
+              type="checkbox"
+              role="switch"
+              id="IconColor"
+            />
+            <label class="form-check-label" for="IconColor"
+              >Sidebar Icon color</label
+            >
+          </div>
+          <div class="form-check form-switch cb-shadow">
+            <input
+              class="form-check-input fs-6"
+              type="checkbox"
+              role="switch"
+              id="BoxShadow"
+            />
+            <label class="form-check-label" for="BoxShadow"
+              >Card box shadow active</label
+            >
+          </div>
+        </div>
+        <div class="d-flex">
+          <button type="button" class="btn w-100 me-1 py-2 btn-primary">
+            Buy Now
+          </button>
+          <button type="button" class="btn w-100 ms-1 py-2 btn-dark">
+            View Portfolio
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--[ hotelair template vender js ]-->
+    <script src="../assets/bundles/libscripts.bundle.js"></script>
+    <script src="../assets/bundles/prism.bundle.js"></script>
+    <script src="../assets/bundles/summernote.bundle.js"></script>
+
+    <!-- Template page js -->
+    <script src="../assets/js/main.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".summernote").summernote();
+        var noteBar = $(".note-toolbar");
+        noteBar.find("[data-toggle]").each(function () {
+          $(this)
+            .attr("data-bs-toggle", $(this).attr("data-toggle"))
+            .removeAttr("data-toggle");
+        });
+      });
+    </script>
+  </body>
+
+  <!-- Mirrored from pixelwibes.in/templates/hotelair/html/docs/summernote.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:33:01 GMT -->
+</html>

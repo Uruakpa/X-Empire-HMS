@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+X-Empire - Stock Report
+{% endblock title %}
+{% block content %}
+		<div class="content">
+			{% comment %} page header {% endcomment %}
+			{% include "header.html" %}
+			{% comment %} end page header {% endcomment %}
+			<!-- start: page body area -->
+			<div class="px-xl-5 px-lg-4 px-3 py-3 page-body">
+                <div class="row g-3">
+					<div class="col-sm-12">
+						<div class="d-flex align-items-center justify-content-between flex-wrap">
+							<h3 class="fw-bold mb-0">Stock Report</h3>
+						</div>
+				  	</div>
+					<div class="col-sm-12">
+						<div class="card">
+							<div class="card-body">
+								<table class="table dataTable align-middle table-hover table-body" style="width: 100%;">
+									<thead>
+										<tr>
+											<th>Product Name</th>
+											<th>Quantity</th>
+											<th>Price</th>
+											<th>Amount</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Bed Cover</td>
+											<td>30</td>
+											<td>$20</td>
+											<td>$600</td>
+										</tr>
+										<tr>
+											<td>Chair</td>
+											<td>30</td>
+											<td>$50</td>
+											<td>$1500</td>
+										</tr>
+										<tr>
+											<td>Bath Towel</td>
+											<td>300</td>
+											<td>$5</td>
+											<td>$1500</td>
+										</tr>
+										<tr>
+											<td>Pillowcase Set</td>
+											<td>50</td>
+											<td>$10</td>
+											<td>$500</td>
+										</tr>
+										<tr>
+											<td>Hand Soap</td>
+											<td>200</td>
+											<td>$2</td>
+											<td>$400</td>
+										</tr>
+										<tr>
+											<td>Shower Gel</td>
+											<td>80</td>
+											<td>$8</td>
+											<td>$640</td>
+										</tr>
+										<tr>
+											<td>Shampoo</td>
+											<td>60</td>
+											<td>$7</td>
+											<td>$420</td>
+										</tr>
+										<tr>
+											<td>Conditioner</td>
+											<td>40</td>
+											<td>$6</td>
+											<td>$240</td>
+										</tr>
+										<tr>
+											<td>Toothpaste</td>
+											<td>120</td>
+											<td>$3</td>
+											<td>$360</td>
+										</tr>
+										<tr>
+											<td>Toothbrush</td>
+											<td>150</td>
+											<td>$2</td>
+											<td>$300</td>
+										</tr>
+										<tr>
+											<td>Bathrobe</td>
+											<td>20</td>
+											<td>$30</td>
+											<td>$600</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+                </div><!-- Row End -->
+			</div>
+		</div>
+
+	</main>
+
+<script>
+		$(document).ready( function () {
+            $('.dataTable')
+            .addClass( 'nowrap' )
+            .dataTable( {
+                responsive: true,
+            });
+        });
+
+	</script>
+
+{% endblock content %}

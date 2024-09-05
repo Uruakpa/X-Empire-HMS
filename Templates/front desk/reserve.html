@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="content">
+{% include "header.html" %}
+            <table class="table dataTable align-middle table-hover table-body" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>Check In</th>
+                        <th>Check Out</th>
+                        <th>
+                            Arrival From
+                        </th>
+                        {% comment %} <th>Unit</th> {% endcomment %}
+                        <th>
+                            Purpose
+                        </th>
+                        <th>
+                            Reservation Date
+                        </th>
+                        {% comment %} <th>Laundry Item</th> {% endcomment %}
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   {% if reserve %}
+                    {% for reservation  in reserve %}
+                    <tr>
+                        <td>
+                            {{reservation.check_in}}
+                            
+                        </td>
+                        <td>
+
+                            {{reservation.check_out}}
+                        </td>
+                        <td>
+                            {{reservation.arrival_from}}
+                        </td>
+                        <td>
+                            {{reservation.purpose}}
+                        </td>
+                        <td>
+                            {{reservation.reservation_date}}
+                        </td>
+                        <td>
+                            
+                            <a href="{% url "checkin" reservation.pk %}" class="btn btn-warning">
+                                Checkout
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    {% else %}
+                     <div class="text-center">
+                        <h4> no reserved room available </h4>
+                         </div>
+                    {% endif %}
+
+                    
+                </tbody>
+            </table>
+        </div>
+
+{% endblock content %}

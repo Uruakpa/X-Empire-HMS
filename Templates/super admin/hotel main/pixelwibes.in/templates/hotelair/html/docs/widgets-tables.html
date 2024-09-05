@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from pixelwibes.in/templates/hotelair/html/docs/widgets-tables.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:32:55 GMT -->
+<head>
+    
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Bootstrap 5 admin dashboard template & web App ui kit.">
+	<meta name="keyword" content="bootstrap admin template">
+	<link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon"> <!--[ Favicon]-->
+    <title>: HotelAir : Hotel Management Admin Dashboard Template</title>
+	
+    <!--[ Favicon]-->
+	<link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+
+	<link rel="stylesheet" href="../assets/css/prism.min.css">
+	<link rel="stylesheet" href="../assets/css/dataTables.min.css">
+	
+	<!--[ Template main css file ]-->
+	<link rel="stylesheet" href="../assets/css/style.min.css">
+
+</head>
+
+<body data-theme="theme-PurpleHeart" class="svgstroke-a docs">
+
+	<button class="btn btn-primary d-inline-flex d-xl-none position-fixed bottom-0 end-0 p-2 me-3 mb-3 z-3 shadow avatar rounded-circle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_Navbar">
+		<svg class="svg-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+			<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+			<path d="M4 6l16 0"></path>
+			<path d="M4 12l16 0"></path>
+			<path d="M4 18l16 0"></path>
+		</svg>
+	</button>
+
+    <header class="border-bottom cus-header">
+        <div class="container-xl">
+            <div class="row px-xl-4">
+                <div class="col-12">
+                    <div class="d-flex justify-content-between py-3">
+                        <a href="../index.html" class="brand-icon text-decoration-none d-flex align-items-center" title="HotelAir Admin Template">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
+                                <path d="M9 8l0 8"></path>
+                                <path d="M9 12l6 0"></path>
+                                <path d="M15 8l0 8"></path>
+                            </svg>
+                            <span class="fw-bold ps-2 fs-5 text-gradient">X <small>-</small>Empire</span>
+                        </a>
+                        <a href="#" class="btn btn-dark">Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+	<main class="container-xl px-0">
+		<!-- start: page menu link -->
+		<aside class="ps-xl-5 ps-lg-4 ps-3 pe-2 py-3 sidebar sticky-top" data-bs-theme="none">
+			<nav class="navbar navbar-expand-xl py-0">
+				<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvas_Navbar">
+					<div class="offcanvas-header">
+						<span class="fw-bold fs-5 text-gradient">X <small>-</small>Empire</span>
+						<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+					<div class="offcanvas-body flex-column custom_scroll ps-3 ps-xl-0">
+						<div class="d-flex align-items-start mb-4 d-none d-xl-inline-flex">
+							<a href="../index.html" class="brand-icon text-decoration-none d-flex align-items-center" title="HotelAir Admin Template">
+								<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+									<path d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+									<path d="M9 8l0 8" />
+									<path d="M9 12l6 0" />
+									<path d="M15 8l0 8" />
+								</svg>
+								<span class="fw-bold ps-2 fs-5 text-gradient">X <small>-</small>Empire</span>
+							</a>
+						</div>
+						<!-- start: Menu tab -->
+						<ul class="nav nav-tabs tab-dynamic px-0 mb-4" role="tablist" style="--dynamic-color: var(--accent-color)">
+                            <li class="nav-item" role="presentation"><a class="ps-2 pe-3 nav-link active" data-bs-toggle="tab" href="#tab_General" role="tab" aria-selected="false" tabindex="-1">General</a></li>
+                            <li class="nav-item" role="presentation"><a class="ps-2 pe-3 nav-link" data-bs-toggle="tab" href="#tab_Bootstrtap" role="tab" aria-selected="true">Bootstrtap</a></li>
+                        </ul>
+						<!-- start: Menu content -->
+						<div class="tab-content">
+							<!-- start: General tab-->
+							<div class="tab-pane fade active show" id="tab_General" role="tabpanel">
+								<ul class="list-unstyled mb-4 menu-list">
+									<li>
+										<a href="index.html" aria-label="Documentation">
+											<svg class="svg-stroke" xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+												<path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
+												<path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
+												<path d="M10 12h4v4h-4z"></path>
+											</svg>
+											<span class="mx-3">Documentation</span>
+										</a>
+									</li>
+									<li class="py-2 mt-2">
+										<h6 class="fl-title title-font ps-2 small text-uppercase text-muted" style="--dynamic-color: var(--theme-color1)">Widgets</h6>
+										<ul class="list-unstyled">
+											<li><a href="widgets-basic-card.html" aria-label="Widgets Basic card">Basic card</a></li>
+											<li><a href="widgets-card-tiles.html" aria-label="Widgets tiles">Card tiles</a></li>
+											<li><a href="widgets-card-tab.html" aria-label="Widgets Tabbed">Tabbed card</a></li>
+											<li><a class="active" href="widgets-tables.html" aria-label="Widgets Tables">Tables example</a></li>
+											<li><a href="widgets-forms.html" aria-label="Widgets Forms">Forms example</a></li>
+										</ul>
+									</li>
+									<li class="py-2 mt-2">
+										<h6 class="fl-title title-font ps-2 small text-uppercase text-muted" style="--dynamic-color: var(--theme-color1)">Charts</h6>
+										<ul class="list-unstyled">
+											<li><a href="apex.html" aria-label="Apex chart">Apex chart</a></li>
+											<li><a href="peity.html" aria-label="Peity chart">Peity chart</a></li>
+										</ul>
+									</li>
+									<li class="py-2 mt-2">
+										<h6 class="fl-title title-font ps-2 small text-uppercase text-muted" style="--dynamic-color: var(--theme-color1)">Plugin (NPM)</h6>
+										<ul class="list-unstyled">
+											<li><a href="datatables.html" aria-label="Datatables">Datatables</a></li>
+											<li><a href="flatpickr.html" aria-label="Flatpickr">Flatpickr</a></li>
+											<li><a href="inputmask.html" aria-label="Inputmask">Inputmask</a></li>
+											<li><a href="jsvectormap.html" aria-label="Jsvectormap">Jsvectormap</a></li>
+											<li><a href="sortablejs.html" aria-label="Sortablejs">Sortablejs</a></li>
+											<li><a href="sweetalert2.html" aria-label="Sweet alert 2">Sweet alert 2</a></li>
+											<li><a href="tagify.html" aria-label="Tagify">Tagify</a></li>
+											<li><a href="tiny-slider.html" aria-label="Tiny slider">Tiny slider</a></li>
+											<li><a href="full-calendar.html" aria-label="Calendar">Calendar</a></li>
+											<li><a href="summernote.html" aria-label="Summernote">Summernote</a></li>
+										</ul>
+									</li>
+									<li class="py-2 mt-2">
+										<h6 class="fl-title title-font ps-2 small text-uppercase text-muted" style="--dynamic-color: var(--theme-color1)">Font icon</h6>
+										<ul class="list-unstyled">
+											<li><a href="bootstrap-icon.html" aria-label="Bootstrap Icon">Bootstrap Icon</a></li>
+											<li><a href="flag-icon.html" aria-label="Country Flag">Country Flag icon</a></li>
+											<li><a href="fontawesome-icon.html" aria-label="Font awesome">Font awesome</a></li>
+											<li><a href="linear-icon.html" aria-label="Simple line">Simple line icon</a></li>
+											<li><a href="weather-icon.html" aria-label="Weather icon">Weather icon</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<!-- start: Bootstrtap tab -->
+							<div class="tab-pane fade" id="tab_Bootstrtap" role="tabpanel">
+								<h6 class="fl-title title-font ps-2 small text-uppercase text-muted" style="--dynamic-color: var(--theme-color1)">Bootstrtap</h6>
+								<ul class="list-unstyled mb-4 menu-list">
+									<li class="py-2 mt-2">
+										<ul class="list-unstyled">
+											<li><a href="accordion.html" aria-label="Accordion">Accordion</a></li>
+											<li><a href="alerts.html" aria-label="Alerts">Alerts</a></li>
+											<li><a href="avatar.html" aria-label="User Avatar">User Avatar</a></li>
+											<li><a href="badges.html" aria-label="Badges">Badges</a></li>
+											<li><a href="breadcrumb.html" aria-label="Breadcrumb">Breadcrumb</a></li>
+											<li><a href="buttons.html" aria-label="Buttons">Buttons</a></li>
+											<li><a href="cards.html" aria-label="Cards">Cards</a></li>
+											<li><a href="carousel.html" aria-label="Carousel">Carousel</a></li>
+											<li><a href="collapse.html" aria-label="Collapse">Collapse</a></li>
+											<li><a href="dropdowns.html" aria-label="Dropdowns">Dropdowns</a></li>
+											<li><a href="listgroup.html" aria-label="List group">List group</a></li>
+											<li><a href="modal.html" aria-label="Modal">Modal</a></li>
+											<li><a href="navbar.html" aria-label="Navbar">Navbar</a></li>
+											<li><a href="navstabs.html" aria-label="Navs and tabs">Navs and tabs</a></li>
+											<li><a href="offcanvas.html" aria-label="Offcanvas">Offcanvas</a></li>
+											<li><a href="pagination.html" aria-label="Pagination">Pagination</a></li>
+											<li><a href="placeholders.html" aria-label="Placeholders">Placeholders</a></li>
+											<li><a href="popovers.html" aria-label="Popovers">Popovers</a></li>
+											<li><a href="progress.html" aria-label="Progress">Progress</a></li>
+											<li><a href="spinners.html" aria-label="Spinners">Spinners</a></li>
+											<li><a href="toasts.html" aria-label="Toasts">Toasts</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</aside>
+
+		<div class="content px-xl-5 px-lg-4 px-3 py-3 page-body bg-card">
+			
+			<h3 class="title-font mb-3">Table example</h3>
+			<div class="row g-3">
+				<div class="col-12">
+					<div class="card">
+						<div class="card-header d-flex justify-content-between align-items-center bg-transparent border-bottom-0">
+							<h6 class="m-0">Patients Status</h6>
+							<div class="form-check form-switch table-toggle-one">
+								<input class="form-check-input" type="checkbox" role="switch" id="table-toggle-one">
+								<label class="form-check-label" for="table-toggle-one">Show Code</label>
+							</div>
+						</div>
+						<div class="card-body table-main-one">
+							<table class="myDataTable table table-hover align-middle mb-0" style="width: 100%;">
+								<thead>
+									<tr>
+										<th>Patients</th>
+										<th>Adress</th>
+										<th>Admited</th>
+										<th>Discharge</th>
+										<th>Progress</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><img src="../assets/images/xs/avatar3.jpg" class="avatar sm rounded me-2" alt="profile-image"><span>Jony</span></td>
+										<td>2861 Geneva Street, New York, 10016</td>
+										<td>Mar 17, 2023</td>
+										<td>Mar 19, 2023</td>
+										<td>
+											<div class="progress" style="height: 3px;">
+												<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"> <span class="sr-only">40% Complete</span> </div>
+											</div>
+										</td>
+										<td><span class="badge bg-info">Admit</span></td>
+									</tr>
+									<tr>
+										<td><img src="../assets/images/xs/avatar1.jpg" class="avatar sm rounded me-2" alt="profile-image"><span>Marco Sent</span></td>
+										<td>3387 Caldwell Road, Rochester,  14620</td>
+										<td>Mar 17, 2023</td>
+										<td>Mar 22, 2023</td>
+										<td>
+											<div class="progress" style="height: 3px;">
+												<div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"> <span class="sr-only">100% Complete</span> </div>
+											</div>
+										</td>
+										<td><span class="badge bg-success">Discharge</span></td>
+									</tr>
+									<tr>
+										<td><img src="../assets/images/xs/avatar2.jpg" class="avatar sm rounded me-2" alt="profile-image"><span>Marco Sent</span></td>
+										<td>3958 Kuhl Avenue, Smyrna,  64507</td>
+										<td>Mar 17, 2023</td>
+										<td>Mar 19, 2023</td>
+										<td>
+											<div class="progress" style="height: 3px;">
+												<div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"> <span class="sr-only">100% Complete</span> </div>
+											</div>
+										</td>
+										<td><span class="badge bg-success">Discharge</span></td>
+									</tr>
+									<tr>
+										<td><img src="../assets/images/xs/avatar4.jpg" class="avatar sm rounded me-2" alt="profile-image"><span>Dean Otto</span></td>
+										<td>3387 Caldwell Road, Rochester,  14620</td>
+										<td>Mar 17, 2023</td>
+										<td>Mar 23, 2023</td>
+										<td>
+											<div class="progress" style="height: 3px;">
+												<div class="progress-bar bg-info" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%;"> <span class="sr-only">15% Complete</span> </div>
+											</div>
+										</td>
+										<td><span class="badge bg-info">Admit</span></td>
+									</tr>
+									<tr>
+										<td><img src="../assets/images/xs/avatar5.jpg" class="avatar sm rounded me-2" alt="profile-image"><span>Hughe L.</span></td>
+										<td>3958 Kuhl Avenue, Smyrna,  64507</td>
+										<td>Apr 23, 2023</td>
+										<td>Apr 23, 2023</td>
+										<td>
+											<div class="progress" style="height: 3px;">
+												<div class="progress-bar bg-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"> <span class="sr-only">85% Complete</span> </div>
+											</div>
+										</td>
+										<td><span class="badge bg-info">Admit</span></td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="table-code">
+<pre class="language-html m-0" data-lang="html"><code class="language-html">&lt;table class=&quot;myDataTable table table-hover align-middle mb-0&quot; style=&quot;width: 100%;&quot;&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;Patients&lt;/th&gt;
+			&lt;th&gt;Adress&lt;/th&gt;
+			&lt;th&gt;Admited&lt;/th&gt;
+			&lt;th&gt;Discharge&lt;/th&gt;
+			&lt;th&gt;Progress&lt;/th&gt;
+			&lt;th&gt;Status&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;img src=&quot;../assets/images/xs/avatar3.jpg&quot; class=&quot;avatar sm rounded me-2&quot; alt=&quot;profile-image&quot;&gt;&lt;span&gt;Jony&lt;/span&gt;&lt;/td&gt;
+			&lt;td&gt;2861 Geneva Street, New York, 10016&lt;/td&gt;
+			&lt;td&gt;Mar 17, 2023&lt;/td&gt;
+			&lt;td&gt;Mar 19, 2023&lt;/td&gt;
+			&lt;td&gt;
+				&lt;div class=&quot;progress&quot; style=&quot;height: 3px;&quot;&gt;
+					&lt;div class=&quot;progress-bar progress-bar-warning&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;40&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 40%;&quot;&gt; &lt;span class=&quot;sr-only&quot;&gt;40% Complete&lt;/span&gt; &lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-info&quot;&gt;Admit&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;img src=&quot;../assets/images/xs/avatar1.jpg&quot; class=&quot;avatar sm rounded me-2&quot; alt=&quot;profile-image&quot;&gt;&lt;span&gt;Marco Sent&lt;/span&gt;&lt;/td&gt;
+			&lt;td&gt;3387 Caldwell Road, Rochester,  14620&lt;/td&gt;
+			&lt;td&gt;Mar 17, 2023&lt;/td&gt;
+			&lt;td&gt;Mar 22, 2023&lt;/td&gt;
+			&lt;td&gt;
+				&lt;div class=&quot;progress&quot; style=&quot;height: 3px;&quot;&gt;
+					&lt;div class=&quot;progress-bar bg-success&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;100&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 100%;&quot;&gt; &lt;span class=&quot;sr-only&quot;&gt;100% Complete&lt;/span&gt; &lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-success&quot;&gt;Discharge&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;img src=&quot;../assets/images/xs/avatar2.jpg&quot; class=&quot;avatar sm rounded me-2&quot; alt=&quot;profile-image&quot;&gt;&lt;span&gt;Marco Sent&lt;/span&gt;&lt;/td&gt;
+			&lt;td&gt;3958 Kuhl Avenue, Smyrna,  64507&lt;/td&gt;
+			&lt;td&gt;Mar 17, 2023&lt;/td&gt;
+			&lt;td&gt;Mar 19, 2023&lt;/td&gt;
+			&lt;td&gt;
+				&lt;div class=&quot;progress&quot; style=&quot;height: 3px;&quot;&gt;
+					&lt;div class=&quot;progress-bar bg-success&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;100&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 100%;&quot;&gt; &lt;span class=&quot;sr-only&quot;&gt;100% Complete&lt;/span&gt; &lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-success&quot;&gt;Discharge&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;img src=&quot;../assets/images/xs/avatar4.jpg&quot; class=&quot;avatar sm rounded me-2&quot; alt=&quot;profile-image&quot;&gt;&lt;span&gt;Dean Otto&lt;/span&gt;&lt;/td&gt;
+			&lt;td&gt;3387 Caldwell Road, Rochester,  14620&lt;/td&gt;
+			&lt;td&gt;Mar 17, 2023&lt;/td&gt;
+			&lt;td&gt;Mar 23, 2023&lt;/td&gt;
+			&lt;td&gt;
+				&lt;div class=&quot;progress&quot; style=&quot;height: 3px;&quot;&gt;
+					&lt;div class=&quot;progress-bar bg-info&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;15&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 15%;&quot;&gt; &lt;span class=&quot;sr-only&quot;&gt;15% Complete&lt;/span&gt; &lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-info&quot;&gt;Admit&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;img src=&quot;../assets/images/xs/avatar5.jpg&quot; class=&quot;avatar sm rounded me-2&quot; alt=&quot;profile-image&quot;&gt;&lt;span&gt;Hughe L.&lt;/span&gt;&lt;/td&gt;
+			&lt;td&gt;3958 Kuhl Avenue, Smyrna,  64507&lt;/td&gt;
+			&lt;td&gt;Apr 23, 2023&lt;/td&gt;
+			&lt;td&gt;Apr 23, 2023&lt;/td&gt;
+			&lt;td&gt;
+				&lt;div class=&quot;progress&quot; style=&quot;height: 3px;&quot;&gt;
+					&lt;div class=&quot;progress-bar bg-danger&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;85&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 85%;&quot;&gt; &lt;span class=&quot;sr-only&quot;&gt;85% Complete&lt;/span&gt; &lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-info&quot;&gt;Admit&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12">
+					<div class="card">
+						<div class="card-header py-3 d-flex flex-wrap justify-content-between align-items-center bg-transparent border-bottom-0">
+							<h6 class="card-title m-0">Website Performance</h6>
+							<div class="form-check form-switch table-toggle-two">
+								<input class="form-check-input" type="checkbox" role="switch" id="table-toggle-two">
+								<label class="form-check-label" for="table-toggle-two">Show Code</label>
+							</div>
+						</div>
+						<div class="card-body table-main-two">
+							<div class="table-responsive">
+								<table class="table table-borderless table-hover mb-0">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Source</th>
+											<th>Visits</th>
+											<th>Avg. Time</th>
+											<th>Bounce Rate</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td><a href="#" target="_blank">https://Hotelair.com/</a>
+											</td>
+											<td>980</td>
+											<td>55s</td>
+											<td>5.2%</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td><a href="#" target="_blank">https://Hotelair.com/</a>
+											</td>
+											<td>851</td>
+											<td>16s</td>
+											<td>8.0%</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td><a href="#" target="_blank">https://Hotelair.com/</a>
+											</td>
+											<td>321</td>
+											<td>10s</td>
+											<td>5.7%</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td><a href="#" target="_blank">https://Hotelair.com/</a>
+											</td>
+											<td>205</td>
+											<td>57s</td>
+											<td>5.3%</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td><a href="#" target="_blank">https://Hotelair.com/</a>
+											</td>
+											<td>89</td>
+											<td>45s</td>
+											<td>6.1%</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="table-code">
+<pre class="language-html m-0" data-lang="html"><code class="language-html">&lt;div class=&quot;table-responsive&quot;&gt;
+	&lt;table class=&quot;table table-borderless table-hover mb-0&quot;&gt;
+		&lt;thead&gt;
+			&lt;tr&gt;
+				&lt;th&gt;#&lt;/th&gt;
+				&lt;th&gt;Source&lt;/th&gt;
+				&lt;th&gt;Visits&lt;/th&gt;
+				&lt;th&gt;Avg. Time&lt;/th&gt;
+				&lt;th&gt;Bounce Rate&lt;/th&gt;
+			&lt;/tr&gt;
+		&lt;/thead&gt;
+		&lt;tbody&gt;
+			&lt;tr&gt;
+				&lt;td&gt;1&lt;/td&gt;
+				&lt;td&gt;&lt;a href=&quot;https://Hotelair.com/&quot; target=&quot;_blank&quot;&gt;https://Hotelair.com/&lt;/a&gt;
+				&lt;/td&gt;
+				&lt;td&gt;980&lt;/td&gt;
+				&lt;td&gt;55s&lt;/td&gt;
+				&lt;td&gt;5.2%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;2&lt;/td&gt;
+				&lt;td&gt;&lt;a href=&quot;https://Hotelair.com/&quot; target=&quot;_blank&quot;&gt;https://Hotelair.com/&lt;/a&gt;
+				&lt;/td&gt;
+				&lt;td&gt;851&lt;/td&gt;
+				&lt;td&gt;16s&lt;/td&gt;
+				&lt;td&gt;8.0%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;3&lt;/td&gt;
+				&lt;td&gt;&lt;a href=&quot;https://Hotelair.com/&quot; target=&quot;_blank&quot;&gt;https://Hotelair.com/&lt;/a&gt;
+				&lt;/td&gt;
+				&lt;td&gt;321&lt;/td&gt;
+				&lt;td&gt;10s&lt;/td&gt;
+				&lt;td&gt;5.7%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;4&lt;/td&gt;
+				&lt;td&gt;&lt;a href=&quot;https://Hotelair.com/&quot; target=&quot;_blank&quot;&gt;https://Hotelair.com/&lt;/a&gt;
+				&lt;/td&gt;
+				&lt;td&gt;205&lt;/td&gt;
+				&lt;td&gt;57s&lt;/td&gt;
+				&lt;td&gt;5.3%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;5&lt;/td&gt;
+				&lt;td&gt;&lt;a href=&quot;https://Hotelair.com/&quot; target=&quot;_blank&quot;&gt;https://Hotelair.com/&lt;/a&gt;
+				&lt;/td&gt;
+				&lt;td&gt;89&lt;/td&gt;
+				&lt;td&gt;45s&lt;/td&gt;
+				&lt;td&gt;6.1%&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/tbody&gt;
+	&lt;/table&gt;
+&lt;/div&gt;</code></pre>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12">
+					<div class="card">
+						<div class="card-header py-3 d-flex flex-wrap justify-content-between align-items-center bg-transparent border-bottom-0">
+							<h6 class="card-title m-0">Project Status</h6>
+							<div class="form-check form-switch table-toggle-three">
+								<input class="form-check-input" type="checkbox" role="switch" id="table-toggle-three">
+								<label class="form-check-label" for="table-toggle-three">Show Code</label>
+							</div>
+						</div>
+						<div class="card-body table-main-three">
+							<table class="myDataTable table table-hover align-middle mb-0" style="width:100%">
+								<thead>
+									<tr>
+										<th>Title</th>
+										<th>Date Start</th>
+										<th>Days to Deadline</th>
+										<th>Progress</th>
+										<th>Priority</th>
+										<th>Leader</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="#">Ebazar</a></td>
+										<td>12-02-2023</td>
+										<td>12 days</td>
+										<td>
+											<div class="progress">
+												<div class="progress-bar" data-transitiongoal="95" aria-valuenow="95" style="width: 95%;">95%</div>
+											</div>
+										</td>
+										<td><span class="badge bg-warning">MEDIUM</span></td>
+										<td><img src="../assets/images/xs/avatar1.jpg" alt="Avatar" class="avatar sm rounded me-2"><a href="#">Irene</a></td>
+										<td><span class="badge bg-success">ACTIVE</span></td>
+									</tr>
+									<tr>
+										<td><a href="#">EShop</a></td>
+										<td>24-05-2023</td>
+										<td>30 days</td>
+										<td>
+											<div class="progress">
+												<div class="progress-bar" data-transitiongoal="40" aria-valuenow="40" style="width: 40%;">40%</div>
+											</div>
+										</td>
+										<td><span class="badge bg-success">LOW</span></td>
+										<td><img src="../assets/images/xs/avatar2.jpg" alt="Avatar" class="avatar sm rounded me-2"><a href="#">Jasmine</a></td>
+										<td><span class="badge bg-warning">PENDING</span></td>
+									</tr>
+									<tr>
+										<td><a href="#">Food Buddy</a></td>
+										<td>20-09-2023</td>
+										<td>50 days</td>
+										<td>
+											<div class="progress">
+												<div class="progress-bar" data-transitiongoal="65" aria-valuenow="65" style="width: 65%;">65%</div>
+											</div>
+										</td>
+										<td><span class="badge bg-danger">HIGH</span></td>
+										<td><img src="../assets/images/xs/avatar3.jpg" alt="Avatar" class="avatar sm rounded me-2"><a href="#">Jasmine</a></td>
+										<td><span class="badge bg-success">ACTIVE</span></td>
+									</tr>
+									<tr>
+										<td><a href="#">Property Pro</a></td>
+										<td>05-10-2023</td>
+										<td>40 days</td>
+										<td>
+											<div class="progress">
+												<div class="progress-bar" data-transitiongoal="77" aria-valuenow="77" style="width: 77%;">77%</div>
+											</div>
+										</td>
+										<td><span class="badge bg-warning">MEDIUM</span></td>
+										<td><img src="../assets/images/xs/avatar4.jpg" alt="Avatar" class="avatar sm rounded me-2"><a href="#">Irene</a></td>
+										<td><span class="badge bg-success">ACTIVE</span></td>
+									</tr>
+									<tr>
+										<td><a href="#">Testroutes</a></td>
+										<td>15-11-2023</td>
+										<td>30 days</td>
+										<td>
+											<div class="progress">
+												<div class="progress-bar" data-transitiongoal="25" aria-valuenow="25" style="width: 25%;">25%</div>
+											</div>
+										</td>
+										<td><span class="badge bg-success">LOW</span></td>
+										<td><img src="../assets/images/xs/avatar5.jpg" alt="Avatar" class="avatar sm rounded me-2"><a href="#">Megan</a></td>
+										<td><span class="badge bg-success">ACTIVE</span></td>
+									</tr>
+									<tr>
+										<td><a href="#">Property Pro</a></td>
+										<td>05-10-2023</td>
+										<td>N/A</td>
+										<td>
+											<div class="progress">
+												<div class="progress-bar progress-bar-default" data-transitiongoal="100" aria-valuenow="100" style="width: 100%;">100%</div>
+											</div>
+										</td>
+										<td><span class="badge bg-secondary">MEDIUM</span></td>
+										<td><img src="../assets/images/xs/avatar6.jpg" alt="Avatar" class="avatar sm rounded me-2"><a href="#">Irene</a></td>
+										<td><span class="badge bg-secondary">CLOSED</span></td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="table-code">
+<pre class="language-html m-0" data-lang="html"><code class="language-html">&lt;table class=&quot;myDataTable table table-hover align-middle mb-0&quot; style=&quot;width:100%&quot;&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;Title&lt;/th&gt;
+			&lt;th&gt;Date Start&lt;/th&gt;
+			&lt;th&gt;Days to Deadline&lt;/th&gt;
+			&lt;th&gt;Progress&lt;/th&gt;
+			&lt;th&gt;Priority&lt;/th&gt;
+			&lt;th&gt;Leader&lt;/th&gt;
+			&lt;th&gt;Status&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;a href=&quot;#&quot;&gt;Ebazar&lt;/a&gt;&lt;/td&gt;
+			&lt;td&gt;12-02-2023&lt;/td&gt;
+			&lt;td&gt;12 days&lt;/td&gt;
+			&lt;td&gt;
+				&lt;div class=&quot;progress&quot;&gt;
+					&lt;div class=&quot;progress-bar&quot; data-transitiongoal=&quot;95&quot; aria-valuenow=&quot;95&quot; style=&quot;width: 95%;&quot;&gt;95%&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-warning&quot;&gt;MEDIUM&lt;/span&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;img src=&quot;../assets/images/xs/avatar1.jpg&quot; alt=&quot;Avatar&quot; class=&quot;avatar sm rounded me-2&quot;&gt;&lt;a href=&quot;#&quot;&gt;Irene&lt;/a&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-success&quot;&gt;ACTIVE&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;a href=&quot;#&quot;&gt;EShop&lt;/a&gt;&lt;/td&gt;
+			&lt;td&gt;24-05-2023&lt;/td&gt;
+			&lt;td&gt;30 days&lt;/td&gt;
+			&lt;td&gt;
+				&lt;div class=&quot;progress&quot;&gt;
+					&lt;div class=&quot;progress-bar&quot; data-transitiongoal=&quot;40&quot; aria-valuenow=&quot;40&quot; style=&quot;width: 40%;&quot;&gt;40%&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-success&quot;&gt;LOW&lt;/span&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;img src=&quot;../assets/images/xs/avatar2.jpg&quot; alt=&quot;Avatar&quot; class=&quot;avatar sm rounded me-2&quot;&gt;&lt;a href=&quot;#&quot;&gt;Jasmine&lt;/a&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-warning&quot;&gt;PENDING&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;a href=&quot;#&quot;&gt;Food Buddy&lt;/a&gt;&lt;/td&gt;
+			&lt;td&gt;20-09-2023&lt;/td&gt;
+			&lt;td&gt;50 days&lt;/td&gt;
+			&lt;td&gt;
+				&lt;div class=&quot;progress&quot;&gt;
+					&lt;div class=&quot;progress-bar&quot; data-transitiongoal=&quot;65&quot; aria-valuenow=&quot;65&quot; style=&quot;width: 65%;&quot;&gt;65%&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-danger&quot;&gt;HIGH&lt;/span&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;img src=&quot;../assets/images/xs/avatar3.jpg&quot; alt=&quot;Avatar&quot; class=&quot;avatar sm rounded me-2&quot;&gt;&lt;a href=&quot;#&quot;&gt;Jasmine&lt;/a&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-success&quot;&gt;ACTIVE&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;a href=&quot;#&quot;&gt;Property Pro&lt;/a&gt;&lt;/td&gt;
+			&lt;td&gt;05-10-2023&lt;/td&gt;
+			&lt;td&gt;40 days&lt;/td&gt;
+			&lt;td&gt;
+				&lt;div class=&quot;progress&quot;&gt;
+					&lt;div class=&quot;progress-bar&quot; data-transitiongoal=&quot;77&quot; aria-valuenow=&quot;77&quot; style=&quot;width: 77%;&quot;&gt;77%&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-warning&quot;&gt;MEDIUM&lt;/span&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;img src=&quot;../assets/images/xs/avatar4.jpg&quot; alt=&quot;Avatar&quot; class=&quot;avatar sm rounded me-2&quot;&gt;&lt;a href=&quot;#&quot;&gt;Irene&lt;/a&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-success&quot;&gt;ACTIVE&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;a href=&quot;#&quot;&gt;Testroutes&lt;/a&gt;&lt;/td&gt;
+			&lt;td&gt;15-11-2023&lt;/td&gt;
+			&lt;td&gt;30 days&lt;/td&gt;
+			&lt;td&gt;
+				&lt;div class=&quot;progress&quot;&gt;
+					&lt;div class=&quot;progress-bar&quot; data-transitiongoal=&quot;25&quot; aria-valuenow=&quot;25&quot; style=&quot;width: 25%;&quot;&gt;25%&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-success&quot;&gt;LOW&lt;/span&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;img src=&quot;../assets/images/xs/avatar5.jpg&quot; alt=&quot;Avatar&quot; class=&quot;avatar sm rounded me-2&quot;&gt;&lt;a href=&quot;#&quot;&gt;Megan&lt;/a&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-success&quot;&gt;ACTIVE&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;a href=&quot;#&quot;&gt;Property Pro&lt;/a&gt;&lt;/td&gt;
+			&lt;td&gt;05-10-2023&lt;/td&gt;
+			&lt;td&gt;N/A&lt;/td&gt;
+			&lt;td&gt;
+				&lt;div class=&quot;progress&quot;&gt;
+					&lt;div class=&quot;progress-bar progress-bar-default&quot; data-transitiongoal=&quot;100&quot; aria-valuenow=&quot;100&quot; style=&quot;width: 100%;&quot;&gt;100%&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-secondary&quot;&gt;MEDIUM&lt;/span&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;img src=&quot;../assets/images/xs/avatar6.jpg&quot; alt=&quot;Avatar&quot; class=&quot;avatar sm rounded me-2&quot;&gt;&lt;a href=&quot;#&quot;&gt;Irene&lt;/a&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-secondary&quot;&gt;CLOSED&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12">
+					<div class="card">
+						<div class="card-header bg-transparent py-3 border-0">
+							<h6 class="mb-0 card-title">New Admission List</h6>
+							<div class="form-check form-switch table-toggle-four">
+								<input class="form-check-input" type="checkbox" role="switch" id="table-toggle-four">
+								<label class="form-check-label" for="table-toggle-four">Show Code</label>
+							</div>
+						</div>
+						<div class="card-body table-main-four">
+							<table class="myDataTable table table-hover m-b-0" style="width: 100%;">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Name</th>
+										<th>Age</th>
+										<th>Address</th>
+										<th>Number</th>
+										<th>Department</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>OU 00456</td>
+										<td>Joseph</td>
+										<td>25</td>
+										<td>2861 Geneva Street, New York, 10016</td>
+										<td>516-503-6013</td>
+										<td><span class="badge bg-primary">MCA</td>
+									</tr>
+									<tr>
+										<td>KU 00789</td>
+										<td>Cameron</td>
+										<td>27</td>
+										<td>3387 Caldwell Road, Rochester,  14620</td>
+										<td>516-503-4569</td>
+										<td><span class="badge bg-warning">Medical</td>
+									</tr>
+									<tr>
+										<td>KU 00987</td>
+										<td>Alex</td>
+										<td>23</td>
+										<td>3387 Caldwell Road, Rochester,  14620</td>
+										<td>516-503-7412</td>
+										<td><span class="badge bg-info">M.COM</td>
+									</tr>
+									<tr>
+										<td>OU 00951</td>
+										<td>James</td>
+										<td>23</td>
+										<td>43958 Kuhl Avenue, Smyrna,  64507</td>
+										<td>516-503-2589</td>
+										<td><span class="badge bg-dark">MBA</td>
+									</tr>
+									<tr>
+										<td>OU 00953</td>
+										<td>charlie</td>
+										<td>21</td>
+										<td>3387 Caldwell Road, Rochester,  14620</td>
+										<td>516-503-9632</td>
+										<td><span class="badge bg-success">BBA</td>
+									</tr>
+									<tr>
+										<td>KU 00987</td>
+										<td>Alex</td>
+										<td>23</td>
+										<td>3387 Caldwell Road, Rochester,  14620</td>
+										<td>516-503-7412</td>
+										<td><span class="badge bg-info">M.COM</td>
+									</tr>
+									<tr>
+										<td>OU 00951</td>
+										<td>James</td>
+										<td>23</td>
+										<td>43958 Kuhl Avenue, Smyrna,  64507</td>
+										<td>516-503-2589</td>
+										<td><span class="badge bg-dark">MBA</td>
+									</tr>
+									<tr>
+										<td>OU 00456</td>
+										<td>Joseph</td>
+										<td>25</td>
+										<td>2861 Geneva Street, New York, 10016</td>
+										<td>516-503-6013</td>
+										<td><span class="badge bg-primary">MCA</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="table-code">
+<pre class="language-html m-0" data-lang="html"><code class="language-html">&lt;table class=&quot;myDataTable table table-hover m-b-0&quot; style=&quot;width: 100%;&quot;&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;ID&lt;/th&gt;
+			&lt;th&gt;Name&lt;/th&gt;
+			&lt;th&gt;Age&lt;/th&gt;
+			&lt;th&gt;Address&lt;/th&gt;
+			&lt;th&gt;Number&lt;/th&gt;
+			&lt;th&gt;Department&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;OU 00456&lt;/td&gt;
+			&lt;td&gt;Joseph&lt;/td&gt;
+			&lt;td&gt;25&lt;/td&gt;
+			&lt;td&gt;2861 Geneva Street, New York, 10016&lt;/td&gt;
+			&lt;td&gt;516-503-6013&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-primary&quot;&gt;MCA&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;KU 00789&lt;/td&gt;
+			&lt;td&gt;Cameron&lt;/td&gt;
+			&lt;td&gt;27&lt;/td&gt;
+			&lt;td&gt;3387 Caldwell Road, Rochester,  14620&lt;/td&gt;
+			&lt;td&gt;516-503-4569&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-warning&quot;&gt;Medical&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;KU 00987&lt;/td&gt;
+			&lt;td&gt;Alex&lt;/td&gt;
+			&lt;td&gt;23&lt;/td&gt;
+			&lt;td&gt;3387 Caldwell Road, Rochester,  14620&lt;/td&gt;
+			&lt;td&gt;516-503-7412&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-info&quot;&gt;M.COM&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;OU 00951&lt;/td&gt;
+			&lt;td&gt;James&lt;/td&gt;
+			&lt;td&gt;23&lt;/td&gt;
+			&lt;td&gt;43958 Kuhl Avenue, Smyrna,  64507&lt;/td&gt;
+			&lt;td&gt;516-503-2589&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-dark&quot;&gt;MBA&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;OU 00953&lt;/td&gt;
+			&lt;td&gt;charlie&lt;/td&gt;
+			&lt;td&gt;21&lt;/td&gt;
+			&lt;td&gt;3387 Caldwell Road, Rochester,  14620&lt;/td&gt;
+			&lt;td&gt;516-503-9632&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-success&quot;&gt;BBA&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;KU 00987&lt;/td&gt;
+			&lt;td&gt;Alex&lt;/td&gt;
+			&lt;td&gt;23&lt;/td&gt;
+			&lt;td&gt;3387 Caldwell Road, Rochester,  14620&lt;/td&gt;
+			&lt;td&gt;516-503-7412&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-info&quot;&gt;M.COM&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;OU 00951&lt;/td&gt;
+			&lt;td&gt;James&lt;/td&gt;
+			&lt;td&gt;23&lt;/td&gt;
+			&lt;td&gt;43958 Kuhl Avenue, Smyrna,  64507&lt;/td&gt;
+			&lt;td&gt;516-503-2589&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-dark&quot;&gt;MBA&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;OU 00456&lt;/td&gt;
+			&lt;td&gt;Joseph&lt;/td&gt;
+			&lt;td&gt;25&lt;/td&gt;
+			&lt;td&gt;2861 Geneva Street, New York, 10016&lt;/td&gt;
+			&lt;td&gt;516-503-6013&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;badge bg-primary&quot;&gt;MCA&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12">
+					<div class="card bg-transparent p-2">
+						<div class="card-header border-0">
+							<h6 class="mb-0 card-title">Schedule Table</h6>
+							<div class="form-check form-switch table-toggle-five">
+								<input class="form-check-input" type="checkbox" role="switch" id="table-toggle-five">
+								<label class="form-check-label" for="table-toggle-five">Show Code</label>
+							</div>
+						</div>
+						<div class="card-body table-main-five">
+							<ul class="nav nav-tabs tab-card mb-4" role="tablist">
+								<li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#nav-week1" role="tab">Week 1</a></li>
+								<li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#nav-week2" role="tab">Week 2</a></li>
+								<li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#nav-week3" role="tab">Week 3</a></li>
+								<li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#nav-week4" role="tab">Week 4</a></li>
+							</ul>
+							<div class="table-data">
+								<table id="myDataTable_no_filter" class="table align-middle table-bordered mb-0 custom-table dataTable m-0 w-100">
+									<thead>
+										<tr>                                       
+											<th>Day</th>
+											<th>Yoga Guru</th>
+											<th>Yoga</th>
+											<th>Session</th>
+											<th>Student</th>
+											<th>Action</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Monday</td>
+											<td>
+												<div class="d-flex align-items-center">
+													<img src="../assets/images/xs/avatar1.jpg" class="rounded sm avatar" alt="">
+													<div class="ms-2 mb-0">Frank Baker</div>
+												</div>
+											</td>
+											<td>Bridge – Bandha Sarvangasana</td>
+											<td>5</td>
+											<td>
+												<a href="#" title=""><img class="avatar xs rounded" src="../assets/images/xs/avatar3.jpg" alt="friend"> </a>
+												<a href="#" title=""><img class="avatar xs rounded" src="../assets/images/xs/avatar1.jpg" alt="friend"> </a>
+												<a href="#" title=""><img class="avatar xs rounded" src="../assets/images/xs/avatar7.jpg" alt="friend"> </a>
+												<a href="#" title=""><img class="avatar xs rounded" src="../assets/images/xs/avatar9.jpg" alt="friend"> </a>
+											</td>
+											<td>
+												<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Video"><i class="fa fa-youtube-play"></i></button>
+												<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Send Video"><i class="fa fa-envelope"></i></button>
+												<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Download"><i class="fa fa-download"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>Tuesday</td>
+											<td>
+												<div class="d-flex align-items-center">
+													<img src="../assets/images/xs/avatar2.jpg" class="rounded sm avatar" alt="">
+													<div class="ms-2 mb-0">Liam Berry</div>
+												</div>
+											</td>
+											<td>Arm Balance – Pincha Mayurasana</td>
+											<td>11</td>
+											<td>
+												<a href="#" title=""><img class="avatar xs rounded" src="../assets/images/xs/avatar4.jpg" alt="friend"> </a>
+												<a href="#" title=""><img class="avatar xs rounded" src="../assets/images/xs/avatar5.jpg" alt="friend"> </a>
+												<a href="#" title=""><img class="avatar xs rounded" src="../assets/images/xs/avatar6.jpg" alt="friend"> </a>
+												<a href="#" title=""><img class="avatar xs rounded" src="../assets/images/xs/avatar7.jpg" alt="friend"> </a>
+											</td>
+											<td>
+												<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Video"><i class="fa fa-youtube-play"></i></button>
+												<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Send Video"><i class="fa fa-envelope"></i></button>
+												<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Download"><i class="fa fa-download"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>Wednesday</td>
+											<td>
+												<div class="d-flex align-items-center">
+													<img src="../assets/images/xs/avatar3.jpg" class="rounded sm avatar" alt="">
+													<div class="ms-2 mb-0">Stephen McLean</div>
+												</div>
+											</td>
+											<td>Triangle – Trikonasana</td>
+											<td>4</td>
+											<td>
+												<a href="#" title=""><img class="avatar xs rounded" src="../assets/images/xs/avatar8.jpg" alt="friend"> </a>
+												<a href="#" title=""><img class="avatar xs rounded" src="../assets/images/xs/avatar9.jpg" alt="friend"> </a>
+												<a href="#" title=""><img class="avatar xs rounded" src="../assets/images/xs/avatar10.jpg" alt="friend"> </a>
+											</td>
+											<td>
+												<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Video"><i class="fa fa-youtube-play"></i></button>
+												<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Send Video"><i class="fa fa-envelope"></i></button>
+												<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Download"><i class="fa fa-download"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>Thursday</td>
+											<td>
+												<div class="d-flex align-items-center">
+													<img src="../assets/images/xs/avatar1.jpg" class="rounded sm avatar" alt="">
+													<div class="ms-2 mb-0">Frank Baker</div>
+												</div>
+											</td>
+											<td>Child Pose – Balasana</td>
+											<td>6</td>
+											<td>
+												<a href="#" title=""><img class="avatar xs rounded" src="../assets/images/xs/avatar1.jpg" alt="friend"> </a>
+												<a href="#" title=""><img class="avatar xs rounded" src="../assets/images/xs/avatar2.jpg" alt="friend"> </a>
+												<a href="#" title=""><img class="avatar xs rounded" src="../assets/images/xs/avatar3.jpg" alt="friend"> </a>
+												<a href="#" title=""><img class="avatar xs rounded" src="../assets/images/xs/avatar4.jpg" alt="friend"> </a>
+												<a href="#" title=""><img class="avatar xs rounded" src="../assets/images/xs/avatar5.jpg" alt="friend"> </a>
+												<a href="#" title=""><img class="avatar xs rounded" src="../assets/images/xs/avatar6.jpg" alt="friend"> </a>
+											</td>
+											<td>
+												<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Video"><i class="fa fa-youtube-play"></i></button>
+												<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Send Video"><i class="fa fa-envelope"></i></button>
+												<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Download"><i class="fa fa-download"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>Friday</td>
+											<td>
+												<div class="d-flex align-items-center">
+													<img src="../assets/images/xs/avatar1.jpg" class="rounded sm avatar" alt="">
+													<div class="ms-2 mb-0">Frank Baker</div>
+												</div>
+											</td>
+											<td>Downward Dog – Adho Mukha Svanasana</td>
+											<td>2</td>
+											<td>
+												<a href="#" title=""><img class="avatar xs rounded" src="../assets/images/xs/avatar10.jpg" alt="friend"> </a>
+												<a href="#" title=""><img class="avatar xs rounded" src="../assets/images/xs/avatar5.jpg" alt="friend"> </a>
+												<a href="#" title=""><img class="avatar xs rounded" src="../assets/images/xs/avatar2.jpg" alt="friend"> </a>
+											</td>
+											<td>
+												<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Video"><i class="fa fa-youtube-play"></i></button>
+												<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Send Video"><i class="fa fa-envelope"></i></button>
+												<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Download"><i class="fa fa-download"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td>Saturday</td>
+											<td>
+												<div class="d-flex align-items-center">
+													<img src="../assets/images/xs/avatar8.jpg" class="rounded sm avatar" alt="">
+													<div class="ms-2 mb-0">Gordon Butler</div>
+												</div>
+											</td>
+											<td>King Dancer – Natarajasana</td>
+											<td>2</td>
+											<td>
+												<a href="#" title=""><img class="avatar xs rounded" src="../assets/images/xs/avatar4.jpg" alt="friend"> </a>
+												<a href="#" title=""><img class="avatar xs rounded" src="../assets/images/xs/avatar9.jpg" alt="friend"> </a>
+											</td>
+											<td>
+												<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Video"><i class="fa fa-youtube-play"></i></button>
+												<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Send Video"><i class="fa fa-envelope"></i></button>
+												<button type="button" class="btn btn-link btn-sm text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Download"><i class="fa fa-download"></i></button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="table-code">
+<pre class="language-html m-0" data-lang="html"><code class="language-html">&lt;ul class=&quot;nav nav-tabs tab-card mb-4&quot; role=&quot;tablist&quot;&gt;
+	&lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link active&quot; data-bs-toggle=&quot;tab&quot; href=&quot;#nav-week1&quot; role=&quot;tab&quot;&gt;Week 1&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; data-bs-toggle=&quot;tab&quot; href=&quot;#nav-week2&quot; role=&quot;tab&quot;&gt;Week 2&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; data-bs-toggle=&quot;tab&quot; href=&quot;#nav-week3&quot; role=&quot;tab&quot;&gt;Week 3&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; data-bs-toggle=&quot;tab&quot; href=&quot;#nav-week4&quot; role=&quot;tab&quot;&gt;Week 4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table id=&quot;myDataTable_no_filter&quot; class=&quot;table align-middle table-bordered mb-0 custom-table dataTable m-0 w-100&quot;&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;                                       
+			&lt;th&gt;Day&lt;/th&gt;
+			&lt;th&gt;Yoga Guru&lt;/th&gt;
+			&lt;th&gt;Yoga&lt;/th&gt;
+			&lt;th&gt;Session&lt;/th&gt;
+			&lt;th&gt;Student&lt;/th&gt;
+			&lt;th&gt;Action&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Monday&lt;/td&gt;
+			&lt;td class=&quot;d-flex align-items-center&quot;&gt;
+				&lt;img src=&quot;../assets/images/xs/avatar1.jpg&quot; class=&quot;rounded sm avatar&quot; alt=&quot;&quot;&gt;
+				&lt;div class=&quot;ms-2 mb-0&quot;&gt;Frank Baker&lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td&gt;Bridge &ndash; Bandha Sarvangasana&lt;/td&gt;
+			&lt;td&gt;5&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;&lt;img class=&quot;avatar xs rounded&quot; src=&quot;../assets/images/xs/avatar3.jpg&quot; alt=&quot;friend&quot;&gt; &lt;/a&gt;
+				&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;&lt;img class=&quot;avatar xs rounded&quot; src=&quot;../assets/images/xs/avatar1.jpg&quot; alt=&quot;friend&quot;&gt; &lt;/a&gt;
+				&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;&lt;img class=&quot;avatar xs rounded&quot; src=&quot;../assets/images/xs/avatar7.jpg&quot; alt=&quot;friend&quot;&gt; &lt;/a&gt;
+				&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;&lt;img class=&quot;avatar xs rounded&quot; src=&quot;../assets/images/xs/avatar9.jpg&quot; alt=&quot;friend&quot;&gt; &lt;/a&gt;
+			&lt;/td&gt;
+			&lt;td&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-link btn-sm text-muted&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;Video&quot;&gt;&lt;i class=&quot;fa fa-youtube-play&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-link btn-sm text-muted&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;Send Video&quot;&gt;&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-link btn-sm text-muted&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;Download&quot;&gt;&lt;i class=&quot;fa fa-download&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Tuesday&lt;/td&gt;
+			&lt;td class=&quot;d-flex align-items-center&quot;&gt;
+				&lt;img src=&quot;../assets/images/xs/avatar2.jpg&quot; class=&quot;rounded sm avatar&quot; alt=&quot;&quot;&gt;
+				&lt;div class=&quot;ms-2 mb-0&quot;&gt;Liam Berry&lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td&gt;Arm Balance &ndash; Pincha Mayurasana&lt;/td&gt;
+			&lt;td&gt;11&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;&lt;img class=&quot;avatar xs rounded&quot; src=&quot;../assets/images/xs/avatar4.jpg&quot; alt=&quot;friend&quot;&gt; &lt;/a&gt;
+				&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;&lt;img class=&quot;avatar xs rounded&quot; src=&quot;../assets/images/xs/avatar5.jpg&quot; alt=&quot;friend&quot;&gt; &lt;/a&gt;
+				&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;&lt;img class=&quot;avatar xs rounded&quot; src=&quot;../assets/images/xs/avatar6.jpg&quot; alt=&quot;friend&quot;&gt; &lt;/a&gt;
+				&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;&lt;img class=&quot;avatar xs rounded&quot; src=&quot;../assets/images/xs/avatar7.jpg&quot; alt=&quot;friend&quot;&gt; &lt;/a&gt;
+			&lt;/td&gt;
+			&lt;td&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-link btn-sm text-muted&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;Video&quot;&gt;&lt;i class=&quot;fa fa-youtube-play&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-link btn-sm text-muted&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;Send Video&quot;&gt;&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-link btn-sm text-muted&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;Download&quot;&gt;&lt;i class=&quot;fa fa-download&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Wednesday&lt;/td&gt;
+			&lt;td class=&quot;d-flex align-items-center&quot;&gt;
+				&lt;img src=&quot;../assets/images/xs/avatar3.jpg&quot; class=&quot;rounded sm avatar&quot; alt=&quot;&quot;&gt;
+				&lt;div class=&quot;ms-2 mb-0&quot;&gt;Stephen McLean&lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td&gt;Triangle &ndash; Trikonasana&lt;/td&gt;
+			&lt;td&gt;4&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;&lt;img class=&quot;avatar xs rounded&quot; src=&quot;../assets/images/xs/avatar8.jpg&quot; alt=&quot;friend&quot;&gt; &lt;/a&gt;
+				&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;&lt;img class=&quot;avatar xs rounded&quot; src=&quot;../assets/images/xs/avatar9.jpg&quot; alt=&quot;friend&quot;&gt; &lt;/a&gt;
+				&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;&lt;img class=&quot;avatar xs rounded&quot; src=&quot;../assets/images/xs/avatar10.jpg&quot; alt=&quot;friend&quot;&gt; &lt;/a&gt;
+			&lt;/td&gt;
+			&lt;td&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-link btn-sm text-muted&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;Video&quot;&gt;&lt;i class=&quot;fa fa-youtube-play&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-link btn-sm text-muted&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;Send Video&quot;&gt;&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-link btn-sm text-muted&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;Download&quot;&gt;&lt;i class=&quot;fa fa-download&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Thursday&lt;/td&gt;
+			&lt;td class=&quot;d-flex align-items-center&quot;&gt;
+				&lt;img src=&quot;../assets/images/xs/avatar1.jpg&quot; class=&quot;rounded sm avatar&quot; alt=&quot;&quot;&gt;
+				&lt;div class=&quot;ms-2 mb-0&quot;&gt;Frank Baker&lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td&gt;Child Pose &ndash; Balasana&lt;/td&gt;
+			&lt;td&gt;6&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;&lt;img class=&quot;avatar xs rounded&quot; src=&quot;../assets/images/xs/avatar1.jpg&quot; alt=&quot;friend&quot;&gt; &lt;/a&gt;
+				&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;&lt;img class=&quot;avatar xs rounded&quot; src=&quot;../assets/images/xs/avatar2.jpg&quot; alt=&quot;friend&quot;&gt; &lt;/a&gt;
+				&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;&lt;img class=&quot;avatar xs rounded&quot; src=&quot;../assets/images/xs/avatar3.jpg&quot; alt=&quot;friend&quot;&gt; &lt;/a&gt;
+				&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;&lt;img class=&quot;avatar xs rounded&quot; src=&quot;../assets/images/xs/avatar4.jpg&quot; alt=&quot;friend&quot;&gt; &lt;/a&gt;
+				&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;&lt;img class=&quot;avatar xs rounded&quot; src=&quot;../assets/images/xs/avatar5.jpg&quot; alt=&quot;friend&quot;&gt; &lt;/a&gt;
+				&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;&lt;img class=&quot;avatar xs rounded&quot; src=&quot;../assets/images/xs/avatar6.jpg&quot; alt=&quot;friend&quot;&gt; &lt;/a&gt;
+			&lt;/td&gt;
+			&lt;td&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-link btn-sm text-muted&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;Video&quot;&gt;&lt;i class=&quot;fa fa-youtube-play&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-link btn-sm text-muted&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;Send Video&quot;&gt;&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-link btn-sm text-muted&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;Download&quot;&gt;&lt;i class=&quot;fa fa-download&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Friday&lt;/td&gt;
+			&lt;td class=&quot;d-flex align-items-center&quot;&gt;
+				&lt;img src=&quot;../assets/images/xs/avatar1.jpg&quot; class=&quot;rounded sm avatar&quot; alt=&quot;&quot;&gt;
+				&lt;div class=&quot;ms-2 mb-0&quot;&gt;Frank Baker&lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td&gt;Downward Dog &ndash; Adho Mukha Svanasana&lt;/td&gt;
+			&lt;td&gt;2&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;&lt;img class=&quot;avatar xs rounded&quot; src=&quot;../assets/images/xs/avatar10.jpg&quot; alt=&quot;friend&quot;&gt; &lt;/a&gt;
+				&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;&lt;img class=&quot;avatar xs rounded&quot; src=&quot;../assets/images/xs/avatar5.jpg&quot; alt=&quot;friend&quot;&gt; &lt;/a&gt;
+				&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;&lt;img class=&quot;avatar xs rounded&quot; src=&quot;../assets/images/xs/avatar2.jpg&quot; alt=&quot;friend&quot;&gt; &lt;/a&gt;
+			&lt;/td&gt;
+			&lt;td&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-link btn-sm text-muted&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;Video&quot;&gt;&lt;i class=&quot;fa fa-youtube-play&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-link btn-sm text-muted&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;Send Video&quot;&gt;&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-link btn-sm text-muted&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;Download&quot;&gt;&lt;i class=&quot;fa fa-download&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Saturday&lt;/td&gt;
+			&lt;td class=&quot;d-flex align-items-center&quot;&gt;
+				&lt;img src=&quot;../assets/images/xs/avatar8.jpg&quot; class=&quot;rounded sm avatar&quot; alt=&quot;&quot;&gt;
+				&lt;div class=&quot;ms-2 mb-0&quot;&gt;Gordon Butler&lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td&gt;King Dancer &ndash; Natarajasana&lt;/td&gt;
+			&lt;td&gt;2&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;&lt;img class=&quot;avatar xs rounded&quot; src=&quot;../assets/images/xs/avatar4.jpg&quot; alt=&quot;friend&quot;&gt; &lt;/a&gt;
+				&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;&lt;img class=&quot;avatar xs rounded&quot; src=&quot;../assets/images/xs/avatar9.jpg&quot; alt=&quot;friend&quot;&gt; &lt;/a&gt;
+			&lt;/td&gt;
+			&lt;td&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-link btn-sm text-muted&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;Video&quot;&gt;&lt;i class=&quot;fa fa-youtube-play&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-link btn-sm text-muted&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;Send Video&quot;&gt;&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-link btn-sm text-muted&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;Download&quot;&gt;&lt;i class=&quot;fa fa-download&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12">
+					<div class="card bg-transparent">
+						<div class="card-header border-0">
+							<h6 class="mb-0 card-title">Timetable Table</h6>
+							<div class="form-check form-switch table-toggle-six">
+								<input class="form-check-input" type="checkbox" role="switch" id="table-toggle-six">
+								<label class="form-check-label" for="table-toggle-six">Show Code</label>
+							</div>
+						</div>
+						<div class="card-body table-main-six">
+							<div class="table-data">
+								<ul class="nav nav-tabs tab-card" role="tablist">
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Month</a>
+										<ul class="dropdown-menu border-0 shadow py-3 px-2">
+											<li><a class="dropdown-item py-2 rounded" href="#">Jan 2021</a></li>
+											<li><a class="dropdown-item py-2 rounded" href="#">Feb 2021</a></li>
+											<li><a class="dropdown-item py-2 rounded" href="#">March 2021</a></li>
+											<li><a class="dropdown-item py-2 rounded" href="#">Apr 2021</a></li>
+											<li><a class="dropdown-item py-2 rounded" href="#">May 2021</a></li>
+										</ul>
+									</li>
+									<li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#nav-week1" role="tab">Week 1</a></li>
+									<li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#nav-week1" role="tab">Week 2</a></li>
+									<li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#nav-week1" role="tab">Week 3</a></li>
+									<li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#nav-week1" role="tab">Week 4</a></li>
+								</ul>
+								<div class="table-responsive">
+									<table class="table align-middle table-bordered mb-0 custom-table text-center">
+										<thead>
+											<tr class="bg-light-gray">
+												<th>Time</th>
+												<th>Monday</th>
+												<th>Tuesday</th>
+												<th>Wednesday</th>
+												<th>Thursday</th>
+												<th>Friday</th>
+												<th>Saturday</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="align-middle">09:00am</td>
+												<td>
+													<span class="badge bg-info text-dark">Dance</span>
+													<div class="mt-2">9:00-10:00</div>
+													<div class="small text-muted">Stephen McLean</div>
+												</td>
+												<td>
+													<span class="badge bg-warning text-dark">Yoga</span>
+													<div class="mt-2">9:00-10:00</div>
+													<div class="small text-muted">Marco Sent</div>
+												</td>
+
+												<td>
+													<span class="badge bg-danger">Music</span>
+													<div class="mt-2">9:00-10:00</div>
+													<div class="small text-muted">Stephen McLean</div>
+												</td>
+												<td>
+													<span class="badge bg-success">Dance</span>
+													<div class="mt-2">9:00-10:00</div>
+													<div class="small text-muted">Stephen McLean</div>
+												</td>
+												<td>
+													<span class="badge bg-primary">Art</span>
+													<div class="mt-2">9:00-10:00</div>
+													<div class="small text-muted">Dean Otto</div>
+												</td>
+												<td>
+													<span class="badge bg-dark">English</span>
+													<div class="mt-2">9:00-10:00</div>
+													<div class="small text-muted">James Smith</div>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="align-middle">10:00am</td>
+												<td>
+													<span class="badge bg-danger">Music</span>
+													<div class="mt-2">10:00-11:00</div>
+													<div class="small text-muted">Stephen McLean</div>
+												</td>
+												<td class="bg-light-gray">
+
+												</td>
+												<td>
+													<span class="badge bg-primary">Art</span>
+													<div class="mt-2">10:00-11:00</div>
+													<div class="small text-muted">Dean Otto</div>
+												</td>
+												<td>
+													<span class="badge bg-warning text-dark">Yoga</span>
+													<div class="mt-2">10:00-11:00</div>
+													<div class="small text-muted">Marco Sent</div>
+												</td>
+												<td>
+													<span class="badge bg-dark">English</span>
+													<div class="mt-2">10:00-11:00</div>
+													<div class="small text-muted">James Smith</div>
+												</td>
+												<td class="bg-light-gray">
+
+												</td>
+											</tr>
+
+											<tr>
+												<td class="align-middle">11:00am</td>
+												<td>
+													<span class="badge bg-light text-dark">Break</span>
+													<div class="mt-2">11:00-12:00</div>
+												</td>
+												<td>
+													<span class="badge bg-light text-dark">Break</span>
+													<div class="mt-2">11:00-12:00</div>
+												</td>
+												<td>
+													<span class="badge bg-light text-dark">Break</span>
+													<div class="mt-2">11:00-12:00</div>
+												</td>
+												<td>
+													<span class="badge bg-light text-dark">Break</span>
+													<div class="mt-2">11:00-12:00</div>
+												</td>
+												<td>
+													<span class="badge bg-light text-dark">Break</span>
+													<div class="mt-2">11:00-12:00</div>
+												</td>
+												<td>
+													<span class="badge bg-light text-dark">Break</span>
+													<div class="mt-2">11:00-12:00</div>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="align-middle">12:00pm</td>
+												<td class="bg-light-gray">
+
+												</td>
+												<td>
+													<span class="badge bg-primary">Art</span>
+													<div class="mt-2">12:00-1:00</div>
+													<div class="small text-muted">Dean Otto</div>
+												</td>
+												<td>
+													<span class="badge bg-success">Dance</span>
+													<div class="mt-2">12:00-1:00</div>
+													<div class="small text-muted">Stephen McLean</div>
+												</td>
+												<td>
+													<span class="badge bg-danger">Music</span>
+													<div class="mt-2">12:00-1:00</div>
+													<div class="small text-muted">Stephen McLean</div>
+												</td>
+												<td class="bg-light-gray">
+
+												</td>
+												<td>
+													<span class="badge bg-warning text-dark">Yoga</span>
+													<div class="mt-2">12:00-1:00</div>
+													<div class="small text-muted">Marco Sent</div>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="align-middle">01:00pm</td>
+												<td>
+													<span class="badge bg-dark">English</span>
+													<div class="mt-2">1:00-2:00</div>
+													<div class="small text-muted">James Smith</div>
+												</td>
+												<td>
+													<span class="badge bg-danger">Music</span>
+													<div class="mt-2">1:00-2:00</div>
+													<div class="small text-muted">Stephen McLean</div>
+												</td>
+												<td class="bg-light-gray">
+
+												</td>
+												<td>
+													<span class="badge bg-dark">English</span>
+													<div class="mt-2">1:00-2:00</div>
+													<div class="small text-muted">James Smith</div>
+												</td>
+												<td>
+													<span class="badge bg-warning text-dark">Yoga</span>
+													<div class="mt-2">1:00-2:00</div>
+													<div class="small text-muted">Marco Sent</div>
+												</td>
+												<td>
+													<span class="badge bg-danger">Music</span>
+													<div class="mt-2">1:00-2:00</div>
+													<div class="small text-muted">Stephen McLean</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="table-code">
+<pre class="language-html m-0" data-lang="html"><code class="language-html">&lt;ul class=&quot;nav nav-tabs tab-card&quot; role=&quot;tablist&quot;&gt;
+	&lt;li class=&quot;nav-item dropdown&quot;&gt;
+		&lt;a class=&quot;nav-link dropdown-toggle&quot; data-bs-toggle=&quot;dropdown&quot; href=&quot;#&quot; role=&quot;button&quot; aria-expanded=&quot;false&quot;&gt;Month&lt;/a&gt;
+		&lt;ul class=&quot;dropdown-menu border-0 shadow py-3 px-2&quot;&gt;
+			&lt;li&gt;&lt;a class=&quot;dropdown-item py-2 rounded&quot; href=&quot;#&quot;&gt;Jan 2021&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a class=&quot;dropdown-item py-2 rounded&quot; href=&quot;#&quot;&gt;Feb 2021&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a class=&quot;dropdown-item py-2 rounded&quot; href=&quot;#&quot;&gt;March 2021&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a class=&quot;dropdown-item py-2 rounded&quot; href=&quot;#&quot;&gt;Apr 2021&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a class=&quot;dropdown-item py-2 rounded&quot; href=&quot;#&quot;&gt;May 2021&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link active&quot; data-bs-toggle=&quot;tab&quot; href=&quot;#nav-week1&quot; role=&quot;tab&quot;&gt;Week 1&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; data-bs-toggle=&quot;tab&quot; href=&quot;#nav-week1&quot; role=&quot;tab&quot;&gt;Week 2&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; data-bs-toggle=&quot;tab&quot; href=&quot;#nav-week1&quot; role=&quot;tab&quot;&gt;Week 3&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; data-bs-toggle=&quot;tab&quot; href=&quot;#nav-week1&quot; role=&quot;tab&quot;&gt;Week 4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;table-responsive&quot;&gt;
+	&lt;table class=&quot;table align-middle table-bordered mb-0 custom-table text-center&quot;&gt;
+		&lt;thead&gt;
+			&lt;tr class=&quot;bg-light-gray&quot;&gt;
+				&lt;th&gt;Time&lt;/th&gt;
+				&lt;th&gt;Monday&lt;/th&gt;
+				&lt;th&gt;Tuesday&lt;/th&gt;
+				&lt;th&gt;Wednesday&lt;/th&gt;
+				&lt;th&gt;Thursday&lt;/th&gt;
+				&lt;th&gt;Friday&lt;/th&gt;
+				&lt;th&gt;Saturday&lt;/th&gt;
+			&lt;/tr&gt;
+		&lt;/thead&gt;
+		&lt;tbody&gt;
+			&lt;tr&gt;
+				&lt;td class=&quot;align-middle&quot;&gt;09:00am&lt;/td&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-info text-dark&quot;&gt;Dance&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;9:00-10:00&lt;/div&gt;
+					&lt;div class=&quot;small text-muted&quot;&gt;Stephen McLean&lt;/div&gt;
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-warning text-dark&quot;&gt;Yoga&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;9:00-10:00&lt;/div&gt;
+					&lt;div class=&quot;small text-muted&quot;&gt;Marco Sent&lt;/div&gt;
+				&lt;/td&gt;
+
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-danger&quot;&gt;Music&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;9:00-10:00&lt;/div&gt;
+					&lt;div class=&quot;small text-muted&quot;&gt;Stephen McLean&lt;/div&gt;
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-success&quot;&gt;Dance&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;9:00-10:00&lt;/div&gt;
+					&lt;div class=&quot;small text-muted&quot;&gt;Stephen McLean&lt;/div&gt;
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-primary&quot;&gt;Art&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;9:00-10:00&lt;/div&gt;
+					&lt;div class=&quot;small text-muted&quot;&gt;Dean Otto&lt;/div&gt;
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-dark&quot;&gt;English&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;9:00-10:00&lt;/div&gt;
+					&lt;div class=&quot;small text-muted&quot;&gt;James Smith&lt;/div&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+
+			&lt;tr&gt;
+				&lt;td class=&quot;align-middle&quot;&gt;10:00am&lt;/td&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-danger&quot;&gt;Music&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;10:00-11:00&lt;/div&gt;
+					&lt;div class=&quot;small text-muted&quot;&gt;Stephen McLean&lt;/div&gt;
+				&lt;/td&gt;
+				&lt;td class=&quot;bg-light-gray&quot;&gt;
+
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-primary&quot;&gt;Art&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;10:00-11:00&lt;/div&gt;
+					&lt;div class=&quot;small text-muted&quot;&gt;Dean Otto&lt;/div&gt;
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-warning text-dark&quot;&gt;Yoga&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;10:00-11:00&lt;/div&gt;
+					&lt;div class=&quot;small text-muted&quot;&gt;Marco Sent&lt;/div&gt;
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-dark&quot;&gt;English&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;10:00-11:00&lt;/div&gt;
+					&lt;div class=&quot;small text-muted&quot;&gt;James Smith&lt;/div&gt;
+				&lt;/td&gt;
+				&lt;td class=&quot;bg-light-gray&quot;&gt;
+
+				&lt;/td&gt;
+			&lt;/tr&gt;
+
+			&lt;tr&gt;
+				&lt;td class=&quot;align-middle&quot;&gt;11:00am&lt;/td&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-light text-dark&quot;&gt;Break&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;11:00-12:00&lt;/div&gt;
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-light text-dark&quot;&gt;Break&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;11:00-12:00&lt;/div&gt;
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-light text-dark&quot;&gt;Break&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;11:00-12:00&lt;/div&gt;
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-light text-dark&quot;&gt;Break&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;11:00-12:00&lt;/div&gt;
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-light text-dark&quot;&gt;Break&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;11:00-12:00&lt;/div&gt;
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-light text-dark&quot;&gt;Break&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;11:00-12:00&lt;/div&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+
+			&lt;tr&gt;
+				&lt;td class=&quot;align-middle&quot;&gt;12:00pm&lt;/td&gt;
+				&lt;td class=&quot;bg-light-gray&quot;&gt;
+
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-primary&quot;&gt;Art&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;12:00-1:00&lt;/div&gt;
+					&lt;div class=&quot;small text-muted&quot;&gt;Dean Otto&lt;/div&gt;
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-success&quot;&gt;Dance&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;12:00-1:00&lt;/div&gt;
+					&lt;div class=&quot;small text-muted&quot;&gt;Stephen McLean&lt;/div&gt;
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-danger&quot;&gt;Music&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;12:00-1:00&lt;/div&gt;
+					&lt;div class=&quot;small text-muted&quot;&gt;Stephen McLean&lt;/div&gt;
+				&lt;/td&gt;
+				&lt;td class=&quot;bg-light-gray&quot;&gt;
+
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-warning text-dark&quot;&gt;Yoga&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;12:00-1:00&lt;/div&gt;
+					&lt;div class=&quot;small text-muted&quot;&gt;Marco Sent&lt;/div&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+
+			&lt;tr&gt;
+				&lt;td class=&quot;align-middle&quot;&gt;01:00pm&lt;/td&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-dark&quot;&gt;English&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;1:00-2:00&lt;/div&gt;
+					&lt;div class=&quot;small text-muted&quot;&gt;James Smith&lt;/div&gt;
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-danger&quot;&gt;Music&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;1:00-2:00&lt;/div&gt;
+					&lt;div class=&quot;small text-muted&quot;&gt;Stephen McLean&lt;/div&gt;
+				&lt;/td&gt;
+				&lt;td class=&quot;bg-light-gray&quot;&gt;
+
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-dark&quot;&gt;English&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;1:00-2:00&lt;/div&gt;
+					&lt;div class=&quot;small text-muted&quot;&gt;James Smith&lt;/div&gt;
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-warning text-dark&quot;&gt;Yoga&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;1:00-2:00&lt;/div&gt;
+					&lt;div class=&quot;small text-muted&quot;&gt;Marco Sent&lt;/div&gt;
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;badge bg-danger&quot;&gt;Music&lt;/span&gt;
+					&lt;div class=&quot;mt-2&quot;&gt;1:00-2:00&lt;/div&gt;
+					&lt;div class=&quot;small text-muted&quot;&gt;Stephen McLean&lt;/div&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/tbody&gt;
+	&lt;/table&gt;
+&lt;/div&gt;</code></pre>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</main>
+
+	<!-- start: template setting, and more. -->
+	<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas_setting" aria-labelledby="offcanvas_setting">
+		<div class="offcanvas-header">
+			<h5 class="offcanvas-title">Template Setting</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+		</div>
+		<div class="offcanvas-body">
+			<div class="mb-4">
+				<h6>Set Theme Color</h6>
+				<ul class="choose-skin list-unstyled mb-0">
+					<li data-theme="ValenciaRed"><div style="--hotelair-theme-color: #D63B38;"></div></li>
+					<li data-theme="SunOrange"><div style="--hotelair-theme-color: #F7A614;"></div></li>
+					<li data-theme="AppleGreen"><div style="--hotelair-theme-color: #5BC43A;"></div></li>
+					<li data-theme="CeruleanBlue"><div style="--hotelair-theme-color: #00B8D6;"></div></li>
+					<li data-theme="Mariner"><div style="--hotelair-theme-color: #0066FE;"></div></li>
+					<li data-theme="PurpleHeart" class="active"><div style="--hotelair-theme-color: #6238B3;"></div></li>
+					<li data-theme="FrenchRose"><div style="--hotelair-theme-color: #EB5393;"></div></li>
+				</ul>
+			</div>
+			<div class="svg-stroke mb-4">
+				<h6>Icon Border Stroke</h6>
+				<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+					<input type="radio" class="btn-check" name="stroke" id="Stroke_A" value="svgstroke-a" checked>
+					<label class="btn btn-outline-primary" for="Stroke_A">Stroke 1</label>
+				  
+					<input type="radio" class="btn-check" name="stroke" id="Stroke_B" value="svgstroke-b">
+					<label class="btn btn-outline-primary" for="Stroke_B">Stroke 2</label>
+				  
+					<input type="radio" class="btn-check" name="stroke" id="Stroke_C" value="svgstroke-c">
+					<label class="btn btn-outline-primary" for="Stroke_C">Stroke 3</label>
+				</div>
+			</div>
+			<div class="mb-4">
+				<h6>Layout Section Ligh/Dark</h6>
+				<ul class="list-unstyled d-flex flex-wrap">
+					<li class="me-2 mb-2 sidebar-toggle">
+						<input type="checkbox" class="btn-check" id="Sidebar_dark">
+						<label class="btn btn-outline-primary" for="Sidebar_dark">Sidebar</label>
+					</li>
+					<li class="me-2 mb-2 header-toggle">
+						<input type="checkbox" class="btn-check" id="Header_dark">
+						<label class="btn btn-outline-primary" for="Header_dark">Header</label>
+					</li>
+				</ul>
+			</div>
+			<div class="mb-4">
+				<h6>More App Setting</h6>
+				<div class="form-check form-switch bodygradient-toggle">
+					<input class="form-check-input" type="checkbox" role="switch" id="bodyGradient" checked>
+					<label class="form-check-label" for="bodyGradient">Body Gradient Background</label>
+				</div>
+				
+				<div class="form-check form-switch monochrome-toggle">
+					<input class="form-check-input fs-6" type="checkbox" role="switch" id="monochrome">
+					<label class="form-check-label" for="monochrome">Monochrome Mode</label>
+				</div>
+				<!-- <div class="form-check form-switch gradient-active">
+					<input class="form-check-input fs-6" type="checkbox" role="switch" id="gradient-active">
+					<label class="form-check-label" for="gradient-active">Gradient Active</label>
+				</div> -->
+				<div class="form-check form-switch radius-toggle">
+					<input class="form-check-input fs-6" type="checkbox" role="switch" id="radius0">
+					<label class="form-check-label" for="radius0">Border Radius none</label>
+				</div>
+				<div class="form-check form-switch svg-icon-color">
+					<input class="form-check-input fs-6" type="checkbox" role="switch" id="IconColor">
+					<label class="form-check-label" for="IconColor">Sidebar Icon color</label>
+				</div>
+				<div class="form-check form-switch cb-shadow">
+					<input class="form-check-input fs-6" type="checkbox" role="switch" id="BoxShadow">
+					<label class="form-check-label" for="BoxShadow">Card box shadow active</label>
+				</div>
+			</div>
+			<div class="d-flex">
+				<button type="button" class="btn w-100 me-1 py-2 btn-primary">Buy Now</button>
+				<button type="button" class="btn w-100 ms-1 py-2 btn-dark">View Portfolio</button>
+			</div>
+		</div>
+	</div>
+
+	<!--[ hotelair template vender js ]-->
+	<script src="../assets/bundles/libscripts.bundle.js"></script>
+	<script src="../assets/bundles/prism.bundle.js"></script>
+	<script src="../assets/bundles/dataTables.bundle.js"></script>
+
+	<!-- Template page js -->
+	<script src="../assets/js/main.js"></script>
+	<script>
+	
+		$(document).ready( function () {
+			$('.dataTable')
+			.addClass( 'nowrap' )
+			.dataTable( {
+				responsive: true,
+			});
+		});
+
+	</script>
+
+</body>
+
+<!-- Mirrored from pixelwibes.in/templates/hotelair/html/docs/widgets-tables.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:32:55 GMT -->
+</html>

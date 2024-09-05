@@ -1,0 +1,461 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+		<div class="content">
+			{% include "header.html" %}
+			<!-- start: page body area -->
+			<div class="px-xl-5 px-lg-4 px-3 py-3 page-body">
+				<form action="{% url "room-booking" user.id %}" method="POST">
+					{% csrf_token %}
+                <div class="row g-3">
+					<div class="col-sm-12">
+							<div class="d-flex align-items-center justify-content-between flex-wrap">
+								<h3 class="fw-bold mb-0">Fill Out Booking Details</h3>
+							</div>
+					</div>
+					<div class="col-sm-12">
+							<div class="card mb-3">
+								<div class="card-header">
+									<h6 class="card-title">Reservation Details</h6>
+								</div>
+								<div class="card-body">
+									<div class="row g-3">
+										<div class="col-md-6 col-lg-4 col-xl-4">
+											<div class="form-group">
+												<label class="form-label text-muted">Check In <span class="text-danger">*</span></label>
+												<div class="input-group">
+													<span class="input-group-text" ><i class="bi bi-calendar-plus"></i></span>
+													<input type="date" class="form-control" name="checkin">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6 col-lg-4 col-xl-4">
+											<div class="form-group">
+												<label class="form-label text-muted">Check Out<span class="text-danger">*</span></label>
+												<div class="input-group">
+													<span class="input-group-text" ><i class="bi bi-calendar-minus"></i></span>
+													<input type="date" name="checkout" class="form-control">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6 col-lg-4 col-xl-4">
+											<div class="form-group">
+												<label class="form-label text-muted">Arival From</label>
+												<div class="input-group">
+													<span class="input-group-text" ><i class="bi bi-stop-circle"></i></span>
+													<input type="text" class="form-control" placeholder="Arival From"
+													name="arrivalfrom">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6 col-lg-4 col-xl-4">
+											<div class="form-group">
+												<label class="form-label text-muted">Purpose of Visit</label>
+												<div class="input-group">
+													<span class="input-group-text" ><i class="bi bi-eyeglasses"></i></span>
+													<input type="text" class="form-control" placeholder="Purpose of Visit"
+													name="purpose"
+													>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12 col-lg-12 col-xl-12">
+											<div class="form-group">
+												<label class="form-label text-muted">Remarks</label>
+												<div class="input-group">
+													<span class="input-group-text" ><i class="bi bi-bookmark-star"></i></span>
+													<input type="text" class="form-control" placeholder="Remarks"
+													name="remarks">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card mb-3">
+								<div class="card-header">
+									<h6 class="card-title">Room Details</h6>
+								</div>
+								<div class="card-body">
+									<div class="row g-3">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="form-label text-muted">Room Type <span class="text-danger">*</span></label>
+												<div class="input-group">
+													<span class="input-group-text"><i class="bi bi-house"></i></span>
+													<select class="form-select" id="roomTypeSelect" name="roomtype" required>
+														<option selected disabled>Choose Room Type</option>
+														{% for roomtype in roomtypes %}
+														<option value="{{ roomtype.id }}">{{ roomtype.name }}</option>
+														{% endfor %}
+													</select>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="form-label text-muted">Room No <span class="text-danger">*</span></label>
+												<div class="input-group">
+													<span class="input-group-text"><i class="bi bi-house"></i></span>
+													<select class="form-select" id="roomNumberSelect" name="roomnum" required>
+														<option selected disabled>Choose Room No</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										
+																		
+										
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="form-label text-muted">Adults</label>
+												<div class="input-group">
+													<span class="input-group-text" ><i class="bi bi-people"></i></span>
+													<input type="text" class="form-control" placeholder="0" name="adults">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="form-label text-muted">Children</label>
+												<div class="input-group">
+													<span class="input-group-text" ><i class="bi bi-person"></i></span>
+													<input type="text" class="form-control" placeholder="0" name="children">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header">
+									<h6 class="card-title">Customer Details</h6>
+								</div>
+								<div class="card-body">
+									<div class="row g-3">
+										<div class="col-md-12 col-lg-6 d-flex">
+											<div class="card flex-fill w-100 border">
+												<div class="card-header py-3">
+													<h6 class="card-title">Guest Details</h6>
+												</div>
+												<div class="card-body">
+													<div class="row g-3">
+														
+														<div class="col-md-6">
+															<div class="form-group">
+																<label class="form-label text-muted">Mobile No.</label>
+																<div class="input-group">
+																	<span class="input-group-text"><i class="bi bi-phone"></i></span>
+																	<input type="number" class="form-control" placeholder="Mobile No." name="number">
+																</div>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="form-group">
+																<label class="form-label text-muted">Title</label>
+																<div class="input-group">
+																	<span class="input-group-text"><i class="bi bi-emoji-smile"></i></span>
+																	<select class="form-select" name="title">
+																		<option selected='' value=""></option>
+																		{% for key, value in guest_details_instance.TITLE_CHOICES %}
+																		<option value="{{key}}">
+																			{{value}}
+																		</option>
+																		{% endfor %}
+																	</select>
+																</div>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="form-group">
+																<label class="form-label text-muted">First Name <span class="text-danger">*</span></label>
+																<div class="input-group">
+																	<span class="input-group-text"><i class="bi bi-person-circle"></i></span>
+																	<input type="text" class="form-control" placeholder="First Name" name="fname">
+																</div>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="form-group">
+																<label class="form-label text-muted">Last Name</label>
+																<div class="input-group">
+																	<span class="input-group-text"><i class="bi bi-person-circle"></i></span>
+																	<input type="text" class="form-control" placeholder="Last Name" name="flname">
+																</div>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="form-group">
+																<label class="form-label text-muted">Gender</label>
+																<div class="input-group">
+																	<span class="input-group-text"><i class="bi bi-emoji-smile"></i></span>
+																	<select class="form-select" name="gender">
+																		<option selected='' value=""></option>
+																		{% for key, value in guest_details_instance.GENDER_CHOICES %}
+																		<option value="{{key}}">
+																			{{value}}
+																		</option>
+																		{% endfor %}
+																	</select>
+																</div>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="form-group">
+																<label class="form-label text-muted">Occupation</label>
+																<div class="input-group">
+																	<span class="input-group-text"><i class="bi bi-briefcase"></i></span>
+																	<input type="text" class="form-control" placeholder="Occupation" name="occupation">
+																</div>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="form-group">
+																<label class="form-label text-muted">Date of Birth</label>
+																<div class="input-group">
+																	<span class="input-group-text"><i class="bi bi-calendar"></i></span>
+																	<input type="date" class="form-control" name="dob">
+																</div>
+															</div>
+														</div>
+														
+														<div class="col-md-6">
+															<div class="form-group">
+																<label class="form-label text-muted">Nationality</label>
+																<div class="input-group">
+																	<span class="input-group-text"><i class="bi bi-geo-alt"></i></span>
+																	<input type="text" name="datefilter2" class="form-control" id="nationality" placeholder="Nationality" value="" name="nationality">
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12 col-lg-6 d-flex">
+											<div class="card flex-fill w-100 border">
+												<div class="card-header py-3">
+													<h6 class="card-title">Contact Details</h6>
+												</div>
+												<div class="card-body">
+													<div class="row g-3">
+														<div class="col-md-6">
+															<div class="form-group">
+																<label class="form-label text-muted">Contact Type</label>
+																<div class="input-group">
+																	<span class="input-group-text"><i class="bi bi-journal"></i></span>
+																	<select class="form-select" name="con_type">
+																		<option selected="" value="">Choose Contact Type</option>
+																		{% for key, value in contact_details_instance.CONTACT_TYPE %}
+																		<option value="{{key}}">
+																			{{value}}
+																		</option>
+																		{% endfor %}
+																	</select>
+																</div>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="form-group">
+																<label class="form-label text-muted">Email</label>
+																<div class="input-group">
+																	<span class="input-group-text"><i class="bi bi-envelope"></i></span>
+																	<input type="email" class="form-control" placeholder="example@email.com" name="email">
+																</div>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="form-group">
+																<label class="form-label text-muted">Country</label>
+																<div class="input-group">
+																	<span class="input-group-text"><i class="bi bi-map"></i></span>
+																	<input type="text" class="form-control" placeholder="Country" name="country">
+																</div>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="form-group">
+																<label class="form-label text-muted">State</label>
+																<div class="input-group">
+																	<span class="input-group-text"><i class="bi bi-layers"></i></span>
+																	<input type="text" class="form-control" placeholder="State" name="state">
+																</div>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="form-group">
+																<label class="form-label text-muted">City</label>
+																<div class="input-group">
+																	<span class="input-group-text"><i class="bi bi-mailbox"></i></span>
+																	<input type="text" class="form-control" placeholder="City", name="city">
+																</div>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="form-group">
+																<label class="form-label text-muted">Zipcode</label>
+																<div class="input-group">
+																	<span class="input-group-text"><i class="bi bi-file-zip"></i></span>
+																	<input type="number" class="form-control" placeholder="Zipcode" name="zipcode">
+																</div>
+															</div>
+														</div>
+														<div class="col-md-12 mb-3">
+															<div class="form-group">
+																<label class="form-label text-muted">Address</label>
+																<textarea class="form-control" placeholder="Address" name="address"></textarea>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12 col-lg-6 d-flex">
+											<div class="card flex-fill w-100 border">
+												<div class="card-header py-3">
+													<h6 class="card-title">Identity Details</h6>
+												</div>
+												<div class="card-body">
+													<div class="row g-3">
+														<div class="col-md-6">
+															<div class="form-group">
+																<label class="form-label text-muted">ID TYPE</label>
+																<div class="input-group">
+																	<span class="input-group-text"><i class="bi bi-emoji-smile"></i></span>
+																	<select class="form-select" name="idtype">
+																		<option selected='' value=""></option>
+																		{% for key, value in identity_details_instance.IDENTITY_TYPE %}
+																		<option value="{{key}}">
+																			{{value}}
+																		</option>
+																		{% endfor %}
+																	</select>
+																</div>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="form-group">
+																<label class="form-label text-muted">ID # <span class="text-danger">*</span></label>
+																<div class="input-group">
+																	<span class="input-group-text"><i class="bi bi-images"></i></span>
+																	<input type="text" class="form-control" placeholder="ID" name="idnumber">
+																</div>
+															</div>
+														</div>
+														<div class="col-md-12">
+															<label>Identity Upload</label>
+														</div>
+														
+														<div class="col-md-12">
+															<div class="form-group">
+																<label class="form-label text-muted">Comments</label>
+																<textarea class="form-control" placeholder="Remarks"></textarea>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+					</div>
+					
+					<div class="col-md-12 col-lg-6">
+						<div class="card">
+							<div class="card-header">
+								<h6 class="card-title">Advance Details</h6>
+							</div>
+							<div class="card-body">
+								<div class="row g-3">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label class="form-label text-muted">Payment Mode</label>
+											<div class="input-group">
+												<span class="input-group-text"><i class="bi bi-credit-card"></i></span>
+												<select class="form-select">
+													<option selected="" value="">Payment Mode</option>
+													{% for key, value in payment_instance.PAYMENT_MODE %}
+													<option value="{{key}}">
+														{{value}}
+													</option>
+
+													{% endfor %}
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label class="form-label text-muted">Payment Status</label>
+											<div class="input-group">
+												<span class="input-group-text"><i class="bi bi-credit-card"></i></span>
+												<select class="form-select">
+													<option selected="" value="">Payment Status</option>
+													{% for key, value in payment_instance.PAYMENT_STATUS %}
+													<option value="{{key}}">
+														{{value}}
+													</option>
+
+													{% endfor %}
+												</select>
+											</div>
+										</div>
+									</div>
+									{% comment %} <div class="col-md-6">
+										<div class="form-group">
+											<label class="form-label text-muted">Advance Remarks</label>
+											<div class="input-group">
+												<span class="input-group-text"><i class="bi bi-card-text"></i></span>
+												<input type="text" class="form-control" placeholder="Remarks">
+											</div>
+										</div>
+									</div> {% endcomment %}
+									<div class="col-md-6">
+										<div class="form-group">
+											<label class="form-label text-muted">Advance Amount</label>
+											<div class="input-group">
+												<span class="input-group-text"><i class="bi bi-currency-dollar"></i></span>
+												<input type="text" class="form-control" placeholder="Advance Amount">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 text-end">
+						<button type="submit" class="btn btn-primary">Save Details</button>
+					</div>
+                </div><!-- Row End -->
+			</form>
+
+			</div>
+		</div>
+		<script>
+			document.getElementById('roomTypeSelect').addEventListener('change', function() {
+				const roomTypeId = this.value;
+				const roomNumberSelect = document.getElementById('roomNumberSelect');
+				
+				// Clear previous room numbers
+				roomNumberSelect.innerHTML = '<option selected disabled>Choose Room No</option>';
+		
+				const rooms = {{ rooms|safe }};  // Parse the rooms data
+		
+				// Filter rooms by selected room type
+				const filteredRooms = rooms.filter(room => room.roomType_id == roomTypeId);
+		
+				// Populate the room numbers
+				filteredRooms.forEach(room => {
+					const option = document.createElement('option');
+					option.value = room.room_number;
+					option.text = room.room_number;
+					roomNumberSelect.appendChild(option);
+				});
+			});
+		</script>
+		
+
+{% endblock content %}
