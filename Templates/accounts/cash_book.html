@@ -1,24 +1,78 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}
-X-Empire - Check In/Out
-{% endblock title %}
-
 {% block content %}
-
-<link rel="stylesheet" href="./accounts2.css">
-<div class="content">
-    {% comment %} page header {% endcomment %}
-    {% include "header.html" %}
-    {% comment %} end page header {% endcomment %}
-    <main>
-    <div class=" card ">
-         <div class="card-body">
-
-         </div>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Cash Book</h1>
+    <div class="row mb-3">
+        <div class="col-md-4 offset-md-4">
+            <div class="input-group">
+                <label for="fromDate" class="form-label">From Date</label>
+                <input type="date" class="form-control mb-2" id="fromDate" value="2024-09-05">
+                
+                <label for="toDate" class="form-label">To Date</label>
+                <input type="date" class="form-control mb-2" id="toDate" value="2024-09-05">
+                
+                <button class="btn btn-success mt-2" type="button" id="findButton">Find</button>
+            </div>
         </div>
-        <div>jjjjjj</div>
-    </main>
-</body>
-</html>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Voucher No</th>
+                        <th>Remarks</th>
+                        <th>Total Amount</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="cashBookTableBody">
+                    <!-- Placeholder row (for demonstration) -->
+                    <tr>
+                        <td>CV-BAC-2024-09-05</td>
+                        <td>Aggregated Cash Credit Voucher from 2024-09-05</td>
+                        <td>1000.00</td>
+                        <td>2024-09-05</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $("#findButton").click(function() {
+            var fromDate = $("#fromDate").val();
+            var toDate = $("#toDate").val();
+            
+            // AJAX call to fetch data based on selected date range
+            $.ajax({
+                url: "/your-api-endpoint/", // Replace with actual API endpoint
+                method: "GET",
+                data: { "from_date": fromDate, "to_date": toDate },
+                success: function(response) {
+                    // Clear existing table rows
+                    $("#cashBookTableBody").empty();
+
+                    // Populate table with data from response
+                    $.each(response.vouchers, function(index, voucher) {
+                        var row = $('<tr>');
+                        row.append('<td>' + voucher.voucher_no + '</td>');
+                        row.append('<td>' + voucher.remarks + '</td>');
+                        row.append('<td>' + voucher.total_amount + '</td>');
+                        row.append('<td>' + voucher.date + '</td>');
+                        $("#cashBookTableBody").append(row);
+                    });
+                },
+                error: function() {
+                    alert("Error fetching voucher data.");
+                }
+            });
+        });
+    });
+</script>
+
 {% endblock content %}
