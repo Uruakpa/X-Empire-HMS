@@ -4,6 +4,7 @@ charset-normalizer==3.3.2
 colorama==0.4.6
 comtypes==1.2.1
 distlib==0.3.8
+dj-database-url==2.2.0
 Django==5.0.3
 django-ckeditor-5==0.2.13
 django-countries==7.6.1
