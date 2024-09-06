@@ -26,11 +26,11 @@ SECRET_KEY = 'on9*bf65je3#4+jphqufropk!s9*i&$*54@_9t8^6+c)iro2&q'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 # DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['x-empire-hms.onrender.com','127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '127.0.0.1').split(",")
 # SUPABASE_DB_URL = os.environ.get("SUPABASE_DB_URL")
 # DJANGO_ENV = os.environ.get('DJANGO_ENV')
