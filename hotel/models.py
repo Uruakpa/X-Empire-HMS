@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 
-from accounts.models import Guest, Employee
+from auth.models import Guest, Employee
 
 
 # Create your models here.
