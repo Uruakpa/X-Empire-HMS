@@ -13,7 +13,7 @@ from datetime import datetime, date, timedelta
 import random
 
 # Own imports
-from auth.models import *
+from accounts.models import *
 from room.models import *
 from hotel.models import *
 from .forms import *
@@ -49,7 +49,7 @@ def register_page(request):
                 return redirect('login')
 
         context = {'form': form}
-        return render(request, 'auth/register.html', context)
+        return render(request, 'accounts/register.html', context)
 
 
 @login_required(login_url='login')
@@ -116,7 +116,7 @@ def login_page(request):
    
 
         context = {}
-        return render(request, 'auth/login.html', context)
+        return render(request, 'accounts/login.html', context)
 
 
 def logout_user(request):

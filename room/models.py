@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.http import HttpResponseForbidden
-from auth.models import Guest
+from accounts.models import Guest
 # Create your models here.
 
 

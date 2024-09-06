@@ -33,11 +33,11 @@
     {% comment %} <!-- start: main grid layout -->₦ {% endcomment %}
 	<main class="container-fluid px-0">
 
-		{% if role == 'accounts' %}
+		{% if role == 'account' %}
 		{% include "accounts_navbar.html" %}
-		{% elif role == 'front desk' %}
+		{% elif role == 'frontdesk' %}
 		{% include "frontdesk_nav.html" %}
-		{% elif role == 'admin user' %}
+		{% elif role == 'admin' %}
 		{% include "admin_nav.html" %}
 		{% else %}
 		<p>

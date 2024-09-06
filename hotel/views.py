@@ -11,7 +11,7 @@ from django.contrib.auth.models import Group, User
 from datetime import datetime, date, timedelta
 import random
 # Create your views here.
-from auth.models import *
+from accounts.models import *
 from room.models import *
 from hotel.models import *
 from .forms import *
