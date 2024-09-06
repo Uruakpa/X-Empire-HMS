@@ -30,7 +30,11 @@ DEBUG = True
 # DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
 # ALLOWED_HOSTS = []
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['x-empire.onrender.com','127.0.0.1', 'localhost']
+=======
+ALLOWED_HOSTS = ['x-empire-hms.onrender.com','127.0.0.1', 'localhost']
+>>>>>>> Rejoice
 # ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '127.0.0.1').split(",")
 # SUPABASE_DB_URL = os.environ.get("SUPABASE_DB_URL")
 # DJANGO_ENV = os.environ.get('DJANGO_ENV')
@@ -52,6 +56,10 @@ INSTALLED_APPS = [
     # own
     'hotel',
     'accounts',
+    'account',
+    'Admin',
+    'frontdesk',
+    'guest',
     'room',
 ]
 
@@ -72,7 +80,11 @@ ROOT_URLCONF = 'HMS.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+<<<<<<< HEAD
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
+=======
+        'DIRS': [BASE_DIR / "templates"],
+>>>>>>> Rejoice
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -101,7 +113,11 @@ DATABASES = {
         # 'PORT'
     }
 }
+<<<<<<< HEAD
 # Check if the Supabase database URL is set
+=======
+# Check if the Supaase database URL is set
+>>>>>>> Rejoice
 # if SUPABASE_DB_URL:
 #     # Use the Supabase database configuration
 #     DATABASES = {

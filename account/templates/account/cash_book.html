@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+X-Empire - Cash Book
+{% endblock title %}
+
+{% block content %}
+
+<link rel="stylesheet" href="./accounts2.css">
+<div class="content">
+    {% comment %} page header {% endcomment %}
+    {% include "header.html" %}
+    {% comment %} end page header {% endcomment %}
+    <main>
+        <div class="card">
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-md-4 offset-md-2">
+                        <div class="input-group">
+                            <label for="fromDate" class="input-group-text">From Date</label>
+                            <input type="date" class="form-control" id="fromDate" value="2024-09-06">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <label for="toDate" class="input-group-text">To Date</label>
+                            <input type="date" class="form-control" id="toDate" value="2024-09-06">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-4 offset-md-4">
+                        <button class="btn btn-success w-100" type="button" id="findButton">Find</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Voucher No</th>
+                                    <th>Remarks</th>
+                                    <th>Total Amount</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody id="voucherTableBody">
+                                <!-- Example row -->
+                                <tr>
+                                    <td>CV-BAC-2024-09-06</td>
+                                    <td>Aggregated Cash Credit Voucher of 2024-09-06</td>
+                                    <td>0.00</td>
+                                    <td>2024-09-06</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $("#findButton").click(function() {
+            var fromDate = $("#fromDate").val();
+            var toDate = $("#toDate").val();
+            // Implement your logic to fetch data based on the selected date range
+            // Example: Make an AJAX call to your backend to get voucher data
+            $.ajax({
+                url: "/your-api-endpoint/", // Replace with your actual API endpoint
+                method: "GET",
+                data: { "from_date": fromDate, "to_date": toDate },
+                success: function(response) {
+                    // Clear existing table rows
+                    $("#voucherTableBody").empty();
+
+                    // Populate the table with data from the response
+                    $.each(response.vouchers, function(index, voucher) {
+                        var row = $('<tr>');
+                        row.append('<td>' + voucher.voucher_no + '</td>');
+                        row.append('<td>' + voucher.remarks + '</td>');
+                        row.append('<td>' + voucher.total_amount + '</td>');
+                        row.append('<td>' + voucher.date + '</td>');
+                        $("#voucherTableBody").append(row);
+                    });
+                },
+                error: function() {
+                    // Handle error case
+                    alert("Error fetching voucher data.");
+                }
+            });
+        });
+    });
+</script>
+{% endblock content %}
