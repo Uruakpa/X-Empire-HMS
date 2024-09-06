@@ -101,7 +101,7 @@ DATABASES = {
         # 'PORT'
     }
 }
-# Check if the Supabase database URL is set
+# Check if the Supaase database URL is set
 # if SUPABASE_DB_URL:
 #     # Use the Supabase database configuration
 #     DATABASES = {
