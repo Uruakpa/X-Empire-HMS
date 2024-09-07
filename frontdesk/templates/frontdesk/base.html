@@ -52,10 +52,9 @@
     {% comment %}
     <!-- start: main grid layout -->₦ {% endcomment %}
     <main class="container-fluid px-0">
-      {% include "./.html" %} {% else %}
-      <p>Loozz</p>
+      {% include "./frontdesk_nav.html" %}
 
-      {% endif %} {% block content %} {% endblock content %}
+      {% block content %} {% endblock content %}
     </main>
     <!--[ hotelair template vender js ]-->
     <script src="{% static '/js/libscripts.bundle.js' %}"></script>

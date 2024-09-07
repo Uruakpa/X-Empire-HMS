@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
-import dj_database_url
+# import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,7 +30,9 @@ DEBUG = False
 # DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['*']
+
+ALLOWED_HOSTS = ['x-empire.onrender.com','127.0.0.1', 'localhost']
+
 # ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '127.0.0.1').split(",")
 # SUPABASE_DB_URL = os.environ.get("SUPABASE_DB_URL")
 # DJANGO_ENV = os.environ.get('DJANGO_ENV')
@@ -76,7 +78,7 @@ ROOT_URLCONF = 'HMS.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR/ 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
