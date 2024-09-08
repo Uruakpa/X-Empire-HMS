@@ -197,9 +197,9 @@ def room_booking(request, pk):
         payment.save()
         reserve.payment_det = payment
         reserve.save()
-        
-        # payment
+        messages.success(request, f"Guest {guestdet.first_name} {guestdet.last_name} successfully added to room {room_instance.room_number}")
         return redirect("checkin-out", pk=request.user.id)
+        
     context = {
         "user":user,
         "role":role,

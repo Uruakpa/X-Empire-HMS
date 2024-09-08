@@ -3,6 +3,25 @@
 {% block content %}
 <div class="content">
 {% include "./header.html" %}
+{% if messages %}
+		{% for message in messages %}
+		<div
+			class="alert alert-primary"
+			role="alert"
+		>
+		
+			<h4 class="alert-heading">
+			Alert
+			</h4>
+			<p>
+			{{message}}
+			</p>
+			<hr />
+			<p class="mb-0">Alert Description</p>
+		</div>
+		{% endfor %}
+
+		{% endif %}
             <table class="table dataTable align-middle table-hover table-body" style="width: 100%;">
                 <thead>
                     <tr>
