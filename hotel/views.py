@@ -251,8 +251,9 @@ def checkin_out(request, pk):
 def room_status(request, pk):
     role = str(request.user.groups.all()[0])
     path = role + "/"
+    rooms = Rooms.objects.all()
     user = User.objects.get(id=pk)
-    context = {"user":user, "role":role, }
+    context = {"user":user, "role":role, "rooms":rooms}
     return render(request, path + "room-status.html", context)
 
 @login_required(login_url='login')

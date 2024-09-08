@@ -6,7 +6,7 @@
 {% if messages %}
 		{% for message in messages %}
 		<div
-			class="alert alert-primary"
+			class="alert alert-secodary"
 			role="alert"
 		>
 		
@@ -17,23 +17,25 @@
 			{{message}}
 			</p>
 			<hr />
-			<p class="mb-0">Alert Description</p>
 		</div>
 		{% endfor %}
 
 		{% endif %}
             <table class="table dataTable align-middle table-hover table-body" style="width: 100%;">
+                <h1>
+                    Reservations
+                </h1>
                 <thead>
                     <tr>
+                    <th>
+                            Purpose
+                        </th>
                         <th>Check In</th>
                         <th>Check Out</th>
                         <th>
                             Arrival From
                         </th>
                         {% comment %} <th>Unit</th> {% endcomment %}
-                        <th>
-                            Purpose
-                        </th>
                         <th>
                             Reservation Date
                         </th>
@@ -46,6 +48,9 @@
                     {% for reservation  in reserve %}
                     <tr>
                         <td>
+                            {{reservation.guest.first_name}}
+                        </td>
+                        <td>
                             {{reservation.check_in}}
                             
                         </td>
@@ -55,9 +60,6 @@
                         </td>
                         <td>
                             {{reservation.arrival_from}}
-                        </td>
-                        <td>
-                            {{reservation.purpose}}
                         </td>
                         <td>
                             {{reservation.reservation_date}}

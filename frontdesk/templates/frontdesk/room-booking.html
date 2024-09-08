@@ -7,7 +7,7 @@
 			 {% if messages %}
 		{% for message in messages %}
 		<div
-			class="alert alert-primary"
+			class="alert alert-secondary"
 			role="alert"
 		>
 		
@@ -18,7 +18,7 @@
 			{{message}}
 			</p>
 			<hr />
-			<p class="mb-0">Alert Description</p>
+			{% comment %} <p class="mb-0">Alert Description</p> {% endcomment %}
 		</div>
 		{% endfor %}
 
