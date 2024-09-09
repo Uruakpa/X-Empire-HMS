@@ -197,9 +197,9 @@ def room_booking(request, pk):
         payment.save()
         reserve.payment_det = payment
         reserve.save()
-        
-        # payment
+        messages.success(request, f"Guest {guestdet.first_name} {guestdet.last_name} successfully added to room {room_instance.room_number}")
         return redirect("checkin-out", pk=request.user.id)
+        
     context = {
         "user":user,
         "role":role,
@@ -251,8 +251,9 @@ def checkin_out(request, pk):
 def room_status(request, pk):
     role = str(request.user.groups.all()[0])
     path = role + "/"
+    rooms = Rooms.objects.all()
     user = User.objects.get(id=pk)
-    context = {"user":user, "role":role, }
+    context = {"user":user, "role":role, "rooms":rooms}
     return render(request, path + "room-status.html", context)
 
 @login_required(login_url='login')

@@ -100,8 +100,8 @@ class Rooms(models.Model):
 class RoomDetails(models.Model):
     room_type = models.ForeignKey(RoomType, on_delete=models.CASCADE)
     roomNumber = models.ForeignKey(Rooms, on_delete=models.CASCADE)
-    adults = models.IntegerField()
-    children = models.IntegerField()
+    adults = models.IntegerField(null=True, blank=True)
+    children = models.IntegerField(null=True, blank=True)
     
     
     
