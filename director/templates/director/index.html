@@ -1,10 +1,126 @@
-{% extends "./base.html" %} {% load static %} {% block title %} X-Empire -
-Dashboard {% endblock title %} {% block content %}
-
+<<<<<<< HEAD
+{% extends "./base.html" %} 
+{% load static %}
+{% block content %}
 <div class="content">
-  {% comment %} page header {% endcomment %}
-   {% include "./header.html" %}
-  <!--{%comment %} end page header {% endcomment %}-->
+  <!-- start: page header -->
+ {% include "./header.html" %}
+=======
+{% extends "./base.html" %} {% load static %} {% block content %}
+<div class="content">
+  <!-- start: page header -->
+  {% include "./header.html" %}
+>>>>>>> dev
+  <!-- start: page header area -->
+  <div class="px-xl-5 px-lg-4 px-3 py-2 page-header">
+    <ol class="breadcrumb mb-0 bg-transparent">
+      <li class="breadcrumb-item">
+        <a href="{% url "index" %}" title="home">Home</a>
+      </li>
+      <!-- <li class="breadcrumb-item active" aria-current="page" title="Dashboard">Dashboard</li> -->
+    </ol>
+    <ul class="list-unstyled action d-flex align-items-center mb-0">
+      <li class="dropdown">
+        <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
+          <svg
+            class="svg-stroke"
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+            ></path>
+            <path d="M9 12l6 0"></path>
+            <path d="M12 9l0 6"></path>
+          </svg>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end p-2 p-xl-3 shadow rounded-4">
+          <li><a class="dropdown-item rounded-pill" href="#">New folder</a></li>
+          <li>
+            <a class="dropdown-item rounded-pill" href="#">File upload</a>
+          </li>
+          <li>
+            <a class="dropdown-item rounded-pill" href="#">Google docs</a>
+          </li>
+          <li>
+            <a class="dropdown-item rounded-pill" href="#">Google sheets</a>
+          </li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item rounded-pill" href="#">+ Invite</a></li>
+          <li>
+            <a class="dropdown-item rounded-pill" href="#">Generate report</a>
+          </li>
+          <li>
+            <a class="dropdown-item rounded-pill" href="#">New Reports</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown ms-3">
+        <a
+          href="#"
+          data-bs-toggle="dropdown"
+          data-bs-auto-close="outside"
+          aria-expanded="false"
+        >
+          <svg
+            class="svg-stroke"
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M4 4h16v2.172a2 2 0 0 1 -.586 1.414l-4.414 4.414v7l-6 2v-8.5l-4.48 -4.928a2 2 0 0 1 -.52 -1.345v-2.227z"
+            ></path>
+          </svg>
+        </a>
+        <div
+          class="dropdown-menu dropdown-menu-end p-2 p-xl-3 shadow rounded-4"
+          style="width: 300px"
+        >
+          <h6>Filter Options</h6>
+          <div class="row g-3 mt-3">
+            <div class="col-12">
+              <label class="form-label small text-muted">Sorted by:</label>
+              <input type="search" class="form-control" placeholder="Search" />
+            </div>
+            <div class="col-12">
+              <label class="form-label small text-muted">Status:</label>
+              <select class="form-select">
+                <option selected>Choose...</option>
+                <option>...</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label small text-muted">Notifications:</label>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" />
+                <label class="form-check-label">Enabled</label>
+              </div>
+            </div>
+            <div class="col-12 text-end mt-4">
+              <button type="reset" class="btn btn-sm btn-light me-1">
+                Reset
+              </button>
+              <button type="submit" class="btn btn-sm btn-primary">
+                Apply
+              </button>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
   <!-- start: page body area -->
   <div class="px-xl-5 px-lg-4 px-3 py-3 page-body">
     <div class="row g-3 mb-3">
@@ -26,7 +142,9 @@ Dashboard {% endblock title %} {% block content %}
             <h6 class="card-title mb-0">Total Amount</h6>
           </div>
           <div class="card-body w">
-            <h2>₦2,258</h2>
+            <h2>
+              &#8358 {{total_amount}}
+            </h2>
             <span class="badge bg-warning">+05% </span>
             <span class="text-muted">New income</span>
           </div>
@@ -38,7 +156,9 @@ Dashboard {% endblock title %} {% block content %}
             <h6 class="card-title mb-0">Total Customer</h6>
           </div>
           <div class="card-body">
-            <h2>2.3k</h2>
+            <h2>
+              {{customers|length}}
+            </h2>
             <span class="badge bg-warning">+11% </span>
             <span class="text-muted">From previous period</span>
           </div>
@@ -50,7 +170,9 @@ Dashboard {% endblock title %} {% block content %}
             <h6 class="card-title mb-0">Total Revenue</h6>
           </div>
           <div class="card-body">
-            <h2>11,5587</h2>
+            <h2>
+              {{total_booking|length}}
+            </h2>
             <span class="badge bg-warning">+21% </span>
             <span class="text-muted">From previous period</span>
           </div>
@@ -61,7 +183,7 @@ Dashboard {% endblock title %} {% block content %}
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
-            <h6 class="card-title">Total Incomes</h6>
+            <h6 class="card-title">Reservations</h6>
           </div>
           <div class="card-body">
             <div id="reservations" style="height: 280px"></div>
@@ -187,7 +309,7 @@ Dashboard {% endblock title %} {% block content %}
 
             <!-- Legend Indicator -->
             <div
-              class="flex justify-between sm:justify-end items-center gap-x-4 mt-3 sm:mt-6 small"
+              class="flex justify-between sm:justify-end items-center gap-x-4 mt-3 sm:mt-6"
             >
               <div class="inline-flex items-center px-2">
                 <span
@@ -270,51 +392,39 @@ Dashboard {% endblock title %} {% block content %}
                 </tr>
               </thead>
               <tbody>
+<<<<<<< HEAD
+                {% for reserves in reservation %}
+                <tr>
+                  <td>{{reserves.guest.first_name}} {{reserves.guest.last_name}}</td>
+                  <td>
+                    {{reserves.room.roomType}}
+                  </td>
+                  <td>
+                    {{reserves.check_in}}
+                  </td>
+                  <td>
+                    {{reserves.check_out}}
+                  </td>
+                  <td>
+                    &#8358 {{reserves.payment_det.amount}}
+                  </td>
+                  <td>
+                    &#8358 {{reserves.payable_amount}}
+                  </td>
+                  <td><span class="badge text-bg-warning">Pending</span></td>
+                </tr>
+                {% endfor %}
+=======
                 <tr>
                   <td>Frank Baker</td>
                   <td>Single</td>
                   <td>12/03/2024</td>
                   <td>13/03/2024</td>
                   <td>0.00</td>
-                  <td>₦230</td>
+                  <td>$230</td>
                   <td><span class="badge text-bg-warning">Pending</span></td>
                 </tr>
-                <tr>
-                  <td>Rya Randall</td>
-                  <td>Deluxe</td>
-                  <td>12/03/2024</td>
-                  <td>24/03/2024</td>
-                  <td>0.00</td>
-                  <td>₦430</td>
-                  <td><span class="badge text-bg-warning">Pending</span></td>
-                </tr>
-                <tr>
-                  <td>Phil Glover</td>
-                  <td>Studio</td>
-                  <td>12/03/2024</td>
-                  <td>21/03/2024</td>
-                  <td>0.00</td>
-                  <td>₦4450</td>
-                  <td><span class="badge text-bg-warning">Pending</span></td>
-                </tr>
-                <tr>
-                  <td>Victor Rampling</td>
-                  <td>Junior Suite</td>
-                  <td>12/03/2024</td>
-                  <td>15/03/2024</td>
-                  <td>0.00</td>
-                  <td>₦530</td>
-                  <td><span class="badge text-bg-warning">Pending</span></td>
-                </tr>
-                <tr>
-                  <td>Sally Graham</td>
-                  <td>Queen</td>
-                  <td>12/03/2024</td>
-                  <td>17/03/2024</td>
-                  <td>₦1550</td>
-                  <td>0.00</td>
-                  <td><span class="badge text-bg-success">Success</span></td>
-                </tr>
+>>>>>>> dev
               </tbody>
             </table>
           </div>
@@ -322,6 +432,6 @@ Dashboard {% endblock title %} {% block content %}
       </div>
     </div>
   </div>
-  <script src="assets/bundles/apexcharts.bundle.js"></script>
 </div>
+
 {% endblock content %}

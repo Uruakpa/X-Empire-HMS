@@ -493,6 +493,7 @@ def home(request):
         role = str(request.user.groups.all()[0])
     else:
         return HttpResponseForbidden("lolllzzzzz")
+    
     if role != "guest":
         return redirect("dashboard", pk=request.user.id) 
     else:

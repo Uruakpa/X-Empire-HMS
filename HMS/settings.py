@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'hotel',
     'accounts',
     'account',
-    'Admin',
+    'director',
     'frontdesk',
     'guest',
     'room',
