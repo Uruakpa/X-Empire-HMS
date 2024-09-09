@@ -1,0 +1,162 @@
+<<<<<<< HEAD:Templates/accounts/credit_voucher.html
+{% extends "base.html" %}
+=======
+{% extends "./base.html" %}
+{% load static %}
+>>>>>>> baecac633c379cf16e35b802b6a9b058f047fe82:account/templates/account/credit_voucher.html
+{% block title %}
+    X-Empire - Credit Voucher
+{% endblock title %}
+
+{% block content %}
+<<<<<<< HEAD:Templates/accounts/credit_voucher.html
+  <div class="content">
+    {% comment %} Page Header {% endcomment %}
+    {% include "header.html" %}
+    {% comment %} End Page Header {% endcomment %}
+=======
+
+<link rel="stylesheet" href="./accounts2.css">
+<div class="content">
+    {% comment %} page header {% endcomment %}
+    {% include "./header.html" %}
+    {% comment %} end page header {% endcomment %}
+    <main>
+    <div class=" card ">
+         <div class="card-body">
+>>>>>>> baecac633c379cf16e35b802b6a9b058f047fe82:account/templates/account/credit_voucher.html
+
+    <main>
+        <div class="card card-body" style="margin-top: 20px; padding: 20px; border: 1px solid #ddd;">
+            <div class="card-header" style="font-size: 24px; font-weight: bold; margin-bottom: 20px;">
+                Credit Voucher
+            </div>
+
+            <form id="debitVoucherForm">
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label for="voucherNo" style="display: block; margin-bottom: 5px;">Voucher No</label>
+                    <input type="text" id="voucherNo" name="voucherNo" value="CV-3" readonly style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; background-color: #e9ecef; color:black; ">
+                </div>
+
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label for="creditAccountHead" style="display: block; margin-bottom: 5px;">
+                        Debit Account Head</label>
+                    <select id="creditAccountHead" name="creditAccountHead" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                        <option value="cash_in_hand">Cash in Hand</option>
+                         <option value="cash_in_hand">Cash in Hand</option>
+                          <option value="cash_in_hand">Cash in Hand</option>
+                        <!-- Add other options as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label for="date" style="display: block; margin-bottom: 5px;">Date</label>
+                    <input type="date" id="date" name="date" value="2024-09-06" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label for="remark" style="display: block; margin-bottom: 5px;">Remark</label>
+                    <textarea id="remark" name="remark" rows="3" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+                </div>
+
+                <table style="width: 100%; margin-bottom: 20px; border-collapse: collapse;">
+                    <thead>
+                        <tr>
+                            <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Account Name</th>
+                            <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Code</th>
+                            <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Total Amount</th>
+                            <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="voucherRows">
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;">
+                                <select name="accountName" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                                    <option value="Bank Interest">Bank Interest</option>
+                                    <!-- Add more account options here -->
+                                </select>
+                            </td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">
+                                <input type="text" name="code" placeholder="Enter code" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                            </td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">
+                                <input type="number" name="totalAmount" placeholder="Enter total amount" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" oninput="calculateTotal()">
+                            </td>
+                            <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">
+                                <button type="button" class="btn btn-danger" onclick="removeRow(this)" style="background-color: #dc3545; color: white; border: none; padding: 5px 10px; border-radius: 4px;">
+                                    <i class="fa fa-trash"></i> <!-- Trash icon for delete button -->
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button type="button" onclick="addRow()" style="padding: 10px 20px; background-color: #17a2b8; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 20px;">
+                    Add More
+                </button>
+
+                <div style="text-align: right;">
+                    <label style="font-weight: bold; ">Total</label>
+                    <input type="number" id="totalAmount" readonly style="width: 60%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; background-color: #e9ecef; color:black;">
+                </div>
+
+                <button type="button" onclick="saveVoucher()" style="padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; float: right; margin-top: 20px;">
+                    Save
+                </button>
+            </form>
+        </div>
+    </main>
+  </div>
+
+  <script>
+    // Function to add a new row
+    function addRow() {
+      var table = document.getElementById("voucherRows");
+      var row = table.insertRow();
+      row.innerHTML = `
+        <td style="padding: 8px; border: 1px solid #ddd;">
+          <select name="accountName" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+              <option value="AC">AC</option>
+              <!-- Add more account options here -->
+          </select>
+        </td>
+        <td style="padding: 8px; border: 1px solid #ddd;">
+          <input type="text" name="code" placeholder="Enter code" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+        </td>
+        <td style="padding: 8px; border: 1px solid #ddd;">
+          <input type="number" name="totalAmount" placeholder="Enter total amount" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" oninput="calculateTotal()">
+        </td>
+        <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">
+          <button type="button" class="btn btn-danger" onclick="removeRow(this)" style="background-color: #dc3545; color: white; border: none; padding: 5px 10px; border-radius: 4px;">
+              <i class="fa fa-trash"></i>
+          </button>
+        </td>
+      `;
+    }
+
+    // Function to remove a row
+    function removeRow(button) {
+      var row = button.parentNode.parentNode;
+      row.parentNode.removeChild(row);
+      calculateTotal();  // Recalculate total after row removal
+    }
+
+    // Function to calculate the total of all amounts
+    function calculateTotal() {
+      var total = 0;
+      var amounts = document.querySelectorAll('input[name="totalAmount"]');
+      amounts.forEach(function(amount) {
+        var value = parseFloat(amount.value);
+        if (!isNaN(value)) {
+          total += value;
+        }
+      });
+      document.getElementById("totalAmount").value = total.toFixed(2);  // Update the total field
+    }
+
+    function saveVoucher() {
+      alert("Voucher saved successfully!");
+      // Additional save logic can be added here
+    }
+  </script>
+{% endblock content %}

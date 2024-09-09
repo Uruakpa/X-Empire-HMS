@@ -1,109 +1,137 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="Responsive Bootstrap 5 admin dashboard template & web App ui kit.">
-        <meta name="keyword" content="bootstrap admin template">
-    
-        <!--[ Favicon]-->
-        <link rel="icon" type="image/x-icon" href="/hotel main/pixelwibes.in/templates/hotelair/html/assets/images/favicon.ico">
-        <link rel="icon" type="image/png" sizes="16x16" href="/hotel main/pixelwibes.in/templates/hotelair/html/assets/images/favicon-16x16.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/hotel main/pixelwibes.in/templates/hotelair/html/assets/images/favicon-32x32.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="/hotel main/pixelwibes.in/templates/hotelair/html/assets/images/apple-touch-icon.png">
-    
-        <link rel="stylesheet" href="{% static '/css/dataTables.min.css' %}" >
-        
-        <!--[ Template main css file ]-->
-        <link rel="stylesheet" href="{% static '/css/style.min.css' %}">
-		
-        <link rel="stylesheet" href="{% static '/css/Admin.css' %}">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Responsive Bootstrap 5 admin dashboard template & web App ui kit."
+    />
+    <meta name="keyword" content="bootstrap admin template" />
 
-        <title>
-            {% block title %}
-            X-Empire
-            {% endblock title %}
-        </title>
-    </head>
-    
-<body data-theme="theme-Custom" class="svgstroke-a bg-gradient">
-    {% comment %} <!-- start: main grid layout -->₦ {% endcomment %}
-	<main class="container-fluid px-0">
+    <!--[ Favicon]-->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/hotel main/pixelwibes.in/templates/hotelair/html/assets/images/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/hotel main/pixelwibes.in/templates/hotelair/html/assets/images/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/hotel main/pixelwibes.in/templates/hotelair/html/assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/hotel main/pixelwibes.in/templates/hotelair/html/assets/images/apple-touch-icon.png"
+    />
 
-		{% if role == 'accounts' %}
-		{% include "accounts_navbar.html" %}
-		{% elif role == 'front desk' %}
-		{% include "frontdesk_nav.html" %}
-		{% elif role == 'admin user' %}
-		{% include "admin_nav.html" %}
-		{% else %}
-		<p>
-			Loozz
-		</p>
-		
-		{% endif %}
+    <link rel="stylesheet" href="{% static '/css/dataTables.min.css' %}" />
 
-    {% block content %}
-    
-    {% endblock content %}
-    
-	</main>
+    <!--[ Template main css file ]-->
+    <link rel="stylesheet" href="{% static '/css/style.min.css' %}" />
+
+    <link rel="stylesheet" href="{% static '/css/Admin.css' %}" />
+
+    <title>{% block title %} X-Empire {% endblock title %}</title>
+  </head>
+
+  <body data-theme="theme-Custom" class="svgstroke-a bg-gradient">
+    {% comment %}
+    <!-- start: main grid layout -->₦ {% endcomment %}
+    <main class="container-fluid px-0">
+      {% include "./.html" %} {% else %}
+      <p>Loozz</p>
+
+      {% endif %} {% block content %} {% endblock content %}
+    </main>
     <!--[ hotelair template vender js ]-->
-	<script src="{% static '/js/libscripts.bundle.js' %}"></script>
+    <script src="{% static '/js/libscripts.bundle.js' %}"></script>
     <script src="{% static '/js/apexcharts.bundle.js' %}"></script>
-	<script src="{% static '/js/dataTables.bundle.js' %}"></script>
-	<script src="{% static '/js/main_copy.js' %}"></script>
+    <script src="{% static '/js/dataTables.bundle.js' %}"></script>
+    <script src="{% static '/js/main_copy.js' %}"></script>
     <script>
-		$(document).ready(function() {
-			var options = {
-				chart: {
-					height: 280,
-					type: 'line',
-					toolbar: {
-						show: false,
-					},
-				},
-				colors: ['#ffc107', '#555'],
-				series: [{
-					name: '',
-					type: 'column',
-					data: [440, 505, 414, 671, 227, 413, 201, 352, 752, 320, 257, 160]
-				}, {
-					name: '',
-					type: 'line',
-					data: [23, 42, 35, 27, 43, 22, 17, 31, 22, 22, 12, 16]
-				}],
-				stroke: {
-					width: [0, 4]
-				},
-				labels: ['01 Jan 2001', '02 Jan 2001', '03 Jan 2001', '04 Jan 2001', '05 Jan 2001', '06 Jan 2001', '07 Jan 2001', '08 Jan 2001', '09 Jan 2001', '10 Jan 2001', '11 Jan 2001', '12 Jan 2001'],
-				xaxis: {
-					type: 'datetime'
-				},
-				yaxis: [{
-					title: {
-						text: '',
-					},
-				},{
-					opposite: true,
-					title: {
-						text: ''
-					}
-				}]
-			}
-			var chart = new ApexCharts( document.querySelector("#reservations"), options );
-			chart.render();
+      $(document).ready(function () {
+        var options = {
+          chart: {
+            height: 280,
+            type: "line",
+            toolbar: {
+              show: false,
+            },
+          },
+          colors: ["#ffc107", "#555"],
+          series: [
+            {
+              name: "",
+              type: "column",
+              data: [
+                440, 505, 414, 671, 227, 413, 201, 352, 752, 320, 257, 160,
+              ],
+            },
+            {
+              name: "",
+              type: "line",
+              data: [23, 42, 35, 27, 43, 22, 17, 31, 22, 22, 12, 16],
+            },
+          ],
+          stroke: {
+            width: [0, 4],
+          },
+          labels: [
+            "01 Jan 2001",
+            "02 Jan 2001",
+            "03 Jan 2001",
+            "04 Jan 2001",
+            "05 Jan 2001",
+            "06 Jan 2001",
+            "07 Jan 2001",
+            "08 Jan 2001",
+            "09 Jan 2001",
+            "10 Jan 2001",
+            "11 Jan 2001",
+            "12 Jan 2001",
+          ],
+          xaxis: {
+            type: "datetime",
+          },
+          yaxis: [
+            {
+              title: {
+                text: "",
+              },
+            },
+            {
+              opposite: true,
+              title: {
+                text: "",
+              },
+            },
+          ],
+        };
+        var chart = new ApexCharts(
+          document.querySelector("#reservations"),
+          options
+        );
+        chart.render();
+      });
+      $(document).ready(function () {
+        $(".dataTable").addClass("nowrap").dataTable({
+          responsive: true,
         });
-		$(document).ready( function () {
-            $('.dataTable')
-            .addClass( 'nowrap' )
-            .dataTable( {
-                responsive: true,
-            });
-        });
-	</script>
-</body>
+      });
+    </script>
+  </body>
 </html>

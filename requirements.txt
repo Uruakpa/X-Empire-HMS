@@ -4,6 +4,7 @@ charset-normalizer==3.3.2
 colorama==0.4.6
 comtypes==1.2.1
 distlib==0.3.8
+dj-database-url==2.2.0
 Django==5.0.3
 django-ckeditor-5==0.2.13
 django-countries==7.6.1
@@ -27,8 +28,7 @@ phonenumbers==8.13.43
 pillow==10.4.0
 platformdirs==4.2.0
 pluggy==1.4.0
-psycopg2==2.9.9
-pypiwin32==223
+psycopg2-binary==2.9.9
 pytest==8.0.0
 python-dotenv==1.0.1
 pyttsx3==2.90
