@@ -1,24 +1,149 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block title %}
-X-Empire - Check In/Out
+X-Empire - Dashboard
 {% endblock title %}
 
 {% block content %}
 
-<link rel="stylesheet" href="./accounts2.css">
 <div class="content">
-    {% comment %} page header {% endcomment %}
-    {% include "header.html" %}
-    {% comment %} end page header {% endcomment %}
-    <main>
-    <div class=" card ">
-         <div class="card-body">
+	{% comment %} Page Header {% endcomment %}
+	{% include "header.html" %}
+	{% comment %} End Page Header {% endcomment %}
 
-         </div>
+    <main style="padding: 20px; display:flex; flex-direction:column; gap:40px;">
+        <div class="card card-body" style="padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+            
+            <h2 style="font-size: 24px; text-align: center; margin-bottom: 20px;">Financial Year</h2>
+            
+            <form id="financialYearForm" onsubmit="return validateForm();" method="post">
+                {% csrf_token %}
+                
+                <div style="margin-bottom: 15px;">
+                    <label for="title" style="display: block; margin-bottom: 5px;">Title *</label>
+                    <input type="text" id="title" name="title" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" required value="2024-2024">
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label for="from_date" style="display: block; margin-bottom: 5px;">From Date *</label>
+                    <input type="date" id="from_date" name="from_date" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" required value="{{ today|date:'Y-m-d' }}">
+                </div>
+
+                <div style="margin-bottom: 15px;">
+                    <label for="to_date" style="display: block; margin-bottom: 5px;">To Date *</label>
+                    <input type="date" id="to_date" name="to_date" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" required value="{{ today|date:'Y-m-d' }}">
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 5px;">Status *</label>
+                    <input type="radio" id="active" name="status" value="Active" checked>
+                    <label for="active" style="margin-right: 15px;">Active</label>
+                    <input type="radio" id="inactive" name="status" value="Inactive">
+                    <label for="inactive">Inactive</label>
+                </div>
+
+                <button type="submit" style="background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+                    Save
+                </button>
+            </form>
+
         </div>
-        <div>jjjjjj</div>
+          <div class="card card-body" style="padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+
+            <h2 style="margin-top: 40px; margin-bottom: 20px; font-family: Arial, sans-serif;">Financial Year List</h2>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <div>
+                    <label for="entries">Show</label>
+                    <select id="entries" style="padding: 5px; border-radius: 4px; border: 1px solid #ccc;">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                    </select>
+                    entries
+                </div>
+                <div>
+                    <input type="text" id="search" placeholder="Search" style="padding: 5px; border-radius: 4px; border: 1px solid #ccc;">
+                </div>
+            </div>
+
+            <table style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif;">
+                <thead style="background-color: #F5F5F5; color: black; border-bottom: 2px solid #ddd;">
+                    <tr>
+                        <th style="padding: 10px; border: 1px solid #ddd;">SL</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Title</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">From Date</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">To Date</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Status</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Sample Data Row -->
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">1</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">2021-2022</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">2021-10-25</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">2022-10-31</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ended</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">
+                            <button style="padding: 5px 10px; background-color: #007bff; color: #fff; border: none; border-radius: 4px;">Edit</button>
+                            <button style="padding: 5px 10px; background-color: #dc3545; color: #fff; border: none; border-radius: 4px;">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- More rows can be added dynamically -->
+                </tbody>
+            </table>
+
+            <div style="display: flex; justify-content: space-between; margin-top: 15px;">
+                <div>Showing 1 to 10 of 50 entries</div>
+                <div>
+                    <button style="padding: 5px 10px; background-color: #28a745; color: #fff; border: none; border-radius: 4px;">Previous</button>
+                    <span>1</span>
+                    <button style="padding: 5px 10px; background-color: #28a745; color: #fff; border: none; border-radius: 4px;">Next</button>
+                </div>
+            </div>
+        </div>
     </main>
-</body>
-</html>
+</div>
+
+<script>
+// JavaScript function for form validation
+function validateForm() {
+    const title = document.getElementById('title').value;
+    const fromDate = document.getElementById('from_date').value;
+    const toDate = document.getElementById('to_date').value;
+
+    if (!title || !fromDate || !toDate) {
+        alert('Please fill in all required fields.');
+        return false;
+    }
+
+    if (new Date(fromDate) > new Date(toDate)) {
+        alert('From Date cannot be later than To Date.');
+        return false;
+    }
+
+    return true;
+}
+
+// JavaScript for filtering table entries
+document.getElementById('search').addEventListener('input', function() {
+    let filter = this.value.toUpperCase();
+    let rows = document.getElementById('table-body').getElementsByTagName('tr');
+    for (let i = 0; i < rows.length; i++) {
+        let cells = rows[i].getElementsByTagName('td');
+        let match = false;
+        for (let j = 0; j < cells.length; j++) {
+            if (cells[j].innerText.toUpperCase().indexOf(filter) > -1) {
+                match = true;
+                break;
+            }
+        }
+        rows[i].style.display = match ? '' : 'none';
+    }
+});
+</script>
+
 {% endblock content %}

@@ -1,24 +1,102 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block title %}
-X-Empire - Check In/Out
+X-Empire - Chart of Account
 {% endblock title %}
 
 {% block content %}
 
-<link rel="stylesheet" href="./accounts2.css">
 <div class="content">
-    {% comment %} page header {% endcomment %}
+    {% comment %} Page Header {% endcomment %}
     {% include "header.html" %}
-    {% comment %} end page header {% endcomment %}
-    <main>
-    <div class=" card ">
-         <div class="card-body">
+    {% comment %} End Page Header {% endcomment %}
 
-         </div>
+    <main style="padding: 20px;">
+        <div class="card card-body " style="border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); padding: 20px;">
+            <div class="card-body">
+                <h2 style="text-align: center; font-size: 24px; margin-bottom: 20px;">Chart of Account</h2>
+
+                <!-- Form to Add New Account -->
+                <form id="accountForm" onsubmit="return validateAccountForm();" method="post">
+                    {% csrf_token %}
+                    <div style="margin-bottom: 15px;">
+                        <label for="account_name" style="display: block; margin-bottom: 5px;">Account Name *</label>
+                        <input type="text" id="account_name" name="account_name" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" required>
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <label for="account_type" style="display: block; margin-bottom: 5px;">Account Type *</label>
+                        <select id="account_type" name="account_type" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" required>
+                            <option value="">Select Type</option>
+                            <option value="Asset">Asset</option>
+                            <option value="Liability">Liability</option>
+                            <option value="Income">Income</option>
+                            <option value="Expense">Expense</option>
+                            <option value="Equity">Equity</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <label for="status" style="display: block; margin-bottom: 5px;">Status *</label>
+                        <input type="radio" id="active" name="status" value="Active" checked>
+                        <label for="active" style="margin-right: 15px;">Active</label>
+                        <input type="radio" id="inactive" name="status" value="Inactive">
+                        <label for="inactive">Inactive</label>
+                    </div>
+
+                    <button type="submit" style="background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+                        Add Account
+                    </button>
+                </form>
+
+                <!-- Table to Display Accounts -->
+                <h3 style="margin-top: 40px; margin-bottom: 20px; font-family: Arial, sans-serif;">Accounts List</h3>
+                <table style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif;">
+                    <thead style="background-color: #F5F5F5; color: black; border-bottom: 2px solid #ddd;">
+                        <tr>
+                            <th style="padding: 10px; border: 1px solid #ddd;">SL</th>
+                            <th style="padding: 10px; border: 1px solid #ddd;">Account Name</th>
+                            <th style="padding: 10px; border: 1px solid #ddd;">Type</th>
+                            <th style="padding: 10px; border: 1px solid #ddd;">Status</th>
+                            <th style="padding: 10px; border: 1px solid #ddd;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="accountTableBody">
+                        <!-- Sample Data Row -->
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;">1</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Cash</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Asset</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Active</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                <button style="padding: 5px 10px; background-color: #007bff; color: #fff; border: none; border-radius: 4px;">Edit</button>
+                                <button style="padding: 5px 10px; background-color: #dc3545; color: #fff; border: none; border-radius: 4px;">Delete</button>
+                            </td>
+                        </tr>
+                        <!-- Additional rows can be added dynamically -->
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <div>jjjjjj</div>
     </main>
-</body>
-</html>
+</div>
+
+<script>
+// JavaScript function for form validation
+function validateAccountForm() {
+    const accountName = document.getElementById('account_name').value;
+    const accountType = document.getElementById('account_type').value;
+
+    if (!accountName || !accountType) {
+        alert('Please fill in all required fields.');
+        return false;
+    }
+
+    return true;
+}
+
+// Additional JavaScript for handling table actions can go here
+</script>
+
 {% endblock content %}

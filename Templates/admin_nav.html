@@ -22,7 +22,7 @@
                 <div class="tab-content">
                     <!-- start: Hotel tab-->
                     <div class="tab-pane fade active show" id="tab_hotels" role="tabpanel">
-                        <h6 class="fl-title title-font ps-2 small text-uppercase text-muted py-3" style="--dynamic-color: var(--theme-color1)">Universal</h6>
+                        <!-- <h6 class="fl-title title-font ps-2 small text-uppercase text-muted py-3" style="--dynamic-color: var(--theme-color1)">Universal</h6> -->
                         <ul class="list-unstyled mb-4 menu-list">
                             <li>
                                 <a class="active" href="{% url "dashboard" user.id %}" aria-label="Hotel Dashboard">
@@ -35,8 +35,10 @@
                                     <span class="mx-3">Dashboard</span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="{% url "dashboard" user.id %}" aria-label="Hotel Front">
+                           <li>
+                                <!-- <a href="{% url "accounts" user.id %}" href="#accountDropdown" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle " aria-label="Users"> -->
+
+                                     <a href="#Hotel(Admin).html"  aria-label="Hotel Front" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle" aria-label="Users">
                                     <svg class="svg-stroke" xmlns="http://www.w3.org/2000/svg" width="24"  viewBox="0 0 24 24"  stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                         <path d="M3 21l18 0" />
@@ -44,8 +46,34 @@
                                         <path d="M12 9m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
                                         <path d="M9 21v-5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v5" />
                                     </svg>
-                                    <span class="mx-3">Hotels</span>
+                                    <span class="mx-3">Accounts</span>
                                 </a>
+                                 <ul id="Hotel(Admin).html" class="collapse list-unstyled">
+                                        <li><a href="{% url 'Financial' user.id %} "aria-label="Financial Year" >Financial Year</a></li>
+                                        <li><a href="{% url 'Financial_ending' user.id %}" aria-label="Financial Year Ending" >Financial Year Ending</a></li>
+                                        <li><a href="{% url 'chart_of_account' user.id %} "aria-label="Chart of Account" >Chart of Account</a></li>
+                                        <li><a href="{% url 'opening_balance' user.id %}" aria-label="Opening Balance" >Opening Balance</a></li>
+                                        <li><a href="{% url 'debit_voucher' user.id %}" aria-label="Debit Voucher" >Debit Voucher</a></li>
+                                        <li><a href="{% url 'credit_voucher' user.id %} " aria-label="Credit Voucher" >Credit Voucher</a></li>
+                                        <li><a href="{% url 'contra_voucher' user.id %} " aria-label="Contra Voucher" >Contra Voucher</a></li>
+                                        <li><a href="{% url 'journal_voucher' user.id %} " aria-label="Journal Voucher" >Journal Voucher</a></li>
+                                        <li><a href="{% url 'voucher_approval' user.id %} " aria-label="Voucher Approval" >Voucher Approval</a></li>
+                                        <li>
+                                        <a href="#AccountReport.html" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle" aria-label="Users">
+                                         <span class="mx-3">Accounts Report</span>
+                                         </a>
+                                          <ul class="collapse list-unstyled" id="AccountReport.html">
+                                          <li><a  href="{% url 'voucher_report' user.id %}" aria-label="Voucher Report">Voucher Report</a></li>
+                                          <li><a  href="{% url 'cash_book' user.id %}" aria-label="Cash Book">Cash Book</a></li>
+                                          <li><a  href="{% url 'general_ledger' user.id %}" aria-label="General Ledger">General Ledger</a></li>
+                                          <li><a  href="{% url 'trial_balance' user.id %}" aria-label="Trial Balance">Trial Balance</a></li>
+                                          <li><a  href="{% url 'profit_loss' user.id %}" aria-label="Profit Loss">Profit Loss</a></li>
+                                          <li><a  href="{% url 'coa_print' user.id %}" aria-label="Coa Print">Coa Print</a></li>
+                                          <li><a  href="{% url 'balance_sheet' user.id %}" aria-label="Balance Sheet">Balance Sheet</a></li>
+                                    
+                                         </ul>
+                                        </li>
+                                       </ul>
                             </li>
                             <li>
                                 <a href="transaction(Admin).html" aria-label="Transaction list">

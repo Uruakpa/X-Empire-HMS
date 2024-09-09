@@ -1,24 +1,140 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block title %}
-X-Empire - Check In/Out
+X-Empire - Opening Balance
 {% endblock title %}
 
 {% block content %}
 
-<link rel="stylesheet" href="./accounts2.css">
 <div class="content">
-    {% comment %} page header {% endcomment %}
     {% include "header.html" %}
-    {% comment %} end page header {% endcomment %}
-    <main>
-    <div class=" card ">
-         <div class="card-body">
+    
+    <main style="padding: 20px;">
+        <div class="card card-body" style="border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); padding: 20px;">
+            <div class="card-body">
+                <h2 style="text-align: center; font-size: 24px; margin-bottom: 20px;">Opening Balance</h2>
 
-         </div>
+                <!-- Add Opening Balance Form -->
+                <form id="openingBalanceForm" onsubmit="return validateOpeningBalanceForm();" method="post" style="margin-bottom: 30px;">
+                    {% csrf_token %}
+                    <div style="margin-bottom: 15px;">
+                        <label for="account" style="display: block; margin-bottom: 5px;">Head of Account*</label>
+                        <select id="account" name="account" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" required>
+                            <option value="">Head of Account</option>
+                            {% for account in accounts %}
+                                <option value="{{ account.id }}">{{ account.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <label for="balance" style="display: block; margin-bottom: 5px;">Total Amount *</label>
+                        <input type="number" id="balance" name="balance" step="0.01" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" required>
+                    </div>
+
+                    <div  style="margin-bottom: 15px;">
+                      <label for="balance" style="display: block; margin-bottom: 5px;">Remark *</label>
+                        <textarea type="text"  step="0.01" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" required></textarea>
+                    </div>
+
+                    {% comment %} <div style="margin-bottom: 15px;">
+                        <label style="display: block; margin-bottom: 5px;">Status *</label>
+                        <input type="radio" id="active" name="status" value="Active" checked>
+                        <label for="active" style="margin-right: 15px;">Active</label>
+                        <input type="radio" id="inactive" name="status" value="Inactive">
+                        <label for="inactive">Inactive</label>
+                    </div> {% endcomment %}
+
+                    <button type="submit" style="background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+                        Submit
+                    </button>
+                </form>
+
+                <!-- Opening Balances Table -->
+                {% comment %} <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                    <div>
+                        <label for="entries">Show</label>
+                        <select id="entries" style="padding: 5px; border-radius: 4px; border: 1px solid #ccc;">
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                        </select>
+                        entries
+                    </div>
+                    <div>
+                        <input type="text" id="search" placeholder="Search" style="padding: 5px; border-radius: 4px; border: 1px solid #ccc;">
+                    </div>
+                </div>
+
+                <table style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif;">
+                    <thead style="background-color: #F5F5F5; color: black; border-bottom: 2px solid #ddd;">
+                        <tr>
+                            <th style="padding: 10px; border: 1px solid #ddd;">SL</th>
+                            <th style="padding: 10px; border: 1px solid #ddd;">Account Name</th>
+                            <th style="padding: 10px; border: 1px solid #ddd;">Balance</th>
+                            <th style="padding: 10px; border: 1px solid #ddd;">Status</th>
+                            <th style="padding: 10px; border: 1px solid #ddd;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="openingBalanceTableBody">
+                        {% for balance in opening_balances %}
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;">{{ forloop.counter }}</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">{{ balance.account.name }}</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">{{ balance.balance }}</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">{{ balance.status }}</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                <button style="padding: 5px 10px; background-color: #007bff; color: #fff; border: none; border-radius: 4px;">Edit</button>
+                                <button style="padding: 5px 10px; background-color: #dc3545; color: #fff; border: none; border-radius: 4px;">Delete</button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                <div style="display: flex; justify-content: space-between; margin-top: 15px;">
+                    <div>Showing 1 to 10 of {{ opening_balances.count }}</div>
+                    <div>
+                        <button style="padding: 5px 10px; background-color: #28a745; color: #fff; border: none; border-radius: 4px;">Previous</button>
+                        <span>1</span>
+                        <button style="padding: 5px 10px; background-color: #28a745; color: #fff; border: none; border-radius: 4px;">Next</button>
+                    </div>
+                </div> {% endcomment %}
+            </div>
         </div>
-        <div>jjjjjj</div>
     </main>
-</body>
-</html>
+</div>
+
+<script>
+function validateOpeningBalanceForm() {
+    const account = document.getElementById('account').value;
+    const balance = document.getElementById('balance').value;
+
+    if (!account || balance === '') {
+        alert('Please fill in all required fields.');
+        return false;
+    }
+
+    return true;
+}
+
+// Implement search functionality
+document.getElementById('search').addEventListener('input', function() {
+    let filter = this.value.toUpperCase();
+    let rows = document.getElementById('openingBalanceTableBody').getElementsByTagName('tr');
+    for (let i = 0; i < rows.length; i++) {
+        let cells = rows[i].getElementsByTagName('td');
+        let match = false;
+        for (let j = 0; j < cells.length; j++) {
+            if (cells[j].innerText.toUpperCase().indexOf(filter) > -1) {
+                match = true;
+                break;
+            }
+        }
+        rows[i].style.display = match ? '' : 'none';
+    }
+});
+</script>
+
 {% endblock content %}
