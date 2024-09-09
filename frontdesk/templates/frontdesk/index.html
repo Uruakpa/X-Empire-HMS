@@ -206,12 +206,22 @@
                 {% for reservations in reservation %}
                 <tr>
                   <td>{{reservations.guest.first_name}}</td>
-                  <td>Single</td>
+                  <td>
+                  {{reservations.room.roomType}}
+                  </td>
                   <td>12/03/2024</td>
                   <td>13/03/2024</td>
                   <td>0.00</td>
                   <td>$230</td>
-                  <td><span class="badge text-bg-warning">Pending</span></td>
+                  {% if reservations.payment_det.payment_status == "Pending" %}
+                  <td><span class="badge text-bg-warning">
+                  {{reservations.payment_det.payment_status}}
+                  </span></td>
+                  {% else %}
+                  <td><span class="badge text-bg-primary">
+                  {{reservations.payment_det.payment_status}}
+                  </span></td>
+                  {% endif %}
                 </tr>
                 {% endfor %}
               </tbody>
