@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 {% extends "./base.html" %} 
 {% load static %}
 {% block content %}
 <div class="content">
   <!-- start: page header -->
  {% include "./header.html" %}
+=======
+{% extends "./base.html" %} {% load static %} {% block content %}
+<div class="content">
+  <!-- start: page header -->
+  {% include "./header.html" %}
+>>>>>>> dev
   <!-- start: page header area -->
   <div class="px-xl-5 px-lg-4 px-3 py-2 page-header">
     <ol class="breadcrumb mb-0 bg-transparent">
@@ -385,6 +392,7 @@
                 </tr>
               </thead>
               <tbody>
+<<<<<<< HEAD
                 {% for reserves in reservation %}
                 <tr>
                   <td>{{reserves.guest.first_name}} {{reserves.guest.last_name}}</td>
@@ -406,6 +414,17 @@
                   <td><span class="badge text-bg-warning">Pending</span></td>
                 </tr>
                 {% endfor %}
+=======
+                <tr>
+                  <td>Frank Baker</td>
+                  <td>Single</td>
+                  <td>12/03/2024</td>
+                  <td>13/03/2024</td>
+                  <td>0.00</td>
+                  <td>$230</td>
+                  <td><span class="badge text-bg-warning">Pending</span></td>
+                </tr>
+>>>>>>> dev
               </tbody>
             </table>
           </div>

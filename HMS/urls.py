@@ -24,7 +24,7 @@ from django.conf import settings
 # from hotel.views import *
 
 urlpatterns = [
-    path('admin/', django_admin.site.urls),
+    path('admin-site/', django_admin.site.urls),
     path('', include("hotel.urls")),
     path('auth/', include("accounts.urls")),
 ]
