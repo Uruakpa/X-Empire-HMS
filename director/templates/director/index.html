@@ -1,0 +1,418 @@
+{% extends "./base.html" %} 
+{% load static %}
+{% block content %}
+<div class="content">
+  <!-- start: page header -->
+ {% include "./header.html" %}
+  <!-- start: page header area -->
+  <div class="px-xl-5 px-lg-4 px-3 py-2 page-header">
+    <ol class="breadcrumb mb-0 bg-transparent">
+      <li class="breadcrumb-item">
+        <a href="{% url "index" %}" title="home">Home</a>
+      </li>
+      <!-- <li class="breadcrumb-item active" aria-current="page" title="Dashboard">Dashboard</li> -->
+    </ol>
+    <ul class="list-unstyled action d-flex align-items-center mb-0">
+      <li class="dropdown">
+        <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
+          <svg
+            class="svg-stroke"
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+            ></path>
+            <path d="M9 12l6 0"></path>
+            <path d="M12 9l0 6"></path>
+          </svg>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end p-2 p-xl-3 shadow rounded-4">
+          <li><a class="dropdown-item rounded-pill" href="#">New folder</a></li>
+          <li>
+            <a class="dropdown-item rounded-pill" href="#">File upload</a>
+          </li>
+          <li>
+            <a class="dropdown-item rounded-pill" href="#">Google docs</a>
+          </li>
+          <li>
+            <a class="dropdown-item rounded-pill" href="#">Google sheets</a>
+          </li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item rounded-pill" href="#">+ Invite</a></li>
+          <li>
+            <a class="dropdown-item rounded-pill" href="#">Generate report</a>
+          </li>
+          <li>
+            <a class="dropdown-item rounded-pill" href="#">New Reports</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown ms-3">
+        <a
+          href="#"
+          data-bs-toggle="dropdown"
+          data-bs-auto-close="outside"
+          aria-expanded="false"
+        >
+          <svg
+            class="svg-stroke"
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M4 4h16v2.172a2 2 0 0 1 -.586 1.414l-4.414 4.414v7l-6 2v-8.5l-4.48 -4.928a2 2 0 0 1 -.52 -1.345v-2.227z"
+            ></path>
+          </svg>
+        </a>
+        <div
+          class="dropdown-menu dropdown-menu-end p-2 p-xl-3 shadow rounded-4"
+          style="width: 300px"
+        >
+          <h6>Filter Options</h6>
+          <div class="row g-3 mt-3">
+            <div class="col-12">
+              <label class="form-label small text-muted">Sorted by:</label>
+              <input type="search" class="form-control" placeholder="Search" />
+            </div>
+            <div class="col-12">
+              <label class="form-label small text-muted">Status:</label>
+              <select class="form-select">
+                <option selected>Choose...</option>
+                <option>...</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label small text-muted">Notifications:</label>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" />
+                <label class="form-check-label">Enabled</label>
+              </div>
+            </div>
+            <div class="col-12 text-end mt-4">
+              <button type="reset" class="btn btn-sm btn-light me-1">
+                Reset
+              </button>
+              <button type="submit" class="btn btn-sm btn-primary">
+                Apply
+              </button>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- start: page body area -->
+  <div class="px-xl-5 px-lg-4 px-3 py-3 page-body">
+    <div class="row g-3 mb-3">
+      <div class="col-md-6 col-lg-3">
+        <div class="card">
+          <div class="card-header">
+            <h6 class="card-title mb-0">Today Booking</h6>
+          </div>
+          <div class="card-body">
+            <h2>{{reserve}}</h2>
+            <span class="badge bg-warning">+11% </span>
+            <span class="text-muted">From previous period</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card">
+          <div class="card-header">
+            <h6 class="card-title mb-0">Total Amount</h6>
+          </div>
+          <div class="card-body w">
+            <h2>
+              &#8358 {{total_amount}}
+            </h2>
+            <span class="badge bg-warning">+05% </span>
+            <span class="text-muted">New income</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card">
+          <div class="card-header">
+            <h6 class="card-title mb-0">Total Customer</h6>
+          </div>
+          <div class="card-body">
+            <h2>
+              {{customers|length}}
+            </h2>
+            <span class="badge bg-warning">+11% </span>
+            <span class="text-muted">From previous period</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card">
+          <div class="card-header">
+            <h6 class="card-title mb-0">Total Revenue</h6>
+          </div>
+          <div class="card-body">
+            <h2>
+              {{total_booking|length}}
+            </h2>
+            <span class="badge bg-warning">+21% </span>
+            <span class="text-muted">From previous period</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <h6 class="card-title">Reservations</h6>
+          </div>
+          <div class="card-body">
+            <div id="reservations" style="height: 280px"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box-holder">
+        <div class="box card">
+          <!-- Apex Lines Chart -->
+
+          <div class="w-[100%] text-black" id="hs-single-line-chart"></div>
+
+          <!-- Include ApexCharts library -->
+          <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+          <script>
+            window.addEventListener("load", () => {
+              // Directly initialize the chart with ApexCharts
+              const options = {
+                chart: {
+                  height: 230,
+                  type: "line",
+                  toolbar: {
+                    show: false,
+                  },
+                  zoom: {
+                    enabled: false,
+                  },
+                },
+                series: [
+                  {
+                    name: "Sales",
+                    data: [0, 27000, 25000, 27000, 40000],
+                  },
+                ],
+                dataLabels: {
+                  enabled: false,
+                },
+                stroke: {
+                  curve: "smooth", // Use 'smooth' for smooth lines
+                  width: 4,
+                },
+                grid: {
+                  strokeDashArray: 0,
+                  borderColor: "#000",
+                  padding: {
+                    top: -20,
+                    right: 0,
+                  },
+                },
+                xaxis: {
+                  type: "category",
+                  categories: [
+                    "25 January 2023",
+                    "28 January 2023",
+                    "31 January 2023",
+                    "1 February 2023",
+                    "3 February 2023",
+                  ],
+                  axisBorder: {
+                    show: false,
+                  },
+                  axisTicks: {
+                    show: false,
+                  },
+                  labels: {
+                    offsetY: 5,
+                    style: {
+                      colors: "#000",
+                      fontSize: "13px",
+                      fontFamily: "Inter, ui-sans-serif",
+                      fontWeight: 400,
+                    },
+                    formatter: (title) => {
+                      let t = title;
+
+                      if (t) {
+                        const newT = t.split(" ");
+                        t = `${newT[0]} ${newT[1].slice(0, 3)}`;
+                      }
+
+                      return t;
+                    },
+                  },
+                },
+                yaxis: {
+                  min: 0,
+                  max: 40000,
+                  tickAmount: 4,
+                  labels: {
+                    align: "left",
+                    style: {
+                      colors: "#000",
+                      fontSize: "12px",
+                      fontFamily: "Inter, ui-sans-serif",
+                      fontWeight: 400,
+                    },
+                    formatter: (value) =>
+                      value >= 1000 ? `${value / 1000}k` : value,
+                  },
+                },
+                tooltip: {
+                  x: {
+                    format: "dd MMM yyyy",
+                  },
+                },
+                colors: ["#FFC107"],
+                borderColor: ["#000"],
+              };
+
+              const chart = new ApexCharts(
+                document.querySelector("#hs-single-line-chart"),
+                options
+              );
+              chart.render();
+            });
+          </script>
+        </div>
+        <div class="box card">
+          <div class="flex flex-col justify-center items-center">
+            <div id="hs-doughnut-chart"></div>
+
+            <!-- Legend Indicator -->
+            <div
+              class="flex justify-between sm:justify-end items-center gap-x-4 mt-3 sm:mt-6"
+            >
+              <div class="inline-flex items-center px-2">
+                <span
+                  class="w-2.5 h-2.5 inline-block p-1 IN bg-[#FFC107] rounded-sm me-2"
+                  style="--dynamic-color: var(--theme-color1)"
+                ></span>
+                <span class="text-[13px] text-gray-600">Income</span>
+              </div>
+              <div class="inline-flex items-center px-2">
+                <span
+                  class="w-2.5 h-2.5 inline-block p-1 EX bg-[#555] rounded-sm me-2"
+                ></span>
+                <span class="text-[13px] text-gray-600">Expendiure</span>
+              </div>
+
+              <div class="inline-flex items-center px-2">
+                <span
+                  class="w-2.5 h-2.5 inline-block GR p-1 bg-[#FF6F00] rounded-sm me-2"
+                ></span>
+                <span class="text-[13px] text-gray-600">Gross profit</span>
+              </div>
+            </div>
+
+            <!-- ApexCharts Library -->
+            <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+            <!-- Pie Chart Initialization -->
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                var options = {
+                  chart: {
+                    height: 250,
+                    width: 250,
+                    type: "donut",
+                  },
+                  series: [50, 20, 30],
+                  labels: ["Income", "Expendiure", "gross"],
+                  colors: ["#ffc107", "#555", "#FF6F00"],
+                  legend: {
+                    show: false,
+                  },
+                  dataLabels: {
+                    enabled: false,
+                  },
+                  stroke: {
+                    width: 5,
+                  },
+                };
+
+                var chart = new ApexCharts(
+                  document.querySelector("#hs-doughnut-chart"),
+                  options
+                );
+                chart.render();
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <h6 class="card-title">Today Booking List</h6>
+          </div>
+          <div class="card-body">
+            <table
+              class="table dataTable align-middle table-hover table-body"
+              style="width: 100%"
+            >
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Room Type</th>
+                  <th>Check In</th>
+                  <th>Check Out</th>
+                  <th>Paid Amount</th>
+                  <th>Due Amount</th>
+                  <th>Payment Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for reserves in reservation %}
+                <tr>
+                  <td>{{reserves.guest.first_name}} {{reserves.guest.last_name}}</td>
+                  <td>
+                    {{reserves.room.roomType}}
+                  </td>
+                  <td>
+                    {{reserves.check_in}}
+                  </td>
+                  <td>
+                    {{reserves.check_out}}
+                  </td>
+                  <td>
+                    &#8358 {{reserves.payment_det.amount}}
+                  </td>
+                  <td>
+                    &#8358 {{reserves.payable_amount}}
+                  </td>
+                  <td><span class="badge text-bg-warning">Pending</span></td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
