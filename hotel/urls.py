@@ -52,9 +52,12 @@ urlpatterns = [
     path('trial_balance/<str:pk>/', trial_balance, name="trial_balance"),
     path('profit_loss/<str:pk>/', profit_loss, name="profit_loss"),
     path('coa_print/<str:pk>/', coa_print, name="coa_print"),
+    path('restaurant/<str:pk>/', restaurant, name="restaurant"),
     path('balance_sheet/<str:pk>/', balance_sheet, name="balance_sheet"),
     path('checkin/<int:pk>/', checkin_out, name="checkin"),
     path('checkout/<int:pk>/', checkin_payment, name="checkout"),
+    # path('bar/<int:pk>/', bar, name="bar"),
+    
     # path('hotel/<int:pk>/', checkin_out, name="h"),
     # path('transaction', transaction, name="purchase-report"),
     # path('frontdesk/<str:pk>/', front_desk, name="front-desk"),

@@ -212,10 +212,14 @@ X-Empire - Check In/Out
 							</div>
 						</div>
 				  	</div>
-					
+					<form action="{% url "checkin" reservation.id %}" method="POST">
+					{% csrf_token %}
 					<div class="col-sm-12 text-end">
-						<a href="" class="btn btn-primary">Checkout</a>
+					<button type="submit" value="" placeholder="" class="btn btn-primary">
+					Checkout
+					</button>
 					</div>
+					</form>
                 </div><!-- Row End -->
 			</div>
 		</div>

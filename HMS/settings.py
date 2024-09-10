@@ -57,6 +57,8 @@ INSTALLED_APPS = [
     'frontdesk',
     'guest',
     'room',
+    'bar',
+    # 'restaurant',
 ]
 
 MIDDLEWARE = [
