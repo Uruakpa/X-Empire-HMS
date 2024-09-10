@@ -55,6 +55,8 @@ urlpatterns = [
     path('balance_sheet/<str:pk>/', balance_sheet, name="balance_sheet"),
     path('checkin/<int:pk>/', checkin_out, name="checkin"),
     path('checkout/<int:pk>/', checkin_payment, name="checkout"),
+    # path('bar/<int:pk>/', bar, name="bar"),
+    
     # path('hotel/<int:pk>/', checkin_out, name="h"),
     # path('transaction', transaction, name="purchase-report"),
     # path('frontdesk/<str:pk>/', front_desk, name="front-desk"),
