@@ -1,9 +1,28 @@
-{% extends "base.html" %}
+{% extends "./base.html" %}
 {% load static %}
 {% block content %}
 		<div class="content">
-			{% include "header.html" %}
+			{% include "./header.html" %}
 			<!-- start: page body area -->
+			 {% if messages %}
+		{% for message in messages %}
+		<div
+			class="alert alert-secondary"
+			role="alert"
+		>
+		
+			<h4 class="alert-heading">
+			Alert
+			</h4>
+			<p>
+			{{message}}
+			</p>
+			<hr />
+			{% comment %} <p class="mb-0">Alert Description</p> {% endcomment %}
+		</div>
+		{% endfor %}
+
+		{% endif %}
 			<div class="px-xl-5 px-lg-4 px-3 py-3 page-body">
 				<form action="{% url "room-booking" user.id %}" method="POST">
 					{% csrf_token %}
@@ -112,7 +131,7 @@
 												<label class="form-label text-muted">Adults</label>
 												<div class="input-group">
 													<span class="input-group-text" ><i class="bi bi-people"></i></span>
-													<input type="text" class="form-control" placeholder="0" name="adults">
+													<input type="text" class="form-control" placeholder="0" name="adults" value="0">
 												</div>
 											</div>
 										</div>
@@ -121,7 +140,7 @@
 												<label class="form-label text-muted">Children</label>
 												<div class="input-group">
 													<span class="input-group-text" ><i class="bi bi-person"></i></span>
-													<input type="text" class="form-control" placeholder="0" name="children">
+													<input type="text" class="form-control" placeholder="0" name="children" value="0">
 												</div>
 											</div>
 										</div>
@@ -426,6 +445,8 @@
 
 			</div>
 		</div>
+		
+		
 		<script>
 			document.getElementById('roomTypeSelect').addEventListener('change', function() {
 				const roomTypeId = this.value;

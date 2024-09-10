@@ -11,7 +11,7 @@ from django.contrib.auth.models import Group, User
 from datetime import datetime, date, timedelta
 import random
 # Create your views here.
-from accounts.models import *
+from authapp.models import *
 from room.models import *
 from hotel.models import *
 from .forms import *
@@ -197,9 +197,9 @@ def room_booking(request, pk):
         payment.save()
         reserve.payment_det = payment
         reserve.save()
-        
-        # payment
+        messages.success(request, f"Guest {guestdet.first_name} {guestdet.last_name} successfully added to room {room_instance.room_number}")
         return redirect("checkin-out", pk=request.user.id)
+        
     context = {
         "user":user,
         "role":role,
@@ -251,8 +251,9 @@ def checkin_out(request, pk):
 def room_status(request, pk):
     role = str(request.user.groups.all()[0])
     path = role + "/"
+    rooms = Rooms.objects.all()
     user = User.objects.get(id=pk)
-    context = {"user":user, "role":role, }
+    context = {"user":user, "role":role, "rooms":rooms}
     return render(request, path + "room-status.html", context)
 
 @login_required(login_url='login')
@@ -492,6 +493,7 @@ def home(request):
         role = str(request.user.groups.all()[0])
     else:
         return HttpResponseForbidden("lolllzzzzz")
+    
     if role != "guest":
         return redirect("dashboard", pk=request.user.id) 
     else:

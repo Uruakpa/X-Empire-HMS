@@ -1,4 +1,4 @@
-{% extends "page.html" %}
+{% extends "./page.html" %}
 {% load static %}
 <style>
     
@@ -17,14 +17,12 @@
 <div class="hero-header">
 <div class="header-slider header-slider-preloader slider-two" id="home">
 <div class="animation-slide owl-carousel owl-theme" id="animation-slide">
-<div class="item bg-img-hero" data-image-src="">
-    <img src="{% static "/img/banner/s1.jpg" %}" alt="">
+<div class="item bg-img-hero" data-image-src="{% static "/img/banner/s1.jpg" %}">
 </div>
-<div class="item bg-img-hero" data-image-src="">
-    <img src="{% static "/img/banner/s2.jpg" %}" alt="">
+
+<div class="item bg-img-hero" data-image-src="{% static "/img/banner/s2.jpg" %}">
 </div>
-<div class="item bg-img-hero" data-image-src="">
-    <img src="{% static "/img/banner/b.jpg" %}" alt="">
+<div class="item bg-img-hero" data-image-src="{% static "/img/banner/b.jpg" %}">
 </div>
 </div>
 </div>
@@ -88,8 +86,8 @@
 </div>
 </div>
 <div class="col-lg-3" style="background-color:#fee277;">
-<button type="submit" class="d-flex flex-column align-items-center justify-content-around" style="background-color:#fee277; color:#000; font-weight:600; border:none; width:inherit; height:inherit;">
-<span>Need Help: <p>01840998765</p></span>
+<button type="submit" class="d-flex flex-column align-items-center justify-content-around" style="background-color:#fee277; color:#000; font-weight:600; border:none; width:inherit; height:inherit; display:flex; flex-direction:column; align-items:center; justify-content:space-around">
+<span>Need Help: <p></p></span>
 Check Availability </button>
 </div>
 </div>
@@ -210,7 +208,7 @@ A resort is a self-contained destination that can provide for all of your travel
 <div class="col-lg-3 col-md-4 col-sm-6">
 <div class="card border-0 box-shadow rounded-0 mb-4">
 <a href="#" class="card-img position-relative">
-<img src="{% static "/img/banner/2021-02-01/s.jpg" %}" class="img-fluid wd_xs_100" alt="...">
+<img src="{% static "/images/ACH_0915-a.jpg" %}" class="img-fluid wd_xs_100" alt="...">
 <button type="button" class="position-absolute btn btn-primary btn-sm">Book Now</button>
 </a>
 <div class="card-body">
@@ -222,7 +220,7 @@ A resort is a self-contained destination that can provide for all of your travel
 <div class="col-lg-3 col-md-4 col-sm-6">
 <div class="card border-0 box-shadow rounded-0 mb-4">
 <a href="#" class="card-img position-relative">
-<img src="{% static "/img/banner/2019-06-15/o1.jpg" %}" class="img-fluid wd_xs_100" alt="...">
+<img src="{% static "/images/ACH_0927-a.jpg" %}" class="img-fluid wd_xs_100" alt="...">
 <button type="button" class="position-absolute btn btn-primary btn-sm">Book Now</button>
 </a>
 <div class="card-body">
@@ -234,7 +232,7 @@ A resort is a self-contained destination that can provide for all of your travel
 <div class="col-lg-3 col-md-4 col-sm-6">
 <div class="card border-0 box-shadow rounded-0 mb-4">
 <a href="#" class="card-img position-relative">
-<img src="{% static "/img/banner/2019-06-15/o2.jpg" %}" class="img-fluid wd_xs_100" alt="...">
+<img src="{% static "/images/ACH_0919-a.jpg" %}" class="img-fluid wd_xs_100" alt="...">
 <button type="button" class="position-absolute btn btn-primary btn-sm">Book Now</button>
 </a>
 <div class="card-body">
@@ -246,7 +244,7 @@ A resort is a self-contained destination that can provide for all of your travel
 <div class="col-lg-3 col-md-4 col-sm-6">
 <div class="card border-0 box-shadow rounded-0 mb-4">
 <a href="#" class="card-img position-relative">
-<img src="{% static "/img/banner/2019-06-15/o3.jpg" %}" class="img-fluid wd_xs_100" alt="...">
+<img src="{% static "/images/ACH_0920-a.jpg" %}" class="img-fluid wd_xs_100" alt="...">
 <button type="button" class="position-absolute btn btn-primary btn-sm">Book Now</button>
 </a>
 <div class="card-body">
@@ -258,7 +256,7 @@ A resort is a self-contained destination that can provide for all of your travel
 <div class="col-lg-3 col-md-4 col-sm-6">
 <div class="card border-0 box-shadow rounded-0 mb-4">
 <a href="#" class="card-img position-relative">
-<img src="{% static "/img/banner/2019-06-15/o4.jpg" %}" class="img-fluid wd_xs_100" alt="...">
+<img src="{% static "/images/ACH_0927-a.jpg" %}" class="img-fluid wd_xs_100" alt="...">
 <button type="button" class="position-absolute btn btn-primary btn-sm">Book Now</button>
 </a>
 <div class="card-body">
@@ -270,7 +268,7 @@ A resort is a self-contained destination that can provide for all of your travel
 <div class="col-lg-3 col-md-4 col-sm-6">
 <div class="card border-0 box-shadow rounded-0 mb-4">
 <a href="#" class="card-img position-relative">
-<img src="{% static "/img/banner/2019-06-15/o5.jpg" %}" class="img-fluid wd_xs_100" alt="...">
+<img src="{% static "/images/ACH_0930-a.jpg" %}" class="img-fluid wd_xs_100" alt="...">
 <button type="button" class="position-absolute btn btn-primary btn-sm">Book Now</button>
 </a>
 <div class="card-body">
@@ -282,7 +280,7 @@ A resort is a self-contained destination that can provide for all of your travel
 <div class="col-lg-3 col-md-4 col-sm-6">
 <div class="card border-0 box-shadow rounded-0 mb-4">
 <a href="#" class="card-img position-relative">
-<img src="{% static "/img/banner/2021-02-22/b4.jpg" %}" class="img-fluid wd_xs_100" alt="...">
+<img src="{% static "/images/ACH_0920-a.jpg" %}" class="img-fluid wd_xs_100" alt="...">
 <button type="button" class="position-absolute btn btn-primary btn-sm">Book Now</button>
 </a>
 <div class="card-body">
@@ -294,7 +292,7 @@ A resort is a self-contained destination that can provide for all of your travel
 <div class="col-lg-3 col-md-4 col-sm-6">
 <div class="card border-0 box-shadow rounded-0 mb-4">
 <a href="#" class="card-img position-relative">
-<img src="{% static "/img/banner/2021-02-22/h2.jpg" %}" class="img-fluid wd_xs_100" alt="...">
+<img src="{% static "/images/ACH_0915-a.jpg" %}" class="img-fluid wd_xs_100" alt="...">
 <button type="button" class="position-absolute btn btn-primary btn-sm">Book Now</button>
 </a>
 <div class="card-body">
@@ -309,7 +307,7 @@ A resort is a self-contained destination that can provide for all of your travel
 <!-- ================end weekly top offers ============== -->
 
 <!-- =============== destinations and experiences ==================-->
-<div class="section section-destination">
+{% comment %} <div class="section section-destination">
 <div class="container">
 <div class="row">
 <div class="col-md-10 offset-md-1">
@@ -380,7 +378,7 @@ Our guests always travel the world in style. Mention @Kempinski on Instagram for
 </div>
 </div>
 </div>
-</div>
+</div> {% endcomment %}
 <!-- ===============end destinations and experiences ==================-->
 
 <!-- ========================= footer section =========================== -->
@@ -407,11 +405,12 @@ Our guests always travel the world in style. Mention @Kempinski on Instagram for
 <div class="container">
 <div class="row">
 <div class="col-lg-3 col-xl-3 mb-5">
-<div class="footer-about">
+<div class="footer-about" style="color:white; opacity:50%;">
 <div class="footer-logo mb-3">
-<a href="index.html"><img src="{% static "/img/boutique hotel.png" %}" alt class="img-fluid"></a>
+<a href="index.html"><img src="{% static "/img/boutique hotel.png" %}" alt class="img-fluid " 
+    ></a>
 </div>
-Plot-7, Road-02, Hotel Motel Zone, San Francisco Road, United States of America <div><br></div>
+11 Ekenna Avenue, Off Okigwe Road, Aba, Abia State. Nigeria <div><br></div>
 <a href="https://hotel.bdtask-demo.com/cdn-cgi/l/email-protection" class="__cf_email__ about-text" data-cfemail="751c1b131a351110181a5b161a18">[email&#160;protected]</a>
 </div>
 </div>
@@ -432,10 +431,10 @@ Pages</h3>
 <h3 class="link-title fs-18 mb-3 font-weight-600 position-relative text-white">
 Social Link</h3>
 <ul class="list-unstyled social-icon">
-<li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-instagram icon-wrap bg-gold"></i> <span>Instagram </span> </a></li>
+<li><a href="https://www.instagram.com/xempireboutiquehotel?igsh=MWIyZ3R1Y3N3d2xzOA==" target="_blank" rel="noopener noreferrer"> <i class="fab fa-instagram icon-wrap bg-gold"></i> <span>Instagram </span> </a></li>
 <li><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-twitter icon-wrap"></i> <span>Twitter</span> </a></li>
-<li><a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-dribbble icon-wrap"></i> <span>Dribbble</span> </a></li>
-<li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-facebook-f icon-wrap"></i> <span>Facebook</span> </a></li>
+<li><a href="https://www.linkedin.com/company/xempire-boutique-hotel/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-dribbble icon-wrap"></i> <span>Linkedin</span> </a></li>
+<li><a href="https://www.facebook.com/profile.php?id=100054654001043&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer"> <i class="fab fa-facebook-f icon-wrap"></i> <span>Facebook</span> </a></li>
 </ul>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-4">
@@ -455,7 +454,7 @@ Company Policy</h3>
 <div class="container">
 <div class="row justify-content-end align-items-center">
 <div class="col-md-6">
-<div class="copy">Powered by bdtask</div>
+<div class="copy">Powered by Arcadia</div>
 </div>
 <div class="col-md-6">
 <ul class="list-unstyled text-right mb-0">
