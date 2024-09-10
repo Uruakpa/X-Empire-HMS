@@ -42,16 +42,17 @@ def register_user(request):
         # add @ and numbers to username
         
         # generate a list of random numbers
-        random_numbers = [random.randint(1,9) for _ in range(10)] # generate 10 random numbers
+        random_numbers = [random.randint(1,9) for _ in range(5)] # generate 10 random numbers
         
-        #print the numbers without commas
-        output = print(*random_numbers)
+        # convert the list of numbers into a string
+        output = ''.join(map(str, random_numbers))
+        
         username = fname + "@" + output
         
         #check if passwords match
         if pswd != cpswd:
             messages.info(request, "Password Does Not Match!!!")
-            return redirect(to='login')
+            return redirect(to='register')
         
         myuser = User.objects.create_user(
             username,

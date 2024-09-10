@@ -124,7 +124,7 @@ class GuestDetails(models.Model):
     occupation = models.TextField(null=True, blank=True)
     room = models.ForeignKey(Rooms, on_delete=models.CASCADE, null=True, blank=True)
     gender = models.CharField(max_length=10, choices=GENDER_CHOICES, null=True, blank=True)
-    dob = models.DateField()
+    dob = models.DateField(null=True, blank=True)
     nationality = models.CharField(max_length=50, null=True, blank=True)
     contact_det = models.ForeignKey('ContactDetails', on_delete=models.CASCADE, null=True, blank=True)
     
