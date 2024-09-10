@@ -38,6 +38,7 @@ def register_user(request):
         email = request.POST.get('email')
         pswd = request.POST.get('pswd')
         cpswd = request.POST.get('cpswd')
+        dob = request.POST.get('dob')
         
         # add @ and numbers to username
         
