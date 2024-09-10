@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from pixelwibes.in/templates/hotelair/html/stock-report.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:31:47 GMT -->
+<!-- Mirrored from pixelwibes.in/templates/hotelair/html/contact-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:32:21 GMT -->
 <head>
     <title>: HotelAir : Hotel Management Admin Dashboard Template</title>
     <meta charset="utf-8">
@@ -16,14 +16,25 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
 
-    <link rel="stylesheet" href="assets/vendor/dataTables.min.css">
+	<link rel="stylesheet" href="assets/css/summernote.min.css">
+	<style>
+		@font-face {
+			font-family: "summernote";
+			src: url("assets/fonts/summernoted41d.eot?#iefix") format("embedded-opentype"),
+			url("assets/fonts/summernote.woff2") format("woff2"),
+			url("assets/fonts/summernote.woff") format("woff"),
+			url("assets/fonts/summernote.ttf") format("truetype");
+		}
+	</style>
 	
-    <!--[ Template main css file ]-->
+	<!--[ Template main css file ]-->
 	<link rel="stylesheet" href="assets/css/style.min.css">
+	<link rel="stylesheet" href="./assets/css/Theme.min.css">
+
 
 </head>
 
-<body data-theme="theme-PurpleHeart" class="svgstroke-a bg-gradient"> 
+<body data-theme="theme-Custom" class="svgstroke-a bg-gradient"> 
 	  
 	<main class="container-fluid px-0">
 
@@ -45,14 +56,14 @@
 						</div>
 						<!-- start: Menu tab -->
 						<ul class="nav nav-tabs tab-dynamic px-0 mb-4" role="tablist" style="--dynamic-color: var(--accent-color)">
-							<li class="nav-item" role="presentation"><a class="ps-2 pe-3 nav-link active" data-bs-toggle="tab" href="#tab_hotels" role="tab" aria-selected="false" tabindex="-1">HOTELS</a></li>
+							<li class="nav-item" role="presentation"><a class="ps-2 pe-3 nav-link" data-bs-toggle="tab" href="#tab_hotels" role="tab" aria-selected="false" tabindex="-1">HOTELS</a></li>
                             <li class="nav-item" role="presentation"><a class="ps-2 pe-3 nav-link" data-bs-toggle="tab" href="#tab_hrms" role="tab" aria-selected="true">HRMS</a></li>
-							<li class="nav-item" role="presentation"><a class="ps-2 pe-3 nav-link" data-bs-toggle="tab" href="#tab_settings" role="tab" aria-selected="false" tabindex="-1">TUNING</a></li>
+							<li class="nav-item" role="presentation"><a class="ps-2 pe-3 nav-link active" data-bs-toggle="tab" href="#tab_settings" role="tab" aria-selected="false" tabindex="-1">TUNING</a></li>
                         </ul>
 						<!-- start: Menu content -->
 						<div class="tab-content">
 							<!-- start: Hotel tab-->
-							<div class="tab-pane fade active show" id="tab_hotels" role="tabpanel">
+							<div class="tab-pane fade" id="tab_hotels" role="tabpanel">
 								<h6 class="fl-title title-font ps-2 small text-uppercase text-muted" style="--dynamic-color: var(--theme-color1)">Universal</h6>
 								<ul class="list-unstyled mb-4 menu-list">
 									<li>
@@ -203,7 +214,7 @@
 										<ul class="list-unstyled">
 											<li><a href="booking-report.html" aria-label="Booking Reports">Booking Reports</a></li>
 											<li><a href="purchase-report.html" aria-label="Purchase Report">Purchase Reports</a></li>
-											<li><a class="active" href="stock-report.html" aria-label="Stock Report">Stock Reports</a></li>
+											<li><a href="stock-report.html" aria-label="Stock Report">Stock Reports</a></li>
 										</ul>
 									</li>
 									<li class="py-2 mt-2">
@@ -287,7 +298,7 @@
 								</ul>
 							</div>
 							<!-- start: Setting tab-->
-							<div class="tab-pane fade" id="tab_settings" role="tabpanel">
+							<div class="tab-pane fade active show" id="tab_settings" role="tabpanel">
 								<h6 class="fl-title title-font ps-2 small text-uppercase text-muted" style="--dynamic-color: var(--theme-color1)">Configuration</h6>
 								<ul class="list-unstyled mb-4 menu-list">
 									<li>
@@ -356,7 +367,7 @@
                                        <h6 class="fl-title title-font ps-2 small text-uppercase text-muted" style="--dynamic-color: var(--theme-color1)">Front Pages</h6>
 										<ul class="list-unstyled">
 											<li><a href="about-us.html" aria-label="About Us">About Us</a></li>
-											<li><a href="contact-us.html" aria-label="Contact Us">Contact Us</a></li>
+											<li><a class="active" href="contact-us.html" aria-label="Contact Us">Contact Us</a></li>
 											<li><a href="privacy-policy.html" aria-label="Privacy Policy">Privacy Policy</a></li>
 											<li><a href="terms-conditions.html" aria-label="Terms Conditions">Terms Conditions</a></li>
 										</ul>
@@ -706,8 +717,8 @@
 			<!-- start: page header area -->
 			<div class="px-xl-5 px-lg-4 px-3 py-2 page-header">
 				<ol class="breadcrumb mb-0 bg-transparent">
-					<li class="breadcrumb-item"><a href="index.html" title="home">Home</a></li>
-					<li class="breadcrumb-item active" aria-current="page" title="Stock Report">Stock Report</li>
+					<li class="breadcrumb-item"><a href="tuning.html" title="tuning">Home</a></li>
+					<li class="breadcrumb-item active">Contact Us</li>
 				</ol>
 				<ul class="list-unstyled action d-flex align-items-center mb-0">
 					<li class="dropdown">
@@ -769,97 +780,33 @@
 			</div>
 			<!-- start: page body area -->
 			<div class="px-xl-5 px-lg-4 px-3 py-3 page-body">
-                <div class="row g-3">
+				<div class="row mb-3">
 					<div class="col-sm-12">
 						<div class="d-flex align-items-center justify-content-between flex-wrap">
-							<h3 class="fw-bold mb-0">Stock Report</h3>
-						</div>
-				  	</div>
-					<div class="col-sm-12">
-						<div class="card">
-							<div class="card-body">
-								<table class="table dataTable align-middle table-hover table-body" style="width: 100%;">
-									<thead>
-										<tr>
-											<th>Product Name</th>
-											<th>Quantity</th>
-											<th>Price</th>
-											<th>Amount</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Bed Cover</td>
-											<td>30</td>
-											<td>$20</td>
-											<td>$600</td>
-										</tr>
-										<tr>
-											<td>Chair</td>
-											<td>30</td>
-											<td>$50</td>
-											<td>$1500</td>
-										</tr>
-										<tr>
-											<td>Bath Towel</td>
-											<td>300</td>
-											<td>$5</td>
-											<td>$1500</td>
-										</tr>
-										<tr>
-											<td>Pillowcase Set</td>
-											<td>50</td>
-											<td>$10</td>
-											<td>$500</td>
-										</tr>
-										<tr>
-											<td>Hand Soap</td>
-											<td>200</td>
-											<td>$2</td>
-											<td>$400</td>
-										</tr>
-										<tr>
-											<td>Shower Gel</td>
-											<td>80</td>
-											<td>$8</td>
-											<td>$640</td>
-										</tr>
-										<tr>
-											<td>Shampoo</td>
-											<td>60</td>
-											<td>$7</td>
-											<td>$420</td>
-										</tr>
-										<tr>
-											<td>Conditioner</td>
-											<td>40</td>
-											<td>$6</td>
-											<td>$240</td>
-										</tr>
-										<tr>
-											<td>Toothpaste</td>
-											<td>120</td>
-											<td>$3</td>
-											<td>$360</td>
-										</tr>
-										<tr>
-											<td>Toothbrush</td>
-											<td>150</td>
-											<td>$2</td>
-											<td>$300</td>
-										</tr>
-										<tr>
-											<td>Bathrobe</td>
-											<td>20</td>
-											<td>$30</td>
-											<td>$600</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+							<h3 class="fw-bold mb-0">Contact US</h3>
 						</div>
 					</div>
-                </div><!-- Row End -->
+				</div>
+				<div class="card-body">
+					<div class="card border-0 mb-3">
+						<div class="card-header">
+							<h6 class="card-title mb-0">Contact Details</h6>  
+						</div>
+						<div class="card-body pt-0">
+							<form class="product-add">
+								<div class="row g-3">
+									<div class="col-md-12">
+										<label class="col-form-label">Write Description</label>
+										<div class="summernote"></div>
+									</div>
+									<div class="col-md-12">
+										<button type="submit" class="btn btn-primary mt-2">Submit</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -921,6 +868,10 @@
 					<input class="form-check-input fs-6" type="checkbox" role="switch" id="monochrome">
 					<label class="form-check-label" for="monochrome">Monochrome Mode</label>
 				</div>
+				<!-- <div class="form-check form-switch gradient-active">
+					<input class="form-check-input fs-6" type="checkbox" role="switch" id="gradient-active">
+					<label class="form-check-label" for="gradient-active">Gradient Active</label>
+				</div> -->
 				<div class="form-check form-switch radius-toggle">
 					<input class="form-check-input fs-6" type="checkbox" role="switch" id="radius0">
 					<label class="form-check-label" for="radius0">Border Radius none</label>
@@ -943,21 +894,23 @@
 
 	<!--[ hotelair template vender js ]-->
 	<script src="assets/bundles/libscripts.bundle.js"></script>
-	<script src="assets/bundles/dataTables.bundle.js"></script>      
+	<script src="assets/bundles/summernote.bundle.js"></script>
 
 	<!-- Template page js -->
 	<script src="assets/js/main.js"></script>
-    <script>
-		$(document).ready( function () {
-            $('.dataTable')
-            .addClass( 'nowrap' )
-            .dataTable( {
-                responsive: true,
-            });
-        });
+	<script>
+		
+		$(document).ready(function() {
+			$('.summernote').summernote();
+			var noteBar = $('.note-toolbar');
+			noteBar.find('[data-toggle]').each(function() {
+				$(this).attr('data-bs-toggle', $(this).attr('data-toggle')).removeAttr('data-toggle');
+			});
+		});
 
-	</script>
+    </script>
+
 </body>
 
-<!-- Mirrored from pixelwibes.in/templates/hotelair/html/stock-report.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:31:47 GMT -->
+<!-- Mirrored from pixelwibes.in/templates/hotelair/html/contact-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:32:21 GMT -->
 </html>
