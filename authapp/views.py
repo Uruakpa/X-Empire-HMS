@@ -164,7 +164,7 @@ def login_page(request):
         return redirect('home')
     else:
         if request.method == "POST":
-            username = request.POST.get('email')
+            username = request.POST.get('username')
             password = request.POST.get('password')
 
             user = authenticate(request, username=username, password=password)
