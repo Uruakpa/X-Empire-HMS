@@ -65,10 +65,16 @@
                             {{reservation.reservation_date}}
                         </td>
                         <td>
-                            
+                            {% if reservation.room.status == "Available" %}
+                            <a href="{% url "checkin" reservation.id %}" class="btn btn-secondary">
+                                Checked Out
+                            </a>
+                            {% else %}
                             <a href="{% url "checkin" reservation.pk %}" class="btn btn-warning">
                                 Checkout
                             </a>
+                            {% endif %}
+
                         </td>
                     </tr>
                     {% endfor %}
