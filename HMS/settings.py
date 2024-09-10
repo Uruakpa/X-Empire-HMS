@@ -51,7 +51,7 @@ INSTALLED_APPS = [
 
     # own
     'hotel',
-    'accounts',
+    'authapp',
     'account',
     'Admin',
     'frontdesk',

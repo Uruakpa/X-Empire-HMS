@@ -66,7 +66,12 @@
             box-shadow: none !important;
             outline: 0px !important;
         }
+        input{
+        outline: none;
+        width: 80%;
+        }
     </style>
+
 
 </head>
 
@@ -86,32 +91,43 @@
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            {{form.username}}
+                            <input type="text" name="fname" placeholder="First Name" class="form-control border border-secondary">
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            {{form.first_name}}
+                            <input type="text" name="lname" placeholder="Last Name" class="form-control border border-secondary">
+                            
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            {{form.last_name}}
+                            <input type="email" name="email" class="form-control border border-secondary"  placeholder="Email Address">
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fas fa-envelope-square"></i></span>
                             </div>
-                            {{form.email}}
+                            <select name="title" id="" class="form-control border border-secondary">
+                            <option value="">
+                            Title
+                            </option>
+                            {% for key, values in guestdetails.TITLE_CHOICES %}
+    <option value="{{key}}">
+    {{values}}
+    </option>
+                            {% endfor %}
+                            </select>
+
                         </div>
 
                         <div class="input-group mb-3">
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fas fa-phone"></i></span>
                             </div>
-                            <input type="tel" name="phoneNumber" pattern="[0-9]{10}" maxlength="10" id="id_phoneNumber"
+                            <input type="tel" name="number" pattern="[0-9]{10}" maxlength="10" id="id_phoneNumber"
                                 class="form-control border border-secondary" placeholder="5*********" required>
                         </div>
 
@@ -119,13 +135,13 @@
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            {{form.password1}}
+                            <input type="password" name="pswd" id="" class="form-control border border-secondary">
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            {{form.password2}}
+                            <input type="password" name="cpswd" id="" class="form-control border border-secondary">
                         </div>
 
                         <div class="d-flex justify-content-center mt-3 login_container">
@@ -133,9 +149,27 @@
                         </div>
                     </form>
                 </div>
+    {% if messages %}
+    {% for message in messages %}
+                <div
+                    class="alert alert-warning alert-dismissible fade show"
+                    role="alert"
+                >
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="alert"
+                        aria-label="Close"
+                    ></button>
+                
+                    <strong>
+                    {{message}}
+                    </strong>
+                </div>
+    {% endfor %}
 
-                {{form.errors}}
-
+    {% endif %}
+                
                 <div class="mt-4">
                     <div class="d-flex justify-content-center links text-dark">
                         Already have an account? <a href="{% url 'login' %}" class="ml-2 text-warning">Login</a>
@@ -144,6 +178,7 @@
             </div>
         </div>
     </div>
+    {% comment %} 
     <script>
         /* Because i didnt set placeholder values in forms.py they will be set here using vanilla Javascript
 //We start indexing at one because CSRF_token is considered and input field 
@@ -162,6 +197,7 @@
             form_fields[field].className += ' form-control'
         }
     </script>
+     {% endcomment %}
 
 </body>
 
