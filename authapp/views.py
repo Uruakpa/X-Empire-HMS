@@ -56,7 +56,7 @@ def register_user(request):
             return redirect(to='register')
         
         myuser = User.objects.create_user(
-            username,
+            email,
             email,
             pswd,
         )
@@ -73,7 +73,7 @@ def register_user(request):
         )
         curGuest.save()
         
-        myuser = authenticate(request, username=username, password=pswd)
+        myuser = authenticate(request, username=email, password=pswd)
         messages.info(request, "User created and login success")
         messages.info(request, f"Your Username is {username}")
         return redirect('index')
@@ -164,7 +164,7 @@ def login_page(request):
         return redirect('home')
     else:
         if request.method == "POST":
-            username = request.POST.get('username')
+            username = request.POST.get('email')
             password = request.POST.get('password')
 
             user = authenticate(request, username=username, password=password)

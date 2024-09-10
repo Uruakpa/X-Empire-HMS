@@ -244,6 +244,11 @@ def checkin_out(request, pk):
     role = str(request.user.groups.all()[0])
     path = role + "/"
     reservation = ReservationDetails.objects.get(id=pk)
+    if request.method == "POST":
+        reservation.room.status = "Available"
+        reservation.room.save()
+        return redirect(to="home")
+    
     my_dict = {"reservation":reservation, "role":role}
     return render(request, path + "checkin-out.html", context=my_dict)
     
@@ -357,6 +362,15 @@ def debit_voucher(request, pk):
     user = User.objects.get(id=pk)
     context = {"user":user, "role":role}
     return render(request, path + "debit_voucher.html", context)
+
+@login_required(login_url='login')
+def restaurant(request, pk):
+    role = str(request.user.groups.all()[0])
+    path = role + "/"
+    
+    user = User.objects.get(id=pk)
+    context = {"user":user, "role":role}
+    return render(request, path + "restaurant", context)
 
 @login_required(login_url='login')
 def credit_voucher(request, pk):
