@@ -8,7 +8,7 @@ class Menu(models.Model):
     def __str__(self):
         return self.name
     
-class Menuitems(models.Model):
+class MenuItem(models.Model):
     image = models.ImageField(upload_to="media/menuimages")
     name = models.CharField(max_length=100)
     category = models.ForeignKey(Menu, on_delete=models.CASCADE)
