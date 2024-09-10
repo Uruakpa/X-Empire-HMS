@@ -32,11 +32,11 @@ class Order(models.Model):
 # OrderItem model - individual items within an order
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='order_items')
-    menu = models.ForeignKey(Menuitems, on_delete=models.SET_NULL, null=True)
+    menu = models.ForeignKey(MenuItem, on_delete=models.SET_NULL, null=True)
     quantity = models.IntegerField()
 
     def __str__(self):
-        return f'{self.quantity} x {self.dish.name}'
+        return f'{self.quantity} x {self.menu.name}'
 
 # Staff model - represents staff in the restaurant (Waiter, Chef, etc.)
 # class Staff(models.Model):
