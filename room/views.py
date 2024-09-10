@@ -22,6 +22,7 @@ from .forms import *
 
 @ login_required(login_url='login')
 def rooms(request):
+    
     role = str(request.user.groups.all()[0])
     path = role + "/"
     rooms = Room.objects.all()
