@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.http import HttpResponseForbidden
-from accounts.models import Guest
+from authapp.models import Guest
 # Create your models here.
 
 
@@ -121,10 +121,10 @@ class GuestDetails(models.Model):
     title = models.CharField(max_length=15, choices=TITLE_CHOICES)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    occupation = models.TextField()
+    occupation = models.TextField(null=True, blank=True)
     room = models.ForeignKey(Rooms, on_delete=models.CASCADE, null=True, blank=True)
     gender = models.CharField(max_length=10, choices=GENDER_CHOICES, null=True, blank=True)
-    dob = models.DateField()
+    dob = models.DateField(null=True, blank=True)
     nationality = models.CharField(max_length=50, null=True, blank=True)
     contact_det = models.ForeignKey('ContactDetails', on_delete=models.CASCADE, null=True, blank=True)
     
