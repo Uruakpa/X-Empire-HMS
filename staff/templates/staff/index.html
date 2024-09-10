@@ -1,0 +1,300 @@
+{% extends "./base.html" %} {% load static %} {% block title %} X-Empire -
+{{role}} Dashboard {% endblock title %}
+<!--[ Template main css file ]-->
+
+
+{% block content %}
+
+<div class="content">
+  {% comment %} Page header {% endcomment %} 
+  {% include "./header.html" %} 
+  {% comment %} {%comment %}end Page header {% endcomment %} 
+  <!-- start: page header area -->
+  <div class="px-xl-5 px-lg-4 px-3 py-2 page-header">
+    <ul class="list-unstyled action d-flex align-items-center mb-0">
+      <li class="dropdown">
+        <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
+          <svg
+            class="svg-stroke"
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+            ></path>
+            <path d="M9 12l6 0"></path>
+            <path d="M12 9l0 6"></path>
+          </svg>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end p-2 p-xl-3 shadow rounded-4">
+          <li><a class="dropdown-item rounded-pill" href="#">New folder</a></li>
+          <li>
+            <a class="dropdown-item rounded-pill" href="#">File upload</a>
+          </li>
+          <li>
+            <a class="dropdown-item rounded-pill" href="#">Google docs</a>
+          </li>
+          <li>
+            <a class="dropdown-item rounded-pill" href="#">Google sheets</a>
+          </li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item rounded-pill" href="#">+ Invite</a></li>
+          <li>
+            <a class="dropdown-item rounded-pill" href="#">Generate report</a>
+          </li>
+          <li>
+            <a class="dropdown-item rounded-pill" href="#">New Reports</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown ms-3">
+        <a
+          href="#"
+          data-bs-toggle="dropdown"
+          data-bs-auto-close="outside"
+          aria-expanded="false"
+        >
+          <svg
+            class="svg-stroke"
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M4 4h16v2.172a2 2 0 0 1 -.586 1.414l-4.414 4.414v7l-6 2v-8.5l-4.48 -4.928a2 2 0 0 1 -.52 -1.345v-2.227z"
+            ></path>
+          </svg>
+        </a>
+        <div
+          class="dropdown-menu dropdown-menu-end p-2 p-xl-3 shadow rounded-4"
+          style="width: 300px"
+        >
+          <h6>Filter Options</h6>
+          <div class="row g-3 mt-3">
+            <div class="col-12">
+              <label class="form-label small text-muted">Sorted by:</label>
+              <input type="search" class="form-control" placeholder="Search" />
+            </div>
+            <div class="col-12">
+              <label class="form-label small text-muted">Status:</label>
+              <select class="form-select">
+                <option selected>Choose...</option>
+                <option>...</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label small text-muted">Notifications:</label>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" />
+                <label class="form-check-label">Enabled</label>
+              </div>
+            </div>
+            <div class="col-12 text-end mt-4">
+              <button type="reset" class="btn btn-sm btn-light me-1">
+                Reset
+              </button>
+              <button type="submit" class="btn btn-sm btn-primary">
+                Apply
+              </button>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- start: page body area -->
+  <div class="px-xl-5 px-lg-4 px-3 py-3 page-body">
+    <div class="row g-3 mb-3" style='border:white solid 2px;'>
+      <div class="col-md-6 col-lg-3" style='width:33%;'>
+        <div class="card">
+          <div class="card-header">
+            <h6 class="card-title mb-0">New Order</h6>
+          </div>
+          <div class="card-body">
+            <h2>{{reserve}}</h2>
+            {% comment %} <span class="badge bg-primary">+</span> {% endcomment %}
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#addOrderModal"> + </button>
+
+            <span class="text-muted">Add New Order</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" style='width:33%;'>
+        <div class="card">
+          <div class="card-header">
+            <h6 class="card-title mb-0">Today Order</h6>
+          </div>
+          <div class="card-body ">
+            <h2 style="font-size: 20px">&#8358; {{total_amount}}</h2>
+            <span class="badge bg-info">+05% </span>
+            <span class="text-muted">New income</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" style='width:33%;'>
+        <div class="card">
+          <div class="card-header">
+            <h6 class="card-title mb-0">Total Order</h6>
+          </div>
+          <div class="card-body">
+            <h2>{{customers|length}}</h2>
+            <span class="badge bg-warning">+11% </span>
+            <span class="text-muted">From previous period</span>
+          </div>
+        </div>
+      </div>
+
+
+      {% comment %} <div class="col-md-6 col-lg-3">
+        <div class="card">
+          <div class="card-header">
+            <h6 class="card-title mb-0">Total Booking</h6>
+          </div>
+          <div class="card-body">
+            <h2>{{total_booking|length}}</h2>
+            <span class="badge bg-success">+21% </span>
+            <span class="text-muted">From previous period</span>
+          </div>
+        </div>
+      </div> {% endcomment %}
+    </div>
+
+
+
+          <style>
+      .hover-effect {
+         transition: color 0.3s;
+    }
+    .hover-effect:hover {
+        color: var(--theme-color5);
+    }
+     </style>
+
+    <div class="row g-3">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+  
+            <h6
+            
+             class="card-title hover-effect" style='font-weight:500; font-size:2rem; text-decoration:underline; hover color:var(--theme-color5);'>Menu</h6>
+          </div>
+          <div class="card-body">
+
+               <div class="gallery_top_menu">
+            <ul class="gallery_sort ">
+              <li> <a href="">  <button  id='' class="active default-button btn card_body">All</button> </a></li>
+                                                    <li> <a href=""> <button  id="">Smoothies</button> </a></li>
+                                                                      <li> <a href=""> <button  id="">Cocktails</button> </a></li>
+                                                                      <li> <a href=""> <button  id="483">Mocktails</button> </a></li>
+                                                                      <li> <a href=""> <button  id="381">French Fries</button> </a></li>
+                                                                      <li> <a href=""> <button  id="382">Yam</button> </a></li>
+                                                                      <li> <a href=""> <button  id="383">Beans</button> </a></li>
+                                                                      <li> <a href=""> <button  id="384">Potato</button> </a></li>
+                                                                      <li> <a href=""> <button  id="385">Rice Menu</button> </a></li>
+                                                                      <li> <a href=""> <button  id="386">Sandwich</button> </a></li>
+                                                                      <li> <a href=""> <button  id="387">Spaghetti</button> </a></li>
+                                                                      <li> <a href=""> <button  id="388">Plantain</button> </a></li>
+                                                                      <li> <a href=""> <button  id="389">Sauce</button> </a></li>
+                                                                      <li> <a href=""> <button  id="390">Salads</button> </a></li>
+                                                                      <li> <a href=""> <button  id="391">Peppered Protein</button> </a></li>
+                                                                      <li> <a href=""> <button  id="392">Barbeque</button> </a></li>
+                                                                      <li> <a href=""> <button  id="393">Pepper Soup</button> </a></li>
+                                                                      <li> <a href=""> <button  id="394">African Delicacies</button> </a></li>
+                                                                      <li> <a href=""> <button  id="395">Soups</button> </a></li>
+                                                                      <li> <a href=""> <button  id="396">Grills</button> </a></li>
+                                                                      <li> <a href=""> <button  id="397">Indomie</button> </a></li>
+                                                                      <li> <a href=""> <button  id="400"> Beer</button> </a></li>
+                                                                      <li> <a href=""> <button  id="403">Cognac &amp; Whiskey</button> </a></li>
+                                                                      <li> <a href=""> <button  id="399">Non-Alcoholic </button> </a></li>
+                                                                      <li> <a href=""> <button  id="402">Wine</button> </a></li>
+                                                                      <li> <a href=""> <button  id="404">Champagne / Brut</button> </a></li>
+                                                                      <li> <a href=""> <button  id="405">Vodka / Cream</button> </a></li>
+                                                                      <li> <a href=""> <button  id="401">Energy Drink</button> </a></li>
+                                                                      <li> <a href=""> <button  id="398">Bitters</button> </a></li>
+                                            </ul>
+          </div>
+            {% comment %} <div id="reservations" style="height: 280px"></div> {% endcomment %}
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <h6 class="card-title">Today Booking List</h6>
+          </div>
+          <div class="card-body">
+            <table
+              class="table dataTable align-middle table-hover table-body"
+              style="width: 100%"
+            >
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Room Type</th>
+                  <th>Check In</th>
+                  <th>Check Out</th>
+                  <th>Paid Amount</th>
+                  <th>Due Amount</th>
+                  <th>Payment Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for reservations in reservation %}
+                <tr>
+                  <td>{{reservations.guest.first_name}}</td>
+                  <td>
+                  {{reservations.room.roomType}}
+                  </td>
+                  <td>12/03/2024</td>
+                  <td>13/03/2024</td>
+                  <td>0.00</td>
+                  <td>$230</td>
+                  {% if reservations.payment_det.payment_status == "Pending" %}
+                  <td><span class="badge text-bg-warning">
+                  {{reservations.payment_det.payment_status}}
+                  </span></td>
+                  {% else %}
+                  <td><span class="badge text-bg-primary">
+                  {{reservations.payment_det.payment_status}}
+                  </span></td>
+                  {% endif %}
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
