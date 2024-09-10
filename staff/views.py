@@ -6,7 +6,7 @@ def menuitem_views(request):
     role = str(request.user.groups.all()[0])
     path = role + "/"
     
-    menuitem = Menuitems.objects.all()
+    menuitem = MenuItem.objects.all()
     context = {"menuitem":menuitem}
     return render(request, path + "menuitems.html", context)
 
