@@ -1,11 +1,22 @@
-{% extends "base.html" %}
+{% extends "./base.html" %}
 {% block title %}
 X-Empire - Menu
 {% endblock title %}
 
 {% block content %}
 <div class="content">
-    
+    {% for item in menu %}
+    <a href="{% url "delete-menu" item.id %}">
+        {{item.name}}
+    </a>
+    {% endfor %}
+     
+    {% if messages %}
+
+    {% for message in messages %}
+        {{message}}
+    {% endfor %}
+    {% endif %}
 </div>
 
 {% endblock content %}

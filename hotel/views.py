@@ -100,7 +100,18 @@ def room_booking(request, pk):
     contact_details_instance =ContactDetails()
     identity_details_instance = IdentityDetails()
     payment_instance = Payment()
-    if request.method == "POST":
+    if request.method == "POST" and 'search_number' in request.POST:
+        search_number = request.POST.get('search_number')
+        try:
+            # Try to fetch existing guest by phone number
+            guest_details_instance = GuestDetails.objects.get(phone_number=search_number)
+            contact_details_instance = guest_details_instance.contact_det
+            # identity_details_instance = guest_details_instance.identitydetails_set.first() # if related via FK
+            messages.info(request, f"Guest {guest_details_instance.first_name} {guest_details_instance.last_name} found.")
+        except GuestDetails.DoesNotExist:
+            messages.error(request, f"No guest found with phone number {search_number}.")
+    
+    if request.method == "POST" and 'search_number' not in request.POST:
         fcheckin = request.POST.get('checkin')
         fcheckout = request.POST.get('checkout')
         farrivalfrom = request.POST.get('arrivalfrom')

@@ -127,6 +127,7 @@ class GuestDetails(models.Model):
     dob = models.DateField(null=True, blank=True)
     nationality = models.CharField(max_length=50, null=True, blank=True)
     contact_det = models.ForeignKey('ContactDetails', on_delete=models.CASCADE, null=True, blank=True)
+    identity_det = models.ForeignKey('IdentityDetails', on_delete=models.CASCADE, null=True, blank=True)
     
     
 class ContactDetails(models.Model):
