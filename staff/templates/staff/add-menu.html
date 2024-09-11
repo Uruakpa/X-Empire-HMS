@@ -1,0 +1,28 @@
+<div class="container">
+    <form action="{% url "add-menu" %}" method="POST">
+        {% csrf_token %}
+        <div class="mb-3 row">
+            <label
+                for="inputName"
+                class="col-4 col-form-label"
+                >Name</label
+            >
+            <div
+                class="col-8"
+            >
+                {{form.name}}
+            </div>
+        </div>
+       
+        <div class="mb-3 row">
+            <div class="offset-sm-4 col-sm-8">
+                <button type="submit" class="btn btn-primary">
+                    Action
+                </button>
+            </div>
+        </div>
+    </form>
+    <a href="{% url "add-menuitem" %}">
+        add menu
+    </a>
+</div>
