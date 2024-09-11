@@ -115,16 +115,16 @@
   </div>
   <!-- start: page body area -->
   <div class="px-xl-5 px-lg-4 px-3 py-3 page-body">
-    <div class="row g-3 mb-3" style='border:white solid 2px;'>
-      <div class="col-md-6 col-lg-3" style='width:33%;'>
+    <div class="row g-3 mb-3" >
+      <div class="col-md-6 col-lg-3" style='width:33%; '>
         <div class="card">
           <div class="card-header">
-            <h6 class="card-title mb-0">New Order</h6>
+            <h6 class="card-title mb-0"style="font-family: 'Segoe UI', sans-serif; ">New Order</h6>
           </div>
           <div class="card-body">
-            <h2>{{reserve}}</h2>
+            <h2 style="font-size: 20px">{{reserve}}</h2>
             {% comment %} <span class="badge bg-primary">+</span> {% endcomment %}
-            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#addOrderModal"> + </button>
+            <button type="button" class="badge btn btn-warning" data-bs-toggle="modal" data-bs-target="#addOrderModal" > + </button>
 
             <span class="text-muted">Add New Order</span>
           </div>
@@ -148,7 +148,7 @@
             <h6 class="card-title mb-0">Total Order</h6>
           </div>
           <div class="card-body">
-            <h2>{{customers|length}}</h2>
+            <h2 style="font-size: 20px">{{customers|length}}</h2>
             <span class="badge bg-warning">+11% </span>
             <span class="text-muted">From previous period</span>
           </div>
@@ -171,6 +171,65 @@
     </div>
 
 
+    <!-- Add Order Modal -->
+<div class="modal fade" id="addOrderModal" tabindex="-1" aria-labelledby="addOrderModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addOrderModalLabel" style='color:black;'>Create New Order</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <!-- Dine In / Takeaway Toggle -->
+          <div class="btn-group w-100 mb-3" role="group" aria-label="Order Type">
+            <input type="radio" class="btn-check" name="orderType" id="dineIn" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="dineIn">Dine In</label>
+
+            <input type="radio" class="btn-check" name="orderType" id="takeaway" autocomplete="off">
+            <label class="btn btn-outline-primary" for="takeaway">Takeaway</label>
+          </div>
+
+          <!-- Customer Name Input -->
+          <div class="mb-3 " >
+            <label for="customerName" class="form-label" >Customer Name</label>
+            <input type="text" class="form-control" id="customerName" placeholder="Enter customer name">
+          </div>
+
+          <!-- Guest Input -->
+          <div class="mb-3">
+            <label for="guestCount" class="form-label">Guest</label>
+            <div class="input-group">
+              <input type="number" class="form-control" id="guestCount" value="1" min="1">
+              <button class="btn btn-outline-secondary" type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+              <button class="btn btn-outline-secondary" type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+            </div>
+          </div>
+
+          <!-- Choose Table Select -->
+          <div class="mb-3">
+            <label for="tableSelect" class="form-label">Choose Table</label>
+            <select class="form-select" id="tableSelect">
+              <option selected disabled>Choose...</option>
+              <option value="A1">A1</option>
+              <option value="A2">A2</option>
+              <option value="A3">A3</option>
+              <!-- Add more options as needed -->
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-warning w-100"  type="button" 
+   
+    data-bs-toggle="modal" 
+    data-bs-target="#createOrderModal"
+    id="addOrderBtn">Create Order</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
           <style>
       .hover-effect {
@@ -182,6 +241,7 @@
      </style>
 
     <div class="row g-3">
+
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
@@ -245,54 +305,62 @@
 
 
 
-      <div class="col-sm-12">
-        <div class="card">
-          <div class="card-header">
-            <h6 class="card-title">Today Booking List</h6>
-          </div>
-          <div class="card-body">
-            <table
-              class="table dataTable align-middle table-hover table-body"
-              style="width: 100%"
-            >
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Room Type</th>
-                  <th>Check In</th>
-                  <th>Check Out</th>
-                  <th>Paid Amount</th>
-                  <th>Due Amount</th>
-                  <th>Payment Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                {% for reservations in reservation %}
-                <tr>
-                  <td>{{reservations.guest.first_name}}</td>
-                  <td>
-                  {{reservations.room.roomType}}
-                  </td>
-                  <td>12/03/2024</td>
-                  <td>13/03/2024</td>
-                  <td>0.00</td>
-                  <td>$230</td>
-                  {% if reservations.payment_det.payment_status == "Pending" %}
-                  <td><span class="badge text-bg-warning">
-                  {{reservations.payment_det.payment_status}}
-                  </span></td>
-                  {% else %}
-                  <td><span class="badge text-bg-primary">
-                  {{reservations.payment_det.payment_status}}
-                  </span></td>
-                  {% endif %}
-                </tr>
-                {% endfor %}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
+     <div class="col-sm-12">
+  <div class="card">
+    <div class="card-header">
+      <h6 class="card-title">Food and Drink Order Waiting List</h6>
+    </div>
+    <div class="card-body">
+      <table id="order-list" class="table dataTable align-middle table-hover table-body" style="width: 100%">
+        <thead>
+          <tr>
+            <th>Customer Name</th>
+            <th>Order Type</th>
+            <th>Guests</th>
+            <th>Table</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Order rows will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+document.getElementById('addOrderBtn').addEventListener('click', function () {
+    // Get form values
+    const customerName = document.getElementById('customerName').value;
+    const orderType = document.querySelector('input[name="orderType"]:checked').value;
+    const guests = document.getElementById('guestCount').value;
+    const tableNumber = document.getElementById('tableSelect').value;
+
+    // Create new row for the order list
+    const orderList = document.getElementById('order-list').querySelector('tbody');
+    const newRow = document.createElement('tr');
+
+    newRow.innerHTML = `
+        <td>${customerName}</td>
+        <td>${orderType}</td>
+        <td>${guests}</td>
+        <td>${tableNumber ? tableNumber : 'N/A'}</td>
+        <td><span class="badge bg-warning">Waiting</span></td>
+    `;
+
+    // Append the new row to the table
+    orderList.appendChild(newRow);
+
+    // Reset the form
+    document.getElementById('create-order-form').reset();
+
+    // Close the modal
+    var addOrderModal = new bootstrap.Modal(document.getElementById('addOrderModal'));
+    addOrderModal.hide();
+});
+</script>
+
     </div>
   </div>
 </div>
