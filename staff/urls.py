@@ -3,9 +3,7 @@ from .views import *
 
 
 urlpatterns = [
-<<<<<<< HEAD
-    path('menu/', menu_views, name="")
-=======
-    path('menu/', menu_views,name="" )
->>>>>>> a321d4af2041f755e5cada81dc5e47adc0ed65a7
+    path('menu/', menu_views,name=""),
+    path("add-menu", add_menu, name="add-menu"),
+    path("add-menuitems", add_menuitem, name="add-menuitem"),
 ]

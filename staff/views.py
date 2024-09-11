@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import *
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from .forms import *
 
 # Create your views here.
 
@@ -44,5 +45,37 @@ def menulist(request, foo,pk):
     return render(request, path + "menulist.html", context)
 
 
+def add_menu(request):
+    role = str(request.user.groups.all()[0])
+    path = role + "/"
     
+    form = MenuForm()
+    if request.method == "POST":
+        form = MenuForm(request.POST)
+        if form.is_valid():
+            form.save()
     
+    context = {
+        "form":form,
+        "role":role
+    }        
+    return render(request,path + "add-menu.html", context)
+           
+
+def add_menuitem(request):
+    role = str(request.user.groups.all()[0])
+    path = role + "/"
+    form = MenuItemForm()
+    if request.method == "POST":
+        form = MenuItemForm(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            form = MenuItemForm()
+            
+    context = {
+        "form":form,
+        "role":role
+    }    
+
+    return render(request,path + "add-menuitem.html", context)
