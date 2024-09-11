@@ -26,6 +26,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin-site/', django_admin.site.urls),
     path('', include("hotel.urls")),
+    path('room/', include("room.urls")),
     path('auth/', include("authapp.urls")),
     path('staff/', include("staff.urls")),
 ]

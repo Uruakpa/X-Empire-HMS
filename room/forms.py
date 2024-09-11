@@ -21,3 +21,14 @@ class editDependees(ModelForm):
     class Meta:
         model = Dependees
         fields = ["booking", "name"]
+
+class roomTypeForm(ModelForm):
+    class Meta:
+        model = RoomType
+        fields = "__all__"
+         
+         
+class roomForm(ModelForm):
+    class Meta:
+        model = Rooms
+        fields = "__all__"         
