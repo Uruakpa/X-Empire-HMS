@@ -8,8 +8,7 @@ h5,
 h6 {
   margin: 0;
   font-weight: 700;
-  font-family: "Montserrat";
-}
+  font-family: 'Segoe UI', sans-serif;}
 
 html {
   padding: 0;
@@ -19,24 +18,22 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: unset;
 }
 
-:root {
-  --defaultColor: #50cd89;
-  --grayColor: #b5b5c3;
-  --primaryColor: #009ef7;
-  --dangerColor: #c82333;
-  --btnColor: #009ef7;
-  --whatsappBottom: 100px;
-  --whatsappRight: 30px;
-}
+/* :root { */
+  /* --defaultColor: #50cd89; */
+  /* --grayColor: #b5b5c3; */
+  /* --primaryColor: #009ef7; */
+  /* --dangerColor: #c82333; */
+  /* --btnColor: #009ef7; */
+  /* --whatsappBottom: 100px; */
+  /* --whatsappRight: 30px; */
+/* } */
 
 a:hover {
   text-decoration: none;
@@ -471,7 +468,7 @@ ul.gallery_sort li a button {
   top: 0;
 }
 
-.scroll-line {
+/* .scroll-line {
   height: 4px;
   background: linear-gradient(
     to right,
@@ -482,7 +479,7 @@ ul.gallery_sort li a button {
   width: 0%;
   position: fixed;
   transition: 0.3s;
-}
+} */
 
 /*  custom css
 ================================================== */
@@ -494,10 +491,10 @@ body::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-body::-webkit-scrollbar-thumb {
+/* body::-webkit-scrollbar-thumb {
   background-color: #29c7ac;
   border-radius: 15px;
-}
+} */
 
 /*::-webkit-scrollbar {
     width: 0px;

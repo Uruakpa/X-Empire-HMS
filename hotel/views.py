@@ -199,6 +199,8 @@ def room_booking(request, pk):
             id_number = fidnumber,
         )
         id_det.save()
+        guestdet.identity_det = id_det
+        guestdet.save()
         payment = Payment(
             payment_mode = fmode,
             payment_status = fstatus,
