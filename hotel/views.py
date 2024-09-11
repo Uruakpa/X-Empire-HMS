@@ -111,7 +111,7 @@ def room_booking(request, pk):
         except GuestDetails.DoesNotExist:
             messages.error(request, f"No guest found with phone number {search_number}.")
     
-    if request.method == "POST" and 'search_number' not in request.POST:
+    if request.method == "POST":
         fcheckin = request.POST.get('checkin')
         fcheckout = request.POST.get('checkout')
         farrivalfrom = request.POST.get('arrivalfrom')
