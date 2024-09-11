@@ -261,10 +261,12 @@
 
 
 
-     <div class="col-sm-12">
+ <div class="col-sm-12">
   <div class="card">
-    <div class="card-header">
+    <div class="card-header d-flex justify-content-between align-items-center">
       <h6 class="card-title">Food and Drink Order Waiting List</h6>
+      <!-- Search Bar -->
+      <input type="text" id="searchBar" class="form-control w-25" placeholder="Search...">
     </div>
     <div class="card-body">
       <table id="order-list" class="table dataTable align-middle table-hover table-body" style="width: 100%">
@@ -275,6 +277,7 @@
             <th>Guests</th>
             <th>Table</th>
             <th>Status</th>
+            <th>Checkout</th> <!-- Added checkout column -->
           </tr>
         </thead>
         <tbody>
@@ -303,10 +306,19 @@ document.getElementById('addOrderBtn').addEventListener('click', function () {
         <td>${guests}</td>
         <td>${tableNumber ? tableNumber : 'N/A'}</td>
         <td><span class="badge bg-warning">Waiting</span></td>
+        <td><input type="checkbox" class="checkout-checkbox"></td> <!-- Added checkout checkbox -->
     `;
 
     // Append the new row to the table
     orderList.appendChild(newRow);
+
+    // Add event listener to the checkout checkbox
+    newRow.querySelector('.checkout-checkbox').addEventListener('change', function () {
+        if (this.checked) {
+            // Remove the row when the checkbox is checked
+            newRow.remove();
+        }
+    });
 
     // Reset the form
     document.getElementById('create-order-form').reset();
@@ -314,6 +326,26 @@ document.getElementById('addOrderBtn').addEventListener('click', function () {
     // Close the modal
     var addOrderModal = new bootstrap.Modal(document.getElementById('addOrderModal'));
     addOrderModal.hide();
+});
+
+// Search functionality
+document.getElementById('searchBar').addEventListener('input', function () {
+    const filter = this.value.toLowerCase();
+    const rows = document.getElementById('order-list').querySelectorAll('tbody tr');
+
+    rows.forEach(row => {
+        const cells = row.getElementsByTagName('td');
+        let match = false;
+
+        for (let cell of cells) {
+            if (cell.textContent.toLowerCase().includes(filter)) {
+                match = true;
+                break;
+            }
+        }
+
+        row.style.display = match ? '' : 'none';
+    });
 });
 </script>
 
