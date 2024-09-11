@@ -93,6 +93,7 @@ def room_booking(request, pk):
     role = str(request.user.groups.all()[0])
     path = role + "/"
     
+    # guest_details = GuestDetails.objects.get(phone_number=number)
     user = User.objects.get(id=pk)
     roomtypes = RoomType.objects.all()
     rooms = list(Rooms.objects.values())
@@ -100,17 +101,13 @@ def room_booking(request, pk):
     contact_details_instance =ContactDetails()
     identity_details_instance = IdentityDetails()
     payment_instance = Payment()
-    if request.method == "POST" and 'search_number' in request.POST:
-        search_number = request.POST.get('search_number')
-        try:
-            # Try to fetch existing guest by phone number
-            guest_details_instance = GuestDetails.objects.get(phone_number=search_number)
-            contact_details_instance = guest_details_instance.contact_det
-            # identity_details_instance = guest_details_instance.identitydetails_set.first() # if related via FK
-            messages.info(request, f"Guest {guest_details_instance.first_name} {guest_details_instance.last_name} found.")
-        except GuestDetails.DoesNotExist:
-            messages.error(request, f"No guest found with phone number {search_number}.")
+    q = request.GET.get('q') if request.GET.get('q') != None else ''
     
+    guest_instance = GuestDetails.objects.filter(
+        Q(phone_number__icontains=q)
+        )
+
+
     if request.method == "POST":
         fcheckin = request.POST.get('checkin')
         fcheckout = request.POST.get('checkout')
@@ -216,6 +213,7 @@ def room_booking(request, pk):
         "user":user,
         "role":role,
         "guest_details_instance":guest_details_instance,
+        "guest_instance":guest_instance,
         "roomtypes":roomtypes,
         "payment_instance":payment_instance,
         # "payment":payment,
@@ -225,6 +223,22 @@ def room_booking(request, pk):
         
         }
     return render(request, path + "room-booking.html", context)
+
+@login_required(login_url="login")
+def search_number(request, foo):
+    role = str(request.user.groups.all()[0])
+    path = role + "/"
+    q = request.GET.get('q') if request.GET.get('q') != None else ''
+    
+    guest = GuestDetails.objects.filter(
+        Q(phone_number__icontains=q)
+        )
+    
+    context = {
+        "guest":guest
+    }
+    return
+    
 
 @login_required
 def checkin_payment(request,pk):
