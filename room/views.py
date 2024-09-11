@@ -13,7 +13,7 @@ from django.contrib.auth.models import Group, User
 from datetime import datetime, date, timedelta
 import random
 # Create your views here.
-from accounts.models import *
+from authapp.models import *
 from room.models import *
 from hotel.models import *
 from .forms import *
@@ -22,6 +22,7 @@ from .forms import *
 
 @ login_required(login_url='login')
 def rooms(request):
+    
     role = str(request.user.groups.all()[0])
     path = role + "/"
     rooms = Room.objects.all()

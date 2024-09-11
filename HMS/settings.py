@@ -51,12 +51,14 @@ INSTALLED_APPS = [
 
     # own
     'hotel',
-    'accounts',
+    'authapp',
     'account',
-    'Admin',
+    'director',
     'frontdesk',
     'guest',
     'room',
+    'bar',
+    'staff',
 ]
 
 MIDDLEWARE = [

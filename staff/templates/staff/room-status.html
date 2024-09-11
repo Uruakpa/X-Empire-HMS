@@ -1,0 +1,74 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block title %}
+X-Empire - Room Status
+{% endblock title %}
+
+{% block content %}
+		<div class="content">
+			
+		{% include "./header.html" %}
+			<!-- start: page body area -->
+			<div class="px-xl-5 px-lg-4 px-3 py-3 page-body">
+          <div class="row g-3">
+					<div class="col-sm-12">
+						<div class="d-flex align-items-center justify-content-between flex-wrap">
+							<h3 class="fw-bold mb-0">Room Status</h3>
+						</div>
+				  </div>
+                  <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <table class="table dataTable align-middle table-hover table-body" style="width: 100%;">
+                                    <thead>
+                                        <tr>
+                                            <th>Room Number</th>
+                                            <th>Room Type</th>
+                                            {% comment %} <th>Floor</th> {% endcomment %}
+                                            <th>Check Out</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                      {% for room in rooms  %}
+                                      <tr>
+                                        <td>{{room.room_number}}</td>
+                                        <td>{{room.roomType}}</td>
+                                        {% comment %} <td>First Floor</td> {% endcomment %}
+                                        <td>
+                                            {% if room.status == 'Available' %}   
+                                              <p> None</p>
+                                              {% else %}
+                                            {{reservation.room.checkout}}
+                                            {% endif %}
+                                          </td>
+                                        <td>
+                                        {% if room.status == 'Available' %}   
+                                          
+                                          <span class="badge text-bg-warning">Available</span></td>
+                                          {% else %}
+                                          <span class="badge text-bg-primary">Booked</span></td>
+                                        {% endif %}
+
+                                      </tr>
+                                      {% endfor %}
+                                       
+                                    </tbody>
+                                </table>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+               
+        
+      </div>
+    
+
+    <script>
+      $(document).ready(function () {
+        $(".dataTable").addClass("nowrap").dataTable({
+          responsive: true,
+        });
+      });
+    </script>
+{% endblock content %}
