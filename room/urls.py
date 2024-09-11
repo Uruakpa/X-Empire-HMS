@@ -17,4 +17,7 @@ urlpatterns = [
 
 
     path('deleteBooking/<str:pk>/', deleteBooking, name="deleteBooking"),
+    
+    path("add-room/", add_room, name="add-room"),
+    path("add-roomtype/", add_roomtype, name="add-roomtype"),
 ]

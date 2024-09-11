@@ -1,0 +1,11 @@
+<form action="{% url "add-room" %}" method="POST">
+
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">
+        submit
+    </button>
+</form>
+<a href="{% url "add-roomtype" %}">
+    add room type
+</a>
