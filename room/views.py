@@ -20,6 +20,37 @@ from .forms import *
 
 
 
+def add_room(request):
+    role = str(request.user.groups.all()[0])
+    path = role + "/"
+    form = roomForm()
+    if request.method == "POST":
+        form = roomForm(request.POST)
+        if form.is_valid():
+            form.save()
+            
+    context = {
+        "form":form
+    }
+    
+    return render(request, path + "add-room.html", context)
+            
+def add_roomtype(request):
+    role = str(request.user.groups.all()[0])
+    path = role + "/"
+    form = roomTypeForm()
+    if request.method == "POST":
+        form = roomTypeForm(request.POST)
+        if form.is_valid():
+            form.save()
+            
+    context = {
+        "form":form
+    }
+    
+    return render(request, path + "add-roomtype.html", context)
+            
+
 @ login_required(login_url='login')
 def rooms(request):
     
