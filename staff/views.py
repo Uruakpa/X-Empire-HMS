@@ -31,13 +31,13 @@ def menu_views(request,pk):
     return render(request, path + "menu.html", context)
 
 @login_required(login_url='login')
-def menulist(request, foo,pk):
+def menulist(request, foo):
     role = str(request.user.groups.all()[0])
     path = role + "/"
-    user = User.objects.get(id=pk)
+    # user = User.objects.get(id=pk)
     foo = foo.replace('-', '')
     menu = Menu.objects.get(name=foo)
-    menuitems = MenuItem.objects.filter(menu=menu)
+    menuitems = MenuItem.objects.filter(category=menu)
     
     context = {
         "menu":menu,
