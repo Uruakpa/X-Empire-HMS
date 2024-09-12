@@ -20,4 +20,5 @@ urlpatterns = [
     
     path("add-room/", add_room, name="add-room"),
     path("add-roomtype/", add_roomtype, name="add-roomtype"),
+        
 ]
