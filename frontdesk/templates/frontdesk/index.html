@@ -122,6 +122,159 @@
   <div class="px-xl-5 px-lg-4 px-3 py-3 page-body">
     <div class="row g-3 mb-3">
       <div class="col-md-6 col-lg-3">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="card">
           <div class="card-header">
             <h6 class="card-title mb-0">Today Booking</h6>
@@ -212,9 +365,18 @@
                   <td>
                   {{reservations.check_in}}
                   </td>
-                  <td>13/03/2024</td>
-                  <td>0.00</td>
-                  <td>$230</td>
+                  <td>
+                  {{reservations.check_out}}
+
+                  </td>
+                  <td>
+                  {{reservations.payment_det.amount}}
+
+                  </td>
+                  <td>
+                  {{reservations.payable_amount}}
+
+                  </td>
                   {% if reservations.payment_det.payment_status == "Pending" %}
                   <td><span class="badge text-bg-warning">
                   {{reservations.payment_det.payment_status}}
