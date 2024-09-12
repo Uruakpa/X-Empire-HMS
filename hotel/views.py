@@ -19,6 +19,7 @@ from django.core.serializers import serialize
 import json
 from django.utils import timezone
 from django.db.models import Sum
+from staff.models import MenuItem
 
 
 
@@ -52,6 +53,8 @@ def index_page(request, pk):
     customers = GuestDetails.objects.all()
     
     user = User.objects.get(id=pk)
+    menuitem = MenuItem.objects.all()
+    
     context = {
         "user":user,
         "role":role,
@@ -60,7 +63,8 @@ def index_page(request, pk):
         "customers":customers,
         "total_booking":total_booking,
         "reservation":reservation,
-        "total_amount":total_amount
+        "total_amount":total_amount,
+        "menuitem":menuitem,
                }
     return render(request, path + "index.html", context)
 
@@ -893,6 +897,24 @@ def food_menu_edit(request, pk):
     }
     return render(request, path + "food-menu-edit.html", context)
 
+
+@login_required(login_url='login')
+def housekeeping_roomcleaning(request, pk):
+    role = str(request.user.groups.all()[0])
+    path = role + "/"
+    print(request.POST)
+    housekeeping_roomcleaning = FoodMenu.objects.get(pk=pk)
+    form1 = editFoodMenu(request.POST, instance=housekeeping_roomcleaning)
+    if request.method == "POST":
+        if form1.is_valid():
+            form1.save()
+            return redirect("food-menu")
+
+    context = {
+        "role": role,
+        'housekeeping_roomcleaning': housekeeping_roomcleaning
+    }
+    return render(request, path + "housekeeping_roomcleaning.html", context)
 
 @ login_required(login_url='login')
 def error(request):
