@@ -33,7 +33,7 @@
                         <th>Check In</th>
                         <th>Check Out</th>
                         <th>
-                            Arrival From
+                            Room
                         </th>
                         {% comment %} <th>Unit</th> {% endcomment %}
                         <th>
@@ -59,7 +59,7 @@
                             {{reservation.check_out}}
                         </td>
                         <td>
-                            {{reservation.arrival_from}}
+                           Room - {{reservation.room.room_number}}
                         </td>
                         <td>
                             {{reservation.reservation_date}}
