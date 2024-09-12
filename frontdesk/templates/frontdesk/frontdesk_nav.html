@@ -50,7 +50,8 @@
                                     <span class="mx-3">Room Book</span>
                                 </a>
                                 <ul class="collapse list-unstyled" id="RoomMenu">
-                                    <li><a href="{% url "room-booking" user.id %}" aria-label="Booking List">Book Room</a></li>
+                                    <li><a href="{% url "room-booking" user.id %}" aria-label="Booking List">Book Room                                        
+                                    </a></li>
                                     <li><a href="{% url "room-booking-list" user.id %}" aria-label="Booking List">Booking List</a></li>
                                     <li><a href="{% url "checkin-out" user.id %}" aria-label="Room Checkout">Room Checkout</a></li>
                                     <li><a href="{% url "room-status" user.id %}" aria-label="Room Status">Room Status</a></li>
