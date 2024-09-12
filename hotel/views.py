@@ -19,6 +19,7 @@ from django.core.serializers import serialize
 import json
 from django.utils import timezone
 from django.db.models import Sum
+from staff.models import MenuItem
 
 
 
@@ -52,6 +53,8 @@ def index_page(request, pk):
     customers = GuestDetails.objects.all()
     
     user = User.objects.get(id=pk)
+    menuitem = MenuItem.objects.all()
+    
     context = {
         "user":user,
         "role":role,
@@ -60,7 +63,8 @@ def index_page(request, pk):
         "customers":customers,
         "total_booking":total_booking,
         "reservation":reservation,
-        "total_amount":total_amount
+        "total_amount":total_amount,
+        "menuitem":menuitem,
                }
     return render(request, path + "index.html", context)
 
