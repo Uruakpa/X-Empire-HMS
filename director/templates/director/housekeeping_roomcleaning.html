@@ -1,5 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+		<div class="content">
+			{% include "./header.html" %}
+			<!-- start: page body area -->
+		{% if messages %}
+		{% for message in messages %}
+		<div
+			class="alert alert-secondary"
+			role="alert"
+		>
+		
+			<h4 class="alert-heading">
+			Alert
+			</h4>
+			<p>
+			{{message}}
+			</p>
+			<hr />
+			{% comment %} <p class="mb-0">Alert Description</p> {% endcomment %}
+		</div>
+		{% endfor %}
+		{% endif %}<html lang="en">
   <!-- Mirrored from pixelwibes.in/templates/hotelair/html/housekeeping-roomcleaning.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:31:45 GMT -->
   <head>
      <title>: X-EMPIRE: Hotel Management Admin Dashboard </title>
@@ -1298,3 +1320,4 @@
 
   <!-- Mirrored from pixelwibes.in/templates/hotelair/html/housekeeping-roomcleaning.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:31:45 GMT -->
 </html>
+{% endblock %}

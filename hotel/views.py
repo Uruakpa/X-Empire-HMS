@@ -894,6 +894,24 @@ def food_menu_edit(request, pk):
     return render(request, path + "food-menu-edit.html", context)
 
 
+@login_required(login_url='login')
+def housekeeping_roomcleaning(request, pk):
+    role = str(request.user.groups.all()[0])
+    path = role + "/"
+    print(request.POST)
+    housekeeping_roomcleaning = FoodMenu.objects.get(pk=pk)
+    form1 = editFoodMenu(request.POST, instance=housekeeping_roomcleaning)
+    if request.method == "POST":
+        if form1.is_valid():
+            form1.save()
+            return redirect("food-menu")
+
+    context = {
+        "role": role,
+        'housekeeping_roomcleaning': housekeeping_roomcleaning
+    }
+    return render(request, path + "housekeeping_roomcleaning.html", context)
+
 @ login_required(login_url='login')
 def error(request):
     role = str(request.user.groups.all()[0])
