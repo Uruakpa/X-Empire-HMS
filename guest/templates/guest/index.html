@@ -17,12 +17,12 @@
 <div class="hero-header">
 <div class="header-slider header-slider-preloader slider-two" id="home">
 <div class="animation-slide owl-carousel owl-theme" id="animation-slide">
-<div class="item bg-img-hero" data-image-src="{% static "/img/banner/s1.jpg" %}">
+<div class="item bg-img-hero" data-image-src="{% static "/images/nightview3.jpg" %}">
 </div>
 
-<div class="item bg-img-hero" data-image-src="{% static "/img/banner/s2.jpg" %}">
+<div class="item bg-img-hero" data-image-src="{% static "/images/xempirehot.jpg" %}">
 </div>
-<div class="item bg-img-hero" data-image-src="{% static "/img/banner/b.jpg" %}">
+<div class="item bg-img-hero" data-image-src="{% static "/images/xempirepc.jpg" %}">
 </div>
 </div>
 </div>
@@ -34,7 +34,7 @@
 <div class="header-text my-5">
 <h6 class="header-subtitle">BEYOND IMAGINABLE </h6>
 <h1 class="header-title">Enjoy Your Vacation With Us</h1>
-<p class="header-des mb-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+{% comment %} <p class="header-des mb-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p> {% endcomment %}
 </div>
 </div>
 <div class="col-md-5 d-none d-md-block">
@@ -56,7 +56,7 @@
 <!-- ==================== check out check in section======================= -->
 <div class="container">
 <div class="search-area">
-<form action="https://hotel.bdtask-demo.com/xainhotel/user/roomlist" method="post" accept-charset="utf-8">
+<form action="" method="post" accept-charset="utf-8">
 <input type="hidden" name="csrf_test_name" value="5b87edff149692a421d64b3ae92c2151" />
 <div class="row no-gutters custom-search-input-2 search-form-content">
 <div class="search-option col-12 col-sm-6 col-lg-3">
@@ -156,7 +156,7 @@ Check Availability </button>
 <div class="row align-items-center">
 <div class="col-lg-5 col-md-6 col-12">
 <div class="position-relative">
-<img src="{% static "/img/banner/2021-11-18/a.jpg" %}" class="rounded img-fluid mx-auto d-block" alt>
+<img src="{% static "/images/nightview3.jpg" %}" class="rounded img-fluid mx-auto d-block" alt>
 <div class="play-icon">
 <a href="#" class="play-btn video-play-icon">
 <i class="mdi mdi-play rounded-circle bg-white shadow text-primary" ></i>
@@ -388,11 +388,11 @@ Our guests always travel the world in style. Mention @Kempinski on Instagram for
  <div class="py-5 bg-dark">
 <div class="container">
 <div class="row">
-<div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+<div class="col-md-6 offset-md-2 col-lg-6 offset-lg-3">
 <div class="newslatter">
 <h3 class="text-center text-white">Get updates &amp; exclusive offers</h3>
-<p class="text-center">Sign up to our newsletter to be the first to hear about<br class="d-none d-lg-block">new openings, offers and more.</p>
-<div class="input-group mb-3">
+<p class="text-center text-white-50">Sign up to our newsletter to be the first to hear about<br class="d-none d-lg-block">new openings, offers and more.</p>
+<div class="input-group mb-2">
 <input type="text" name="youremail" id="youremail" class="form-control border-0 rounded-0" placeholder="Enter email here..." aria-label="Recipient's username" aria-describedby="button-addon2">
 <div class="input-group-append">
 <button class="btn bg-gold rounded-0 border-0" type="button" id="button-addon2" onClick="subscribeemail()">Subscribe</button>
@@ -404,14 +404,14 @@ Our guests always travel the world in style. Mention @Kempinski on Instagram for
 </div>
 </div>
 
-<footer class="main-footer py-5 border-top-muted bg-dark">
+<footer class="main-footer py-5 border-top-muted bg-dark" '>
 <div class="container">
 <div class="row">
 <div class="col-lg-3 col-xl-3 mb-5">
 <div class="footer-about" style="color:white; opacity:50%;">
 <div class="footer-logo mb-3">
 <a href="index.html"><img src="{% static "/img/boutique hotel.png" %}" alt class="img-fluid " 
-    ></a>
+width='60px'    ></a>
 </div>
 11 Ekenna Avenue, Off Okigwe Road, Aba, Abia State. Nigeria <div><br></div>
 <a href="https://hotel.bdtask-demo.com/cdn-cgi/l/email-protection" class="__cf_email__ about-text" data-cfemail="751c1b131a351110181a5b161a18">[email&#160;protected]</a>
@@ -427,7 +427,7 @@ Pages</h3>
 <li class="mb-2"><a class="link d-block font-weight-500" href="about.html">About Us</a></li>
 <li class="mb-2"><a class="link d-block font-weight-500" href="contact.html">Contact Us</a></li>
 <li class="mb-2"><a class="link d-block font-weight-500" href="gallery.html">Gallery</a></li>
-<li class="mb-2"><a class="link d-block font-weight-500" href="index.html">My Profile</a></li>
+{% comment %} <li class="mb-2"><a class="link d-block font-weight-500" href="index.html">My Profile</a></li> {% endcomment %}
 </ul>
 </div>
 <div class="col-sm-6 col-md-4 col-lg-4 mb-3 mb-lg-0">
@@ -435,8 +435,8 @@ Pages</h3>
 Social Link</h3>
 <ul class="list-unstyled social-icon">
 <li><a href="https://www.instagram.com/xempireboutiquehotel?igsh=MWIyZ3R1Y3N3d2xzOA==" target="_blank" rel="noopener noreferrer"> <i class="fab fa-instagram icon-wrap bg-gold"></i> <span>Instagram </span> </a></li>
-<li><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-twitter icon-wrap"></i> <span>Twitter</span> </a></li>
-<li><a href="https://www.linkedin.com/company/xempire-boutique-hotel/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-dribbble icon-wrap"></i> <span>Linkedin</span> </a></li>
+{% comment %} <li><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-twitter icon-wrap"></i> <span>Twitter</span> </a></li> {% endcomment %}
+<li><a href="https://www.linkedin.com/company/xempire-boutique-hotel/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-linkedin icon-wrap"></i> <span>Linkedin</span> </a></li>
 <li><a href="https://www.facebook.com/profile.php?id=100054654001043&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer"> <i class="fab fa-facebook-f icon-wrap"></i> <span>Facebook</span> </a></li>
 </ul>
 </div>
@@ -457,7 +457,7 @@ Company Policy</h3>
 <div class="container">
 <div class="row justify-content-end align-items-center">
 <div class="col-md-6">
-<div class="copy">Powered by Arcadia</div>
+<div class="copy" style='color:white; opacity:20%;'>Powered by Arcadia</div>
 </div>
 <div class="col-md-6">
 <ul class="list-unstyled text-right mb-0">
