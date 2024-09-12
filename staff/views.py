@@ -14,8 +14,8 @@ def menuitem_views(request, pk):
     
     user = User.objects.get(id=pk)
     
-    menuitem = MenuItem.objects.all()
-    context = {"menuitem":menuitem}
+    menuitems = MenuItem.objects.all()
+    context = {"menuitem":menuitems}
     return render(request, path + "menuitems.html", context)
 
 @login_required(login_url='login')
