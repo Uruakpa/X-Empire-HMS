@@ -1,7 +1,30 @@
-<!DOCTYPE html>
+{% extends "./base.html" %}
+{% load static %}
+{% block content %}
+		<div class="content">
+			{% include "./header.html" %}
+			<!-- start: page body area -->
+		{% if messages %}
+		{% for message in messages %}
+		<div
+			class="alert alert-secondary"
+			role="alert"
+		>
+		
+			<h4 class="alert-heading">
+			Alert
+			</h4>
+			<p>
+			{{message}}
+			</p>
+			<hr />
+			{% comment %} <p class="mb-0">Alert Description</p> {% endcomment %}
+		</div>
+		{% endfor %}
+		{% endif %}
 <html lang="en">
   <!-- Mirrored from pixelwibes.in/templates/hotelair/html/room-booking-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:31:42 GMT -->
-  <head>
+  {% comment %} <head>
     <title>: X-EMPIRE: Hotel Management Admin Dashboard </title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
@@ -41,12 +64,12 @@
    <link rel="stylesheet" href="assets/css/style.min.css">
 	   <link rel="stylesheet" href="assets/css/Admin.css">
 
-</head>
+</head> {% endcomment %}
 
 <body data-theme="theme-Custom" class="svgstroke-a bg-gradient"> 
     <main class="container-fluid px-0">
       <!-- start: page menu link -->
-     	<aside class="ps-xl-5 ps-lg-4 ps-3 pe-2 py-3 sidebar sticky-top" data-bs-theme="none">
+     	{% comment %} <aside class="ps-xl-5 ps-lg-4 ps-3 pe-2 py-3 sidebar sticky-top" data-bs-theme="none">
 			<nav class="navbar navbar-expand-xl py-0">
 				<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvas_Navbar">
 					<div class="offcanvas-header">
@@ -470,11 +493,11 @@
 					</div>
 				</div>
 			</nav>
-		</aside>
+		</aside> {% endcomment %}
 
       <div class="content">
         <!-- start: page header -->
-     	<header class="px-xl-5 px-lg-4 px-3 sticky-top" data-bs-theme="none">
+     	{% comment %} <header class="px-xl-5 px-lg-4 px-3 sticky-top" data-bs-theme="none">
 				<div class="d-flex justify-content-between align-items-center py-2 w-100">
 					<div class="d-flex align-items-center pe-4">
 						<button class="btn d-inline-flex d-xl-none border-0 p-0 pe-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_Navbar">
@@ -740,21 +763,9 @@
 						</li>
 					</ul>
 				</div>
-			</header>
+			</header> {% endcomment %}
         <!-- start: page header area -->
         <div class="px-xl-5 px-lg-4 px-3 py-2 page-header">
-          <ol class="breadcrumb mb-0 bg-transparent">
-            <li class="breadcrumb-item">
-              <a href="tuning.html" title="tuning">Home</a>
-            </li>
-            <li
-              class="breadcrumb-item active"
-              aria-current="page"
-              title="Room Booking List"
-            >
-              Room Booking List
-            </li>
-          </ol>
           <ul class="list-unstyled action d-flex align-items-center mb-0">
             <li class="dropdown">
               <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
@@ -1226,3 +1237,4 @@
 
   <!-- Mirrored from pixelwibes.in/templates/hotelair/html/room-booking-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:31:42 GMT -->
 </html>
+{% endblock %}
