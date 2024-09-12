@@ -4,7 +4,7 @@
 		<div class="content">
 			{% include "./header.html" %}
 			<!-- start: page body area -->
-			 {% if messages %}
+		{% if messages %}
 		{% for message in messages %}
 		<div
 			class="alert alert-secondary"
@@ -21,9 +21,14 @@
 			{% comment %} <p class="mb-0">Alert Description</p> {% endcomment %}
 		</div>
 		{% endfor %}
-
 		{% endif %}
 			<div class="px-xl-5 px-lg-4 px-3 py-3 page-body">
+				<!-- Trigger buttons for the modal -->
+    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+		Already a guest?
+	</button>
+
+    {% include "./hello.html" %}
 				<form action="{% url "room-booking" user.id %}" method="POST">
 					{% csrf_token %}
                 <div class="row g-3">
@@ -166,7 +171,7 @@
 																<label class="form-label text-muted">Mobile No.</label>
 																<div class="input-group">
 																	<span class="input-group-text"><i class="bi bi-phone"></i></span>
-																	<input type="number" class="form-control" placeholder="Mobile No." name="number">
+																	<input type="number" class="form-control" placeholder="Mobile No." name="number" value="{{guest_instance.phone_number}}">
 																</div>
 															</div>
 														</div>
@@ -176,7 +181,8 @@
 																<div class="input-group">
 																	<span class="input-group-text"><i class="bi bi-emoji-smile"></i></span>
 																	<select class="form-select" name="title">
-																		<option selected='' value=""></option>
+																		<option selected=''  value="{{guest_instance.title}}">
+																			{{guest_details_instance.title}}																	</option>
 																		{% for key, value in guest_details_instance.TITLE_CHOICES %}
 																		<option value="{{key}}">
 																			{{value}}
@@ -191,7 +197,7 @@
 																<label class="form-label text-muted">First Name <span class="text-danger">*</span></label>
 																<div class="input-group">
 																	<span class="input-group-text"><i class="bi bi-person-circle"></i></span>
-																	<input type="text" class="form-control" placeholder="First Name" name="fname">
+																	<input type="text" class="form-control" placeholder="First Name" name="fname" value="{{guest_instance.first_name}}">
 																</div>
 															</div>
 														</div>
@@ -200,7 +206,7 @@
 																<label class="form-label text-muted">Last Name</label>
 																<div class="input-group">
 																	<span class="input-group-text"><i class="bi bi-person-circle"></i></span>
-																	<input type="text" class="form-control" placeholder="Last Name" name="flname">
+																	<input type="text" class="form-control" placeholder="Last Name" name="flname" value="{{guest_instance.last_name}}">
 																</div>
 															</div>
 														</div>
@@ -210,7 +216,9 @@
 																<div class="input-group">
 																	<span class="input-group-text"><i class="bi bi-emoji-smile"></i></span>
 																	<select class="form-select" name="gender">
-																		<option selected='' value=""></option>
+																		<option selected='' value="{{guest_instance.gender}}">
+																			{{guest_instance.gender}}
+																		</option>
 																		{% for key, value in guest_details_instance.GENDER_CHOICES %}
 																		<option value="{{key}}">
 																			{{value}}
@@ -225,7 +233,7 @@
 																<label class="form-label text-muted">Occupation</label>
 																<div class="input-group">
 																	<span class="input-group-text"><i class="bi bi-briefcase"></i></span>
-																	<input type="text" class="form-control" placeholder="Occupation" name="occupation">
+																	<input type="text" class="form-control" placeholder="Occupation" name="occupation"  value="{{guest_instance.occupation}}">
 																</div>
 															</div>
 														</div>
@@ -234,7 +242,7 @@
 																<label class="form-label text-muted">Date of Birth</label>
 																<div class="input-group">
 																	<span class="input-group-text"><i class="bi bi-calendar"></i></span>
-																	<input type="date" class="form-control" name="dob">
+																	<input type="date" class="form-control" value="{{guest_instance.dob}}" name="dob" >
 																</div>
 															</div>
 														</div>
@@ -244,7 +252,7 @@
 																<label class="form-label text-muted">Nationality</label>
 																<div class="input-group">
 																	<span class="input-group-text"><i class="bi bi-geo-alt"></i></span>
-																	<input type="text" name="datefilter2" class="form-control" id="nationality" placeholder="Nationality" value="" name="nationality">
+																	<input type="text" name="datefilter2" class="form-control" id="nationality" placeholder="Nationality" value="{{guest_instance.nationality}}" name="nationality">
 																</div>
 															</div>
 														</div>
@@ -266,6 +274,7 @@
 																	<span class="input-group-text"><i class="bi bi-journal"></i></span>
 																	<select class="form-select" name="con_type">
 																		<option selected="" value="">Choose Contact Type</option>
+																		<option  value="{{guest_instance.contact_det.contact_type}}" ></option>
 																		{% for key, value in contact_details_instance.CONTACT_TYPE %}
 																		<option value="{{key}}">
 																			{{value}}
@@ -280,7 +289,7 @@
 																<label class="form-label text-muted">Email</label>
 																<div class="input-group">
 																	<span class="input-group-text"><i class="bi bi-envelope"></i></span>
-																	<input type="email" class="form-control" placeholder="example@email.com" name="email">
+																	<input type="email" class="form-control" placeholder="example@email.com" name="email" value="{{guest_instance.contact_det.email}}">
 																</div>
 															</div>
 														</div>
@@ -289,7 +298,7 @@
 																<label class="form-label text-muted">Country</label>
 																<div class="input-group">
 																	<span class="input-group-text"><i class="bi bi-map"></i></span>
-																	<input type="text" class="form-control" placeholder="Country" name="country">
+																	<input type="text" class="form-control" placeholder="Country" name="country" value="{{guest_instance.contact_det.country}}">
 																</div>
 															</div>
 														</div>
@@ -298,7 +307,7 @@
 																<label class="form-label text-muted">State</label>
 																<div class="input-group">
 																	<span class="input-group-text"><i class="bi bi-layers"></i></span>
-																	<input type="text" class="form-control" placeholder="State" name="state">
+																	<input type="text" class="form-control" placeholder="State" name="state" value="{{guest_instance.contact_det.state}}">
 																</div>
 															</div>
 														</div>
@@ -307,7 +316,7 @@
 																<label class="form-label text-muted">City</label>
 																<div class="input-group">
 																	<span class="input-group-text"><i class="bi bi-mailbox"></i></span>
-																	<input type="text" class="form-control" placeholder="City", name="city">
+																	<input type="text" class="form-control" placeholder="City", name="city" value="{{guest_instance.contact_det.city}}">
 																</div>
 															</div>
 														</div>
@@ -316,14 +325,14 @@
 																<label class="form-label text-muted">Zipcode</label>
 																<div class="input-group">
 																	<span class="input-group-text"><i class="bi bi-file-zip"></i></span>
-																	<input type="number" class="form-control" placeholder="Zipcode" name="zipcode">
+																	<input type="number" class="form-control" placeholder="Zipcode" name="zipcode" value="{{guest_instance.contact_det.zipcode}}">
 																</div>
 															</div>
 														</div>
 														<div class="col-md-12 mb-3">
 															<div class="form-group">
 																<label class="form-label text-muted">Address</label>
-																<textarea class="form-control" placeholder="Address" name="address"></textarea>
+																<input class="form-control" placeholder="Address" name="address" value="{{guest_instance.contact_det.address}}"></input>
 															</div>
 														</div>
 													</div>
@@ -469,7 +478,13 @@
 					roomNumberSelect.appendChild(option);
 				});
 			});
+			
 		</script>
-		
+
+		<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+
 
 {% endblock content %}

@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import *
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .forms import *
+from django.contrib import messages
 
 # Create your views here.
 
@@ -54,6 +55,7 @@ def add_menu(request):
         form = MenuForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.info(request, f"Menu added")
     
     context = {
         "form":form,
@@ -70,6 +72,8 @@ def add_menuitem(request):
         form = MenuItemForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.info(request, f"Menu added")
+            
         else:
             form = MenuItemForm()
             
@@ -79,3 +83,17 @@ def add_menuitem(request):
     }    
 
     return render(request,path + "add-menuitem.html", context)
+
+
+def delete_menu(request, foo):
+    role = str(request.user.groups.all()[0])
+    path = role + '/'
+    menu = Menu.objects.get(id=foo)
+    if request.method == "POST":
+        menu.delete()
+        return redirect(to="menu", pk=request.user.id)
+        
+    my_dict = {
+        "menu":menu,
+    }
+    return render(request, path + "delete-menu.html", context=my_dict)

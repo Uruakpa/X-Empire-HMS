@@ -1,0 +1,15 @@
+{% extends "./base.html" %}
+{% block content %}
+
+<div class="contauner">
+    <form action="{% url "delete-menu" menu.id %}" method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">
+            delete
+        </button>
+    </form>
+    <h1>
+        {{menu.name}}
+    </h1>
+</div>
+{% endblock content %}
