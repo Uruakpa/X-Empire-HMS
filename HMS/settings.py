@@ -59,7 +59,11 @@ INSTALLED_APPS = [
     'room',
     'bar',
     'staff',
+<<<<<<< HEAD
     'store',
+=======
+   
+>>>>>>> 4fc78d71a6180ee1421dc85a1f83cf77444e0817
 ]
 
 MIDDLEWARE = [

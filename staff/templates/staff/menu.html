@@ -1,39 +1,14 @@
 <div class="gallery_top_menu">
     <ul class="gallery_sort ">
-      <li> <a href="">  <button  id='' class="active default-button btn card_body">All</button> </a></li>
+      <li> <a href="{% url "menu" user.id %}">  <button  id='' class="active default-button btn card_body">All</button> </a></li>
       {% for item in menu %}
-      <li> <a href=""> <button  id="">
+      <li> <a href="{% url "menulist" item.name %}"> <button  id="">
         {{item.name}}
       </button> </a></li>
       {% endfor %}                                      
-                                                              {% comment %}
-                                                              <li> <a href=""> <button  id="">Cocktails</button> </a></li>
-                                                              <li> <a href=""> <button  id="483">Mocktails</button> </a></li>
-                                                              <li> <a href=""> <button  id="381">French Fries</button> </a></li>
-                                                              <li> <a href=""> <button  id="382">Yam</button> </a></li>
-                                                              <li> <a href=""> <button  id="383">Beans</button> </a></li>
-                                                              <li> <a href=""> <button  id="384">Potato</button> </a></li>
-                                                              <li> <a href=""> <button  id="385">Rice Menu</button> </a></li>
-                                                              <li> <a href=""> <button  id="386">Sandwich</button> </a></li>
-                                                              <li> <a href=""> <button  id="387">Spaghetti</button> </a></li>
-                                                              <li> <a href=""> <button  id="388">Plantain</button> </a></li>
-                                                              <li> <a href=""> <button  id="389">Sauce</button> </a></li>
-                                                              <li> <a href=""> <button  id="390">Salads</button> </a></li>
-                                                              <li> <a href=""> <button  id="391">Peppered Protein</button> </a></li>
-                                                              <li> <a href=""> <button  id="392">Barbeque</button> </a></li>
-                                                              <li> <a href=""> <button  id="393">Pepper Soup</button> </a></li>
-                                                              <li> <a href=""> <button  id="394">African Delicacies</button> </a></li>
-                                                              <li> <a href=""> <button  id="395">Soups</button> </a></li>
-                                                              <li> <a href=""> <button  id="396">Grills</button> </a></li>
-                                                              <li> <a href=""> <button  id="397">Indomie</button> </a></li>
-                                                              <li> <a href=""> <button  id="400"> Beer</button> </a></li>
-                                                              <li> <a href=""> <button  id="403">Cognac &amp; Whiskey</button> </a></li>
-                                                              <li> <a href=""> <button  id="399">Non-Alcoholic </button> </a></li>
-                                                              <li> <a href=""> <button  id="402">Wine</button> </a></li>
-                                                              <li> <a href=""> <button  id="404">Champagne / Brut</button> </a></li>
-                                                              <li> <a href=""> <button  id="405">Vodka / Cream</button> </a></li>
-                                                              <li> <a href=""> <button  id="401">Energy Drink</button> </a></li>
-                                                              <li> <a href=""> <button  id="398">Bitters</button> </a></li>
-                                                              {% endcomment %}
+<<<<<<< HEAD
+                                                             
+=======
+>>>>>>> 540bd5025cfa9aabd08687a0ace4f36d09b8325a
                                     </ul>
   </div>
