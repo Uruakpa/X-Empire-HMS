@@ -52,6 +52,7 @@ urlpatterns = [
     path('trial_balance/<str:pk>/', trial_balance, name="trial_balance"),
     path('profit_loss/<str:pk>/', profit_loss, name="profit_loss"),
     path('coa_print/<str:pk>/', coa_print, name="coa_print"),
+    path('store/<str:pk>/',store, name="store"),
     path('housekeeping_roomcleaning/<str:pk>/', housekeeping_roomcleaning, name="housekeeping_roomcleaning"),
     # path('restaurant/<str:pk>/', restaurant, name="restaurant"),
     path('balance_sheet/<str:pk>/', balance_sheet, name="balance_sheet"),

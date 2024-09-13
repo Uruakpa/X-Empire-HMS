@@ -37,6 +37,17 @@ def accounts_page(request, pk):
     context = {'user':user, "role":role,}
     return render(request, path + "hotels.html", context)
 
+# jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+@login_required(login_url='login')
+def store(request, pk):
+    role = str(request.user.groups.all()[0])
+    path = role + "/"
+    
+    user = User.objects.get(id=pk)   
+    
+    context = {'user':user, "role":role,}
+    return render(request, path + "./index.html", context)
+
 @login_required(login_url='login')
 def index_page(request, pk):
     role = str(request.user.groups.all()[0])

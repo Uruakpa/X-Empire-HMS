@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Purchase</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="/Admin/src/output.css" rel="stylesheet">
+      <link rel="stylesheet" href="./purchase-update.css">
+    <style>
+        /* Additional custom styles if necessary */
+    </style>
+</head>
+<body class="bg-gray-100">
+
+<div class="container mx-auto p-4 flex items-center justify-center ">
+    <div class="bg-white p-6 rounded-lg shadow-md w-[95%] h-fit">
+        
+     <a href="purchase-reports(Admin).html">   
+        <i class="bi bi-x-lg ml-[95%]"></i>
+    </a>
+        <h1 class="text-3xl font-light uppercase border-b-[1px] pb-8 text-black p-4 mb-6 ">
+            Update Purchase
+             
+        </h1>
+
+        <form action="https://hotel.bdtask-demo.com/xainhotel/purchase/purchase/update_entry" class="space-y-6" id="insert_purchase" name="insert_purchase" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+            <input type="hidden" name="csrf_test_name" value="dcd58ffa4f84d0d83c966b0f4d99b142" autocomplete="off">
+            <input type="hidden" name="purID" value="6" autocomplete="off">
+            <input type="hidden" name="oldinvoice" value="484654" autocomplete="off">
+            <input type="hidden" name="oldsupplier" value="18" autocomplete="off">
+            <input name="url" type="hidden" id="url" value="https://hotel.bdtask-demo.com/xainhotel/purchase/purchase/purchaseitem" autocomplete="off"
+            >
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex items-center justify-around">
+                    <label for="suplierid" class="md:inline-block block  text-sm font-medium text-gray-700">Supplier Name <i class="text-red-500">*</i></label>
+                    <select name="suplierid" class="mt-1 block w-[50%] px-2 border-gray-300 rounded-md shadow-sm  h-10 border-[1px] " id="suplierid" autocomplete="off">
+                        <option value="">Supplier Name</option>
+                        <option value="17">Supplier_1</option>
+                        <option value="18" selected="selected">Pastore</option>
+                        <option value="19">Sargio</option>
+                    </select>
+                </div>
+
+                <div class="flex items-center justify-around">
+                    <label for="invoice_no" class="md:inline-block block  text-sm font-medium text-gray-700">Invoice No <i class="text-red-500">*</i></label>
+                    <input type="text" tabindex="3" class="mt-1 block w-[50%] px-2 border-gray-300 border-[1px] h-10 rounded-md shadow-sm" name="invoice_no" value="484654" readonly="" placeholder="Invoice No" id="invoice_no" required="" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex items-center justify-around">
+                    <label for="purchase_date" class="md:inline-block block text-sm font-medium text-gray-700">Purchase Date <i class="text-red-500">*</i></label>
+                    <input type="text" class="mt-1 block w-[50%] border-gray-300 px-2 rounded-md shadow-sm border-[1px] h-10" name="purchase_date" value="17-11-2021" required="" tabindex="2" data-dtp="dtp_tMB7h" autocomplete="off">
+                </div>
+
+                <div class="flex items-center justify-around">
+                    <label for="expire_date" class="md:inline-block block  text-sm font-medium text-gray-700">Expiry Date <i class="text-red-500">*</i></label>
+                    <input type="text" class="mt-1 block w-[50%] border-gray-300 rounded-md shadow-sm border-2 h-10" name="expire_date" value="17-11-2021" id="expire_date" required="" tabindex="2" readonly="readonly" data-dtp="dtp_pOXep" autocomplete="off">
+                </div>
+            </div>
+
+            <div>
+                <label for="purchase_details" class="block text-sm font-medium text-gray-700">Details</label>
+                <textarea class="mt-1 block w-full border-gray-300 rounded-md shadow-sm px-3 h-10 py-2 border-[1px]" tabindex="4" id="adress" name="purchase_details" placeholder="Details" rows="1" autocomplete="off"></textarea>
+            </div>
+
+          <table class="w-[100%] divide-y divide-gray-200 b2">
+          <thead class="bg-gray-50 b2">
+        <tr>
+            <th class=" b2 text-center text-xs font-medium text-gray-500 uppercase tracking-wider py-2">Item Information<i class="text-red-500">*</i></th>
+            <th class="b2    text-center text-xs font-medium text-gray-500 uppercase tracking-wider py-2">Stock/Qnt</th>
+            <th class="b2  text-center text-xs font-medium text-gray-500 uppercase tracking-wider py-2">Quantity <i class="text-red-500">*</i></th>
+            <th class="b2  text-center text-xs font-medium text-gray-500 uppercase tracking-wider py-2">Rate<i class="text-red-500">*</i></th>
+            <th class=" b2 text-center text-xs font-medium text-gray-500 uppercase tracking-wider py-2">Total</th>
+            <th class="  text-center text-xs font-medium text-gray-500 uppercase tracking-wider py-2"></th>
+        </tr>
+    </thead>
+    <tbody id="addPurchaseItem">
+        <tr class="space-y-0 hover:bg-slate-300">
+            <td class="whitespace-nowrap px-2 py-1 text-left ">
+                <input type="text" name="product_name" required="" class=" b pl-2 form-control text-sm w-[10vw] h-8" onkeypress="product_list(1);" placeholder="Item Name" id="product_name_1" value="Bed" tabindex="5" autocomplete="off">
+                <input type="hidden" class="autocomplete_hidden_value product_id_1" name="product_id[]" id="SchoolHiddenId" value="15" autocomplete="off">
+                <input type="hidden" class="sl" value="1" autocomplete="off">
+            </td>
+            <td class="whitespace-nowrap px-2 py-1 text-right ">
+                <input type="text" id="available_quantity_1" class="  bg-slate-300 b form-control text-sm text-right w-[12vw] h-8" placeholder="0.00" value="" readonly="" autocomplete="off">
+            </td>
+            <td class="whitespace-nowrap px-2 py-1 text-right">
+                <input type="number" min="1" name="product_quantity[]" id="cartoon_1" class=" b form-control text-sm text-right w-[12vw] h-8" onkeyup="calculate_store(1);" onchange="calculate_store(1);" placeholder="0.00" value="5.00" tabindex="6" required="" autocomplete="off">
+            </td>
+            <td class="whitespace-nowrap px-2 py-1 text-right">
+                <input type="text" name="product_rate[]" onkeyup="calculate_store(1);" onchange="calculate_store(1);" id="product_rate_1" class="form-control b text-sm text-right w-[12vw] h-8" placeholder="0.00" value="5000.00" min="0" tabindex="7" autocomplete="off">
+            </td>
+            <td class="whitespace-nowrap px-2 py-1 text-right">
+                <input class="   bg-slate-300 form-control text-sm text-right b w-[15vw] h-8" type="text" name="total_price[]" id="total_price_1" value="25000.00" readonly="readonly" autocomplete="off">
+            </td>
+            <td class="whitespace-nowrap px-3 py-1">
+                <button class="btn btn-danger w-full text-sm py-2 px-3" type="button" value="Delete" onclick="deletePurchaseRow(this)" tabindex="8" autocomplete="off">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2">
+                <input type="button" id="add_invoice_item" class="btn btn-success w-[50%] py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-md px-2" name="add-invoice-item" onclick="addmore('addPurchaseItem');" value="Add More item" tabindex="9" autocomplete="off">
+            </td>
+            <td class="text-right font-semibold" colspan="2">Grand Total:</td>
+            <td class="text-right">
+                <input type="text" id="grandTotal" class=" b w-[15vw] h-8 text-right form-control" name="grand_total_price" value="25000.00" readonly="readonly" autocomplete="off">
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+
+
+            <input type="hidden" name="finyear" value="1" autocomplete="off">
+            <div class="form-group">
+                <div class="col-sm-6">
+                    <input type="submit" id="add_purchase" class="btn btn-success ml-2 w-[10%] bg-blue-600 rounded-md px-2 py-2  hover:bg-blue-700 text-white" name="add-purchase" value="Submit" autocomplete="off">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.querySelector("body > div.wrapper > div > div.main-content > div.body-content > div")
+</script>
+</body>
+</html>
