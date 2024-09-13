@@ -1,0 +1,33 @@
+/* Reduce the space between rows */
+table tbody tr {
+    border-bottom: 1px solid #e5e7eb; /* Light gray border for row separation */
+}
+
+table td {
+    padding: 0.5rem; /* Reduced padding for cells */
+}
+
+table th {
+    padding: 0.5rem; /* Reduced padding for headers */
+}
+
+/* Button styling */
+.btn-danger {
+    background-color: #dc2626; /* Red background */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+}
+
+.btn-danger:hover {
+    background-color: #b91c1c; /* Darker red on hover */
+}
+
+.b{
+    border: 1px solid rgba(203 213 225);
+    border-radius: 4px;
+    padding-right: 3px;
+}
+
+.b2{
+   border: 1px solid #ced0d3;  
+}

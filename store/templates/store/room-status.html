@@ -1,0 +1,510 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block content %}
+		<div class="content">
+			{% include "./header.html" %}
+			<!-- start: page body area -->
+		{% if messages %}
+		{% for message in messages %}
+		<div
+			class="alert alert-secondary"
+			role="alert"
+		>
+		
+			<h4 class="alert-heading">
+			Alert
+			</h4>
+			<p>
+			{{message}}
+			</p>
+			<hr />
+			{% comment %} <p class="mb-0">Alert Description</p> {% endcomment %}
+		</div>
+		{% endfor %}
+		{% endif %}
+  <!-- Mirrored from pixelwibes.in/templates/hotelair/html/room-status.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:31:43 GMT -->
+  <head>
+    <title>: X-EMPIRE: Hotel Management Admin Dashboard </title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Responsive Bootstrap 5 admin dashboard template & web App ui kit."
+    />
+    <meta name="keyword" content="bootstrap admin template" />
+
+    <!--[ Favicon]-->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/apple-touch-icon.png"
+    />
+
+    <link rel="stylesheet" href="assets/vendor/dataTables.min.css" />
+
+    <!--[ Template main css file ]-->
+     <link rel="stylesheet" href="assets/css/style.min.css">
+	   <link rel="stylesheet" href="assets/css/Admin.css">
+
+</head>
+
+<body data-theme="theme-Custom" class="svgstroke-a bg-gradient"> 
+    <main class="container-fluid px-0">
+
+
+      <div class="content">
+
+        <!-- start: page header area -->
+        <div class="px-xl-5 px-lg-4 px-3 py-2 page-header">
+          
+          <ul class="list-unstyled action d-flex align-items-center mb-0">
+            <li class="dropdown">
+              <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <svg
+                  class="svg-stroke"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+                  ></path>
+                  <path d="M9 12l6 0"></path>
+                  <path d="M12 9l0 6"></path>
+                </svg>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end p-2 p-xl-3 shadow rounded-4"
+              >
+                <li>
+                  <a class="dropdown-item rounded-pill" href="#">New folder</a>
+                </li>
+                <li>
+                  <a class="dropdown-item rounded-pill" href="#">File upload</a>
+                </li>
+                <li>
+                  <a class="dropdown-item rounded-pill" href="#">Google docs</a>
+                </li>
+                <li>
+                  <a class="dropdown-item rounded-pill" href="#"
+                    >Google sheets</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item rounded-pill" href="#">+ Invite</a>
+                </li>
+                <li>
+                  <a class="dropdown-item rounded-pill" href="#"
+                    >Generate report</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item rounded-pill" href="#">New Reports</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown ms-3">
+              <a
+                href="#"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="outside"
+                aria-expanded="false"
+              >
+                <svg
+                  class="svg-stroke"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M4 4h16v2.172a2 2 0 0 1 -.586 1.414l-4.414 4.414v7l-6 2v-8.5l-4.48 -4.928a2 2 0 0 1 -.52 -1.345v-2.227z"
+                  ></path>
+                </svg>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-end p-2 p-xl-3 shadow rounded-4"
+                style="width: 300px"
+              >
+                <h6>Filter Options</h6>
+                <div class="row g-3 mt-3">
+                  <div class="col-12">
+                    <label class="form-label small text-muted"
+                      >Sorted by:</label
+                    >
+                    <input
+                      type="search"
+                      class="form-control"
+                      placeholder="Search"
+                    />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label small text-muted">Status:</label>
+                    <select class="form-select">
+                      <option selected>Choose...</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label small text-muted"
+                      >Notifications:</label
+                    >
+                    <div class="form-check form-switch">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                      />
+                      <label class="form-check-label">Enabled</label>
+                    </div>
+                  </div>
+                  <div class="col-12 text-end mt-4">
+                    <button type="reset" class="btn btn-sm btn-light me-1">
+                      Reset
+                    </button>
+                    <button type="submit" class="btn btn-sm btn-primary">
+                      Apply
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- start: page body area -->
+        <div class="px-xl-5 px-lg-4 px-3 py-3 page-body">
+          <div class="row g-3">
+            <div class="col-sm-12">
+              <div
+                class="d-flex align-items-center justify-content-between flex-wrap"
+              >
+                <h3 class="fw-bold mb-0">Room Status</h3>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="card">
+                <div class="card-body">
+                  <table
+                    class="table dataTable align-middle table-hover table-body"
+                    style="width: 100%"
+                  >
+                    <thead>
+                      <tr>
+                        <th>Room Number</th>
+                        <th>Room Type</th>
+                        <th>Floor</th>
+                        <th>Check Out</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>A-1101</td>
+                        <td>Deluxe</td>
+                        <td>First Floor</td>
+                        <td>12/04/2021</td>
+                        <td>
+                          <span class="badge text-bg-warning">Checkin</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>A-1102</td>
+                        <td>Studio</td>
+                        <td>First Floor</td>
+                        <td>None</td>
+                        <td>
+                          <span class="badge text-bg-success">Available</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>H-1001</td>
+                        <td>King</td>
+                        <td>Eighth Floor</td>
+                        <td>None</td>
+                        <td>
+                          <span class="badge text-bg-success">Available</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>B-1201</td>
+                        <td>Queen</td>
+                        <td>Nineth Floor</td>
+                        <td>None</td>
+                        <td>
+                          <span class="badge text-bg-success">Available</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>B-1202</td>
+                        <td>Queen</td>
+                        <td>Nineth Floor</td>
+                        <td>None</td>
+                        <td>
+                          <span class="badge text-bg-success">Available</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>B-1203</td>
+                        <td>Queen</td>
+                        <td>Nineth Floor</td>
+                        <td>None</td>
+                        <td>
+                          <span class="badge text-bg-success">Available</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>B-1204</td>
+                        <td>Queen</td>
+                        <td>Nineth Floor</td>
+                        <td>None</td>
+                        <td>
+                          <span class="badge text-bg-success">Available</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>B-1201</td>
+                        <td>Queen</td>
+                        <td>Nineth Floor</td>
+                        <td>None</td>
+                        <td>
+                          <span class="badge text-bg-success">Available</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>B-1205</td>
+                        <td>Queen</td>
+                        <td>Nineth Floor</td>
+                        <td>None</td>
+                        <td>
+                          <span class="badge text-bg-success">Available</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Row End -->
+        </div>
+      </div>
+    </main>
+
+    <!-- start: template setting, and more. -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvas_setting"
+      aria-labelledby="offcanvas_setting"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Template Setting</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="mb-4">
+          <h6>Set Theme Color</h6>
+          <ul class="choose-skin list-unstyled mb-0">
+            <li data-theme="ValenciaRed">
+              <div style="--hotelair-theme-color: #d63b38"></div>
+            </li>
+            <li data-theme="SunOrange">
+              <div style="--hotelair-theme-color: #f7a614"></div>
+            </li>
+            <li data-theme="AppleGreen">
+              <div style="--hotelair-theme-color: #5bc43a"></div>
+            </li>
+            <li data-theme="CeruleanBlue">
+              <div style="--hotelair-theme-color: #00b8d6"></div>
+            </li>
+            <li data-theme="Mariner">
+              <div style="--hotelair-theme-color: #0066fe"></div>
+            </li>
+            <li data-theme="PurpleHeart" class="active">
+              <div style="--hotelair-theme-color: #6238b3"></div>
+            </li>
+            <li data-theme="FrenchRose">
+              <div style="--hotelair-theme-color: #eb5393"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="svg-stroke mb-4">
+          <h6>Icon Border Stroke</h6>
+          <div
+            class="btn-group"
+            role="group"
+            aria-label="Basic radio toggle button group"
+          >
+            <input
+              type="radio"
+              class="btn-check"
+              name="stroke"
+              id="Stroke_A"
+              value="svgstroke-a"
+              checked
+            />
+            <label class="btn btn-outline-primary" for="Stroke_A"
+              >Stroke 1</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="stroke"
+              id="Stroke_B"
+              value="svgstroke-b"
+            />
+            <label class="btn btn-outline-primary" for="Stroke_B"
+              >Stroke 2</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="stroke"
+              id="Stroke_C"
+              value="svgstroke-c"
+            />
+            <label class="btn btn-outline-primary" for="Stroke_C"
+              >Stroke 3</label
+            >
+          </div>
+        </div>
+        <div class="mb-4">
+          <h6>Layout Section Ligh/Dark</h6>
+          <ul class="list-unstyled d-flex flex-wrap">
+            <li class="me-2 mb-2 sidebar-toggle">
+              <input type="checkbox" class="btn-check" id="Sidebar_dark" />
+              <label class="btn btn-outline-primary" for="Sidebar_dark"
+                >Sidebar</label
+              >
+            </li>
+            <li class="me-2 mb-2 header-toggle">
+              <input type="checkbox" class="btn-check" id="Header_dark" />
+              <label class="btn btn-outline-primary" for="Header_dark"
+                >Header</label
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="mb-4">
+          <h6>More App Setting</h6>
+          <div class="form-check form-switch bodygradient-toggle">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="bodyGradient"
+              checked
+            />
+            <label class="form-check-label" for="bodyGradient"
+              >Body Gradient Background</label
+            >
+          </div>
+
+          <div class="form-check form-switch monochrome-toggle">
+            <input
+              class="form-check-input fs-6"
+              type="checkbox"
+              role="switch"
+              id="monochrome"
+            />
+            <label class="form-check-label" for="monochrome"
+              >Monochrome Mode</label
+            >
+          </div>
+          <div class="form-check form-switch radius-toggle">
+            <input
+              class="form-check-input fs-6"
+              type="checkbox"
+              role="switch"
+              id="radius0"
+            />
+            <label class="form-check-label" for="radius0"
+              >Border Radius none</label
+            >
+          </div>
+          <div class="form-check form-switch svg-icon-color">
+            <input
+              class="form-check-input fs-6"
+              type="checkbox"
+              role="switch"
+              id="IconColor"
+            />
+            <label class="form-check-label" for="IconColor"
+              >Sidebar Icon color</label
+            >
+          </div>
+          <div class="form-check form-switch cb-shadow">
+            <input
+              class="form-check-input fs-6"
+              type="checkbox"
+              role="switch"
+              id="BoxShadow"
+            />
+            <label class="form-check-label" for="BoxShadow"
+              >Card box shadow active</label
+            >
+          </div>
+        </div>
+        <div class="d-flex">
+          <button type="button" class="btn w-100 me-1 py-2 btn-primary">
+            Buy Now
+          </button>
+          <button type="button" class="btn w-100 ms-1 py-2 btn-dark">
+            View Portfolio
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--[ hotelair template vender js ]-->
+    <script src="assets/bundles/libscripts.bundle.js"></script>
+    <script src="assets/bundles/dataTables.bundle.js"></script>
+
+    <!-- Template page js -->
+    <script src="assets/js/main.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".dataTable").addClass("nowrap").dataTable({
+          responsive: true,
+        });
+      });
+    </script>
+  </body>
+
+  <!-- Mirrored from pixelwibes.in/templates/hotelair/html/room-status.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 13:31:43 GMT -->
+</html>
+{% endblock %}
