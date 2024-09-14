@@ -12,8 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import dj_database_url
 import os
 from pathlib import Path
-# postgresql://arcadia_u4fc_user:geJVrTRM236YdCRx5dlKTHmfs7Tw6lwV@dpg-cri7o23qf0us739q31u0-a.oregon-postgres.render.com/arcadia_u4fc
-# import dj_database_url
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -173,3 +172,35 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 
 # supabase database key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVrbXZ6Z3hueGlteHJ3dGx1dmxqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjU1NTY2NTksImV4cCI6MjA0MTEzMjY1OX0.wyA_aBpGBJsTdIg38q0VMVX7CakVW1XhDAwQOR2DiDU;
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://red-criokp5umphs73cntq90:6379",  # Replace with your Redis server
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
+#storing django sessions
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+SESSION_CACHE_ALIAS = "default"
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("redis://red-criokp5umphs73cntq90:6379", 6379)],  # Replace with your Redis server
+        },
+    },
+}
+
+
+import redis
+
+# Connect to your internal Redis instance using the REDIS_URL environment variable
+# The REDIS_URL is set to the internal Redis URL e.g. redis://red-343245ndffg023:6379
+r = redis.from_url(os.environ['REDIS_URL'])
+
+r.set('mykey', 'hello, reddis')
+r.get('mykey')

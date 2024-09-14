@@ -29,6 +29,7 @@ urlpatterns = [
     path('room/', include("room.urls")),
     path('auth/', include("authapp.urls")),
     path('staff/', include("staff.urls")),
+    path('guest/', include("guest.urls")),
     
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

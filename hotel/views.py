@@ -59,9 +59,11 @@ def index_page(request, pk):
     reserve = ReservationDetails.objects.filter(reservation_date=today).count()
     reservation = ReservationDetails.objects.filter(reservation_date=today).all()
     total_booking = ReservationDetails.objects.all()
+    total_booking_count = ReservationDetails.objects.all().count()
     # today
     payment = Payment.objects.all()
     customers = GuestDetails.objects.all()
+    customers_count = GuestDetails.objects.all().count()
     
     user = User.objects.get(id=pk)
     menuitem = MenuItem.objects.all()
@@ -74,7 +76,9 @@ def index_page(request, pk):
         "reserve":reserve,
         "payment":payment,
         "customers":customers,
+        "customers_count":customers_count,
         "total_booking":total_booking,
+        "total_booking_count":total_booking_count,
         "reservation":reservation,
         "total_amount":total_amount,
         "menuitem":menuitem,

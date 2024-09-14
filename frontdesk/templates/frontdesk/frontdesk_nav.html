@@ -56,6 +56,12 @@
                                     <li><a href="{% url "checkin-out" user.id %}" aria-label="Room Checkout">Room Checkout</a></li>
                                     <li><a href="{% url "room-status" user.id %}" aria-label="Room Status">Room Status</a></li>
                                 </ul>
+                                <a href="{% url "logout" %}">
+                                    <button class="btn btn-danger">
+
+                                        logout
+                                    </button>
+                                </a>
                             </li>
                 </div>
             </div>
