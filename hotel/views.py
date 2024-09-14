@@ -153,7 +153,7 @@ def room_booking(request, pk):
         fcountry = request.POST.get('country')
         fstate = request.POST.get('state')
         fcity = request.POST.get('city')
-        # fzipcode = request.POST.get('zipcode')
+        fzipcode = request.POST.get('zipcode')
         faddress = request.POST.get('address')
         fidtype = request.POST.get('idtype')
         fidnumber = request.POST.get('idnumber')
@@ -207,7 +207,7 @@ def room_booking(request, pk):
             country = fcountry,
             state = fstate,
             city = fcity,
-            # zipcode = fzipcode,
+            zipcode = fzipcode,
             address = faddress
         )
         con_det.save()

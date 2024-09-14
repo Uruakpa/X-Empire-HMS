@@ -49,7 +49,7 @@
 												<label class="form-label text-muted">Check In <span class="text-danger">*</span></label>
 												<div class="input-group">
 													<span class="input-group-text" ><i class="bi bi-calendar-plus"></i></span>
-													<input type="date" class="form-control" name="checkin">
+													<input type="date" class="form-control" name="checkin" required>
 												</div>
 											</div>
 										</div>
@@ -58,7 +58,7 @@
 												<label class="form-label text-muted">Check Out<span class="text-danger">*</span></label>
 												<div class="input-group">
 													<span class="input-group-text" ><i class="bi bi-calendar-minus"></i></span>
-													<input type="date" name="checkout" class="form-control">
+													<input type="date" name="checkout" class="form-control" required>
 												</div>
 											</div>
 										</div>
@@ -171,7 +171,7 @@
 																<label class="form-label text-muted">Mobile No.</label>
 																<div class="input-group">
 																	<span class="input-group-text"><i class="bi bi-phone"></i></span>
-																	<input type="number" class="form-control" placeholder="Mobile No." name="number" value="{{guest_instance.phone_number}}">
+																	<input type="number" class="form-control" placeholder="Mobile No." name="number" value="{{guest_instance.phone_number}}" required>
 																</div>
 															</div>
 														</div>
@@ -180,7 +180,7 @@
 																<label class="form-label text-muted">Title</label>
 																<div class="input-group">
 																	<span class="input-group-text"><i class="bi bi-emoji-smile"></i></span>
-																	<select class="form-select" name="title">
+																	<select class="form-select" name="title" required>
 																		<option selected=''  value="{{guest_instance.title}}">
 																			{{guest_details_instance.title}}																	</option>
 																		{% for key, value in guest_details_instance.TITLE_CHOICES %}
@@ -215,7 +215,7 @@
 																<label class="form-label text-muted">Gender</label>
 																<div class="input-group">
 																	<span class="input-group-text"><i class="bi bi-emoji-smile"></i></span>
-																	<select class="form-select" name="gender">
+																	<select class="form-select" name="gender" required>
 																		<option selected='' value="{{guest_instance.gender}}">
 																			{{guest_instance.gender}}
 																		</option>
@@ -242,7 +242,7 @@
 																<label class="form-label text-muted">Date of Birth</label>
 																<div class="input-group">
 																	<span class="input-group-text"><i class="bi bi-calendar"></i></span>
-																	<input type="date" class="form-control" value="{{guest_instance.dob}}" name="dob" >
+																	<input type="date" class="form-control" value="{{guest_instance.dob}}" name="dob" required>
 																</div>
 															</div>
 														</div>
@@ -320,15 +320,15 @@
 																</div>
 															</div>
 														</div>
-														{% comment %} <div class="col-md-6">
+														<div class="col-md-6">
 															<div class="form-group">
 																<label class="form-label text-muted">Zipcode</label>
 																<div class="input-group">
 																	<span class="input-group-text"><i class="bi bi-file-zip"></i></span>
-																	<input type="number" class="form-control" placeholder="Zipcode" name="zipcode" value="{{guest_instance.contact_det.zipcode}}">
+																	<input type="number" class="form-control" placeholder="Zipcode" name="zipcode" value="0">
 																</div>
 															</div>
-														</div> {% endcomment %}
+														</div>
 														<div class="col-md-12 mb-3">
 															<div class="form-group">
 																<label class="form-label text-muted">Address</label>

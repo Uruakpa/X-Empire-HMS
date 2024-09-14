@@ -142,7 +142,7 @@ class ContactDetails(models.Model):
     country = models.CharField(max_length=50, default='')
     state = models.CharField(max_length=50, default='')
     city = models.CharField(max_length=50, default='')
-    # zipcode = models.CharField(max_length=50, default='')
+    zipcode = models.CharField(max_length=50, default='', null=True,blank=True)
     address = models.TextField()
 
     
@@ -155,7 +155,7 @@ class IdentityDetails(models.Model):
         ('DRIVER\'S LICENSE', 'DRIVER\'S LICENSE'),
     )
     
-    id_type = models.CharField(max_length=60, choices=IDENTITY_TYPE)
+    id_type = models.CharField(max_length=60, choices=IDENTITY_TYPE, null=True, blank=True)
     id_number = models.CharField(max_length=255, default='',null=True, blank=True)
     
     # class 
