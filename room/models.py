@@ -142,7 +142,7 @@ class ContactDetails(models.Model):
     country = models.CharField(max_length=50, default='')
     state = models.CharField(max_length=50, default='')
     city = models.CharField(max_length=50, default='')
-    zipcode = models.CharField(max_length=50, default='')
+    # zipcode = models.CharField(max_length=50, default='')
     address = models.TextField()
 
     
@@ -156,7 +156,7 @@ class IdentityDetails(models.Model):
     )
     
     id_type = models.CharField(max_length=60, choices=IDENTITY_TYPE)
-    id_number = models.CharField(max_length=255, default='')
+    id_number = models.CharField(max_length=255, default='',null=True, blank=True)
     
     # class 
     
@@ -187,7 +187,7 @@ class AdditionalPayment(models.Model):
 class ReservationDetails(models.Model):
     check_in = models.DateField()
     check_out = models.DateField()
-    arrival_from = models.CharField(max_length=255)
+    arrival_from = models.CharField(max_length=255, null=True, blank=True)
     # purpose = models.TextField()
     # remarks = models.TextField()
     reservation_date = models.DateField(auto_now=True)
